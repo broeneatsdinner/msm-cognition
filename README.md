@@ -20,6 +20,14 @@ The work is useful in three ways:
 
 The goal is not to pretend the model already knows the game. The goal is to show how a human can teach a model: by preserving examples, corrections, language, uncertainty, and state updates in a form future sessions can reuse.
 
+### Source language
+
+This README preserves polished project language, but the training record also keeps the original user phrasing that produced it:
+
+> It's a very interesting project! And, I'm happy to do it because 1) it's fun (I get to play the game) and 2) it's educational (I get to learn how to train, and keep notes for myself on how to be a better teacher) and 3) it's enduring (if others can see how training of this sort works, they can apply it to their own projects)
+
+That original phrasing is preserved in `training/language/2026-07-09-project-motivation.md` alongside the README interpretation.
+
 ## Purpose
 
 MSM Cognition is a small cognition/workbench project for reducing lookup friction during gameplay.
