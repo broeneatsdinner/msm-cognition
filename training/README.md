@@ -4,6 +4,20 @@ This directory preserves the learning loop behind MSM Cognition.
 
 The project is not only tracking game state. It is also recording how a domain-specific visual interface is interpreted over time: screenshots, observations, mistakes, corrections, terminology, and recognition rules.
 
+## Why this matters
+
+The game is the testbed, but the deeper project is the training loop.
+
+This directory records how a human teaches an assistant to understand a domain-specific interface:
+
+1. ask the assistant to interpret what it sees
+2. correct mistakes directly
+3. clarify domain terminology
+4. separate visible facts from uncertain interpretation
+5. preserve the correction as future operating procedure
+
+That makes the work fun, educational, and enduring. The user gets to play the game, the project records how better teaching happens, and future readers can apply the same pattern to their own domains.
+
 ## Purpose
 
 Training material captures how the workbench learns.

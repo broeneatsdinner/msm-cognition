@@ -8,6 +8,18 @@ This project starts with a simple question:
 
 The first layer is a human-readable reference system: local egg/icon assets, curated Markdown pages, and spreadsheet-derived reference data. The next layer is intended to use screenshots, local reference assets, and breeding rules to produce confidence-ranked interpretations of an in-progress breeding structure.
 
+## Why this project exists
+
+This project is intentionally built around a game because the game makes the learning loop enjoyable and repeatable.
+
+The work is useful in three ways:
+
+1. **Fun** — the data comes from ordinary gameplay, not from a sterile benchmark.
+2. **Educational** — every screenshot, mistake, correction, and terminology fix becomes practice in teaching a model to read a domain-specific interface.
+3. **Enduring** — the recorded process can help others understand how to build their own domain-specific LLM workbenches.
+
+The goal is not to pretend the model already knows the game. The goal is to show how a human can teach a model: by preserving examples, corrections, language, uncertainty, and state updates in a form future sessions can reuse.
+
 ## Purpose
 
 MSM Cognition is a small cognition/workbench project for reducing lookup friction during gameplay.
