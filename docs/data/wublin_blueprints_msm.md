@@ -1,0 +1,12 @@
+# Wublin Blueprints - MSM
+
+Cleaned table export from `Wublin Blueprints - MSM`.
+
+| Required Monster | Any Currents? | Best Island | Best Recipe | Success Breed Time | Failure Time & Monster | Why This Recipe? |
+|---|---|---|---|---|---|---|
+| T-Rox |  | Plant Island | Maw + Noggin | 8 hours | 5 seconds (Noggin) | If you fail, the 5-second Noggin lets you retry instantly without blocking your island. |
+| Congle |  | Cold Island | Toe Jammer + Pango | 12 hours | 1 minute (Toe Jammer) | If you fail, a 1-minute Toe Jammer is super fast to clear out so you can spam attempts. |
+| Pango |  | Air Island | Mammott + Tweedle | 8 hours | None | 100% Guaranteed. Zero risk of failure. |
+| Oaktopus |  | Water Island | Potbelly + Toe Jammer | 8 hours | None | 100% Guaranteed. Zero risk of failure. |
+| Drumpler |  | Earth Island | Noggin + Mammott | 30 minutes | None | 100% Guaranteed. Zero risk of failure on Earth Island. |
+| Maw |  | Fire Oasis | Mammott + Toe Jammer | 30 minutes | None | 100% Guaranteed. Keeps your main natural islands totally clear. |
