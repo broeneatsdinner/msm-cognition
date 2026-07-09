@@ -22,12 +22,12 @@ def clean_cell(value: str | None) -> str:
 	if value is None:
 		return ""
 
-	return str(value).replace("\n", "<br>").strip()
+	return str(value).replace("\n", " ").strip()
 
 
 def markdown_cell(value: str) -> str:
 	value = value.replace("|", "\\|")
-	return value if value else ""
+	return value if value else "—"
 
 
 def read_csv(path: Path) -> list[list[str]]:
@@ -42,10 +42,6 @@ def parse_island_blocks(rows: list[list[str]]) -> list[IslandBlock]:
 	The sheet contains repeated table regions:
 	- left region:  columns B:H, represented here as indexes 1:8
 	- right region: columns J:P, represented here as indexes 9:16
-
-	Each region has the same logical columns:
-
-	Island | Item | Structures | Cost to Upgrade | Currency to Upgrade | Current Capacity | Total Capacity
 	"""
 
 	blocks: list[IslandBlock] = []
@@ -65,6 +61,7 @@ def parse_island_blocks(rows: list[list[str]]) -> list[IslandBlock]:
 			if not any(region):
 				continue
 
+			# Island heading row.
 			if first and not any([item, structures, cost, currency, current_capacity, total_capacity]):
 				current = IslandBlock(name=first)
 				blocks.append(current)
@@ -73,29 +70,64 @@ def parse_island_blocks(rows: list[list[str]]) -> list[IslandBlock]:
 			if current is None:
 				continue
 
-			if any([first, item, structures, cost, currency, current_capacity, total_capacity]):
-				current.rows.append([
-					first,
-					item,
-					structures,
-					cost,
-					currency,
-					current_capacity,
-					total_capacity,
-				])
+			current.rows.append([
+				first,
+				item,
+				structures,
+				cost,
+				currency,
+				current_capacity,
+				total_capacity,
+			])
 
 	return blocks
 
 
-def render_table(headers: list[str], rows: list[list[str]]) -> str:
-	lines = []
-	lines.append("| " + " | ".join(headers) + " |")
-	lines.append("| " + " | ".join(["---"] * len(headers)) + " |")
+def render_key_value_table(rows: list[tuple[str, str]]) -> str:
+	lines = [
+		"| Field | Value |",
+		"|---|---|",
+	]
 
-	for row in rows:
-		lines.append("| " + " | ".join(markdown_cell(cell) for cell in row) + " |")
+	for key, value in rows:
+		lines.append(f"| {markdown_cell(key)} | {markdown_cell(value)} |")
 
 	return "\n".join(lines)
+
+
+def summarize_island(block: IslandBlock) -> list[tuple[str, str]]:
+	summary: list[tuple[str, str]] = []
+	notes: list[str] = []
+
+	for note, item, structures, cost, currency, current_capacity, total_capacity in block.rows:
+		if note and not item:
+			notes.append(note)
+			continue
+
+		if not item:
+			continue
+
+		value_parts: list[str] = []
+
+		if structures:
+			value_parts.append(structures)
+
+		if current_capacity or total_capacity:
+			value_parts.append(f"{current_capacity or '—'} / {total_capacity or '—'}")
+
+		if cost or currency:
+			cost_text = " ".join(part for part in [cost, currency] if part)
+			value_parts.append(f"upgrade: {cost_text}")
+
+		value = "; ".join(value_parts) if value_parts else "—"
+
+		# Make the field name more readable but preserve original item names.
+		summary.append((item, value))
+
+	if notes:
+		summary.append(("Notes", "; ".join(notes)))
+
+	return summary
 
 
 def render_islands_doc(blocks: list[IslandBlock]) -> str:
@@ -104,32 +136,43 @@ def render_islands_doc(blocks: list[IslandBlock]) -> str:
 		"",
 		"Curated island-status view generated from `data/raw/islands_msm.csv`.",
 		"",
-		"This page is organized for reading. It does not preserve the spreadsheet's side-by-side layout.",
+		"This page is organized as one compact status card per island. It is meant for quick reading, not for preserving the original spreadsheet layout.",
 		"",
+		"## At a glance",
+		"",
+		"| Island | Rows captured |",
+		"|---|---:|",
 	]
 
-	headers = [
-		"Notes",
-		"Item",
-		"Structures",
-		"Cost to Upgrade",
-		"Currency",
-		"Current Capacity",
-		"Total Capacity",
-	]
+	for block in blocks:
+		out.append(f"| [{markdown_cell(block.name)}](#{slugify(block.name)}) | {len(block.rows)} |")
+
+	out.append("")
 
 	for block in blocks:
 		out.append(f"## {block.name}")
 		out.append("")
 
-		if block.rows:
-			out.append(render_table(headers, block.rows))
+		summary = summarize_island(block)
+
+		if summary:
+			out.append(render_key_value_table(summary))
 		else:
 			out.append("_No rows captured._")
 
 		out.append("")
 
 	return "\n".join(out).rstrip() + "\n"
+
+
+def slugify(value: str) -> str:
+	return (
+		value.lower()
+		.replace("&", "")
+		.replace("'", "")
+		.replace("/", "")
+		.replace(" ", "-")
+	)
 
 
 def main() -> None:
