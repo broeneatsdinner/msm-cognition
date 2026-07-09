@@ -1,6 +1,32 @@
-# Spreadsheet-derived docs
+# Data documentation
 
-Markdown exports derived from the uploaded Google Sheets workbook.
+This directory is for human-readable documentation derived from the MSM reference data.
 
-- `wublin_blueprints_msm.md` is a cleaned table.
-- `islands_msm.md` and `monsters_msm.md` preserve the raw spreadsheet layout as Markdown tables.
+The raw spreadsheet exports live under:
+
+```text
+data/raw/
+```
+
+Those files are intended for scripts and reproducible data processing.
+
+Raw Markdown previews of the original spreadsheet exports are kept here only as inspection artifacts:
+
+```text
+docs/data/raw-export-previews/
+```
+
+They preserve the shape of the original sheets, including blank columns and side-by-side table regions, so they are not intended to be polished public reference pages.
+
+## Planned curated views
+
+Future documentation should be generated or authored into cleaner pages such as:
+
+```text
+docs/data/islands.md
+docs/data/monsters.md
+docs/data/wublins.md
+docs/data/breeding-rules.md
+```
+
+Those pages should be organized for reading, not for preserving spreadsheet layout.
