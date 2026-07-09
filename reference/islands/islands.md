@@ -1,6 +1,6 @@
 # Islands
 
-Curated island-status view generated from `data/raw/islands_msm.csv`.
+Curated island-status view generated from `reference/islands/islands.csv`.
 
 This page is organized as one compact status card per island. It is meant for quick reading, not for preserving the original spreadsheet layout.
 
@@ -8,60 +8,53 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Island | Rows captured |
 |---|---:|
-| [Plant Island](#plant-island) | 11 |
-| [Cold](#cold) | 8 |
-| [Air](#air) | 8 |
-| [Water](#water) | 8 |
+| [Plant Island](#plant-island) | 6 |
+| [Cold](#cold) | 6 |
+| [Air](#air) | 6 |
+| [Water](#water) | 6 |
 | [Earth](#earth) | 8 |
-| [Shugabush](#shugabush) | 8 |
-| [Ethereal](#ethereal) | 8 |
-| [Ethereal Workshop](#ethereal-workshop) | 8 |
-| [Magical Sanctum](#magical-sanctum) | 8 |
-| [Fire Haven](#fire-haven) | 8 |
-| [Fire Oasis](#fire-oasis) | 8 |
-| [Mythical](#mythical) | 8 |
-| [Light](#light) | 8 |
-| [Psychic](#psychic) | 8 |
-| [Faerie](#faerie) | 8 |
-| [Bone](#bone) | 8 |
-| [Tribal](#tribal) | 2 |
-| [Wublin](#wublin) | 8 |
-| [Celestial](#celestial) | 8 |
-| [Amber](#amber) | 8 |
-| [Colossingum](#colossingum) | 8 |
-| [Gold](#gold) | 8 |
-| [Magical Nexus](#magical-nexus) | 8 |
-| [Seasonal Shanty](#seasonal-shanty) | 8 |
-| [Composer](#composer) | 8 |
-| [Paironormal Carnival](#paironormal-carnival) | 8 |
-| [Mirror Plant Island](#mirror-plant-island) | 11 |
-| [Mirror Cold](#mirror-cold) | 8 |
+| [Shugabush](#shugabush) | 6 |
+| [Ethereal](#ethereal) | 6 |
+| [Ethereal Workshop](#ethereal-workshop) | 6 |
+| [Magical Sanctum](#magical-sanctum) | 6 |
+| [Fire Haven](#fire-haven) | 6 |
+| [Fire Oasis](#fire-oasis) | 6 |
+| [Mythical](#mythical) | 6 |
+| [Light](#light) | 6 |
+| [Psychic](#psychic) | 6 |
+| [Faerie](#faerie) | 6 |
+| [Bone](#bone) | 6 |
+| [Tribal](#tribal) | 1 |
+| [Wublin](#wublin) | 6 |
+| [Celestial](#celestial) | 6 |
+| [Amber](#amber) | 6 |
+| [Colossingum](#colossingum) | 6 |
+| [Gold](#gold) | 6 |
+| [Magical Nexus](#magical-nexus) | 6 |
+| [Seasonal Shanty](#seasonal-shanty) | 6 |
+| [Composer](#composer) | 6 |
+| [Paironormal Carnival](#paironormal-carnival) | 6 |
+| [Mirror Plant Island](#mirror-plant-island) | 6 |
+| [Mirror Cold](#mirror-cold) | 6 |
 
 ## Plant Island
 
 | Field | Value |
 |---|---|
-| Castle | Extravagant Castle; 59 / 60; upgrade: -40 diamonds |
+| Castle | Extravagant Castle; 59 / 60; upgrade: 40 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
-| Monster | — |
-| Monster | — |
-| Monster | — |
 
 ## Cold
 
 | Field | Value |
 |---|---|
-| Castle | Paradise Castle; 73 / 90; upgrade: -100 diamonds |
+| Castle | Paradise Castle; 73 / 90; upgrade: 100 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -70,11 +63,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Extravagant Castle; 60 / 60; upgrade: -60 diamonds |
+| Castle | Extravagant Castle; 60 / 60; upgrade: 60 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -83,11 +74,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Extravagant Castle; 59 / 60; upgrade: -70 diamonds |
+| Castle | Extravagant Castle; 59 / 60; upgrade: 70 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 5 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -96,11 +85,11 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Paradise Castle; 89 / 90; upgrade: -160 diamonds |
+| Castle | Paradise Castle; 89 / 90; upgrade: 160 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | Not-Upgraded |
+| Bonus Breeding Structure | Not-Upgraded |
 | Nursery | Not-Upgraded |
-| Nursery | Not-Upgraded |
+| Bonus Nursery | Not-Upgraded |
 | Wishing Torch | 10 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -109,11 +98,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Modest Castle; 8 / 10; upgrade: -100000 coins |
+| Castle | Modest Castle; 8 / 10; upgrade: 100,000 coins |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 1 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -122,11 +109,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Extravagant Castle; 181 / 265; upgrade: -60 diamonds |
+| Castle | Extravagant Castle; 181 / 265; upgrade: 60 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -135,11 +120,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Spacious Castle; 165 / 325; upgrade: -10000 shards |
+| Castle | Spacious Castle; 165 / 325; upgrade: 10,000 shards |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 0 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -148,11 +131,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Luxurious Castle; 38 / 40; upgrade: -30 diamonds |
+| Castle | Luxurious Castle; 38 / 40; upgrade: 30 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 1 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -161,11 +142,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Luxurious Castle; 38 / 40; upgrade: -30 diamonds |
+| Castle | Luxurious Castle; 38 / 40; upgrade: 30 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -176,9 +155,7 @@ This page is organized as one compact status card per island. It is meant for qu
 |---|---|
 | Castle | Comfortable Castle; 18 / 18; upgrade: Currently Being Upgraded |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 1 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -187,11 +164,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Luxurious Castle; 60 / 60; upgrade: -30 diamonds |
+| Castle | Luxurious Castle; 60 / 60; upgrade: 30 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 1 |
 | Mine | N/A |
 | Coloss-Eye | Complete |
@@ -200,11 +175,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Spacious Castle; 28 / 28; upgrade: -14625000 coins |
+| Castle | Spacious Castle; 28 / 28; upgrade: 14,625,000 coins |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -213,11 +186,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Comfortable Castle; 15 / 18; upgrade: -10500000 coins |
+| Castle | Comfortable Castle; 15 / 18; upgrade: 10,500,000 coins |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 1 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -226,11 +197,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Comfortable Castle; 18 / 18; upgrade: -11250000 coins |
+| Castle | Comfortable Castle; 18 / 18; upgrade: 11,250,000 coins |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -239,11 +208,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Comfortable Castle; 18 / 18; upgrade: -12000000 coins |
+| Castle | Comfortable Castle; 18 / 18; upgrade: 12,000,000 coins |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 1 |
 | Mine | Mini Mine |
 | Coloss-Eye | Complete |
@@ -252,17 +219,15 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Tribal Level | Level 600; -1312500 / -131250; upgrade: Level 21 -131 |
+| Tribal Level | Level 600; 1,312,500 / 131,250; upgrade: Level 21 -131 |
 
 ## Wublin
 
 | Field | Value |
 |---|---|
-| Castle | Extravagant Castle; 59 / 60; upgrade: -40 diamonds |
+| Castle | Extravagant Castle; 59 / 60; upgrade: 40 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -271,11 +236,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Extravagant Castle; 59 / 60; upgrade: -40 diamonds |
+| Castle | Extravagant Castle; 59 / 60; upgrade: 40 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -284,11 +247,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Amber Castle; 1 / 4; upgrade: -10 relics |
+| Castle | Amber Castle; 1 / 4; upgrade: 10 relics |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -297,11 +258,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Renowned Conservatory; 0 / 2; upgrade: -200 diamonds |
+| Castle | Renowned Conservatory; 0 / 2; upgrade: 200 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -312,9 +271,7 @@ This page is organized as one compact status card per island. It is meant for qu
 |---|---|
 | Castle | Crystal Castle; 2 / unlimited |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -323,11 +280,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Nexus Nucleus; upgrade: -18000 shards |
+| Castle | Nexus Nucleus; upgrade: 18,000 shards |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -336,11 +291,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Basic Castle; 0 / 4; upgrade: -50000 coins |
+| Castle | Basic Castle; 0 / 4; upgrade: 50,000 coins |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -351,9 +304,7 @@ This page is organized as one compact status card per island. It is meant for qu
 |---|---|
 | Castle | Composer Castle; 12 / 40 |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -362,11 +313,9 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Basic "Castle" of the Beyond; 0 / 8; upgrade: -128 diamonds |
+| Castle | Basic "Castle" of the Beyond; 0 / 8; upgrade: 128 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
@@ -375,27 +324,20 @@ This page is organized as one compact status card per island. It is meant for qu
 
 | Field | Value |
 |---|---|
-| Castle | Luxurious Castle; 35 / 40; upgrade: -20 diamonds |
+| Castle | Luxurious Castle; 35 / 40; upgrade: 20 diamonds |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |
-| Monster | — |
-| Monster | — |
-| Monster | — |
 
 ## Mirror Cold
 
 | Field | Value |
 |---|---|
-| Castle | Comfortable Castle; 12 / 18; upgrade: -120000 coins |
+| Castle | Comfortable Castle; 12 / 18; upgrade: 120,000 coins |
 | Breeding Structure | Not-Upgraded |
-| Breeding Structure | — |
 | Nursery | Not-Upgraded |
-| Nursery | — |
 | Wishing Torch | 10 |
 | Mine | Maximum Mine |
 | Coloss-Eye | Complete |

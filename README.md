@@ -67,9 +67,9 @@ This repository currently contains:
 The spreadsheet exports are represented in three forms:
 
 ```text
-data/raw/*.csv   Snapshot of the spreadsheet-derived tabular data
-data/raw/*.json  Script-friendly structured data
-docs/data/*.md   Human-readable Markdown tables
+reference/*.csv   Snapshot of the spreadsheet-derived tabular data
+reference/*.json  Script-friendly structured data
+reference/*.md   Human-readable Markdown tables
 ```
 
 The intent is to keep the source data easy to inspect by a person while also making it usable by future Python code.

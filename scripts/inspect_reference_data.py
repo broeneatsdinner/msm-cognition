@@ -7,15 +7,15 @@ from pathlib import Path
 from typing import Any
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-DATA_DIR = REPO_ROOT / "data" / "raw"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+REFERENCE_DIR = REPO_ROOT / "reference"
 
 
 SheetRows = list[list[Any]]
 
 
 def load_sheet_values(name: str, *, drop_blank_rows: bool = True) -> SheetRows:
-	path = DATA_DIR / name
+	path = REFERENCE_DIR / name
 
 	with path.open(encoding="utf-8") as f:
 		data = json.load(f)
@@ -46,15 +46,15 @@ def is_blank_row(row: list[Any]) -> bool:
 
 
 def load_islands() -> SheetRows:
-	return load_sheet_values("islands_msm.json")
+	return load_sheet_values("islands/islands.json")
 
 
 def load_monsters() -> SheetRows:
-	return load_sheet_values("monsters_msm.json")
+	return load_sheet_values("monsters/monsters.json")
 
 
 def load_wublin_blueprints() -> SheetRows:
-	return load_sheet_values("wublin_blueprints_msm.json")
+	return load_sheet_values("wublins/wublin-blueprints.json")
 
 
 def describe_sheet(label: str, rows: SheetRows) -> None:
