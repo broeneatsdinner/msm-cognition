@@ -57,7 +57,22 @@ This repository currently contains:
 
 - local reference assets for the 30 Natural monsters
 - a Markdown/HTML reference table for quick visual lookup
+- spreadsheet-derived CSV data for islands, monsters, and Wublin blueprints
+- JSON versions of that data for future scripts
+- Markdown versions of that data for GitHub-readable browsing
 - a planned structure for future screenshot recognition and breeding inference
+
+## Data layers
+
+The spreadsheet exports are represented in three forms:
+
+```text
+data/raw/*.csv   Snapshot of the spreadsheet-derived tabular data
+data/raw/*.json  Script-friendly structured data
+docs/data/*.md   Human-readable Markdown tables
+```
+
+The intent is to keep the source data easy to inspect by a person while also making it usable by future Python code.
 
 ## Disclaimer
 
