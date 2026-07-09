@@ -1,32 +1,39 @@
 # Data documentation
 
-This directory is for human-readable documentation derived from the MSM reference data.
+This directory contains human-readable documentation derived from the MSM reference data.
 
-The raw spreadsheet exports live under:
+## Curated pages
 
-```text
-data/raw/
-```
-
-Those files are intended for scripts and reproducible data processing.
-
-Raw Markdown previews of the original spreadsheet exports are kept here only as inspection artifacts:
-
-```text
-docs/data/raw-export-previews/
-```
-
-They preserve the shape of the original sheets, including blank columns and side-by-side table regions, so they are not intended to be polished public reference pages.
-
-## Planned curated views
-
-Future documentation should be generated or authored into cleaner pages such as:
+These pages are organized for reading:
 
 ```text
 docs/data/islands.md
+```
+
+Future curated pages should include:
+
+```text
 docs/data/monsters.md
 docs/data/wublins.md
 docs/data/breeding-rules.md
 ```
 
-Those pages should be organized for reading, not for preserving spreadsheet layout.
+## Raw export previews
+
+The original spreadsheet-shaped Markdown exports are preserved here:
+
+```text
+docs/data/raw-export-previews/
+```
+
+Those files are useful for audit/debug purposes, but they preserve spreadsheet layout artifacts such as blank columns, repeated header blocks, and side-by-side table regions. They are not intended to be polished public documentation.
+
+## Script-facing data
+
+The script-facing data lives under:
+
+```text
+data/raw/
+```
+
+Those files are the canonical spreadsheet-derived snapshots.
