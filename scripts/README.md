@@ -105,6 +105,30 @@ Each detector candidate retains its raw OpenCV template score and also receives 
 
 Experiment output is generated training evidence; leave it untracked unless it has been deliberately reviewed and selected for promotion.
 
+## Breeding Structure ground-truth review
+
+Use this focused workflow to measure whether the first-stage detector proposes the real Breeding Structure and whether the second-stage scorer ranks an overlapping candidate well.
+
+Step 1: prepare numbered candidate overlays, crops, JSON annotation templates, and local drag-to-box HTML reviews.
+
+```bash
+python3 scripts/prepare_breeder_ground_truth_review.py \
+  --screenshots-dir training/screenshots/breeding-structure/plant-island-2026-07-09 \
+  --out-dir training/evidence/breeding-structure-ground-truth-review/plant-island-2026-07-09
+```
+
+Step 2: open the generated `index.html`, drag a rectangle around the complete true Breeding Structure, and paste that box into the image's `annotation.json`. Change `ground_truth.status` from `needs_manual_box` to `confirmed` only after checking the box.
+
+Step 3: compare confirmed ground truth with detector candidates.
+
+```bash
+python3 scripts/compare_breeder_ground_truth.py \
+  --annotations-dir training/evidence/breeding-structure-ground-truth-review/plant-island-2026-07-09 \
+  --out-dir training/evidence/breeding-structure-ground-truth-review/plant-island-2026-07-09/comparison
+```
+
+Ground-truth coordinates are not a future location rule. They identify the object crop in that one screenshot so reference similarity, candidate IoU, ranking quality, false positives, and missed proposals can be compared visually and measured. Keep generated review and comparison output untracked until it has been deliberately reviewed.
+
 ```text
 summarize_detector_training.py
 ```

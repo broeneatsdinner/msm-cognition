@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "label": "breeding_structure",
+  "island": "Plant Island",
+  "source_screenshot_dir": "training/screenshots/breeding-structure/plant-island-2026-07-09",
+  "notes": [
+    "Coordinates identify the true Breeding Structure in each screenshot only.",
+    "They are supervision for visual comparison and detector proposal evaluation, not future location rules.",
+    "Annotated/review images are evidence only and must not be used as detector templates."
+  ],
+  "annotations": [
+    {
+      "image": "training/screenshots/breeding-structure/plant-island-2026-07-09/plant-breeding-structure-idle-zoom-01.png",
+      "state": "idle",
+      "status": "confirmed",
+      "box": {"x": 684, "y": 120, "w": 858, "h": 1239}
+    },
+    {
+      "image": "training/screenshots/breeding-structure/plant-island-2026-07-09/plant-breeding-structure-in-use-zoom-01.png",
+      "state": "in_use",
+      "status": "confirmed",
+      "box": {"x": 631, "y": 152, "w": 911, "h": 1221}
+    }
+  ]
+}
