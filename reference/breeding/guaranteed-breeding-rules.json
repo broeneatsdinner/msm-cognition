@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "purpose": "Pattern-level breeding rules that describe guaranteed, duplicate-farming, or special-case breeding behavior beyond a simple island-scoped parent-pair lookup.",
+  "rules": [
+    {
+      "id": "common-plus-rare-same-monster",
+      "label": "Common + Rare same-monster clone",
+      "rule_type": "duplicate_farming",
+      "guarantee": true,
+      "parents": {
+        "pattern": "common_monster + rare_counterpart_of_same_monster"
+      },
+      "result": {
+        "pattern": "same_monster_family",
+        "usual_result": "common_variant"
+      },
+      "notes": [
+        "Useful once both Common and Rare forms are available.",
+        "Good duplicate-farming rule for zapping, Wublins, Celestials, Amber vessels, and inventory planning.",
+        "Rare or Epic availability windows may affect edge cases; do not overstate event behavior without evidence."
+      ],
+      "confidence": "source_supported"
+    },
+    {
+      "id": "natural-single-plus-single-guaranteed-double",
+      "label": "Natural single + Natural single guaranteed double",
+      "rule_type": "guaranteed_double",
+      "guarantee": true,
+      "parents": {
+        "pattern": "two_core_natural_single_element_monsters"
+      },
+      "result": {
+        "pattern": "core_natural_double_element_monster"
+      },
+      "combinations": [
+        {
+          "parents": [
+            "Noggin",
+            "Toe Jammer"
+          ],
+          "result": "Fwog"
+        },
+        {
+          "parents": [
+            "Noggin",
+            "Mammott"
+          ],
+          "result": "Drumpler"
+        },
+        {
+          "parents": [
+            "Toe Jammer",
+            "Mammott"
+          ],
+          "result": "Maw"
+        },
+        {
+          "parents": [
+            "Tweedle",
+            "Potbelly"
+          ],
+          "result": "Dandidoo"
+        },
+        {
+          "parents": [
+            "Tweedle",
+            "Noggin"
+          ],
+          "result": "Cybop"
+        },
+        {
+          "parents": [
+            "Tweedle",
+            "Toe Jammer"
+          ],
+          "result": "Quibble"
+        },
+        {
+          "parents": [
+            "Tweedle",
+            "Mammott"
+          ],
+          "result": "Pango"
+        },
+        {
+          "parents": [
+            "Potbelly",
+            "Noggin"
+          ],
+          "result": "Shrubb"
+        },
+        {
+          "parents": [
+            "Potbelly",
+            "Toe Jammer"
+          ],
+          "result": "Oaktopus"
+        },
+        {
+          "parents": [
+            "Potbelly",
+            "Mammott"
+          ],
+          "result": "Furcorn"
+        }
+      ],
+      "warnings": [
+        "Do not generalize this guarantee to Fire doubles or Magical doubles.",
+        "Non-Natural double-element breeding can fail back to a parent."
+      ],
+      "confidence": "source_supported"
+    },
+    {
+      "id": "quad-plus-single-guaranteed-single",
+      "label": "Quad + Single guaranteed single duplicate",
+      "rule_type": "duplicate_farming",
+      "guarantee": true,
+      "parents": {
+        "pattern": "quad_element_monster + single_element_monster"
+      },
+      "result": {
+        "pattern": "single_element_parent"
+      },
+      "examples": [
+        {
+          "parents": [
+            "Entbrat",
+            "Potbelly"
+          ],
+          "result": "Potbelly"
+        },
+        {
+          "parents": [
+            "Deedge",
+            "Tweedle"
+          ],
+          "result": "Tweedle"
+        }
+      ],
+      "notes": [
+        "Useful for farming single-element monsters without buying them from the market.",
+        "Still requires the parent pair to be valid on the island being used."
+      ],
+      "confidence": "source_supported"
+    },
+    {
+      "id": "shugafam-plus-shugabush-clone",
+      "label": "Shugafam + Shugabush clone",
+      "rule_type": "duplicate_farming",
+      "guarantee": true,
+      "parents": {
+        "pattern": "shugafam_monster + Shugabush"
+      },
+      "result": {
+        "pattern": "same_shugafam_monster"
+      },
+      "examples": [
+        {
+          "parents": [
+            "Shugarock",
+            "Shugabush"
+          ],
+          "result": "Shugarock"
+        }
+      ],
+      "notes": [
+        "Useful if confirmed, but should not drive hard automation yet.",
+        "Needs stronger source support or our own observed training evidence."
+      ],
+      "confidence": "needs_verification"
+    }
+  ]
+}
