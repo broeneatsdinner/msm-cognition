@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import itertools
+import json
 import math
 import shutil
 from dataclasses import dataclass
@@ -51,10 +52,45 @@ class ExperimentResult:
 	config: ExperimentConfig
 	out_dir: Path
 	candidates: list[breeder.CandidateEvidence]
+	contexts: list[CandidateContext]
 
 	@property
 	def top_candidate(self) -> breeder.CandidateEvidence | None:
 		return self.candidates[0] if self.candidates else None
+
+
+@dataclass(frozen=True)
+class CandidateContext:
+	candidate_index: int
+	context_box: breeder.CropBox
+	path: Path
+	boxed_path: Path
+
+
+@dataclass(frozen=True)
+class CandidateObservation:
+	experiment_number: int
+	candidate_index: int
+	detection: breeder.DetectorCandidate
+	boxed_context_path: Path
+
+
+@dataclass
+class CandidateCluster:
+	number: int
+	observations: list[CandidateObservation]
+
+	@property
+	def representative_box(self) -> breeder.CropBox:
+		box_counts: dict[breeder.CropBox, int] = {}
+		for observation in self.observations:
+			box = observation.detection.box
+			box_counts[box] = box_counts.get(box, 0) + 1
+		return max(box_counts, key=lambda box: (box_counts[box], observation_box_area(box)))
+
+
+def observation_box_area(box: breeder.CropBox) -> int:
+	return box.w * box.h
 
 
 def template_sets_for_island(island: str) -> tuple[TemplateSet, ...]:
@@ -146,6 +182,86 @@ def detector_args(
 	)
 
 
+def save_candidate_context(
+	source_image: Image.Image,
+	experiment_dir: Path,
+	candidate_index: int,
+	candidate_box: breeder.CropBox,
+) -> CandidateContext:
+	padding = max(96, round(max(candidate_box.w, candidate_box.h) * 1.25))
+	unclamped_context_box = breeder.CropBox(
+		x=candidate_box.x - padding,
+		y=candidate_box.y - padding,
+		w=candidate_box.w + (padding * 2),
+		h=candidate_box.h + (padding * 2),
+	)
+	context_box = breeder.clamp_box(unclamped_context_box, source_image)
+	context = breeder.crop_image(source_image, context_box).convert("RGB")
+	context_path = experiment_dir / f"candidate-{candidate_index}-source-context.png"
+	boxed_path = experiment_dir / f"candidate-{candidate_index}-source-context-boxed.png"
+	breeder.save_png(context, context_path)
+
+	boxed = context.copy()
+	draw = ImageDraw.Draw(boxed)
+	left = candidate_box.x - context_box.x
+	top = candidate_box.y - context_box.y
+	right = left + candidate_box.w - 1
+	bottom = top + candidate_box.h - 1
+	draw.rectangle((left, top, right, bottom), outline=(8, 12, 18), width=10)
+	draw.rectangle((left, top, right, bottom), outline=(255, 216, 64), width=5)
+
+	font = load_font(20, bold=True)
+	label = f"Candidate {candidate_index} · {candidate_box.x},{candidate_box.y},{candidate_box.w},{candidate_box.h}"
+	label_box = draw.textbbox((0, 0), label, font=font)
+	label_width = label_box[2] - label_box[0]
+	label_height = label_box[3] - label_box[1]
+	label_x = max(0, min(left, boxed.width - label_width - 12))
+	label_y = top - label_height - 14
+	if label_y < 0:
+		label_y = min(boxed.height - label_height - 12, bottom + 8)
+	draw.rounded_rectangle(
+		(label_x, label_y, label_x + label_width + 12, label_y + label_height + 10),
+		radius=5,
+		fill=(8, 12, 18),
+	)
+	draw.text((label_x + 6, label_y + 4), label, font=font, fill=(255, 226, 94))
+	breeder.save_png(boxed, boxed_path)
+
+	return CandidateContext(
+		candidate_index=candidate_index,
+		context_box=context_box,
+		path=context_path,
+		boxed_path=boxed_path,
+	)
+
+
+def append_contexts_to_report(report_path: Path, contexts: list[CandidateContext]) -> None:
+	if not contexts:
+		return
+	lines = [
+		"",
+		"## Candidate source context",
+		"",
+		"These wider screenshot crops show where each isolated detector crop came from. The yellow rectangle is the exact candidate box.",
+		"",
+	]
+	for context in contexts:
+		lines.extend(
+			[
+				f"### Candidate {context.candidate_index} context",
+				"",
+				f"Context box: `{context.context_box.as_report_text()}`",
+				"",
+				f"![Candidate {context.candidate_index} source context]({context.path.name})",
+				"",
+				f"![Candidate {context.candidate_index} source context with detector box]({context.boxed_path.name})",
+				"",
+			]
+		)
+	with report_path.open("a", encoding="utf-8") as report:
+		report.write("\n".join(lines))
+
+
 def run_experiments(args: argparse.Namespace, configs: list[ExperimentConfig]) -> list[ExperimentResult]:
 	source_image = breeder.load_image(args.source)
 	breeding_data = breeder.load_breeding_data()
@@ -181,6 +297,7 @@ def run_experiments(args: argparse.Namespace, configs: list[ExperimentConfig]) -
 
 		shutil.copy2(args.source, experiment_dir / "source.png")
 		candidate_evidence: list[breeder.CandidateEvidence] = []
+		candidate_contexts: list[CandidateContext] = []
 		for candidate_index, detection in enumerate(detected, start=1):
 			manual_parents = tuple(args.parents) if candidate_index == 1 else (None, None)
 			candidate_evidence.append(
@@ -195,9 +312,18 @@ def run_experiments(args: argparse.Namespace, configs: list[ExperimentConfig]) -
 					manual_parents=manual_parents,
 				)
 			)
+			candidate_contexts.append(
+				save_candidate_context(
+					source_image=source_image,
+					experiment_dir=experiment_dir,
+					candidate_index=candidate_index,
+					candidate_box=detection.box,
+				)
+			)
 
+		report_path = experiment_dir / "report.md"
 		breeder.write_report(
-			report_path=experiment_dir / "report.md",
+			report_path=report_path,
 			args=config_args,
 			source_copy=experiment_dir / "source.png",
 			candidates=candidate_evidence,
@@ -205,12 +331,14 @@ def run_experiments(args: argparse.Namespace, configs: list[ExperimentConfig]) -
 			debug_candidates=debug_candidates,
 			detector_debug=detector_debug,
 		)
+		append_contexts_to_report(report_path, candidate_contexts)
 		results.append(
 			ExperimentResult(
 				number=number,
 				config=config,
 				out_dir=experiment_dir,
 				candidates=candidate_evidence,
+				contexts=candidate_contexts,
 			)
 		)
 		print(
@@ -227,11 +355,129 @@ def markdown_link(label: str, path: Path, base: Path) -> str:
 	return f"[{label}]({path.relative_to(base).as_posix()})"
 
 
+def cluster_candidate_boxes(results: list[ExperimentResult], iou_threshold: float = 0.85) -> list[CandidateCluster]:
+	clusters: list[CandidateCluster] = []
+	for result in results:
+		for candidate, context in zip(result.candidates, result.contexts, strict=True):
+			if candidate.detection is None:
+				continue
+			observation = CandidateObservation(
+				experiment_number=result.number,
+				candidate_index=candidate.index,
+				detection=candidate.detection,
+				boxed_context_path=context.boxed_path,
+			)
+			matching_cluster = next(
+				(
+					cluster
+					for cluster in clusters
+					if breeder.box_iou(candidate.detection.box, cluster.representative_box) >= iou_threshold
+				),
+				None,
+			)
+			if matching_cluster:
+				matching_cluster.observations.append(observation)
+			else:
+				clusters.append(CandidateCluster(number=len(clusters) + 1, observations=[observation]))
+
+	clusters.sort(key=lambda cluster: len(cluster.observations), reverse=True)
+	for number, cluster in enumerate(clusters, start=1):
+		cluster.number = number
+	return clusters
+
+
+def box_as_json(box: breeder.CropBox) -> dict[str, int]:
+	return {"x": box.x, "y": box.y, "w": box.w, "h": box.h}
+
+
+def box_from_json(value: object) -> breeder.CropBox | None:
+	if not isinstance(value, dict):
+		return None
+	try:
+		return breeder.CropBox(
+			x=int(value["x"]),
+			y=int(value["y"]),
+			w=int(value["w"]),
+			h=int(value["h"]),
+		)
+	except (KeyError, TypeError, ValueError):
+		return None
+
+
+def annotation_for_box(annotations: list[dict], box: breeder.CropBox) -> dict | None:
+	for annotation in annotations:
+		annotation_box = box_from_json(annotation.get("box"))
+		if annotation_box and breeder.box_iou(annotation_box, box) >= 0.85:
+			return annotation
+	return None
+
+
+def source_display_path(source: Path) -> str:
+	try:
+		return source.relative_to(REPO_ROOT).as_posix()
+	except ValueError:
+		return str(source)
+
+
+def write_annotation_file(
+	args: argparse.Namespace,
+	clusters: list[CandidateCluster],
+) -> tuple[Path, dict]:
+	path = args.out / "annotations.json"
+	if path.exists():
+		try:
+			data = json.loads(path.read_text(encoding="utf-8"))
+		except (json.JSONDecodeError, OSError) as exc:
+			raise RuntimeError(f"Could not preserve existing annotation file {path}: {exc}") from exc
+	else:
+		data = {"schema_version": 1, "annotations": []}
+
+	annotations = data.get("annotations")
+	if not isinstance(annotations, list):
+		raise RuntimeError(f"Expected an annotations list in {path}")
+	data["schema_version"] = 1
+	data["source"] = source_display_path(args.source)
+	data["island"] = args.island
+
+	if not any(annotation.get("label") == "breeding_structure" for annotation in annotations):
+		annotations.append(
+			{
+				"id": "breeding-structure-manual-box",
+				"label": "breeding_structure",
+				"status": "needs_manual_box",
+				"box": None,
+				"notes": "Draw the real Breeding Structure box after reviewing source context crops.",
+			}
+		)
+
+	for cluster in clusters:
+		box = cluster.representative_box
+		annotation = annotation_for_box(annotations, box)
+		if annotation is None:
+			annotation = {
+				"id": f"detector-cluster-{box.x}-{box.y}-{box.w}-{box.h}",
+				"label": "detector_candidate",
+				"status": "needs_review",
+				"box": box_as_json(box),
+				"notes": "Review the boxed source context before assigning a label.",
+			}
+			annotations.append(annotation)
+		annotation["cluster_occurrences"] = len(cluster.observations)
+		annotation["observed_in_experiments"] = sorted(
+			{observation.experiment_number for observation in cluster.observations}
+		)
+
+	path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+	return path, data
+
+
 def crop_links(result: ExperimentResult, base: Path) -> str:
 	if not result.top_candidate:
 		return "—"
 	prefix = result.out_dir / "candidate-1"
 	paths = (
+		("context", result.contexts[0].path),
+		("boxed context", result.contexts[0].boxed_path),
 		("crop", Path(f"{prefix}-crop-breeder.png")),
 		("crop 4x", Path(f"{prefix}-crop-breeder-4x.png")),
 		("left egg", Path(f"{prefix}-crop-left-parent-egg.png")),
@@ -242,8 +488,15 @@ def crop_links(result: ExperimentResult, base: Path) -> str:
 	return "<br>".join(markdown_link(label, path, base) for label, path in paths)
 
 
-def write_summary(args: argparse.Namespace, results: list[ExperimentResult], total_configs: int) -> Path:
+def write_summary(
+	args: argparse.Namespace,
+	results: list[ExperimentResult],
+	total_configs: int,
+	clusters: list[CandidateCluster],
+	annotation_data: dict,
+) -> Path:
 	path = args.out / "experiment-summary.md"
+	annotations = annotation_data["annotations"]
 	lines = [
 		"# Breeder Detector Experiment Summary",
 		"",
@@ -254,9 +507,38 @@ def write_summary(args: argparse.Namespace, results: list[ExperimentResult], tot
 		"",
 		"The experiment order is balanced across thresholds, minimum sizes, and template sets so limited runs sample the full search space early.",
 		"",
+		"Candidate annotations: [annotations.json](annotations.json)",
+		"",
+		"## Candidate box clusters",
+		"",
+		"Candidate boxes are grouped when their intersection-over-union is at least 0.85. Repeated detections at one location are one review target, not independent evidence that the detection is correct.",
+		"",
+		"| Cluster | Representative box | Occurrences | Experiments | Score range | Templates | Annotation | Status | Example context |",
+		"|---:|---|---:|---|---|---|---|---|---|",
+	]
+	for cluster in clusters:
+		box = cluster.representative_box
+		annotation = annotation_for_box(annotations, box) or {}
+		scores = [observation.detection.match_score for observation in cluster.observations]
+		templates = sorted({observation.detection.template_name for observation in cluster.observations})
+		experiments = sorted({observation.experiment_number for observation in cluster.observations})
+		example = cluster.observations[0]
+		lines.append(
+			f"| {cluster.number} | `{box.as_report_text()}` | {len(cluster.observations)} | "
+			f"{', '.join(f'{number:03d}' for number in experiments)} | "
+			f"{min(scores):.3f}–{max(scores):.3f} | {', '.join(templates)} | "
+			f"{annotation.get('label', 'unannotated')} | {annotation.get('status', 'needs_review')} | "
+			f"{markdown_link('boxed context', example.boxed_context_path, args.out)} |"
+		)
+	lines.extend(
+		[
+			"",
+			"## Experiments",
+			"",
 		"| Experiment | Threshold | Min size | Template set | Template flags | Max candidates | Candidates | Top score | Top template | Top box | No candidates | Evidence |",
 		"|---:|---:|---:|---|---|---:|---:|---:|---|---|---|---|",
-	]
+		]
+	)
 	for result in results:
 		config = result.config
 		top = result.top_candidate
@@ -309,7 +591,7 @@ def draw_contact_sheet(args: argparse.Namespace, results: list[ExperimentResult]
 	draw.text((margin, 20), "Breeder Detector Experiment Contact Sheet", font=title_font, fill=(246, 248, 252))
 	draw.text(
 		(margin, 64),
-		f"{args.island} · {len(results)} experiments · top candidate from each configuration",
+		f"{args.island} · {len(results)} experiments · boxed source context for each top candidate",
 		font=subtitle_font,
 		fill=(174, 187, 207),
 	)
@@ -358,7 +640,7 @@ def draw_contact_sheet(args: argparse.Namespace, results: list[ExperimentResult]
 				font=card_font,
 				fill=(38, 113, 89),
 			)
-			crop_path = result.out_dir / "candidate-1-crop-breeder-4x.png"
+			crop_path = result.contexts[0].boxed_path
 			with Image.open(crop_path) as crop_file:
 				crop = crop_file.convert("RGB")
 				crop.thumbnail((image_width - 28, image_height - 28), Image.Resampling.LANCZOS)
@@ -418,8 +700,11 @@ def main() -> int:
 	args.out.mkdir(parents=True, exist_ok=True)
 
 	results = run_experiments(args, configs)
-	summary_path = write_summary(args, results, len(all_configs))
+	clusters = cluster_candidate_boxes(results)
+	annotation_path, annotation_data = write_annotation_file(args, clusters)
+	summary_path = write_summary(args, results, len(all_configs), clusters, annotation_data)
 	contact_sheet_path = draw_contact_sheet(args, results)
+	print(f"Wrote {annotation_path.relative_to(REPO_ROOT)}")
 	print(f"Wrote {summary_path.relative_to(REPO_ROOT)}")
 	print(f"Wrote {contact_sheet_path.relative_to(REPO_ROOT)}")
 	return 0

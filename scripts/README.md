@@ -84,7 +84,7 @@ Detector output can be promoted into `training/evidence/` when it captures a use
 run_breeder_detector_experiments.py
 ```
 
-Runs a balanced sweep of detector thresholds, minimum candidate sizes, template sets, and maximum candidate counts against one screenshot. Every experiment gets its own full detector report, original and 4x Breeding Structure crops, and parent egg crops. The output root also gets a Markdown comparison table and a large, labeled contact sheet for quick visual review.
+Runs a balanced sweep of detector thresholds, minimum candidate sizes, template sets, and maximum candidate counts against one screenshot. Every experiment gets its own full detector report, original and 4x Breeding Structure crops, parent egg crops, and wider source-context crops with the candidate box visibly outlined. The output root also gets a Markdown comparison table and a large, labeled context contact sheet for quick visual review.
 
 Use `--limit` for a fast initial pass. Limited runs are ordered to sample all configuration dimensions early; omit it to run the full sweep. Paironormal templates are included as a separate template set only when the island name contains `Paironormal`.
 
@@ -97,7 +97,9 @@ python3 scripts/run_breeder_detector_experiments.py \
   --limit 50
 ```
 
-Review `experiment-summary.md` and `contact-sheet.png` first, then open an experiment's `report.md` for all candidates and parent evidence. Experiment output is generated training evidence; leave it untracked unless it has been deliberately reviewed and selected for promotion.
+Review `experiment-summary.md` and `contact-sheet.png` first, then open an experiment's `report.md` for all candidates and parent evidence. The summary clusters recurring candidate boxes so repeated false positives can be annotated once. Human labels live in `annotations.json`; reruns preserve those labels, update occurrence metadata, add new detector clusters as `needs_review`, and keep a `breeding_structure` placeholder until a human supplies the real box.
+
+Experiment output is generated training evidence; leave it untracked unless it has been deliberately reviewed and selected for promotion.
 
 ```text
 summarize_detector_training.py
