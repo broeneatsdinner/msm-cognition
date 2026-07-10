@@ -32,7 +32,9 @@ Looks up island-scoped breeding combinations from `reference/breeding/common-nat
 guess_breeder_result.py
 ```
 
-Builds a local evidence report from a breeder screenshot, parent egg crops, local egg reference assets, and the structured breeding data.
+Builds a local evidence report from a breeder screenshot, manual/debug crop boxes, local egg reference assets, and the structured breeding data. Manual parent names supplied with `--parents` are shown separately from the crude automated egg-reference match table.
+
+Future automatic detection should locate one or two Breeding Structure candidates in a full island screenshot, crop each structure, crop the top-left and top-right parent eggs for in-progress structures, compare them against `assets/eggs/`, and then run the island-scoped breeding lookup.
 
 ## Typical workflow
 
