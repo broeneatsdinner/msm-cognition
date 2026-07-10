@@ -1,0 +1,36 @@
+{
+  "source_page": "https://mysingingmonsters.fandom.com/wiki/Breeding_Structure",
+  "license_note": "Fandom community content is marked on the source page as CC-BY-SA unless otherwise noted; verify before committing third-party assets to a public repository.",
+  "assets": [
+    {
+      "filename": "normal-breeding-structure.webp",
+      "label": "Normal Breeding Structure",
+      "url": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/fe/Breeding_Structure.webp/revision/latest?cb=20251101020706"
+    },
+    {
+      "filename": "enhanced-breeding-structure.webp",
+      "label": "Enhanced Breeding Structure",
+      "url": "https://static.wikia.nocookie.net/mysingingmonsters/images/5/5d/Enhanced_Breeding_Structure.webp/revision/latest?cb=20251101021047"
+    },
+    {
+      "filename": "locked-breeding-structure.webp",
+      "label": "Locked Breeding Structure",
+      "url": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b7/Breeding_Structure_%28Locked%29.webp/revision/latest?cb=20230613032306"
+    },
+    {
+      "filename": "paironormal-breeding-structure.webp",
+      "label": "Paironormal Breeding Structure of the Beyond",
+      "url": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/68/%22Breeding_Structure%22_of_the_Beyond.webp/revision/latest?cb=20251213214522"
+    },
+    {
+      "filename": "paironormal-enhanced-breeding-structure.webp",
+      "label": "Enhanced Paironormal Breeding Structure of the Beyond",
+      "url": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/db/Enhanced_%22Breeding_Structure%22_of_the_Beyond.webp/revision/latest?cb=20251213214551"
+    },
+    {
+      "filename": "paironormal-locked-breeding-structure.webp",
+      "label": "Locked Paironormal Breeding Structure of the Beyond",
+      "url": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/f4/%22Breeding_Structure%22_of_the_Beyond_%28Locked%29.webp/revision/latest?cb=20251213214225"
+    }
+  ]
+}
