@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "scope": "common_natural_best_breeding_combinations",
+  "source_notes": [
+    "Data is structured from the My Singing Monsters Wiki Breeding Combinations page.",
+    "This records best listed combinations and island availability, not every possible alternate pair.",
+    "Mirror islands are modeled as aliases of their original island for Book of Monsters purposes."
+  ],
+  "mirror_aliases": {
+    "Mirror Plant Island": "Plant Island",
+    "Mirror Cold Island": "Cold Island",
+    "Mirror Air Island": "Air Island",
+    "Mirror Water Island": "Water Island",
+    "Mirror Earth Island": "Earth Island"
+  },
+  "monsters": {
+    "Dandidoo": {
+      "parents": ["Tweedle", "Potbelly"],
+      "time": "8h",
+      "enhanced_time": "6h",
+      "islands": ["Cold Island", "Water Island", "Earth Island", "Fire Haven"]
+    },
+    "Cybop": {
+      "parents": ["Tweedle", "Noggin"],
+      "time": "8h",
+      "enhanced_time": "6h",
+      "islands": ["Air Island", "Water Island", "Earth Island", "Fire Haven"]
+    },
+    "Quibble": {
+      "parents": ["Tweedle", "Toe Jammer"],
+      "time": "8h",
+      "enhanced_time": "6h",
+      "islands": ["Cold Island", "Air Island", "Water Island", "Shugabush Island", "Fire Oasis"]
+    },
+    "Pango": {
+      "parents": ["Tweedle", "Mammott"],
+      "time": "8h",
+      "enhanced_time": "6h",
+      "islands": ["Cold Island", "Air Island", "Earth Island", "Fire Oasis"]
+    },
+    "Shrubb": {
+      "parents": ["Potbelly", "Noggin"],
+      "time": "8h",
+      "enhanced_time": "6h",
+      "islands": ["Plant Island", "Water Island", "Earth Island", "Fire Haven"]
+    },
+    "Oaktopus": {
+      "parents": ["Potbelly", "Toe Jammer"],
+      "time": "8h",
+      "enhanced_time": "6h",
+      "islands": ["Plant Island", "Cold Island", "Water Island", "Shugabush Island", "Psychic Island"]
+    },
+    "Furcorn": {
+      "parents": ["Potbelly", "Mammott"],
+      "time": "8h",
+      "enhanced_time": "6h",
+      "islands": ["Plant Island", "Cold Island", "Earth Island", "Shugabush Island", "Light Island"]
+    },
+    "Fwog": {
+      "parents": ["Noggin", "Toe Jammer"],
+      "time": "30m",
+      "enhanced_time": "22m 30s",
+      "islands": ["Plant Island", "Air Island", "Water Island", "Bone Island"]
+    },
+    "Drumpler": {
+      "parents": ["Noggin", "Mammott"],
+      "time": "30m",
+      "enhanced_time": "22m 30s",
+      "islands": ["Plant Island", "Air Island", "Earth Island", "Faerie Island"]
+    },
+    "Maw": {
+      "parents": ["Toe Jammer", "Mammott"],
+      "time": "30m",
+      "enhanced_time": "22m 30s",
+      "islands": ["Plant Island", "Cold Island", "Air Island", "Fire Oasis"]
+    },
+    "Reedling": {
+      "parents": ["Noggin", "Dandidoo"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Water Island", "Earth Island", "Fire Haven"]
+    },
+    "Spunge": {
+      "parents": ["Toe Jammer", "Dandidoo"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Cold Island", "Water Island"]
+    },
+    "Thumpies": {
+      "parents": ["Mammott", "Dandidoo"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Cold Island", "Earth Island"]
+    },
+    "Scups": {
+      "parents": ["Noggin", "Quibble"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Air Island", "Water Island"]
+    },
+    "PomPom": {
+      "parents": ["Noggin", "Pango"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Air Island", "Earth Island", "Shugabush Island"]
+    },
+    "Congle": {
+      "parents": ["Toe Jammer", "Pango"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Cold Island", "Air Island", "Fire Oasis"]
+    },
+    "Pummel": {
+      "parents": ["Noggin", "Oaktopus"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Plant Island", "Water Island"]
+    },
+    "Clamble": {
+      "parents": ["Noggin", "Furcorn"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Plant Island", "Earth Island"]
+    },
+    "Bowgart": {
+      "parents": ["Toe Jammer", "Furcorn"],
+      "time": "12h",
+      "enhanced_time": "9h",
+      "islands": ["Plant Island", "Cold Island"]
+    },
+    "T-Rox": {
+      "parents": ["Noggin", "Maw"],
+      "time": "8h",
+      "enhanced_time": "6h",
+      "islands": ["Plant Island", "Air Island"]
+    },
+    "Shellbeat": {
+      "parents": ["Noggin", "Spunge"],
+      "time": "1d",
+      "enhanced_time": "18h",
+      "islands": ["Water Island"]
+    },
+    "Quarrister": {
+      "parents": ["Noggin", "Thumpies"],
+      "time": "1d",
+      "enhanced_time": "18h",
+      "islands": ["Earth Island"]
+    },
+    "Deedge": {
+      "parents": ["Toe Jammer", "Thumpies"],
+      "time": "1d",
+      "enhanced_time": "18h",
+      "islands": ["Cold Island", "Shugabush Island"]
+    },
+    "Riff": {
+      "parents": ["Noggin", "Congle"],
+      "time": "1d",
+      "enhanced_time": "18h",
+      "islands": ["Air Island"]
+    },
+    "Entbrat": {
+      "parents": ["Noggin", "Bowgart"],
+      "time": "1d",
+      "enhanced_time": "18h",
+      "islands": ["Plant Island"]
+    }
+  }
+}
