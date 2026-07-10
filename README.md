@@ -70,6 +70,9 @@ reference/
 
 scripts/
   build_curated_docs.py  Generate curated Markdown from reference data
+  breeding_lookup.py     Look up island-scoped breeding combinations
+  guess_breeder_result.py
+                         Build screenshot evidence reports for breeder guesses
   inspect_reference_data.py
                          Inspect spreadsheet-shaped JSON exports
 
@@ -139,6 +142,12 @@ Regenerate curated island documentation:
 
 ```bash
 python3 scripts/build_curated_docs.py
+```
+
+Some helper scripts use Pillow for image loading, cropping, upscaling, and comparison. Install the current Python dependencies with:
+
+```bash
+python3 -m pip install -r requirements.txt
 ```
 
 After running generators, check for changes:
