@@ -88,6 +88,8 @@ Runs a balanced sweep of detector thresholds, minimum candidate sizes, template 
 
 Use `--limit` for a fast initial pass. Limited runs are ordered to sample all configuration dimensions early; omit it to run the full sweep. Paironormal templates are included as a separate template set only when the island name contains `Paironormal`.
 
+Only clean `.webp` structure assets may be used as detector or scoring references. Human-annotated images are visual guidance only: files named as annotated, marked, notes, human markup, guides, or guidance are excluded from reference scoring and must not be used as detector templates. Raw capture folders such as `breeding-structure-grabs/` are not ingested automatically.
+
 ```bash
 python3 scripts/run_breeder_detector_experiments.py \
   --source training/screenshots/2026-07-09-world-overview-mirror-cold-island.png \
@@ -98,6 +100,8 @@ python3 scripts/run_breeder_detector_experiments.py \
 ```
 
 Review `experiment-summary.md` and `contact-sheet.png` first, then open an experiment's `report.md` for all candidates and parent evidence. The summary clusters recurring candidate boxes so repeated false positives can be annotated once. Human labels live in `annotations.json`; reruns preserve those labels, update occurrence metadata, add new detector clusters as `needs_review`, and keep a `breeding_structure` placeholder until a human supplies the real box.
+
+Each detector candidate retains its raw OpenCV template score and also receives a non-definitive breeder-likeness score for ranking. The second-stage score combines masked HSV color similarity, multi-scale edge layout, silhouette/masked shape similarity, local candidate-versus-surroundings separation, and soft world-view size/edge sanity, then subtracts visual-similarity and box-overlap penalties from confirmed false-positive annotations. The summary and per-experiment reports show every component so a human can see why a candidate moved up or down.
 
 Experiment output is generated training evidence; leave it untracked unless it has been deliberately reviewed and selected for promotion.
 
