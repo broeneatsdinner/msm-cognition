@@ -2,11 +2,11 @@
 
 ## Screenshot batch
 
-This observation records a 19-image My Singing Monsters world overview batch from 2026-07-09.
+This observation records a 21-image My Singing Monsters world overview batch from 2026-07-09.
 
 The batch contains:
 
-- 16 island overview screenshots
+- 18 island overview screenshots
 - 3 map / island inventory screenshots
 
 ## Screenshot files
@@ -14,6 +14,8 @@ The batch contains:
 ```text
 training/screenshots/2026-07-09-world-overview-plant-island.png
 training/screenshots/2026-07-09-world-overview-cold-island.png
+training/screenshots/2026-07-09-world-overview-mirror-plant-island.png
+training/screenshots/2026-07-09-world-overview-mirror-cold-island.png
 training/screenshots/2026-07-09-world-overview-air-island.png
 training/screenshots/2026-07-09-world-overview-water-island.png
 training/screenshots/2026-07-09-world-overview-earth-island.png
@@ -233,3 +235,18 @@ breeding_audit:
     - Plant Island breeding_structure
     - Plant Island nursery
 ```
+
+## Mirror island addendum
+
+The initial world overview batch missed Mirror Plant Island and Mirror Cold Island. The user caught this and added both screenshots afterward.
+
+Additional screenshot files:
+
+```text
+training/screenshots/2026-07-09-world-overview-mirror-plant-island.png
+training/screenshots/2026-07-09-world-overview-mirror-cold-island.png
+```
+
+These images extend the batch from 16 island overviews to 18 island overviews.
+
+The map inventory counts recorded above were read from the three map / island inventory screenshots already present in the batch. Mirror island population counts should not be inferred here unless they are visible in a map inventory screenshot or confirmed by the user.
