@@ -81,6 +81,25 @@ The relative parent crop boxes are fractions inside each detected Breeding Struc
 Detector output can be promoted into `training/evidence/` when it captures a useful success, false positive, missed detection, or parent crop correction. Annotate the report's `training_review` block instead of treating the output as disposable.
 
 ```text
+run_breeder_detector_experiments.py
+```
+
+Runs a balanced sweep of detector thresholds, minimum candidate sizes, template sets, and maximum candidate counts against one screenshot. Every experiment gets its own full detector report, original and 4x Breeding Structure crops, and parent egg crops. The output root also gets a Markdown comparison table and a large, labeled contact sheet for quick visual review.
+
+Use `--limit` for a fast initial pass. Limited runs are ordered to sample all configuration dimensions early; omit it to run the full sweep. Paironormal templates are included as a separate template set only when the island name contains `Paironormal`.
+
+```bash
+python3 scripts/run_breeder_detector_experiments.py \
+  --source training/screenshots/2026-07-09-world-overview-mirror-cold-island.png \
+  --island "Mirror Cold Island" \
+  --parents Mammott Tweedle \
+  --out training/evidence/experiments/mirror-cold-breeder-sweep \
+  --limit 50
+```
+
+Review `experiment-summary.md` and `contact-sheet.png` first, then open an experiment's `report.md` for all candidates and parent evidence. Experiment output is generated training evidence; leave it untracked unless it has been deliberately reviewed and selected for promotion.
+
+```text
 summarize_detector_training.py
 ```
 
@@ -114,5 +133,6 @@ python3 -m pip install -r requirements.txt
 Current external dependencies:
 
 - Pillow — image loading, cropping, upscaling, and comparison helpers
+- OpenCV — Breeding Structure template matching
 
 The scripts expect Python 3.
