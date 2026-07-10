@@ -51,6 +51,17 @@ class CropBox:
 
 
 @dataclass(frozen=True)
+class RelativeCropBox:
+	x: float
+	y: float
+	w: float
+	h: float
+
+	def as_report_text(self) -> str:
+		return f"x={self.x:g}, y={self.y:g}, w={self.w:g}, h={self.h:g}"
+
+
+@dataclass(frozen=True)
 class DetectorCandidate:
 	box: CropBox
 	template_name: str
@@ -70,6 +81,8 @@ class CropArtifact:
 class ParentEvidence:
 	side: str
 	crop: CropArtifact
+	relative_crop: RelativeCropBox | None
+	crop_was_clamped: bool
 	manual_parent: str | None
 	manual_reference_path: Path | None
 	auto_parent: str | None
@@ -122,6 +135,27 @@ def parse_crop(value: str) -> CropBox:
 		raise argparse.ArgumentTypeError("crop width and height must be positive")
 
 	return CropBox(x=x, y=y, w=w, h=h)
+
+
+def parse_relative_crop(value: str) -> RelativeCropBox:
+	parts = [part.strip() for part in value.split(",")]
+	if len(parts) != 4:
+		raise argparse.ArgumentTypeError("relative crop boxes must be x,y,w,h")
+	try:
+		x, y, w, h = [float(part) for part in parts]
+	except ValueError as exc:
+		raise argparse.ArgumentTypeError("relative crop box values must be floats") from exc
+
+	if not 0.0 <= x <= 1.0:
+		raise argparse.ArgumentTypeError("relative crop x must be between 0 and 1")
+	if not 0.0 <= y <= 1.0:
+		raise argparse.ArgumentTypeError("relative crop y must be between 0 and 1")
+	if not 0.0 < w <= 1.0:
+		raise argparse.ArgumentTypeError("relative crop w must be greater than 0 and no more than 1")
+	if not 0.0 < h <= 1.0:
+		raise argparse.ArgumentTypeError("relative crop h must be greater than 0 and no more than 1")
+
+	return RelativeCropBox(x=x, y=y, w=w, h=h)
 
 
 def normalize_name(value: str) -> str:
@@ -291,13 +325,12 @@ def md_rel(path: Path, base: Path) -> str:
 	return path.relative_to(base).as_posix()
 
 
-def relative_box(parent: CropBox, rel_box: tuple[float, float, float, float]) -> CropBox:
-	x_rel, y_rel, w_rel, h_rel = rel_box
+def relative_box(parent: CropBox, rel_box: RelativeCropBox) -> CropBox:
 	return CropBox(
-		x=parent.x + round(parent.w * x_rel),
-		y=parent.y + round(parent.h * y_rel),
-		w=max(1, round(parent.w * w_rel)),
-		h=max(1, round(parent.h * h_rel)),
+		x=parent.x + round(parent.w * rel_box.x),
+		y=parent.y + round(parent.h * rel_box.y),
+		w=max(1, round(parent.w * rel_box.w)),
+		h=max(1, round(parent.h * rel_box.h)),
 	)
 
 
@@ -470,6 +503,16 @@ def append_crop(lines: list[str], artifact: CropArtifact, out_dir: Path) -> None
 def append_parent_evidence(lines: list[str], parent: ParentEvidence, out_dir: Path) -> None:
 	lines.append(f"### {parent.side.title()} parent egg crop")
 	lines.append("")
+	if parent.relative_crop:
+		lines.append(f"Relative crop inside detected Breeding Structure: `{parent.relative_crop.as_report_text()}`")
+		lines.append("")
+		lines.append(f"Resulting absolute crop box: `{parent.crop.box.as_report_text()}`")
+		lines.append("")
+		if parent.crop_was_clamped:
+			lines.append("Crop clamping: **yes**")
+		else:
+			lines.append("Crop clamping: **no**")
+		lines.append("")
 	append_crop(lines, parent.crop, out_dir)
 	lines.append("")
 	lines.append(f"Manual parent: **{parent.manual_parent or 'not supplied'}**  ")
@@ -687,6 +730,7 @@ def write_report(
 	lines.append("")
 	lines.append("- When a Breeding Structure is in progress, the top-left and top-right eggs are the parent eggs.")
 	lines.append("- When a Breeding Structure is finished, the bottom-center egg is the resulting egg.")
+	lines.append("- Parent egg crop regions are currently heuristic and should be tuned from confirmed training examples.")
 	lines.append("- Automated egg-reference matching is a simple helper, not a trained recognizer and not authoritative.")
 	lines.append("- Manual parent recognition, when supplied, is displayed separately from automated matches.")
 	lines.append("")
@@ -722,6 +766,10 @@ def write_report(
 		lines.append("")
 		lines.append("### Parent egg evidence")
 		lines.append("")
+		if args.mode == "detect-breeders":
+			lines.append(f"Left parent relative crop setting: `{args.left_parent_rel.as_report_text()}`  ")
+			lines.append(f"Right parent relative crop setting: `{args.right_parent_rel.as_report_text()}`")
+			lines.append("")
 		append_parent_evidence(lines, candidate.left_parent, out_dir)
 		lines.append("")
 		append_parent_evidence(lines, candidate.right_parent, out_dir)
@@ -729,14 +777,24 @@ def write_report(
 		append_lookup_and_guess(lines, args, data, candidate.left_parent, candidate.right_parent, candidate.guesses)
 		lines.append("")
 
-	lines.append("## Pending user confirmation/correction")
+	lines.append("## Training review")
+	lines.append("")
+	lines.append("Suggested `detector_classification` values: `confirmed_positive`, `false_positive`, `missed_detection`, `parent_crop_incorrect`, `parent_crop_correct`, `unresolved`.")
 	lines.append("")
 	lines.append("```yaml")
-	lines.append("user_confirmation:")
-	lines.append("  status: pending")
-	lines.append("  confirmed_candidate: null")
+	lines.append("training_review:")
+	lines.append("  status: unresolved")
+	lines.append("  detector_candidate_correct: null")
+	lines.append("  detector_classification: null")
+	lines.append("  breeder_box_correction: null")
+	lines.append("  left_parent_crop_correct: null")
+	lines.append("  left_parent_box_correction: null")
+	lines.append("  right_parent_crop_correct: null")
+	lines.append("  right_parent_box_correction: null")
+	lines.append("  confirmed_left_parent: null")
+	lines.append("  confirmed_right_parent: null")
 	lines.append("  confirmed_result: null")
-	lines.append("  correction: null")
+	lines.append("  notes: null")
 	lines.append("```")
 	lines.append("")
 
@@ -755,8 +813,10 @@ def build_candidate_evidence(
 ) -> CandidateEvidence:
 	prefix = f"candidate-{index}"
 	breeder_box = clamp_box(breeder_box, source_image)
-	left_box = clamp_box(relative_box(breeder_box, LEFT_PARENT_EGG_REL), source_image)
-	right_box = clamp_box(relative_box(breeder_box, RIGHT_PARENT_EGG_REL), source_image)
+	left_unclamped_box = relative_box(breeder_box, args.left_parent_rel)
+	right_unclamped_box = relative_box(breeder_box, args.right_parent_rel)
+	left_box = clamp_box(left_unclamped_box, source_image)
+	right_box = clamp_box(right_unclamped_box, source_image)
 
 	breeder = crop_image(source_image, breeder_box)
 	left = crop_image(source_image, left_box)
@@ -810,6 +870,8 @@ def build_candidate_evidence(
 	left_parent = ParentEvidence(
 		side="left",
 		crop=left_artifact,
+		relative_crop=args.left_parent_rel,
+		crop_was_clamped=left_box != left_unclamped_box,
 		manual_parent=left_manual,
 		manual_reference_path=copy_manual_reference_image(left_manual, out_dir, f"{prefix}-left"),
 		auto_parent=left_matches[0]["monster"] if left_matches else None,
@@ -818,6 +880,8 @@ def build_candidate_evidence(
 	right_parent = ParentEvidence(
 		side="right",
 		crop=right_artifact,
+		relative_crop=args.right_parent_rel,
+		crop_was_clamped=right_box != right_unclamped_box,
 		manual_parent=right_manual,
 		manual_reference_path=copy_manual_reference_image(right_manual, out_dir, f"{prefix}-right"),
 		auto_parent=right_matches[0]["monster"] if right_matches else None,
@@ -877,6 +941,18 @@ def main() -> int:
 	parser.add_argument("--crop-breeder", type=parse_crop, help="Manual mode breeder crop as x,y,w,h")
 	parser.add_argument("--crop-left-egg", type=parse_crop, help="Manual mode left parent egg crop as x,y,w,h")
 	parser.add_argument("--crop-right-egg", type=parse_crop, help="Manual mode right parent egg crop as x,y,w,h")
+	parser.add_argument(
+		"--left-parent-rel",
+		type=parse_relative_crop,
+		default=RelativeCropBox(*LEFT_PARENT_EGG_REL),
+		help="Detected mode left parent egg crop as relative x,y,w,h inside the Breeding Structure candidate",
+	)
+	parser.add_argument(
+		"--right-parent-rel",
+		type=parse_relative_crop,
+		default=RelativeCropBox(*RIGHT_PARENT_EGG_REL),
+		help="Detected mode right parent egg crop as relative x,y,w,h inside the Breeding Structure candidate",
+	)
 	parser.add_argument("--parents", nargs=2, metavar=("LEFT", "RIGHT"), help="Optional manual parent names for candidate 1")
 	parser.add_argument("--out", required=True, type=Path, help="Output evidence directory")
 	parser.add_argument("--top-matches", type=int, default=5, help="Number of egg reference matches to show")
@@ -1039,8 +1115,10 @@ def build_candidate_evidence_from_boxes(
 ) -> CandidateEvidence:
 	prefix = f"candidate-{index}"
 	breeder_box = clamp_box(breeder_box, source_image)
-	left_box = clamp_box(left_box, source_image)
-	right_box = clamp_box(right_box, source_image)
+	left_unclamped_box = left_box
+	right_unclamped_box = right_box
+	left_box = clamp_box(left_unclamped_box, source_image)
+	right_box = clamp_box(right_unclamped_box, source_image)
 
 	breeder = crop_image(source_image, breeder_box)
 	left = crop_image(source_image, left_box)
@@ -1080,6 +1158,8 @@ def build_candidate_evidence_from_boxes(
 			path=left_path,
 			upscaled_path=left_4x_path,
 		),
+		relative_crop=None,
+		crop_was_clamped=left_box != left_unclamped_box,
 		manual_parent=left_manual,
 		manual_reference_path=copy_manual_reference_image(left_manual, out_dir, f"{prefix}-left"),
 		auto_parent=left_matches[0]["monster"] if left_matches else None,
@@ -1093,6 +1173,8 @@ def build_candidate_evidence_from_boxes(
 			path=right_path,
 			upscaled_path=right_4x_path,
 		),
+		relative_crop=None,
+		crop_was_clamped=right_box != right_unclamped_box,
 		manual_parent=right_manual,
 		manual_reference_path=copy_manual_reference_image(right_manual, out_dir, f"{prefix}-right"),
 		auto_parent=right_matches[0]["monster"] if right_matches else None,

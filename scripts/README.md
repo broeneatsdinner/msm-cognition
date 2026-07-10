@@ -64,6 +64,22 @@ python3 scripts/guess_breeder_result.py \
 
 Detector mode uses OpenCV template matching against `assets/structures/breeding-structure/*.webp`, then crops likely parent egg regions inside each detected Breeding Structure. By default, only `normal-breeding-structure.webp` and `enhanced-breeding-structure.webp` are active. Locked templates are opt-in with `--allow-locked-templates`; Paironormal templates are excluded by default unless the island name contains `Paironormal`, and can be enabled with `--allow-paironormal-templates`. Paironormal locked templates require both the Paironormal family and locked templates to be allowed. `--structure-min-width` and `--structure-min-height` reject tiny scaled template matches before they can become candidates. Zero candidates can be a correct conservative result. The automated egg matches are evidence for review, not authoritative recognition.
 
+Parent crop tuning example:
+
+```bash
+python3 scripts/guess_breeder_result.py \
+  --mode detect-breeders \
+  --source examples/screenshots/plant-island.png \
+  --island "Plant Island" \
+  --left-parent-rel 0.20,0.06,0.22,0.22 \
+  --right-parent-rel 0.58,0.06,0.22,0.22 \
+  --out examples/evidence/parent-crop-tuning
+```
+
+The relative parent crop boxes are fractions inside each detected Breeding Structure candidate and should be tuned from confirmed training examples.
+
+Detector output can be promoted into `training/evidence/` when it captures a useful success, false positive, missed detection, or parent crop correction. Annotate the report's `training_review` block instead of treating the output as disposable.
+
 ## Typical workflow
 
 ```bash
