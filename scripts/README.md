@@ -80,12 +80,24 @@ The relative parent crop boxes are fractions inside each detected Breeding Struc
 
 Detector output can be promoted into `training/evidence/` when it captures a useful success, false positive, missed detection, or parent crop correction. Annotate the report's `training_review` block instead of treating the output as disposable.
 
+```text
+summarize_detector_training.py
+```
+
+Summarizes breeder detector evidence reports from `training/evidence/**/report.md`.
+
+```bash
+python3 scripts/summarize_detector_training.py
+python3 scripts/summarize_detector_training.py --out training/evidence/detector-training-summary.md
+```
+
 ## Typical workflow
 
 ```bash
 python3 scripts/inspect_reference_data.py
 python3 scripts/build_curated_docs.py
 python3 scripts/breeding_lookup.py --monster T-Rox --island "Plant Island"
+python3 scripts/summarize_detector_training.py
 git status --short
 ```
 
