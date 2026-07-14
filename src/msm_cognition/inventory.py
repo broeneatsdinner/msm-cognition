@@ -10,6 +10,7 @@ import yaml
 
 
 RECIPE_PATH = Path("reference/breeding/rare-epic-breeding.json")
+BREEDABILITY_PATH = Path("reference/breeding/island-breedability.json")
 INVENTORY_DIRECTORY = Path("inventory/islands")
 OUTPUT_PATH = Path("inventory/README.md")
 
@@ -65,6 +66,24 @@ def target_owned(
         for record in index.get(normalize_name(name), [])
         if record.get("variant") == variant
     )
+
+
+def is_breedable(
+    island_breedability: dict[str, Any], name: str, variant: str
+) -> bool:
+    variant_rules = island_breedability.get(variant)
+    if not isinstance(variant_rules, dict):
+        raise ValueError(f"Missing breedability rules for variant {variant}")
+
+    normalized = normalize_name(name)
+    yes = {normalize_name(value) for value in variant_rules.get("breedable", [])}
+    no = {normalize_name(value) for value in variant_rules.get("not_breedable", [])}
+    classifications = int(normalized in yes) + int(normalized in no)
+    if classifications != 1:
+        raise ValueError(
+            f"Expected exactly one breedability classification for {variant} {name}"
+        )
+    return normalized in yes
 
 
 def parent_display(index: dict[str, list[dict[str, Any]]], name: str) -> str:
@@ -166,7 +185,9 @@ def render_summary(island: dict[str, Any]) -> list[str]:
     )
 
 
-def render_inventory(island: dict[str, Any]) -> list[str]:
+def render_inventory(
+    island: dict[str, Any], island_breedability: dict[str, Any]
+) -> list[str]:
     rows = []
     for monster in island.get("monsters", []):
         rows.append(
@@ -174,13 +195,25 @@ def render_inventory(island: dict[str, Any]) -> list[str]:
                 monster.get("display_name", monster["name"]),
                 monster["variant"].title(),
                 monster["class"].title(),
+                "Yes"
+                if is_breedable(island_breedability, monster["name"], monster["variant"])
+                else "No",
                 "Yes" if monster.get("discovered") else "No",
                 "?" if monster.get("owned") is None else monster.get("owned", 0),
                 monster.get("confidence", "—").title(),
             ]
         )
     return render_table(
-        ["Monster", "Variant", "Class", "Discovered", "Owned", "Confidence"], rows
+        [
+            "Monster",
+            "Variant",
+            "Class",
+            "Breedable?",
+            "Discovered",
+            "Owned",
+            "Confidence",
+        ],
+        rows,
     )
 
 
@@ -229,6 +262,7 @@ def island_sort_key(island: dict[str, Any]) -> tuple[int, str]:
 
 def generate_document(repo_root: Path) -> str:
     recipes = load_json(repo_root / RECIPE_PATH)
+    breedability = load_json(repo_root / BREEDABILITY_PATH)
     islands = sorted(
         (load_yaml(path) for path in (repo_root / INVENTORY_DIRECTORY).glob("*.yaml")),
         key=island_sort_key,
@@ -249,10 +283,13 @@ def generate_document(repo_root: Path) -> str:
     for island in islands:
         name = island["island"]
         island_recipes = recipes.get("islands", {}).get(name, {})
+        island_breedability = breedability.get("islands", {}).get(name)
+        if not isinstance(island_breedability, dict):
+            raise ValueError(f"Missing island breedability data for {name}")
         lines.extend([f"## {name}", "", f"Observed: `{island.get('observed_at', 'unknown')}`", ""])
         lines.extend(render_summary(island))
         lines.extend(["", "### Current monsters", ""])
-        lines.extend(render_inventory(island))
+        lines.extend(render_inventory(island, island_breedability))
         lines.extend(["", "### Pending", ""])
         lines.extend(render_pending(island))
         lines.extend(["", "### Rare breeding planner", ""])

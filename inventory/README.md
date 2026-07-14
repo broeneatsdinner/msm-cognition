@@ -19,75 +19,75 @@ Observed: `2026-07-13`
 
 ### Current monsters
 
-| Monster | Variant | Class | Discovered | Owned | Confidence |
-| --- | --- | --- | --- | --- | --- |
-| Potbelly | Common | Natural | Yes | 2 | — |
-| Noggin | Common | Natural | Yes | 1 | — |
-| Toe Jammer | Common | Natural | Yes | 1 | — |
-| Mammott | Common | Natural | Yes | 1 | — |
-| Shrubb | Common | Natural | Yes | 1 | — |
-| Oaktopus | Common | Natural | Yes | 1 | — |
-| Furcorn | Common | Natural | Yes | 1 | — |
-| Fwog | Common | Natural | Yes | 1 | — |
-| Drumpler | Common | Natural | Yes | 0 | — |
-| Maw | Common | Natural | Yes | 3 | — |
-| Pummel | Common | Natural | Yes | 4 | — |
-| Clamble | Common | Natural | Yes | 3 | — |
-| Bowgart | Common | Natural | Yes | 3 | — |
-| T-Rox | Common | Natural | Yes | 1 | — |
-| Entbrat | Common | Natural | Yes | 0 | — |
-| Ghazt | Common | Ethereal | Yes | 0 | — |
-| Shugabush | Common | Legendary | Yes | 0 | — |
-| G'joob | Common | Mythical | Yes | 1 | — |
-| Tawkerr | Common | Werdo | No | 0 | — |
-| Parlsona | Common | Werdo | No | 0 | — |
-| Wubbox | Common | Supernatural | No | 0 | — |
-| Do | Common | Dipster | Yes | 1 | — |
-| Re | Common | Dipster | Yes | 1 | — |
-| Mi | Common | Dipster | Yes | 1 | — |
-| Fa | Common | Dipster | Yes | 1 | — |
-| Sol | Common | Dipster | Yes | 1 | — |
-| La | Common | Dipster | Yes | 1 | — |
-| Ti | Common | Dipster | Yes | 1 | — |
-| Mammott | Rare | Natural | Yes | 1 | Medium |
-| Oaktopus | Rare | Natural | Yes | 1 | Medium |
-| Furcorn | Rare | Natural | Yes | 0 | — |
-| Entbrat | Rare | Natural | Yes | 1 | — |
-| Wubbox | Rare | Supernatural | Yes | 1 | Medium |
-| Potbelly | Rare | Natural | No | 0 | — |
-| Noggin | Rare | Natural | No | 0 | — |
-| Toe Jammer | Rare | Natural | No | 0 | — |
-| Shrubb | Rare | Natural | No | 0 | — |
-| Fwog | Rare | Natural | No | 0 | — |
-| Drumpler | Rare | Natural | No | 0 | — |
-| Maw | Rare | Natural | No | 0 | — |
-| Pummel | Rare | Natural | No | 0 | — |
-| Clamble | Rare | Natural | No | 0 | — |
-| Bowgart | Rare | Natural | No | 0 | — |
-| T-Rox | Rare | Natural | No | 0 | — |
-| Ghazt | Rare | Ethereal | No | 0 | — |
-| G'joob | Rare | Mythical | No | 0 | — |
-| Potbelly | Epic | Natural | No | 0 | — |
-| Noggin | Epic | Natural | No | 0 | — |
-| Toe Jammer | Epic | Natural | No | 0 | — |
-| Mammott | Epic | Natural | No | 0 | — |
-| Shrubb | Epic | Natural | No | 0 | — |
-| Oaktopus | Epic | Natural | No | 0 | — |
-| Furcorn | Epic | Natural | No | 0 | — |
-| Fwog | Epic | Natural | No | 0 | — |
-| Drumpler | Epic | Natural | No | 0 | — |
-| Maw | Epic | Natural | No | 0 | — |
-| Pummel | Epic | Natural | No | 0 | — |
-| Clamble | Epic | Natural | No | 0 | — |
-| Bowgart | Epic | Natural | No | 0 | — |
-| T-Rox | Epic | Natural | No | 0 | — |
-| Entbrat | Epic | Natural | No | 0 | — |
-| Ghazt | Epic | Ethereal | No | 0 | — |
-| G'joob | Epic | Mythical | No | 0 | — |
-| Wubbox | Epic | Supernatural | No | 0 | — |
-| Punkleton | Common | Seasonal | No | 0 | — |
-| Punkleton | Rare | Seasonal | No | 0 | — |
-| Punkleton | Epic | Seasonal | No | 0 | — |
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Confidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| Potbelly | Common | Natural | No | Yes | 2 | — |
+| Noggin | Common | Natural | No | Yes | 1 | — |
+| Toe Jammer | Common | Natural | No | Yes | 1 | — |
+| Mammott | Common | Natural | No | Yes | 1 | — |
+| Shrubb | Common | Natural | Yes | Yes | 1 | — |
+| Oaktopus | Common | Natural | Yes | Yes | 1 | — |
+| Furcorn | Common | Natural | Yes | Yes | 1 | — |
+| Fwog | Common | Natural | Yes | Yes | 1 | — |
+| Drumpler | Common | Natural | Yes | Yes | 0 | — |
+| Maw | Common | Natural | Yes | Yes | 3 | — |
+| Pummel | Common | Natural | Yes | Yes | 4 | — |
+| Clamble | Common | Natural | Yes | Yes | 3 | — |
+| Bowgart | Common | Natural | Yes | Yes | 3 | — |
+| T-Rox | Common | Natural | Yes | Yes | 1 | — |
+| Entbrat | Common | Natural | Yes | Yes | 0 | — |
+| Ghazt | Common | Ethereal | Yes | Yes | 0 | — |
+| Shugabush | Common | Legendary | Yes | Yes | 0 | — |
+| G'joob | Common | Mythical | Yes | Yes | 1 | — |
+| Tawkerr | Common | Werdo | No | No | 0 | — |
+| Parlsona | Common | Werdo | No | No | 0 | — |
+| Wubbox | Common | Supernatural | No | No | 0 | — |
+| Do | Common | Dipster | No | Yes | 1 | — |
+| Re | Common | Dipster | No | Yes | 1 | — |
+| Mi | Common | Dipster | No | Yes | 1 | — |
+| Fa | Common | Dipster | No | Yes | 1 | — |
+| Sol | Common | Dipster | No | Yes | 1 | — |
+| La | Common | Dipster | No | Yes | 1 | — |
+| Ti | Common | Dipster | No | Yes | 1 | — |
+| Mammott | Rare | Natural | Yes | Yes | 1 | Medium |
+| Oaktopus | Rare | Natural | Yes | Yes | 1 | Medium |
+| Furcorn | Rare | Natural | Yes | Yes | 0 | — |
+| Entbrat | Rare | Natural | Yes | Yes | 1 | — |
+| Wubbox | Rare | Supernatural | No | Yes | 1 | Medium |
+| Potbelly | Rare | Natural | Yes | No | 0 | — |
+| Noggin | Rare | Natural | Yes | No | 0 | — |
+| Toe Jammer | Rare | Natural | Yes | No | 0 | — |
+| Shrubb | Rare | Natural | Yes | No | 0 | — |
+| Fwog | Rare | Natural | Yes | No | 0 | — |
+| Drumpler | Rare | Natural | Yes | No | 0 | — |
+| Maw | Rare | Natural | Yes | No | 0 | — |
+| Pummel | Rare | Natural | Yes | No | 0 | — |
+| Clamble | Rare | Natural | Yes | No | 0 | — |
+| Bowgart | Rare | Natural | Yes | No | 0 | — |
+| T-Rox | Rare | Natural | Yes | No | 0 | — |
+| Ghazt | Rare | Ethereal | Yes | No | 0 | — |
+| G'joob | Rare | Mythical | Yes | No | 0 | — |
+| Potbelly | Epic | Natural | Yes | No | 0 | — |
+| Noggin | Epic | Natural | Yes | No | 0 | — |
+| Toe Jammer | Epic | Natural | Yes | No | 0 | — |
+| Mammott | Epic | Natural | Yes | No | 0 | — |
+| Shrubb | Epic | Natural | Yes | No | 0 | — |
+| Oaktopus | Epic | Natural | Yes | No | 0 | — |
+| Furcorn | Epic | Natural | Yes | No | 0 | — |
+| Fwog | Epic | Natural | Yes | No | 0 | — |
+| Drumpler | Epic | Natural | Yes | No | 0 | — |
+| Maw | Epic | Natural | Yes | No | 0 | — |
+| Pummel | Epic | Natural | Yes | No | 0 | — |
+| Clamble | Epic | Natural | Yes | No | 0 | — |
+| Bowgart | Epic | Natural | Yes | No | 0 | — |
+| T-Rox | Epic | Natural | Yes | No | 0 | — |
+| Entbrat | Epic | Natural | Yes | No | 0 | — |
+| Ghazt | Epic | Ethereal | Yes | No | 0 | — |
+| G'joob | Epic | Mythical | Yes | No | 0 | — |
+| Wubbox | Epic | Supernatural | No | No | 0 | — |
+| Punkleton | Common | Seasonal | Yes | No | 0 | — |
+| Punkleton | Rare | Seasonal | Yes | No | 0 | — |
+| Punkleton | Epic | Seasonal | Yes | No | 0 | — |
 
 ### Pending
 
@@ -159,52 +159,52 @@ Observed: `2026-07-13`
 
 ### Current monsters
 
-| Monster | Variant | Class | Discovered | Owned | Confidence |
-| --- | --- | --- | --- | --- | --- |
-| Theremind | Common | Magical | Yes | 3 | — |
-| Clackula | Common | Magical | Yes | 1 | — |
-| Fluoress | Common | Magical | Yes | 7 | — |
-| Floot Fly | Common | Magical | No | 0 | — |
-| Xyster | Common | Magical | Yes | 1 | — |
-| Cahoot | Common | Magical | Yes | 7 | — |
-| Déjà-Jin | Common | Magical | No | 0 | — |
-| Roarick | Common | Magical | No | 0 | — |
-| Osstax | Common | Magical | No | 0 | — |
-| Knucklehead | Common | Magical | Yes | 1 | — |
-| G'day | Common | Magical | No | 0 | — |
-| Larvaluss | Common | Magical | No | 0 | — |
-| Frondley | Common | Magical | Yes | 4 | — |
-| Mushaboom | Common | Magical | No | 0 | — |
-| Enchantling | Common | Magical | No | 0 | — |
-| Do | Common | Dipster | Yes | 1 | — |
-| Re | Common | Dipster | No | 0 | — |
-| Mi | Common | Dipster | No | 0 | — |
-| Fa | Common | Dipster | No | 0 | — |
-| Sol | Common | Dipster | No | 0 | — |
-| La | Common | Dipster | No | 0 | — |
-| Ti | Common | Dipster | No | 0 | — |
-| Theremind | Rare | Magical | No | 0 | — |
-| Clackula | Rare | Magical | No | 0 | — |
-| Fluoress | Rare | Magical | No | 0 | — |
-| Floot Fly | Rare | Magical | No | 0 | — |
-| Xyster | Rare | Magical | No | 0 | — |
-| Cahoot | Rare | Magical | No | 0 | — |
-| Rare Déjà-Jin | Rare | Magical | No | 0 | — |
-| Roarick | Rare | Magical | No | 0 | — |
-| Osstax | Rare | Magical | No | 0 | — |
-| Knucklehead | Rare | Magical | No | 0 | — |
-| G'day | Rare | Magical | No | 0 | — |
-| Larvaluss | Rare | Magical | No | 0 | — |
-| Frondley | Rare | Magical | No | 0 | — |
-| Mushaboom | Rare | Magical | No | 0 | — |
-| Enchantling | Rare | Magical | No | 0 | — |
-| Clackula | Epic | Magical | No | 0 | — |
-| Fluoress | Epic | Magical | No | 0 | — |
-| Floot Fly | Epic | Magical | No | 0 | — |
-| Knucklehead | Epic | Magical | No | 0 | — |
-| Carillong | Common | Seasonal | No | 0 | — |
-| Carillong | Rare | Seasonal | No | 0 | — |
-| Carillong | Epic | Seasonal | No | 0 | — |
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Confidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| Theremind | Common | Magical | No | Yes | 3 | — |
+| Clackula | Common | Magical | No | Yes | 1 | — |
+| Fluoress | Common | Magical | No | Yes | 7 | — |
+| Floot Fly | Common | Magical | No | No | 0 | — |
+| Xyster | Common | Magical | Yes | Yes | 1 | — |
+| Cahoot | Common | Magical | Yes | Yes | 7 | — |
+| Déjà-Jin | Common | Magical | Yes | No | 0 | — |
+| Roarick | Common | Magical | Yes | No | 0 | — |
+| Osstax | Common | Magical | Yes | No | 0 | — |
+| Knucklehead | Common | Magical | Yes | Yes | 1 | — |
+| G'day | Common | Magical | Yes | No | 0 | — |
+| Larvaluss | Common | Magical | Yes | No | 0 | — |
+| Frondley | Common | Magical | Yes | Yes | 4 | — |
+| Mushaboom | Common | Magical | Yes | No | 0 | — |
+| Enchantling | Common | Magical | Yes | No | 0 | — |
+| Do | Common | Dipster | No | Yes | 1 | — |
+| Re | Common | Dipster | No | No | 0 | — |
+| Mi | Common | Dipster | No | No | 0 | — |
+| Fa | Common | Dipster | No | No | 0 | — |
+| Sol | Common | Dipster | No | No | 0 | — |
+| La | Common | Dipster | No | No | 0 | — |
+| Ti | Common | Dipster | No | No | 0 | — |
+| Theremind | Rare | Magical | Yes | No | 0 | — |
+| Clackula | Rare | Magical | Yes | No | 0 | — |
+| Fluoress | Rare | Magical | Yes | No | 0 | — |
+| Floot Fly | Rare | Magical | Yes | No | 0 | — |
+| Xyster | Rare | Magical | Yes | No | 0 | — |
+| Cahoot | Rare | Magical | Yes | No | 0 | — |
+| Rare Déjà-Jin | Rare | Magical | Yes | No | 0 | — |
+| Roarick | Rare | Magical | Yes | No | 0 | — |
+| Osstax | Rare | Magical | Yes | No | 0 | — |
+| Knucklehead | Rare | Magical | Yes | No | 0 | — |
+| G'day | Rare | Magical | Yes | No | 0 | — |
+| Larvaluss | Rare | Magical | Yes | No | 0 | — |
+| Frondley | Rare | Magical | Yes | No | 0 | — |
+| Mushaboom | Rare | Magical | Yes | No | 0 | — |
+| Enchantling | Rare | Magical | Yes | No | 0 | — |
+| Clackula | Epic | Magical | Yes | No | 0 | — |
+| Fluoress | Epic | Magical | Yes | No | 0 | — |
+| Floot Fly | Epic | Magical | Yes | No | 0 | — |
+| Knucklehead | Epic | Magical | Yes | No | 0 | — |
+| Carillong | Common | Seasonal | Yes | No | 0 | — |
+| Carillong | Rare | Seasonal | Yes | No | 0 | — |
+| Carillong | Epic | Seasonal | Yes | No | 0 | — |
 
 ### Pending
 

@@ -16,6 +16,8 @@ island -> available Book of Monsters -> valid parent pair -> possible child
 - `rare-epic-breeding.json` records island-scoped first-copy planning recipes
   for every Rare and Epic represented by the current Plant Island and Magical
   Sanctum inventories, including their Seasonal slots.
+- `island-breedability.json` explicitly classifies every currently inventoried
+  monster variant as breedable or not breedable on that island.
 - `guaranteed-breeding-rules.json` records verified guarantees.
 - `breeding-rules.md` explains the rule patterns and evidence boundaries.
 
@@ -26,6 +28,10 @@ selects an owned pair when possible.
 
 Non-breedable targets such as Rare and Epic Wubbox are represented with an
 acquisition instruction instead of a false breeding recipe.
+
+Breedability is not the same as island obtainability. Market purchases, Dipster
+Key placement, Werdo purchases, boxing, evolution, and teleport-only acquisition
+can all place a monster on an island without making it breedable there.
 
 ## Planner behavior
 

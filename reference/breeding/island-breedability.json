@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "scope": "island_and_variant_specific_breedability",
+  "definition": "Yes means the exact monster variant can be produced in a Breeding Structure on that island while it is available. No includes Market purchases, Key placement, boxing, evolution, and teleport-only acquisition.",
+  "islands": {
+    "Plant Island": {
+      "common": {
+        "breedable": ["Shrubb", "Oaktopus", "Furcorn", "Fwog", "Drumpler", "Maw", "Pummel", "Clamble", "Bowgart", "T-Rox", "Entbrat", "Ghazt", "Shugabush", "G'joob", "Punkleton"],
+        "not_breedable": ["Potbelly", "Noggin", "Toe Jammer", "Mammott", "Tawkerr", "Parlsona", "Wubbox", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"]
+      },
+      "rare": {
+        "breedable": ["Potbelly", "Noggin", "Toe Jammer", "Mammott", "Shrubb", "Oaktopus", "Furcorn", "Fwog", "Drumpler", "Maw", "Pummel", "Clamble", "Bowgart", "T-Rox", "Entbrat", "Ghazt", "G'joob", "Punkleton"],
+        "not_breedable": ["Wubbox"]
+      },
+      "epic": {
+        "breedable": ["Potbelly", "Noggin", "Toe Jammer", "Mammott", "Shrubb", "Oaktopus", "Furcorn", "Fwog", "Drumpler", "Maw", "Pummel", "Clamble", "Bowgart", "T-Rox", "Entbrat", "Ghazt", "G'joob", "Punkleton"],
+        "not_breedable": ["Wubbox"]
+      }
+    },
+    "Magical Sanctum": {
+      "common": {
+        "breedable": ["Xyster", "Cahoot", "Deja-Jin", "Roarick", "Osstax", "Knucklehead", "G'day", "Larvaluss", "Frondley", "Mushaboom", "Enchantling", "Carillong"],
+        "not_breedable": ["Theremind", "Clackula", "Fluoress", "Floot Fly", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"]
+      },
+      "rare": {
+        "breedable": ["Theremind", "Clackula", "Fluoress", "Floot Fly", "Xyster", "Cahoot", "Deja-Jin", "Roarick", "Osstax", "Knucklehead", "G'day", "Larvaluss", "Frondley", "Mushaboom", "Enchantling", "Carillong"],
+        "not_breedable": []
+      },
+      "epic": {
+        "breedable": ["Clackula", "Fluoress", "Floot Fly", "Knucklehead", "Carillong"],
+        "not_breedable": []
+      }
+    }
+  }
+}

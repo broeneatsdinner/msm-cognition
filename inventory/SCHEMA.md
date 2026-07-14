@@ -42,6 +42,16 @@ Rare and Epic first-copy recipes live in
 those island-scoped rules to owned monsters by canonical name. A Common or Rare
 parent can satisfy a recipe; an Epic cannot breed.
 
+Exact island-and-variant breedability lives in
+`reference/breeding/island-breedability.json`. Every monster row must appear in
+exactly one of that variant's `breedable` or `not_breedable` lists. Generation
+fails on missing or contradictory classifications instead of silently guessing.
+
+`Breedable?` means the exact variant can be produced in a Breeding Structure on
+that island while available. A monster may still be obtainable on an island
+when this field is `No`, such as a Dipster placed with a Key, a Werdo purchased
+with Relics, or a Wubbox acquired through purchase, boxing, or evolution.
+
 Availability is deliberately reported as `When offered`. The static inventory
 does not claim that a limited-time target is currently available in the game.
 
