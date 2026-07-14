@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "scope": "island_scoped_rare_epic_first_copy_planning",
+  "availability_note": "Rare, Epic, and Seasonal targets can be bred only while offered by the game.",
+  "source_notes": [
+    "Rare hybrids generally use the same first-copy combination as their Common counterpart.",
+    "Rare single-element monsters use two distinct triple-element monsters sharing the target element.",
+    "Epic combinations are island-specific and do not follow the Common or Rare pattern.",
+    "Parent order is irrelevant. A Rare parent can substitute for its Common counterpart. Epic monsters cannot breed."
+  ],
+  "sources": [
+    "https://mysingingmonsters.fandom.com/wiki/Breeding_Combinations",
+    "https://mysingingmonsters.fandom.com/wiki/Epic_Breeding_Combinations",
+    "https://mysingingmonsters.fandom.com/wiki/Plant_Island",
+    "https://mysingingmonsters.fandom.com/wiki/Magical_Sanctum"
+  ],
+  "islands": {
+    "Plant Island": {
+      "rare": [
+        {"name": "Potbelly", "pattern": {"kind": "two_distinct_triples", "element": "Plant", "candidates": ["Pummel", "Clamble", "Bowgart"]}, "time": "6h", "enhanced_time": "4h 30m"},
+        {"name": "Noggin", "pattern": {"kind": "two_distinct_triples", "element": "Earth", "candidates": ["T-Rox", "Pummel", "Clamble"]}, "time": "6h", "enhanced_time": "4h 30m"},
+        {"name": "Toe Jammer", "pattern": {"kind": "two_distinct_triples", "element": "Water", "candidates": ["T-Rox", "Pummel", "Bowgart"]}, "time": "6h", "enhanced_time": "4h 30m"},
+        {"name": "Mammott", "pattern": {"kind": "two_distinct_triples", "element": "Cold", "candidates": ["T-Rox", "Clamble", "Bowgart"]}, "time": "6h", "enhanced_time": "4h 30m"},
+        {"name": "Shrubb", "parents": ["Potbelly", "Noggin"], "time": "10h 30m", "enhanced_time": "7h 52m 30s"},
+        {"name": "Oaktopus", "parents": ["Potbelly", "Toe Jammer"], "time": "10h 30m", "enhanced_time": "7h 52m 30s"},
+        {"name": "Furcorn", "parents": ["Potbelly", "Mammott"], "time": "10h 30m", "enhanced_time": "7h 52m 30s"},
+        {"name": "Fwog", "parents": ["Noggin", "Toe Jammer"], "time": "1h 15m", "enhanced_time": "56m 15s"},
+        {"name": "Drumpler", "parents": ["Noggin", "Mammott"], "time": "1h 7m 30s", "enhanced_time": "50m 37s"},
+        {"name": "Maw", "parents": ["Toe Jammer", "Mammott"], "time": "1h 7m 30s", "enhanced_time": "50m 37s"},
+        {"name": "Pummel", "parents": ["Noggin", "Oaktopus"], "time": "15h 30m", "enhanced_time": "11h 37m 30s"},
+        {"name": "Clamble", "parents": ["Noggin", "Furcorn"], "time": "15h 30m", "enhanced_time": "11h 37m 30s"},
+        {"name": "Bowgart", "parents": ["Toe Jammer", "Furcorn"], "time": "15h 30m", "enhanced_time": "11h 37m 30s"},
+        {"name": "T-Rox", "parents": ["Noggin", "Maw"], "time": "10h 30m", "enhanced_time": "7h 52m 30s"},
+        {"name": "Entbrat", "parents": ["Noggin", "Bowgart"], "time": "1d 6h 30m", "enhanced_time": "22h 52m 30s"},
+        {"name": "Ghazt", "parents": ["Entbrat", "T-Rox"], "time": "1d 21h 30m", "enhanced_time": "1d 10h 7m 30s", "note": "Entbrat + T-Rox minimizes failed-attempt waiting time."},
+        {"name": "G'joob", "parents": ["Pummel", "T-Rox"], "time": "22h 30m", "enhanced_time": "16h 52m 30s"},
+        {"name": "Wubbox", "acquisition": "not_breedable", "instruction": "Purchase a dormant Rare Wubbox, then box one of each required Rare monster."},
+        {"name": "Punkleton", "parents": ["Bowgart", "T-Rox"], "time": "1d 7h 45m", "enhanced_time": "23h 48m 45s", "seasonal": true}
+      ],
+      "epic": [
+        {"name": "Potbelly", "parents": ["Entbrat", "Shrubb"], "time": "9h", "enhanced_time": "6h 45m"},
+        {"name": "Noggin", "parents": ["Entbrat", "Fwog"], "time": "1h", "enhanced_time": "45m"},
+        {"name": "Toe Jammer", "parents": ["Entbrat", "Oaktopus"], "time": "3h", "enhanced_time": "2h 15m"},
+        {"name": "Mammott", "parents": ["Entbrat", "Furcorn"], "time": "5h", "enhanced_time": "3h 45m"},
+        {"name": "Shrubb", "parents": ["T-Rox", "Oaktopus"], "time": "19h", "enhanced_time": "14h 15m"},
+        {"name": "Oaktopus", "parents": ["Bowgart", "Shrubb"], "time": "1d 7h", "enhanced_time": "23h 15m"},
+        {"name": "Furcorn", "parents": ["Clamble", "Fwog"], "time": "17h", "enhanced_time": "12h 45m"},
+        {"name": "Fwog", "parents": ["Pummel", "Furcorn"], "time": "7h", "enhanced_time": "5h 15m"},
+        {"name": "Drumpler", "parents": ["Clamble", "Maw"], "time": "15h", "enhanced_time": "11h 15m"},
+        {"name": "Maw", "parents": ["Bowgart", "Drumpler"], "time": "13h", "enhanced_time": "9h 45m"},
+        {"name": "Pummel", "parents": ["Bowgart", "Fwog"], "time": "1d 7h", "enhanced_time": "23h 15m"},
+        {"name": "Clamble", "parents": ["Pummel", "Maw"], "time": "21h", "enhanced_time": "15h 45m"},
+        {"name": "Bowgart", "parents": ["Clamble", "Oaktopus"], "time": "1d 5h", "enhanced_time": "21h 45m"},
+        {"name": "T-Rox", "parents": ["Pummel", "Drumpler"], "time": "19h", "enhanced_time": "14h 15m"},
+        {"name": "Entbrat", "parents": ["T-Rox", "Shrubb"], "time": "1d 21h", "enhanced_time": "1d 9h 45m"},
+        {"name": "Ghazt", "parents": ["T-Rox", "Furcorn"], "time": "1d 6h", "enhanced_time": "22h 30m"},
+        {"name": "G'joob", "parents": ["Entbrat", "Maw"], "time": "1d 9h 10m", "enhanced_time": "1d 52m 30s"},
+        {"name": "Wubbox", "acquisition": "not_breedable", "instruction": "Evolve a powered Common Wubbox during an Epic Wubbox availability window."},
+        {"name": "Punkleton", "parents": ["Entbrat", "Drumpler"], "time": "1d 7h 10m", "enhanced_time": "23h 22m 30s", "seasonal": true}
+      ]
+    },
+    "Magical Sanctum": {
+      "rare": [
+        {"name": "Theremind", "pattern": {"kind": "two_distinct_triples", "element": "Psychic", "candidates": ["G'day", "Larvaluss", "Frondley"]}, "time": "8h", "enhanced_time": "6h"},
+        {"name": "Clackula", "pattern": {"kind": "two_distinct_triples", "element": "Bone", "candidates": ["G'day", "Larvaluss", "Mushaboom"]}, "time": "8h", "enhanced_time": "6h"},
+        {"name": "Fluoress", "pattern": {"kind": "two_distinct_triples", "element": "Light", "candidates": ["G'day", "Frondley", "Mushaboom"]}, "time": "8h", "enhanced_time": "6h"},
+        {"name": "Floot Fly", "pattern": {"kind": "two_distinct_triples", "element": "Faerie", "candidates": ["Larvaluss", "Frondley", "Mushaboom"]}, "time": "8h", "enhanced_time": "6h"},
+        {"name": "Xyster", "parents": ["Theremind", "Clackula"], "time": "1d 2h 30m", "enhanced_time": "19h 52m 30s"},
+        {"name": "Cahoot", "parents": ["Theremind", "Fluoress"], "time": "1d 2h 30m", "enhanced_time": "19h 52m 30s"},
+        {"name": "Deja-Jin", "display_name": "Déjà-Jin", "parents": ["Theremind", "Floot Fly"], "time": "1d 2h 30m", "enhanced_time": "19h 52m 30s"},
+        {"name": "Roarick", "parents": ["Clackula", "Fluoress"], "time": "1d 2h 30m", "enhanced_time": "19h 52m 30s"},
+        {"name": "Osstax", "parents": ["Clackula", "Floot Fly"], "time": "1d 2h 30m", "enhanced_time": "19h 52m 30s"},
+        {"name": "Knucklehead", "parents": ["Fluoress", "Floot Fly"], "time": "1d 2h 30m", "enhanced_time": "19h 52m 30s"},
+        {"name": "G'day", "parents": ["Xyster", "Fluoress"], "time": "1d 13h 30m", "enhanced_time": "1d 4h 7m 30s"},
+        {"name": "Larvaluss", "parents": ["Osstax", "Theremind"], "time": "1d 13h 30m", "enhanced_time": "1d 4h 7m 30s"},
+        {"name": "Frondley", "parents": ["Deja-Jin", "Fluoress"], "time": "1d 13h 30m", "enhanced_time": "1d 4h 7m 30s"},
+        {"name": "Mushaboom", "parents": ["Osstax", "Fluoress"], "time": "1d 13h 30m", "enhanced_time": "1d 4h 7m 30s"},
+        {"name": "Enchantling", "parents": ["Larvaluss", "Fluoress"], "time": "2d 14h 30m", "enhanced_time": "1d 22h 52m 30s"},
+        {"name": "Carillong", "parents": ["Mushaboom", "Roarick"], "time": "1d 7h 45m", "enhanced_time": "23h 48m 45s", "seasonal": true}
+      ],
+      "epic": [
+        {"name": "Clackula", "parents": ["Enchantling", "Osstax"], "time": "20h 6m", "enhanced_time": "15h 4m 30s"},
+        {"name": "Fluoress", "parents": ["Enchantling", "Cahoot"], "time": "19h 16m", "enhanced_time": "14h 27m"},
+        {"name": "Floot Fly", "parents": ["Enchantling", "Knucklehead"], "time": "19h 56m", "enhanced_time": "14h 57m"},
+        {"name": "Knucklehead", "parents": ["Larvaluss", "Cahoot"], "time": "2d 3h 49m", "enhanced_time": "1d 14h 51m 45s"},
+        {"name": "Carillong", "parents": ["Enchantling", "Roarick"], "time": "1d 12h 12m", "enhanced_time": "1d 3h 9m", "seasonal": true}
+      ]
+    }
+  }
+}

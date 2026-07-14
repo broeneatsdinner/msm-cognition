@@ -2,35 +2,48 @@
 
 This directory contains structured breeding-reference data for My Singing Monsters.
 
-The purpose is to prevent the workbench from inferring breedability from monster elements alone.
-
-Breedability is island-scoped:
+The purpose is to prevent the workbench from inferring breedability from monster
+elements alone. Breedability is island-scoped:
 
 ```text
 island -> available Book of Monsters -> valid parent pair -> possible child
 ```
 
-A monster's elements are not enough to decide where it can be bred.
-
 ## Data scope
 
-`common-natural-breeding.json` is a first structured pass covering common Natural monsters and their source-listed best breeding combinations.
+- `common-natural-breeding.json` records source-listed best combinations for
+  Common Natural monsters.
+- `rare-epic-breeding.json` records island-scoped first-copy planning recipes
+  for every Rare and Epic represented by the current Plant Island and Magical
+  Sanctum inventories, including their Seasonal slots.
+- `guaranteed-breeding-rules.json` records verified guarantees.
+- `breeding-rules.md` explains the rule patterns and evidence boundaries.
 
-This is not yet a complete model of every possible breeding result in the game.
+The Rare/Epic data supports either an explicit parent pair or a constrained
+parent pattern. Rare single-element monsters use the pattern “two distinct
+triple-element monsters sharing the target element”; the inventory generator
+selects an owned pair when possible.
 
-## Source model
+Non-breedable targets such as Rare and Epic Wubbox are represented with an
+acquisition instruction instead of a false breeding recipe.
 
-The source data records:
+## Planner behavior
 
-- monster
-- parent pair
-- standard breeding time
-- enhanced breeding time, where listed
-- islands where the monster is listed as breedable
-- mirror-island aliases that share Book of Monsters entries with the original island
+`bin/inventory` joins the Rare/Epic reference to `inventory/islands/*.yaml` and
+reports whether the player owns suitable parents. Common and Rare parents both
+count; Epic monsters cannot breed.
+
+Limited-time availability is intentionally not inferred from static data. The
+generated README says `When offered` or `Seasonal offer`, and the player should
+confirm the current in-game Market before attempting a recipe.
+
+## Sources
+
+The structured records were checked against the My Singing Monsters Wiki pages
+for Breeding Combinations, Epic Breeding Combinations, Plant Island, Magical
+Sanctum, and the individual special-monster pages linked from them.
 
 ## Core rule
 
-Do not answer "can I breed X on island Y?" from elements alone.
-
-Answer from island-scoped data.
+Do not answer “can I breed X on island Y?” from elements alone. Answer from
+island-scoped data.
