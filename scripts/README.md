@@ -39,13 +39,13 @@ Manual/debug crop mode:
 ```bash
 python3 scripts/guess_breeder_result.py \
   --mode manual-crops \
-  --source examples/screenshots/plant-island.png \
+  --source training/screenshots/breeding-structure/plant-island-2026-07-09/plant-breeding-structure-in-use-zoom-01.png \
   --island "Plant Island" \
   --crop-breeder 100,200,300,300 \
   --crop-left-egg 130,220,70,70 \
   --crop-right-egg 250,220,70,70 \
   --parents Noggin Maw \
-  --out examples/evidence/manual-test
+  --out /tmp/msm-cognition/manual-test
 ```
 
 Detector mode:
@@ -53,13 +53,13 @@ Detector mode:
 ```bash
 python3 scripts/guess_breeder_result.py \
   --mode detect-breeders \
-  --source examples/screenshots/plant-island.png \
+  --source training/screenshots/breeding-structure/plant-island-2026-07-09/plant-breeding-structure-in-use-zoom-01.png \
   --island "Plant Island" \
   --max-candidates 2 \
   --structure-match-threshold 0.80 \
   --structure-min-width 120 \
   --structure-min-height 120 \
-  --out examples/evidence/detect-test
+  --out /tmp/msm-cognition/detect-test
 ```
 
 Detector mode uses OpenCV template matching against `assets/structures/breeding-structure/*.webp`, then crops likely parent egg regions inside each detected Breeding Structure. By default, only `normal-breeding-structure.webp` and `enhanced-breeding-structure.webp` are active. Locked templates are opt-in with `--allow-locked-templates`; Paironormal templates are excluded by default unless the island name contains `Paironormal`, and can be enabled with `--allow-paironormal-templates`. Paironormal locked templates require both the Paironormal family and locked templates to be allowed. `--structure-min-width` and `--structure-min-height` reject tiny scaled template matches before they can become candidates. Zero candidates can be a correct conservative result. The automated egg matches are evidence for review, not authoritative recognition.
@@ -69,11 +69,11 @@ Parent crop tuning example:
 ```bash
 python3 scripts/guess_breeder_result.py \
   --mode detect-breeders \
-  --source examples/screenshots/plant-island.png \
+  --source training/screenshots/breeding-structure/plant-island-2026-07-09/plant-breeding-structure-in-use-zoom-01.png \
   --island "Plant Island" \
   --left-parent-rel 0.20,0.06,0.22,0.22 \
   --right-parent-rel 0.58,0.06,0.22,0.22 \
-  --out examples/evidence/parent-crop-tuning
+  --out /tmp/msm-cognition/parent-crop-tuning
 ```
 
 The relative parent crop boxes are fractions inside each detected Breeding Structure candidate and should be tuned from confirmed training examples.

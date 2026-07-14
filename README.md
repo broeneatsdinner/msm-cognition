@@ -59,8 +59,10 @@ The repository currently contains:
 assets/
   eggs/                  Local egg/icon image assets
 
-examples/
-  screenshots/           Local screenshots for future vision testing
+training/
+  screenshots/           Reviewed gameplay screenshots and detector inputs
+  observations/          Human interpretations tied to screenshots
+  corrections/           Recognition and terminology corrections
 
 reference/
   eggs/                  Human-readable egg reference

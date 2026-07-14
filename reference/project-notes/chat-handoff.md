@@ -12,7 +12,6 @@ It records both current reference data and the learning process used to interpre
 
 ```text
 assets/       Visual reference assets
-examples/     Future public examples and fixtures
 reference/    Human + machine reference knowledge
 scripts/      Repo-maintenance tooling
 src/          Future importable cognition engine
