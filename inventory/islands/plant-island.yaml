@@ -1,0 +1,129 @@
+schema_version: 1
+island: Plant Island
+observed_at: "2026-07-13"
+
+evidence:
+  screenshot_directory: training/screenshots/inventory/plant-island-2026-07-13
+  book:
+    - book-commons-25-of-28.png
+    - book-rares-5-of-18.png
+    - book-epics-0-of-18.png
+  market:
+    - market-01-epic-entbrat-rare-entbrat-drumpler.png
+    - market-02-entbrat-ghazt-shugabush.png
+    - market-03-tawkerr-parlsona-wubbox.png
+    - market-04-epic-wubbox-potbelly-noggin.png
+    - market-05-toe-jammer-mammott-shrubb.png
+    - market-06-oaktopus-furcorn-fwog.png
+    - market-07-maw-pummel-clamble.png
+    - market-08-bowgart-t-rox-gjoob.png
+    - market-09-dipsters-do-re-mi.png
+    - market-10-dipsters-fa-sol-la.png
+    - market-11-dipsters-la-ti-rare-furcorn-buyback.png
+  overview:
+    - island-overview-01.png
+    - island-overview-02.png
+
+book:
+  common:
+    discovered: 25
+    total: 28
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 6, total: 194}
+  rare:
+    discovered: 5
+    total: 18
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 0, total: 8}
+  epic:
+    discovered: 0
+    total: 18
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 0, total: 12}
+
+monsters:
+  # Common Naturals
+  - {name: Potbelly, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Noggin, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Toe Jammer, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Mammott, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Shrubb, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Oaktopus, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Furcorn, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Fwog, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Drumpler, variant: common, class: natural, discovered: true, owned: 0}
+  - {name: Maw, variant: common, class: natural, discovered: true, owned: 3}
+  - {name: Pummel, variant: common, class: natural, discovered: true, owned: 4}
+  - {name: Clamble, variant: common, class: natural, discovered: true, owned: 3}
+  - {name: Bowgart, variant: common, class: natural, discovered: true, owned: 3}
+  - {name: T-Rox, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Entbrat, variant: common, class: natural, discovered: true, owned: 0}
+
+  # Other Commons and Dipsters
+  - {name: Ghazt, variant: common, class: ethereal, discovered: true, owned: 0}
+  - {name: Shugabush, variant: common, class: legendary, discovered: true, owned: 0}
+  - {name: "G'joob", variant: common, class: mythical, discovered: true, owned: 1}
+  - {name: Tawkerr, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Parlsona, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Wubbox, variant: common, class: supernatural, discovered: false, owned: 0}
+  - {name: Do, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Re, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Mi, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Fa, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Sol, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: La, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Ti, variant: common, class: dipster, discovered: true, owned: 1}
+
+  # Rares discovered in the Book
+  - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 1, confidence: medium}
+  - {name: Oaktopus, variant: rare, class: natural, discovered: true, owned: 1, confidence: medium}
+  - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Entbrat, variant: rare, class: natural, discovered: true, owned: 1}
+  - {name: Wubbox, variant: rare, class: supernatural, discovered: true, owned: 1, confidence: medium}
+
+  # Rares not discovered
+  - {name: Potbelly, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Noggin, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Shrubb, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Fwog, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Drumpler, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Maw, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Pummel, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Clamble, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Bowgart, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: T-Rox, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Ghazt, variant: rare, class: ethereal, discovered: false, owned: 0}
+  - {name: "G'joob", variant: rare, class: mythical, discovered: false, owned: 0}
+
+  # Epics
+  - {name: Potbelly, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Noggin, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Mammott, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Shrubb, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Oaktopus, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Furcorn, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Fwog, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Drumpler, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Maw, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Pummel, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Clamble, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Bowgart, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: T-Rox, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Entbrat, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Ghazt, variant: epic, class: ethereal, discovered: false, owned: 0}
+  - {name: "G'joob", variant: epic, class: mythical, discovered: false, owned: 0}
+  - {name: Wubbox, variant: epic, class: supernatural, discovered: false, owned: 0}
+
+  # Seasonal slots are counted separately by the Book.
+  - {name: Punkleton, variant: common, class: seasonal, discovered: false, owned: 0}
+  - {name: Punkleton, variant: rare, class: seasonal, discovered: false, owned: 0}
+  - {name: Punkleton, variant: epic, class: seasonal, discovered: false, owned: 0}
+
+pending: []
+
+notes:
+  - Market counts can be zero for a discovered monster after it has been sold or boxed.
+  - Rare Furcorn is discovered but was visible only as a zero-owned Buyback entry.
+  - Rare Mammott, Rare Oaktopus, and Rare Wubbox owned counts are inferred from the island overview.

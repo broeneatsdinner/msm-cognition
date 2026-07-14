@@ -1,0 +1,105 @@
+schema_version: 1
+island: Magical Sanctum
+observed_at: "2026-07-13"
+
+evidence:
+  screenshot_directory: training/screenshots/inventory/magical-sanctum-2026-07-13
+  book:
+    - book-commons-8-of-22.png
+    - book-rares-0-of-15.png
+    - book-epics-0-of-4.png
+  market:
+    - market-01-floot-fly-deja-jin-roarick.png
+    - market-02-osstax-gday-larvaluss.png
+    - market-03-mushaboom-enchantling-dipster-re.png
+    - market-04-dipsters-mi-fa-sol.png
+    - market-05-dipsters-la-ti-theremind.png
+    - market-06-clackula-fluoress-xyster.png
+    - market-07-cahoot-knucklehead-frondley.png
+    - market-08-knucklehead-frondley-dipster-do.png
+  overview:
+    - island-overview-01.png
+
+book:
+  common:
+    discovered: 8
+    total: 22
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 0, total: 46}
+  rare:
+    discovered: 0
+    total: 15
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 0, total: 0}
+  epic:
+    discovered: 0
+    total: 4
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 0, total: 0}
+
+monsters:
+  # Commons
+  - {name: Theremind, variant: common, class: magical, discovered: true, owned: 3}
+  - {name: Clackula, variant: common, class: magical, discovered: true, owned: 1}
+  - {name: Fluoress, variant: common, class: magical, discovered: true, owned: 7}
+  - {name: Floot Fly, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Xyster, variant: common, class: magical, discovered: true, owned: 1}
+  - {name: Cahoot, variant: common, class: magical, discovered: true, owned: 7}
+  - {name: Deja-Jin, display_name: Déjà-Jin, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Roarick, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Osstax, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Knucklehead, variant: common, class: magical, discovered: true, owned: 1}
+  - {name: "G'day", variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Larvaluss, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Frondley, variant: common, class: magical, discovered: true, owned: 4}
+  - {name: Mushaboom, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Enchantling, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Do, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Re, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Mi, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Fa, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Sol, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: La, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Ti, variant: common, class: dipster, discovered: false, owned: 0}
+
+  # Rares
+  - {name: Theremind, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Clackula, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Fluoress, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Floot Fly, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Xyster, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Cahoot, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Deja-Jin, display_name: Rare Déjà-Jin, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Roarick, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Osstax, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Knucklehead, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: "G'day", variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Larvaluss, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Frondley, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Mushaboom, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Enchantling, variant: rare, class: magical, discovered: false, owned: 0}
+
+  # Epics currently represented in the Book.
+  - {name: Clackula, variant: epic, class: magical, discovered: false, owned: 0}
+  - {name: Fluoress, variant: epic, class: magical, discovered: false, owned: 0}
+  - {name: Floot Fly, variant: epic, class: magical, discovered: false, owned: 0}
+  - {name: Knucklehead, variant: epic, class: magical, discovered: false, owned: 0}
+
+  # Seasonal slots are counted separately by the Book.
+  - {name: Carillong, variant: common, class: seasonal, discovered: false, owned: 0}
+  - {name: Carillong, variant: rare, class: seasonal, discovered: false, owned: 0}
+  - {name: Carillong, variant: epic, class: seasonal, discovered: false, owned: 0}
+
+pending:
+  - type: breeding
+    parents: [Frondley, Clackula]
+    displayed_time: 1d 6h
+    predicted_result: Frondley
+    confidence: high
+    counted_in_owned: false
+
+notes:
+  - The Book's 8/22 Common count is seven Magical species plus the Do Dipster.
+  - Xyster is housed in the Humble Hotel; the Market still reports one owned.
+  - A Theremind egg in the Nursery is not included in the owned count.
+  - The pending Frondley will raise the owned count from four to five only after placement.
