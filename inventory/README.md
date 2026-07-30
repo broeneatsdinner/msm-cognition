@@ -147,6 +147,107 @@ None recorded.
 - Rare Furcorn is discovered but was visible only as a zero-owned Buyback entry.
 - Rare Mammott, Rare Oaktopus, and Rare Wubbox owned counts are inferred from the island overview.
 
+## Earth Island
+
+Observed: `2026-07-30`
+
+| Variant | Book discovered | Owned species | Owned monsters |
+| --- | --- | --- | --- |
+| Common | 24/27 | 22 | 43 |
+| Rare | 5/18 | 5 | 5 |
+| Epic | 1/18 | 1 | 1 |
+
+### Current monsters
+
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Confidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| Tweedle | Common | Natural | No | Yes | 1 | — |
+| Potbelly | Common | Natural | No | Yes | 1 | — |
+| Noggin | Common | Natural | No | Yes | 1 | — |
+| Mammott | Common | Natural | No | Yes | 1 | — |
+| Dandidoo | Common | Natural | Yes | Yes | 2 | — |
+| Cybop | Common | Natural | Yes | Yes | 1 | — |
+| Pango | Common | Natural | Yes | Yes | 2 | — |
+| Shrubb | Common | Natural | Yes | Yes | 2 | — |
+| Furcorn | Common | Natural | Yes | Yes | 0 | — |
+| Drumpler | Common | Natural | Yes | Yes | 1 | — |
+| Reedling | Common | Natural | Yes | Yes | 2 | — |
+| Thumpies | Common | Natural | Yes | Yes | 0 | — |
+| PomPom | Common | Natural | Yes | Yes | 2 | — |
+| Clamble | Common | Natural | Yes | Yes | 1 | — |
+| Quarrister | Common | Natural | Yes | Yes | 17 | — |
+| Humbug | Common | Ethereal | Yes | Yes | 0 | — |
+| Hyehehe | Common | Mythical | Yes | No | 0 | — |
+| Tawkerr | Common | Werdo | No | No | 0 | — |
+| Stoowarb | Common | Werdo | No | Yes | 1 | — |
+| Wubbox | Common | Supernatural | No | No | 0 | — |
+| Do | Common | Dipster | No | Yes | 1 | — |
+| Re | Common | Dipster | No | Yes | 1 | — |
+| Mi | Common | Dipster | No | Yes | 1 | — |
+| Fa | Common | Dipster | No | Yes | 1 | — |
+| Sol | Common | Dipster | No | Yes | 1 | — |
+| La | Common | Dipster | No | Yes | 1 | — |
+| Ti | Common | Dipster | No | Yes | 1 | — |
+| Hoola | Common | Seasonal | Yes | Yes | 1 | — |
+| Tweedle | Rare | Natural | Yes | No | 0 | — |
+| Potbelly | Rare | Natural | Yes | Yes | 1 | — |
+| Noggin | Rare | Natural | Yes | No | 0 | — |
+| Mammott | Rare | Natural | Yes | No | 0 | — |
+| Dandidoo | Rare | Natural | Yes | No | 0 | — |
+| Cybop | Rare | Natural | Yes | No | 0 | — |
+| Pango | Rare | Natural | Yes | No | 0 | — |
+| Shrubb | Rare | Natural | Yes | Yes | 1 | — |
+| Furcorn | Rare | Natural | Yes | Yes | 1 | — |
+| Drumpler | Rare | Natural | Yes | No | 0 | — |
+| Reedling | Rare | Natural | Yes | No | 0 | — |
+| Thumpies | Rare | Natural | Yes | No | 0 | — |
+| PomPom | Rare | Natural | Yes | No | 0 | — |
+| Clamble | Rare | Natural | Yes | No | 0 | — |
+| Quarrister | Rare | Natural | Yes | Yes | 1 | — |
+| Humbug | Rare | Ethereal | Yes | Yes | 1 | — |
+| Hyehehe | Rare | Mythical | Yes | No | 0 | — |
+| Wubbox | Rare | Supernatural | No | No | 0 | — |
+| Hoola | Rare | Seasonal | Yes | No | 0 | — |
+| Tweedle | Epic | Natural | Yes | No | 0 | — |
+| Potbelly | Epic | Natural | Yes | No | 0 | — |
+| Noggin | Epic | Natural | Yes | No | 0 | — |
+| Mammott | Epic | Natural | Yes | No | 0 | — |
+| Dandidoo | Epic | Natural | Yes | No | 0 | — |
+| Cybop | Epic | Natural | Yes | No | 0 | — |
+| Pango | Epic | Natural | Yes | No | 0 | — |
+| Shrubb | Epic | Natural | Yes | No | 0 | — |
+| Furcorn | Epic | Natural | Yes | No | 0 | — |
+| Drumpler | Epic | Natural | Yes | No | 0 | — |
+| Reedling | Epic | Natural | Yes | No | 0 | — |
+| Thumpies | Epic | Natural | Yes | No | 0 | — |
+| PomPom | Epic | Natural | Yes | No | 0 | — |
+| Clamble | Epic | Natural | Yes | No | 0 | — |
+| Quarrister | Epic | Natural | Yes | Yes | 1 | — |
+| Humbug | Epic | Ethereal | Yes | No | 0 | — |
+| Hyehehe | Epic | Mythical | Yes | No | 0 | — |
+| Wubbox | Epic | Supernatural | No | No | 0 | — |
+| Hoola | Epic | Seasonal | Yes | No | 0 | — |
+
+### Pending
+
+| Type | Parents | Time | Prediction | Confidence |
+| --- | --- | --- | --- | --- |
+| Castle_Upgrade | — | — | — | High |
+
+### Rare breeding planner
+
+No recipes recorded yet.
+
+### Epic breeding planner
+
+No recipes recorded yet.
+
+### Notes
+
+- The current Polished Stonyx Castle is upgrading to the final Carved Stonyx Castle tier.
+- Market counts are current owned counts; a discovered monster can have zero owned after sale or boxing.
+- Common Furcorn, Humbug, and Thumpies are discovered but the Market showed zero owned.
+
 ## Magical Sanctum
 
 Observed: `2026-07-13`
