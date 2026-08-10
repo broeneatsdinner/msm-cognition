@@ -233,6 +233,20 @@ Observed: `2026-07-30`
 | Type | Parents | Time | Prediction | Confidence |
 | --- | --- | --- | --- | --- |
 | Castle_Upgrade | — | — | — | High |
+| Breeding | Rare Thumpies (level 10) + Shrubb (level 10) | 8h | Shrubb fail while attempting Epic Reedling | Medium |
+| Breeding | Rare Thumpies (level 10) + Shrubb (level 10) | 12h | Thumpies fail while attempting Epic Reedling | Medium |
+
+### Current objective
+
+Breed **Epic Reedling** during its current availability window.
+
+| Target | Combo | Success time | Enhanced success time | Current status | Priority |
+| --- | --- | --- | --- | --- | --- |
+| Epic Reedling | Thumpies + Shrubb | 17h | 12h 45m | In progress with two likely failed attempts | Active while offered |
+
+Notes:
+- Rare Thumpies can substitute for Common Thumpies as a parent.
+- The current 8h and 12h timers are likely Shrubb and Thumpies misses; retry immediately when both breeders clear.
 
 ### Rare breeding planner
 

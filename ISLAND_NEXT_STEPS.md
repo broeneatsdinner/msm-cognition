@@ -82,3 +82,56 @@ Helpful boosts:
 - Light wishing torches if possible.
 - Keep the Breeding Structure and Nursery clear to maximize attempts.
 - Use Enhanced Breeding if available to reduce retry time.
+
+## Earth Island
+
+### Current Goal
+
+Breed **Epic Reedling** on Earth Island while it is currently available.
+
+Availability snapshot:
+- Epic Reedling is available for approximately **2d 8h 44m** from the time this plan was created on **2026-08-10**.
+- Epic Monsters must be available in the Market for their breeding combo to work.
+
+### Required Breeding Chain
+
+Best combo on Earth Island:
+
+**Thumpies + Shrubb**
+
+Current parent set:
+- **Rare Thumpies**, level 10
+- **Shrubb**, level 10
+
+Notes:
+- Rare parents can substitute for their Common counterparts in breeding.
+- Using Rare Thumpies should not improve odds over Common Thumpies, but it is fine to use if it is the available or higher-level Thumpies.
+- Parent levels above level 4 help odds, so level 10 parents are worth continuing with.
+
+Timers:
+
+| Result | Normal Breeding | Enhanced Breeding |
+|---|---:|---:|
+| Epic Reedling | 17h | 12h 45m |
+| Shrubb fail | 8h | 6h |
+| Thumpies fail | 12h | 9h |
+| Quarrister fail | 1d | 18h |
+
+Current status:
+- Two active breeding attempts are running with **8h** and **12h** timers.
+- These are likely failed attempts:
+  - **8h** likely means Shrubb.
+  - **12h** likely means Thumpies.
+
+Next action:
+- Let both current breeders finish.
+- Clear both breeders as soon as they are ready.
+- Retry **Rare Thumpies + Shrubb** in both breeders until Epic Reedling is obtained or the offer ends.
+- Watch for the success timer:
+  - **17h** with normal breeding
+  - **12h 45m** with Enhanced Breeding
+
+Helpful boosts:
+- Light wishing torches if possible.
+- Keep both Breeding Structures and Nurseries clear to maximize attempts.
+- If a higher-level Common Thumpies is available later, use whichever Thumpies variant has the higher level.
