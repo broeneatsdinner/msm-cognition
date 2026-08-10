@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breeding Structure ground-truth review</title>
+<style>
+body { margin: 0; padding: 24px; background: #161c28; color: #eef2f8; font: 16px/1.5 system-ui, sans-serif; }
+h1 { margin-top: 0; }
+code, pre { background: #252d3d; border-radius: 6px; padding: 3px 7px; }
+.stage { position: relative; display: inline-block; max-width: 100%; border: 2px solid #53627b; background: #0b0f16; }
+.stage img { display: block; max-width: 100%; height: auto; user-select: none; }
+.stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: crosshair; touch-action: none; }
+.output { margin: 18px 0; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+button { padding: 8px 14px; border: 0; border-radius: 6px; background: #38c6df; color: #071118; font-weight: 700; cursor: pointer; }
+.warning { color: #ffdf68; font-weight: 700; }
+</style>
+</head>
+<body>
+<h1>Breeding Structure ground-truth review</h1>
+<p class="warning">Manually enter the true Breeding Structure box into the JSON file.</p>
+<p>Drag a rectangle around the complete Breeding Structure. Candidate boxes are cyan; your current drag is yellow. Coordinates are reported in original image pixels, even when the image is scaled in the browser.</p>
+<p>Edit <code>annotation.json</code>, set <code>ground_truth.status</code> to <code>confirmed</code>, and paste the generated box into <code>ground_truth.box</code>. These coordinates identify the object only in this image; they are not a future location rule.</p>
+<div class="output"><pre id="box">Drag on the image to create a box.</pre><button id="copy" type="button">Copy box JSON</button></div>
+<div class="stage"><img id="source" src="source.png" alt="Source screenshot"><canvas id="overlay"></canvas></div>
+<script>
+const candidates = [{"id": "candidate-001", "box": {"x": 4, "y": 1028, "w": 70, "h": 70}, "raw_template_score": 0.775318, "breeder_likeness_score": 0.364759, "best_reference": "normal-breeding-structure.webp @ 1.15x", "template": "enhanced-breeding-structure.webp", "crop": "candidate-001-crop.png", "boxed_context": "candidate-1-source-context-boxed.png"}, {"id": "candidate-002", "box": {"x": 6, "y": 1140, "w": 88, "h": 88}, "raw_template_score": 0.756575, "breeder_likeness_score": 0.372433, "best_reference": "enhanced-breeding-structure.webp @ 1.15x", "template": "enhanced-breeding-structure.webp", "crop": "candidate-002-crop.png", "boxed_context": "candidate-2-source-context-boxed.png"}, {"id": "candidate-003", "box": {"x": 0, "y": 1201, "w": 176, "h": 176}, "raw_template_score": 0.618004, "breeder_likeness_score": 0.489845, "best_reference": "enhanced-breeding-structure.webp @ 1.15x", "template": "enhanced-breeding-structure.webp", "crop": "candidate-003-crop.png", "boxed_context": "candidate-3-source-context-boxed.png"}, {"id": "candidate-004", "box": {"x": 464, "y": 811, "w": 84, "h": 84}, "raw_template_score": 0.567697, "breeder_likeness_score": 0.334627, "best_reference": "enhanced-breeding-structure.webp @ 1.15x", "template": "locked-breeding-structure.webp", "crop": "candidate-004-crop.png", "boxed_context": "candidate-4-source-context-boxed.png"}, {"id": "candidate-005", "box": {"x": 913, "y": 713, "w": 220, "h": 220}, "raw_template_score": 0.563721, "breeder_likeness_score": 0.434615, "best_reference": "normal-breeding-structure.webp @ 1.15x", "template": "enhanced-breeding-structure.webp", "crop": "candidate-005-crop.png", "boxed_context": "candidate-5-source-context-boxed.png"}, {"id": "candidate-006", "box": {"x": 1324, "y": 1050, "w": 105, "h": 105}, "raw_template_score": 0.549724, "breeder_likeness_score": 0.353726, "best_reference": "enhanced-breeding-structure.webp @ 1.15x", "template": "locked-breeding-structure.webp", "crop": "candidate-006-crop.png", "boxed_context": "candidate-6-source-context-boxed.png"}, {"id": "candidate-007", "box": {"x": 944, "y": 730, "w": 126, "h": 126}, "raw_template_score": 0.54403, "breeder_likeness_score": 0.372767, "best_reference": "enhanced-breeding-structure.webp @ 1.15x", "template": "locked-breeding-structure.webp", "crop": "candidate-007-crop.png", "boxed_context": "candidate-7-source-context-boxed.png"}, {"id": "candidate-008", "box": {"x": 679, "y": 356, "w": 278, "h": 278}, "raw_template_score": 0.463404, "breeder_likeness_score": 0.493703, "best_reference": "enhanced-breeding-structure.webp @ 1.15x", "template": "normal-breeding-structure.webp", "crop": "candidate-008-crop.png", "boxed_context": "candidate-8-source-context-boxed.png"}, {"id": "candidate-009", "box": {"x": 297, "y": 667, "w": 405, "h": 405}, "raw_template_score": 0.454014, "breeder_likeness_score": 0.482392, "best_reference": "enhanced-breeding-structure.webp @ 1.15x", "template": "locked-breeding-structure.webp", "crop": "candidate-009-crop.png", "boxed_context": "candidate-9-source-context-boxed.png"}];
+const image = document.getElementById('source');
+const canvas = document.getElementById('overlay');
+const context = canvas.getContext('2d');
+const output = document.getElementById('box');
+let start = null;
+let current = null;
+
+function point(event) {
+  const rect = canvas.getBoundingClientRect();
+  return {
+    x: Math.round((event.clientX - rect.left) * canvas.width / rect.width),
+    y: Math.round((event.clientY - rect.top) * canvas.height / rect.height)
+  };
+}
+
+function boxFromPoints(a, b) {
+  const x = Math.min(a.x, b.x);
+  const y = Math.min(a.y, b.y);
+  return {x, y, w: Math.abs(a.x - b.x), h: Math.abs(a.y - b.y)};
+}
+
+function draw() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.font = 'bold 24px system-ui';
+  context.lineWidth = 5;
+  for (const candidate of candidates) {
+    const b = candidate.box;
+    context.strokeStyle = '#36e1ff';
+    context.strokeRect(b.x, b.y, b.w, b.h);
+    context.fillStyle = '#071118';
+    context.fillRect(b.x, Math.max(0, b.y - 32), 76, 32);
+    context.fillStyle = '#66ebff';
+    context.fillText(candidate.id.replace('candidate-', '#'), b.x + 6, Math.max(25, b.y - 7));
+  }
+  if (start && current) {
+    const b = boxFromPoints(start, current);
+    context.strokeStyle = '#ffdc4e';
+    context.lineWidth = 7;
+    context.strokeRect(b.x, b.y, b.w, b.h);
+  }
+}
+
+image.addEventListener('load', () => {
+  canvas.width = image.naturalWidth;
+  canvas.height = image.naturalHeight;
+  draw();
+});
+canvas.addEventListener('pointerdown', event => {
+  canvas.setPointerCapture(event.pointerId);
+  start = point(event);
+  current = start;
+  draw();
+});
+canvas.addEventListener('pointermove', event => {
+  if (!start) return;
+  current = point(event);
+  draw();
+});
+canvas.addEventListener('pointerup', event => {
+  if (!start) return;
+  current = point(event);
+  const box = boxFromPoints(start, current);
+  output.textContent = JSON.stringify(box);
+  start = null;
+  current = null;
+  draw();
+});
+document.getElementById('copy').addEventListener('click', async () => {
+  if (!output.textContent.startsWith('{')) return;
+  await navigator.clipboard.writeText(output.textContent);
+});
+</script>
+</body>
+</html>

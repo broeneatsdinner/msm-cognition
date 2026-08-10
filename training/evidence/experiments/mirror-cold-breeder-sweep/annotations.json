@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "source": "training/screenshots/2026-07-09-world-overview-mirror-cold-island.png",
+  "island": "Mirror Cold Island",
+  "annotations": [
+    {
+      "id": "false-positive-2041-923-110-110",
+      "label": "false_positive",
+      "status": "confirmed",
+      "box": {
+        "x": 2041,
+        "y": 923,
+        "w": 110,
+        "h": 110
+      },
+      "notes": "Recurring detector box confirmed by human review as not a Breeding Structure.",
+      "cluster_occurrences": 6,
+      "observed_in_experiments": [
+        1,
+        2,
+        3,
+        31,
+        32,
+        33
+      ]
+    },
+    {
+      "id": "false-positive-1830-310-132-132",
+      "label": "false_positive",
+      "status": "confirmed",
+      "box": {
+        "x": 1830,
+        "y": 310,
+        "w": 132,
+        "h": 132
+      },
+      "notes": "Recurring detector box confirmed by human review as not a Breeding Structure.",
+      "cluster_occurrences": 15,
+      "observed_in_experiments": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        25,
+        26,
+        27,
+        32,
+        33,
+        49,
+        50
+      ]
+    },
+    {
+      "id": "breeding-structure-manual-box",
+      "label": "breeding_structure",
+      "status": "needs_manual_box",
+      "box": null,
+      "notes": "Draw the real Breeding Structure box after reviewing source context crops."
+    }
+  ]
+}

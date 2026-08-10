@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "image": "training/screenshots/breeding-structure/plant-island-2026-07-09/plant-breeding-structure-idle-zoom-01.png",
+  "label": "breeding_structure",
+  "island": "Plant Island",
+  "state": "idle",
+  "ground_truth": {
+    "status": "confirmed",
+    "box": {
+      "x": 684,
+      "y": 120,
+      "w": 858,
+      "h": 1239
+    }
+  },
+  "detector_settings": {
+    "threshold": 0.45,
+    "minimum_size": {
+      "w": 64,
+      "h": 64
+    },
+    "max_candidates": 12
+  },
+  "detector_candidates": [
+    {
+      "id": "candidate-001",
+      "box": {
+        "x": 32,
+        "y": 1139,
+        "w": 70,
+        "h": 70
+      },
+      "raw_template_score": 0.769086,
+      "breeder_likeness_score": 0.377275,
+      "best_reference": "enhanced-breeding-structure.webp @ 1.15x",
+      "template": "enhanced-breeding-structure.webp",
+      "crop": "candidate-001-crop.png",
+      "boxed_context": "candidate-1-source-context-boxed.png"
+    },
+    {
+      "id": "candidate-002",
+      "box": {
+        "x": 20,
+        "y": 1124,
+        "w": 132,
+        "h": 132
+      },
+      "raw_template_score": 0.705157,
+      "breeder_likeness_score": 0.370502,
+      "best_reference": "normal-breeding-structure.webp @ 1.15x",
+      "template": "enhanced-breeding-structure.webp",
+      "crop": "candidate-002-crop.png",
+      "boxed_context": "candidate-2-source-context-boxed.png"
+    },
+    {
+      "id": "candidate-003",
+      "box": {
+        "x": 0,
+        "y": 1123,
+        "w": 264,
+        "h": 264
+      },
+      "raw_template_score": 0.615337,
+      "breeder_likeness_score": 0.504915,
+      "best_reference": "locked-breeding-structure.webp @ 0.85x",
+      "template": "enhanced-breeding-structure.webp",
+      "crop": "candidate-003-crop.png",
+      "boxed_context": "candidate-3-source-context-boxed.png"
+    },
+    {
+      "id": "candidate-004",
+      "box": {
+        "x": 1979,
+        "y": 570,
+        "w": 84,
+        "h": 84
+      },
+      "raw_template_score": 0.59882,
+      "breeder_likeness_score": 0.28676,
+      "best_reference": "enhanced-breeding-structure.webp @ 1.15x",
+      "template": "locked-breeding-structure.webp",
+      "crop": "candidate-004-crop.png",
+      "boxed_context": "candidate-4-source-context-boxed.png"
+    },
+    {
+      "id": "candidate-005",
+      "box": {
+        "x": 965,
+        "y": 721,
+        "w": 126,
+        "h": 126
+      },
+      "raw_template_score": 0.552425,
+      "breeder_likeness_score": 0.373843,
+      "best_reference": "enhanced-breeding-structure.webp @ 1.15x",
+      "template": "locked-breeding-structure.webp",
+      "crop": "candidate-005-crop.png",
+      "boxed_context": "candidate-5-source-context-boxed.png"
+    },
+    {
+      "id": "candidate-006",
+      "box": {
+        "x": 1346,
+        "y": 1039,
+        "w": 105,
+        "h": 105
+      },
+      "raw_template_score": 0.55007,
+      "breeder_likeness_score": 0.358415,
+      "best_reference": "enhanced-breeding-structure.webp @ 1.15x",
+      "template": "locked-breeding-structure.webp",
+      "crop": "candidate-006-crop.png",
+      "boxed_context": "candidate-6-source-context-boxed.png"
+    },
+    {
+      "id": "candidate-007",
+      "box": {
+        "x": 1919,
+        "y": 493,
+        "w": 168,
+        "h": 168
+      },
+      "raw_template_score": 0.510237,
+      "breeder_likeness_score": 0.279238,
+      "best_reference": "enhanced-breeding-structure.webp @ 1.15x",
+      "template": "locked-breeding-structure.webp",
+      "crop": "candidate-007-crop.png",
+      "boxed_context": "candidate-7-source-context-boxed.png"
+    },
+    {
+      "id": "candidate-008",
+      "box": {
+        "x": 317,
+        "y": 656,
+        "w": 405,
+        "h": 405
+      },
+      "raw_template_score": 0.454858,
+      "breeder_likeness_score": 0.481936,
+      "best_reference": "enhanced-breeding-structure.webp @ 1.15x",
+      "template": "locked-breeding-structure.webp",
+      "crop": "candidate-008-crop.png",
+      "boxed_context": "candidate-8-source-context-boxed.png"
+    },
+    {
+      "id": "candidate-009",
+      "box": {
+        "x": 633,
+        "y": 182,
+        "w": 348,
+        "h": 348
+      },
+      "raw_template_score": 0.452748,
+      "breeder_likeness_score": 0.502928,
+      "best_reference": "enhanced-breeding-structure.webp @ 1.15x",
+      "template": "normal-breeding-structure.webp",
+      "crop": "candidate-009-crop.png",
+      "boxed_context": "candidate-9-source-context-boxed.png"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+# Breeder Result Guess
+
+## Source
+
+Island: **Mirror Cold Island**  
+Island alias: **Mirror Cold Island -> Cold Island**  
+Detection mode: **detect-breeders**  
+
+Source image: `/Users/broen/Documents/Git/msm-cognition/training/screenshots/2026-07-09-world-overview-mirror-cold-island.png`
+
+![Source screenshot](source.png)
+
+## Detector candidates
+
+Active filters: locked templates excluded, Paironormal templates excluded, minimum size `96x96`, match threshold `0.680`.
+
+Active templates: `enhanced-breeding-structure.webp, normal-breeding-structure.webp`
+
+Rejected detector checks:
+
+| Reason | Count |
+|---|---:|
+| paironormal_template_excluded | 48 |
+| locked_template_excluded | 13 |
+| below_min_size | 2 |
+| below_threshold | 25 |
+
+| Candidate | Template | Match score | Detector confidence | Template scale | Bounding box |
+|---:|---|---:|---|---:|---|
+| 1 | enhanced-breeding-structure.webp | 0.743 | low | 0.125 | `x=2041, y=923, w=110, h=110` |
+
+Debug candidate shortlist:
+
+| Rank | Template | Match score | Template scale | Bounding box |
+|---:|---|---:|---:|---|
+| 1 | enhanced-breeding-structure.webp | 0.743 | 0.125 | `x=2041, y=923, w=110, h=110` |
+| 2 | enhanced-breeding-structure.webp | 0.726 | 0.15 | `x=1830, y=310, w=132, h=132` |
+
+## Recognition notes
+
+- When a Breeding Structure is in progress, the top-left and top-right eggs are the parent eggs.
+- When a Breeding Structure is finished, the bottom-center egg is the resulting egg.
+- Parent egg crop regions are currently heuristic and should be tuned from confirmed training examples.
+- Automated egg-reference matching is a simple helper, not a trained recognizer and not authoritative.
+- Manual parent recognition, when supplied, is displayed separately from automated matches.
+
+## Candidate 1
+
+Detector: `enhanced-breeding-structure.webp`, score `0.743`, confidence `low`, scale `0.125`
+
+### Warnings
+
+- The Breeding Structure detector confidence is low; candidate crop requires manual review.
+- Manual `--parents` were supplied for this candidate.
+- The final guess depends on manual parent recognition.
+- The left automated egg-reference match disagrees with manual recognition: manual `Mammott`, automated `Pango`.
+- The right automated egg-reference match disagrees with manual recognition: manual `Tweedle`, automated `Pango`.
+
+### Breeding Structure crop
+
+Crop coordinates: `x=2041, y=923, w=110, h=110`
+
+![Candidate 1 Breeding Structure crop](candidate-1-crop-breeder.png)
+
+Upscaled evidence crop:
+
+![Candidate 1 Breeding Structure crop 4x](candidate-1-crop-breeder-4x.png)
+
+## Manual parent recognition
+
+Manual parent recognition comes only from `--parents LEFT RIGHT` and currently applies to candidate 1 only.
+
+Left manual parent: **Mammott**  
+Right manual parent: **Tweedle**
+
+## Automated egg-reference matches
+
+Automated matching is non-authoritative evidence for review.
+
+Left automated parent: **Pango**  
+Right automated parent: **Pango**
+
+### Parent egg evidence
+
+Left parent relative crop setting: `x=0.2, y=0.06, w=0.22, h=0.22`  
+Right parent relative crop setting: `x=0.58, y=0.06, w=0.22, h=0.22`
+
+### Left parent egg crop
+
+Relative crop inside detected Breeding Structure: `x=0.2, y=0.06, w=0.22, h=0.22`
+
+Resulting absolute crop box: `x=2063, y=930, w=24, h=24`
+
+Crop clamping: **no**
+
+Crop coordinates: `x=2063, y=930, w=24, h=24`
+
+![Candidate 1 left parent egg crop](candidate-1-crop-left-parent-egg.png)
+
+Upscaled evidence crop:
+
+![Candidate 1 left parent egg crop 4x](candidate-1-crop-left-parent-egg-4x.png)
+
+Manual parent: **Mammott**  
+
+Manual parent reference egg:
+
+![Mammott](candidate-1-left-manual-mammott.webp)
+
+Top automated match: **Pango**
+
+Automated egg-reference matches:
+
+| Rank | Monster | Score | RMS | Reference |
+|---:|---|---:|---:|---|
+| 1 | Pango | 89.0 | 48.80 | ![Pango](candidate-1-reference-left-match-1-pango.webp) |
+| 2 | Oaktopus | 88.3 | 51.86 | ![Oaktopus](candidate-1-reference-left-match-2-oaktopus.webp) |
+| 3 | Noggin | 88.0 | 53.14 | ![Noggin](candidate-1-reference-left-match-3-noggin.webp) |
+| 4 | Cybop | 87.1 | 56.78 | ![Cybop](candidate-1-reference-left-match-4-cybop.webp) |
+| 5 | T-Rox | 86.9 | 58.07 | ![T-Rox](candidate-1-reference-left-match-5-t-rox.webp) |
+
+### Right parent egg crop
+
+Relative crop inside detected Breeding Structure: `x=0.58, y=0.06, w=0.22, h=0.22`
+
+Resulting absolute crop box: `x=2105, y=930, w=24, h=24`
+
+Crop clamping: **no**
+
+Crop coordinates: `x=2105, y=930, w=24, h=24`
+
+![Candidate 1 right parent egg crop](candidate-1-crop-right-parent-egg.png)
+
+Upscaled evidence crop:
+
+![Candidate 1 right parent egg crop 4x](candidate-1-crop-right-parent-egg-4x.png)
+
+Manual parent: **Tweedle**  
+
+Manual parent reference egg:
+
+![Tweedle](candidate-1-right-manual-tweedle.webp)
+
+Top automated match: **Pango**
+
+Automated egg-reference matches:
+
+| Rank | Monster | Score | RMS | Reference |
+|---:|---|---:|---:|---|
+| 1 | Pango | 85.7 | 63.29 | ![Pango](candidate-1-reference-right-match-1-pango.webp) |
+| 2 | Oaktopus | 85.1 | 65.71 | ![Oaktopus](candidate-1-reference-right-match-2-oaktopus.webp) |
+| 3 | Shrubb | 83.7 | 71.83 | ![Shrubb](candidate-1-reference-right-match-3-shrubb.webp) |
+| 4 | Noggin | 83.6 | 72.55 | ![Noggin](candidate-1-reference-right-match-4-noggin.webp) |
+| 5 | Thumpies | 83.4 | 73.29 | ![Thumpies](candidate-1-reference-right-match-5-thumpies.webp) |
+
+## Structured breeding lookup
+
+```text
+Island: Mirror Cold Island
+Alias: Mirror Cold Island -> Cold Island
+Parents used: Mammott + Tweedle
+Left parent source: manual_parent_recognition
+Right parent source: manual_parent_recognition
+```
+
+## Final guess
+
+Likely result: **Pango**
+
+Confidence: **high**
+
+Reason:
+
+- Mirror Cold Island aliases to Cold Island.
+- Pango is listed for Cold Island.
+- Pango's listed parent pair is Tweedle + Mammott.
+- Standard time: 8h.
+- Enhanced time: 6h.
+
+## Training review
+
+Suggested `detector_classification` values: `confirmed_positive`, `false_positive`, `missed_detection`, `parent_crop_incorrect`, `parent_crop_correct`, `unresolved`.
+
+```yaml
+training_review:
+  status: unresolved
+  detector_candidate_correct: null
+  detector_classification: null
+  breeder_box_correction: null
+  left_parent_crop_correct: null
+  left_parent_box_correction: null
+  right_parent_crop_correct: null
+  right_parent_box_correction: null
+  confirmed_left_parent: null
+  confirmed_right_parent: null
+  confirmed_result: null
+  notes: null
+```
+
+## Candidate source context and breeder-likeness scoring
+
+These wider screenshot crops show where each isolated detector crop came from. The yellow rectangle is the exact candidate box.
+
+The breeder-likeness score is an explainable ranking aid, not a definitive classification. It preserves the raw template score and combines reference color, edge layout, masked shape, size/layout sanity, and confirmed-false-positive evidence.
+
+### Candidate 1 context
+
+| Raw template | Color | Edge | Shape/mask | Local context | Negative penalty | Layout sanity | Breeder-likeness | Best reference |
+|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 0.743 | 0.093 | 0.330 | 0.234 | 0.323 | 0.800 | 0.833 | **0.000** | normal-breeding-structure.webp @ 1.15x |
+
+Context box: `x=1903, y=785, w=257, h=386`
+
+![Candidate 1 source context](candidate-1-source-context.png)
+
+![Candidate 1 source context with detector box](candidate-1-source-context-boxed.png)
