@@ -23,7 +23,7 @@ Availability snapshot:
 
 ### Required Breeding Chain
 
-We are missing **Quibble**, so the first step is to breed Quibble again.
+Quibble has been bred on Cold Island, so the active step is now the Epic Spunge attempt.
 
 #### Step 1: Breed Quibble
 
@@ -45,12 +45,12 @@ Why this combo:
 - Once Quibble is bred and hatched, feed it to **level 4** so it can be used for breeding.
 
 Current status:
-- Tweedle + Toe Jammer breeding attempt has been started on Cold Island.
+- **Completed.** Quibble has been bred on Cold Island.
 
 Next action:
-- Wait for the breeding result.
-- If Quibble: hatch it, place it, and feed to level 4.
-- If fail: retry Tweedle + Toe Jammer immediately when available.
+- Hatch and place Quibble if it is still in the Nursery.
+- Feed Quibble to **level 4** if needed.
+- Use Quibble with Thumpies for the Epic Spunge attempt.
 
 #### Step 2: Breed Epic Spunge
 
@@ -72,8 +72,12 @@ Why this combo:
 - It is the only known Cold Island combo for Epic Spunge.
 - Failed attempts are manageable enough to allow multiple retries during the availability window.
 
-Next action after Quibble is ready:
-- Breed **Thumpies + Quibble** repeatedly until Epic Spunge is obtained or the event ends.
+Current status:
+- Quibble has been acquired.
+- The next breeding attempt is **Thumpies + Quibble**.
+
+Next action:
+- Breed **Thumpies + Quibble** now, then repeat until Epic Spunge is obtained or the event ends.
 - Watch for the success timer:
   - **1d 1h** with normal breeding
   - **18h 45m** with Enhanced Breeding
