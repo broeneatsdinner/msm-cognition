@@ -248,20 +248,20 @@ Observed: `2026-07-30`
 | Type | Parents | Time | Prediction | Confidence |
 | --- | --- | --- | --- | --- |
 | Castle_Upgrade | — | — | — | High |
-| Breeding | Rare Thumpies (level 10) + Shrubb (level 10) | 8h | Shrubb fail while attempting Epic Reedling | Medium |
-| Breeding | Rare Thumpies (level 10) + Shrubb (level 10) | 12h | Thumpies fail while attempting Epic Reedling | Medium |
+| Breeding | Pebblonius (Quarrister, level 20) + Lil Fuzz (Rare Furcorn, level 10) | — | Attempting Epic Potbelly | High |
 
 ### Current objective
 
-Breed **Epic Reedling** during its current availability window.
+Breed **Epic Potbelly** during its current availability window.
 
 | Target | Combo | Success time | Enhanced success time | Current status | Priority |
 | --- | --- | --- | --- | --- | --- |
-| Epic Reedling | Thumpies + Shrubb | 17h | 12h 45m | In progress with two likely failed attempts | Active while offered |
+| Epic Potbelly | Quarrister + Furcorn | 9h | 6h 45m | Ready to start with named parents | Active while offered |
 
 Notes:
-- Rare Thumpies can substitute for Common Thumpies as a parent.
-- The current 8h and 12h timers are likely Shrubb and Thumpies misses; retry immediately when both breeders clear.
+- Use **Pebblonius** (Quarrister, level 20) with **Lil Fuzz** (Rare Furcorn, level 10).
+- Lil Fuzz can substitute for Common Furcorn as the Furcorn parent.
+- Watch for 9h normally, or 6h 45m with Enhanced Breeding, as the success timer.
 
 ### Rare breeding planner
 
