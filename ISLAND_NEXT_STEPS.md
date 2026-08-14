@@ -11,6 +11,56 @@ Each island section should include:
 - Current status
 - Next action
 
+## Water Island
+
+### Current Goal
+
+Breed **Epic Oaktopus** on Water Island while it is currently available.
+
+Availability snapshot:
+- Rare Toe Jammer, Rare Oaktopus, Epic Potbelly, Epic Toe Jammer, and Epic Oaktopus are available on Water Island as of **2026-08-14**.
+- Epic Oaktopus is the preferred Water Island target.
+- Epic Monsters must be available in the Market for their breeding combo to work.
+
+### Required Breeding Chain
+
+Best combo on Water Island:
+
+**Reedling + Fwog**
+
+Current parent set:
+- **Fwoot**: Reedling, level 11
+- **Walden**: Fwog, level 10
+
+Notes:
+- Walden was raised from level 4 to level 10 before the attempt.
+- Use these named parents for repeated attempts unless a higher-level Reedling or Fwog becomes available.
+- Focus Water Island breeding capacity on Epic Oaktopus before chasing Rare Toe Jammer, Rare Oaktopus, Epic Potbelly, or Epic Toe Jammer.
+
+Timers:
+
+| Result | Normal Breeding | Enhanced Breeding |
+|---|---:|---:|
+| Epic Oaktopus | 1d 7h | 23h 15m |
+| Fwog fail | 30m | 22m 30s |
+| Reedling fail | 12h | 9h |
+| Shellbeat fail | 1d | 18h |
+
+Current status:
+- The active Water Island target is **Epic Oaktopus**.
+- Start breeding **Fwoot + Walden**.
+
+Next action:
+- Breed **Reedling + Fwog** repeatedly until Epic Oaktopus is obtained or the offer ends.
+- Watch for the success timer:
+  - **1d 7h** with normal breeding
+  - **23h 15m** with Enhanced Breeding
+
+Helpful boosts:
+- Light wishing torches if possible.
+- Keep the Breeding Structure and Nursery clear to maximize attempts.
+- A 30m Fwog miss is a quick retry; clear it immediately when possible.
+
 ## Plant Island
 
 ### Current Goal
