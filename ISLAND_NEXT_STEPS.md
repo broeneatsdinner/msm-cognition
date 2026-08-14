@@ -11,6 +11,56 @@ Each island section should include:
 - Current status
 - Next action
 
+## Plant Island
+
+### Current Goal
+
+Breed **Epic Oaktopus** on Plant Island while it is currently available.
+
+Availability snapshot:
+- Epic Oaktopus is available for approximately **3d 7h** from the time this plan was created on **2026-08-14**.
+- Rare Toe Jammer, Epic Toe Jammer, Epic Oaktopus, and Epic Potbelly are also available, but Epic Oaktopus is the preferred target.
+- Epic Monsters must be available in the Market for their breeding combo to work.
+
+### Required Breeding Chain
+
+Best combo on Plant Island:
+
+**Bowgart + Shrubb**
+
+Current parent set:
+- **ItsABassThnCellO**: Bowgart, level 15
+- **Iggy**: Shrubb, level 15
+
+Notes:
+- Level 15 parents are a strong setup and should be used for repeated attempts.
+- Rare Bowgart or Rare Shrubb could substitute if needed, but the current named Common parents are already high-level.
+- Focus Plant Island breeding capacity on Epic Oaktopus before chasing the other available targets.
+
+Timers:
+
+| Result | Normal Breeding | Enhanced Breeding |
+|---|---:|---:|
+| Epic Oaktopus | 1d 7h | 23h 15m |
+| Shrubb fail | 8h | 6h |
+| Bowgart fail | 12h | 9h |
+| Entbrat fail | 1d | 18h |
+
+Current status:
+- The active Plant Island target is **Epic Oaktopus**.
+- Start breeding **ItsABassThnCellO + Iggy**.
+
+Next action:
+- Breed **Bowgart + Shrubb** repeatedly until Epic Oaktopus is obtained or the offer ends.
+- Watch for the success timer:
+  - **1d 7h** with normal breeding
+  - **23h 15m** with Enhanced Breeding
+
+Helpful boosts:
+- Light wishing torches if possible.
+- Keep the Breeding Structure and Nursery clear to maximize attempts.
+- If both Plant Island breeders are available and duplicate parent coverage allows it, run the same target in both.
+
 ## Cold Island
 
 ### Current Goal

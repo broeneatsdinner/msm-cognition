@@ -91,7 +91,22 @@ Observed: `2026-07-13`
 
 ### Pending
 
-None recorded.
+| Type | Parents | Time | Prediction | Confidence |
+| --- | --- | --- | --- | --- |
+| Breeding | ItsABassThnCellO (Bowgart, level 15) + Iggy (Shrubb, level 15) | — | Attempting Epic Oaktopus | High |
+
+### Current objective
+
+Breed **Epic Oaktopus** during its current availability window.
+
+| Target | Combo | Success time | Enhanced success time | Current status | Priority |
+| --- | --- | --- | --- | --- | --- |
+| Epic Oaktopus | Bowgart + Shrubb | 1d 7h | 23h 15m | Ready to start with level 15 parents | Active while offered |
+
+Notes:
+- Use **ItsABassThnCellO** (Bowgart, level 15) with **Iggy** (Shrubb, level 15).
+- Current offer window is approximately **3d 7h** from the 2026-08-14 planning update.
+- Watch for 1d 7h normally, or 23h 15m with Enhanced Breeding, as the success timer.
 
 ### Rare breeding planner
 
