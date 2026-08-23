@@ -4,6 +4,9 @@ __pycache__/
 .venv/
 venv/
 
+# Downloaded reference caches can be regenerated from checked-in manifests.
+reference/book/images/
+
 # macOS cruft
 .AppleDouble
 .LSOverride

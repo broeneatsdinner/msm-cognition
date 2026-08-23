@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "source": {
+    "name": "My Singing Monsters Wiki",
+    "book_page": "https://mysingingmonsters.fandom.com/wiki/Book_of_Monsters",
+    "category_page": "https://mysingingmonsters.fandom.com/wiki/Category:Book_of_Monsters",
+    "notes": [
+      "Official support documents what the Book and map sidebar fractions mean, but does not expose canonical Book page images.",
+      "The wiki Book of Monsters gallery and Book of Monsters category list island collection image file titles."
+    ]
+  },
+  "references": [
+    {
+      "island": "Plant Island",
+      "variant": "common",
+      "file_title": "File:Plant Island Collection (Commons).png"
+    },
+    {
+      "island": "Plant Island",
+      "variant": "rare",
+      "file_title": "File:Plant Island Collection (Rares).png"
+    },
+    {
+      "island": "Plant Island",
+      "variant": "epic",
+      "file_title": "File:Plant Island Collection (Epics).png"
+    },
+    {
+      "island": "Cold Island",
+      "variant": "common",
+      "file_title": "File:Cold Island Collection (Commons).png"
+    },
+    {
+      "island": "Cold Island",
+      "variant": "rare",
+      "file_title": "File:Cold Island Collection (Rares).png"
+    },
+    {
+      "island": "Cold Island",
+      "variant": "epic",
+      "file_title": "File:Cold Island Collection (Epics).png"
+    },
+    {
+      "island": "Air Island",
+      "variant": "common",
+      "file_title": "File:Air Island Collection (Commons).png"
+    },
+    {
+      "island": "Air Island",
+      "variant": "rare",
+      "file_title": "File:Air Island Collection (Rares).png"
+    },
+    {
+      "island": "Air Island",
+      "variant": "epic",
+      "file_title": "File:Air Island Collection (Epics).png"
+    },
+    {
+      "island": "Water Island",
+      "variant": "common",
+      "file_title": "File:Water Island Collection (Commons).png"
+    },
+    {
+      "island": "Water Island",
+      "variant": "rare",
+      "file_title": "File:Water Island Collection (Rares).png"
+    },
+    {
+      "island": "Water Island",
+      "variant": "epic",
+      "file_title": "File:Water Island Collection (Epics).png"
+    },
+    {
+      "island": "Earth Island",
+      "variant": "common",
+      "file_title": "File:Earth Island Collection (Commons).png"
+    },
+    {
+      "island": "Earth Island",
+      "variant": "rare",
+      "file_title": "File:Earth Island Collection (Rares).png"
+    },
+    {
+      "island": "Earth Island",
+      "variant": "epic",
+      "file_title": "File:Earth Island Collection (Epics).png"
+    }
+  ]
+}

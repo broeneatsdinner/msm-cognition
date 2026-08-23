@@ -23,6 +23,15 @@ reference/islands/islands.md
 ```
 
 ```text
+fetch_book_references.py
+```
+
+Downloads Book of Monsters reference images listed in
+`reference/book/book-reference-manifest.json` into the gitignored local cache at
+`reference/book/images/`. Use it before screenshot re-indexing when Book
+silhouettes need to be compared against canonical island layouts.
+
+```text
 breeding_lookup.py
 ```
 

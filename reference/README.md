@@ -15,6 +15,7 @@ raw-export.md
 ## Reference groups
 
 ```text
+book/       Book of Monsters reference image manifests and local cache workflow
 eggs/       Visual egg/icon reference
 islands/    Island status and structure reference
 monsters/   Monster reference data

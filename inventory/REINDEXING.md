@@ -79,6 +79,10 @@ own roster.
   state. Market pages can supply current owned counts, prices, and visible
   availability, but Market visibility does not remove or undiscover a monster
   shown in the Book.
+- Compare account Book screenshots against the canonical Book reference manifest
+  in `reference/book/book-reference-manifest.json` before naming shadowed or
+  visually similar entries. If the local reference cache is missing, regenerate
+  it with `python3 scripts/fetch_book_references.py`.
 - Book totals can prove that some discovery exists without proving which monster
   it is. If a Book silhouette is ambiguous, record the count under
   `unresolved_discoveries` rather than assigning `discovered: true` to a guessed
