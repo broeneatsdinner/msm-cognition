@@ -4,6 +4,9 @@ The canonical player inventory is stored as one YAML file per island under
 `inventory/islands/`. Screenshot evidence and Git history therefore remain
 island-scoped, while `inventory/README.md` provides one generated human view.
 
+For the repeatable workflow used to re-evaluate islands from a dated screenshot
+batch, see `inventory/REINDEXING.md`.
+
 ## Field semantics
 
 - `discovered` mirrors whether the monster is unlocked in the Book of Monsters.
