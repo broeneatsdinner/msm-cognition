@@ -52,6 +52,11 @@ the Market because it is not currently offered. Every inventory monster row must
 still use an explicit non-negative integer `owned` count; unresolved evidence is
 recorded through `confidence: low`, notes, and bed audit deltas.
 
+Use `scripts/compare_book_references.py` to compare account Book screenshots
+against cached canonical Book references before naming shadowed or visually
+similar Book entries. The comparator produces review evidence only; it does not
+change inventory rows or resolve `unresolved_discoveries` by itself.
+
 Castle bed panels audit the inventory rows. They can reveal drift, but they
 should not silently assign a specific monster count without screenshot evidence,
 user confirmation, or an explicit low-confidence note.

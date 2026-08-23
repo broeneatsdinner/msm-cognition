@@ -32,6 +32,23 @@ Downloads Book of Monsters reference images listed in
 silhouettes need to be compared against canonical island layouts.
 
 ```text
+compare_book_references.py
+```
+
+Compares account Book screenshots from `inventory/islands/*.yaml` against cached
+canonical Book references and writes generated, gitignored review evidence under
+`training/evidence/book-reference-audit/`.
+
+```bash
+python3 scripts/compare_book_references.py --island "Water Island"
+python3 scripts/compare_book_references.py
+```
+
+Scores are for review only. They identify likely Common/Rare/Epic page matches
+and weak matches; they do not update inventory YAML or name ambiguous
+silhouettes.
+
+```text
 breeding_lookup.py
 ```
 

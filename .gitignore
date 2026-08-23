@@ -6,6 +6,7 @@ venv/
 
 # Downloaded reference caches can be regenerated from checked-in manifests.
 reference/book/images/
+training/evidence/book-reference-audit/
 
 # macOS cruft
 .AppleDouble
