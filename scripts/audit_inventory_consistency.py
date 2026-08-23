@@ -20,6 +20,10 @@ from msm_cognition.inventory import bed_usage, load_json, load_yaml  # noqa: E40
 INVENTORY_DIR = REPO_ROOT / "inventory/islands"
 PLAYER_MAP_PATH = REPO_ROOT / "reference/islands/player-map-2026-08-23.json"
 MONSTER_BEDS_PATH = REPO_ROOT / "reference/monsters/bed-requirements.json"
+SCREENSHOT_BATCH_DIR = (
+    REPO_ROOT
+    / "training/screenshots/My Singing Monsters Island Inventories 2026-08-22"
+)
 
 
 def flatten_player_map(path: Path) -> dict[str, dict[str, Any]]:
@@ -71,6 +75,26 @@ def island_rows() -> list[tuple[Path, dict[str, Any]]]:
     ]
 
 
+def screenshot_folder_for(name: str) -> Path | None:
+    if not SCREENSHOT_BATCH_DIR.exists():
+        return None
+    suffix = f" {name}"
+    for path in sorted(SCREENSHOT_BATCH_DIR.iterdir()):
+        if path.is_dir() and path.name.endswith(suffix):
+            return path
+    return None
+
+
+def screenshot_count(path: Path | None) -> int:
+    if path is None:
+        return 0
+    return sum(
+        1
+        for child in path.iterdir()
+        if child.is_file() and child.suffix.casefold() in {".jpg", ".jpeg", ".png"}
+    )
+
+
 def audit() -> str:
     player_map = flatten_player_map(PLAYER_MAP_PATH)
     monster_beds = load_json(MONSTER_BEDS_PATH)
@@ -85,6 +109,7 @@ def audit() -> str:
 
     problems: list[str] = []
     islands = island_rows()
+    indexed_names = {island["island"] for _, island in islands}
     for path, island in islands:
         name = island["island"]
         map_row = player_map.get(name)
@@ -122,6 +147,16 @@ def audit() -> str:
         missing = [p for p in evidence_paths(island) if not p.exists()]
         if missing:
             problems.append(f"{name}: {len(missing)} referenced screenshot(s) missing")
+
+    for name, map_row in sorted(player_map.items(), key=lambda item: item[1]["order"]):
+        if map_row.get("status") != "unlocked" or name in indexed_names:
+            continue
+        folder = screenshot_folder_for(name)
+        count = screenshot_count(folder)
+        if count:
+            problems.append(f"{name}: unlocked with {count} screenshot(s), not indexed yet")
+        else:
+            problems.append(f"{name}: unlocked, not indexed, no screenshots in batch")
 
     if problems:
         lines.extend(f"- {problem}" for problem in problems)
@@ -172,6 +207,24 @@ def audit() -> str:
                 for monster in low_confidence
             ]
             lines.append(f"- Low/medium confidence rows: {', '.join(labels)}")
+        lines.append("")
+
+    unindexed = [
+        (name, map_row)
+        for name, map_row in sorted(player_map.items(), key=lambda item: item[1]["order"])
+        if map_row.get("status") == "unlocked" and name not in indexed_names
+    ]
+    if unindexed:
+        lines.extend(["## Unindexed Unlocked Islands", ""])
+        for name, map_row in unindexed:
+            folder = screenshot_folder_for(name)
+            count = screenshot_count(folder)
+            folder_display = (
+                f"`{folder.relative_to(REPO_ROOT)}`" if folder is not None else "none"
+            )
+            lines.append(
+                f"- `{map_row['order']}` {name}: {count} screenshot(s), folder {folder_display}"
+            )
         lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
