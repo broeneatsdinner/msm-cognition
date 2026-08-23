@@ -42,6 +42,19 @@ python3 scripts/audit_inventory_beds.py --island "Water Island" --assume-panel-i
 ```
 
 ```text
+audit_inventory_consistency.py
+```
+
+Audits all indexed islands against player map progress, Book totals, referenced
+screenshot files, row-level count rules, and Castle bed panels. It can write a
+dated Markdown report for unattended review.
+
+```bash
+python3 scripts/audit_inventory_consistency.py
+python3 scripts/audit_inventory_consistency.py --out reference/project-notes/2026-08-23-inventory-consistency-audit.md
+```
+
+```text
 guess_breeder_result.py
 ```
 
