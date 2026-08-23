@@ -4,6 +4,7 @@ Generated from local inventory YAML, player map snapshot, screenshot evidence pa
 
 ## Summary
 
+- Earth Island: common named discoveries 27 plus unresolved 0 does not match Book+Seasonal 26
 - Earth Island: Castle bed audit delta +6
 - Water Island: Castle bed audit delta +4
 - Tribal Island: unlocked, not indexed, no screenshots in batch
@@ -42,8 +43,9 @@ Generated from local inventory YAML, player map snapshot, screenshot evidence pa
 - Player map order: `4`
 - Map progress: `29/72` (map_sidebar_collected_monsters, high confidence)
 - Book plus Seasonal total: `29/72`
+- Unresolved Book IDs: rare 1, epic 1
 - Castle beds: indexed `86`, panel `86/90`, delta `+0`
-- Low/medium confidence rows: rare Congle owned 0, rare T-Rox owned 1, rare Riff owned 1, rare Reebro owned 1, rare Hoola owned 1, epic Wubbox owned 0, common Hoola owned 1
+- Low/medium confidence rows: rare T-Rox owned 1, rare Riff owned 1, rare Reebro owned 1, rare Hoola owned 1, common Hoola owned 1
 
 ### Cold Island
 
@@ -51,8 +53,8 @@ Generated from local inventory YAML, player map snapshot, screenshot evidence pa
 - Player map order: `3`
 - Map progress: `25/69` (map_sidebar_collected_monsters, high confidence)
 - Book plus Seasonal total: `25/69`
+- Unresolved Book IDs: epic 1
 - Castle beds: indexed `89`, panel `89/90`, delta `+0`
-- Low/medium confidence rows: epic Wubbox owned 0
 
 ### Earth Island
 
@@ -84,9 +86,9 @@ Generated from local inventory YAML, player map snapshot, screenshot evidence pa
 - Player map order: `5`
 - Map progress: `22/69` (map_sidebar_collected_monsters, high confidence)
 - Book plus Seasonal total: `22/69`
+- Unresolved Book IDs: rare 1, epic 1
 - Castle beds: indexed `86`, panel `90/90`, delta `+4`
-- Hotel alternate: total owned beds `88`, panel-minus-owned delta `+2`
-- Low/medium confidence rows: rare Anglow owned 0, epic Wubbox owned 0
+- Checked-in Hotel beds: `2` (owned inventory, not Castle occupancy)
 
 ## Unindexed Unlocked Islands
 

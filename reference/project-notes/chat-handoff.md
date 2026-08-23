@@ -55,6 +55,8 @@ into `inventory/README.md`.
 - Book pages are the stronger source for discovery state.
 - Visible Market cards are the stronger source for current owned counts.
 - Missing Market cards do not prove `owned: 0`.
+- Ambiguous Book silhouettes must not be forced into named monster rows. Record
+  those slots under `unresolved_discoveries` until the identity is confirmed.
 - Buyback cards are not current inventory.
 - Eggs still breeding or incubating are not counted as owned.
 - Every monster row must have a non-negative integer `owned` count; do not use

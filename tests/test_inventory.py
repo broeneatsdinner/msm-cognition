@@ -25,6 +25,9 @@ class InventoryGeneratorTests(unittest.TestCase):
         self.assertIn("## Plant Island", document)
         self.assertIn("## Magical Sanctum", document)
         self.assertIn("### Castle", document)
+        self.assertIn("### Unresolved discoveries", document)
+        self.assertIn("| Rare | 4/19 | 1 |", document)
+        self.assertIn("| Epic | 1/19 | 1 |", document)
         self.assertIn(
             "| Vegidian Castle | High | 117 | 120 | 3 | 0 | 117 | 117 | 120 | 0 |",
             document,
@@ -120,6 +123,22 @@ class InventoryGeneratorTests(unittest.TestCase):
                     monster["owned"],
                     f"{island['island']} {monster['variant']} {monster['name']}",
                 )
+
+    def test_low_confidence_zero_owned_discoveries_stay_unresolved(self) -> None:
+        for path in (REPO_ROOT / "inventory/islands").glob("*.yaml"):
+            island = load_yaml(path)
+            for monster in island["monsters"]:
+                with self.subTest(
+                    island=island["island"],
+                    variant=monster["variant"],
+                    monster=monster["name"],
+                ):
+                    self.assertFalse(
+                        monster.get("discovered")
+                        and monster["owned"] == 0
+                        and monster.get("confidence") in {"low", "medium"},
+                        "Ambiguous zero-owned Book IDs belong in unresolved_discoveries",
+                    )
 
     def test_rare_single_pattern_reports_missing_path(self) -> None:
         island = load_yaml(REPO_ROOT / "inventory/islands/magical-sanctum.yaml")

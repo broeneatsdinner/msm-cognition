@@ -10,6 +10,9 @@ This is where the Water Island inventory audit paused on 2026-08-23.
 - Castle: Paradise Castle
 - Castle info panel, user-confirmed: `90/90` beds occupied
 - Hotel: one Humble Hotel with one occupant, Blaise, a level 1 Cybop
+- Hotel mechanic confirmed by in-game constraint: Blaise cannot be checked out
+  while Water Island has `90/90` occupied Castle beds, so the Hotel is keeping
+  Blaise on Water Island without occupying Castle beds.
 - Buyback: `Walden`, a Fwog, ignored for current inventory
 
 The Water Island Cybop row is recorded as owned and checked in:
@@ -37,80 +40,90 @@ Checked-in Hotel beds: 2
 Total owned beds: 88
 Panel: 90/90
 Bed audit delta: +4
-If the Castle panel includes Hotel occupants, the delta would be +2.
 ```
 
-Under the current model, where checked-in Hotel occupants do not count against
-the Castle panel, the smallest single-card reconciliations are:
+Checked-in Hotel occupants do not count against the Castle panel. The smallest
+single-card reconciliations were:
 
 ```text
 Common Shellbeat +1
 Rare Shellbeat +1
 ```
 
-The Water Island screenshots and OCR pass both support the existing values:
+The Water Island screenshots, OCR pass, and user re-check all support the
+existing values:
 
 ```text
 Common Shellbeat = 5
 Rare Shellbeat = 4
 ```
 
-So the current `+4` mismatch is not resolved by the obvious Shellbeat counts.
+So the current `+4` mismatch is not resolved by Shellbeat counts or Hotel
+accounting.
 
-## Alternate Hotel interpretation
+## Disproved zero-owned candidates
 
-It is still unproven whether the in-game Castle info panel includes monsters
-checked into a Hotel. To test that alternate interpretation, run:
-
-```bash
-python3 scripts/audit_inventory_beds.py --island "Water Island" --assume-panel-includes-hotels
-```
-
-Current result:
+The user checked these Water Island rows directly:
 
 ```text
-Bed audit delta, treating Hotel occupants as panel-counted: +2
+Rare Toe Jammer = 0
+Rare Anglow = 0 and undiscovered
+Epic Wubbox = 0 and undiscovered
 ```
 
-Under that interpretation, the smallest one-card reconciliations are:
+This corrected two bad Book silhouette identifications in
+`inventory/islands/water-island.yaml`:
 
-```text
-Common Dandidoo +1
-Common Cybop +1
-Common Quibble +1
-Common Shrubb +1
-Common Oaktopus +1
-Common Fwog +1
-```
+- Rare Anglow is now `discovered: false`.
+- Epic Wubbox is now `discovered: false`.
+- Rare Scups is the current low-confidence row preserving the Book's `4/19`
+  Rare count.
+- Epic Blabbit is the current medium-confidence row preserving the Book's
+  `1/19` Epic count.
 
-This does not mean one of those counts is wrong. It means those are the only
-single count changes that would explain the remaining `+2` if the Castle panel
-includes the checked-in Cybop.
+These corrections did not change the Castle bed delta, because the corrected
+rows all remain owned `0`.
+
+## Market sequence re-read
+
+The Water Island Market screenshots were re-read as a scrolling sequence, with
+the rule that there is only one card per monster/variant in a Market section and
+overlapping screenshots must not be counted as duplicate inventory.
+
+Visible unique Market cards and counts:
+
+| Screenshot | Cards |
+| --- | --- |
+| `IMG_0917.jpg` | Spunge 5, Rare Shellbeat 4, Rare Toe Jammer 0 |
+| `IMG_0918.jpg` | Rare Tweedle 2, T-Pirainha 0, Maggpi 0 |
+| `IMG_0919.jpg` | Parlsona 0, Do 0, Re 0 |
+| `IMG_0920.jpg` | Mi 0, Fa 0, Sol 0 |
+| `IMG_0921.jpg` | La 0, Ti 0, Wubbox 0 |
+| `IMG_0922.jpg` | Epic Wubbox 0, Tweedle 1, Potbelly 1 |
+| `IMG_0923.jpg` | Noggin 1, Toe Jammer 1, Dandidoo 1 |
+| `IMG_0924.jpg` | Cybop 1, Quibble 1, Shrubb 2 |
+| `IMG_0925.jpg` | Oaktopus 1, Fwog 1, Reedling 1 |
+| `IMG_0926.jpg` | Scups 1, Pummel 1, Shellbeat 5 |
+| `IMG_0927.jpg` | Jeeode 1, Anglow 1, Buyback Walden ignored |
+
+This re-read found no duplicated same-monster Market cards that explain the
+`+4` Castle bed delta. The current Water Island inventory rows match the visible
+unique Market cards above.
 
 ## What to test next
 
 When resuming in-game, do these in order:
 
-1. Confirm whether the Castle info panel on Water Island still says `90/90`.
-2. Confirm the Humble Hotel still has exactly one occupant: Blaise, level 1
-   Cybop.
-3. Determine the Hotel accounting rule if possible:
-   - note the Water Island Castle panel while Blaise is checked in
-   - temporarily check Blaise out or compare before/after if the game allows
-     that safely
-   - if the Castle occupied number changes by 2, Hotel occupants were excluded
-     from the panel
-   - if it does not change, Hotel occupants may already be included in the panel
-4. If the panel excludes Hotel occupants, re-check only:
-   - Common Shellbeat
-   - Rare Shellbeat
-5. If the panel includes Hotel occupants, re-check only:
-   - Common Dandidoo
-   - Common Cybop
-   - Common Quibble
-   - Common Shrubb
-   - Common Oaktopus
-   - Common Fwog
+1. Keep Castle panel as `90/90` and Hotel as Blaise checked in unless the game
+   state changes.
+2. Do not re-check Common Shellbeat or Rare Shellbeat unless new evidence
+   contradicts the confirmed counts.
+3. Check the next smallest `+4` explanations:
+   - two 2-bed common monsters off by one each
+   - one 3-bed monster plus one 1-bed monster off by one each
+   - one other 4-bed monster row not represented by Shellbeat or Rare Shellbeat
+4. Prioritize any Water Island rows that were not directly visible in the Market
+   screenshots or were visually inferred from Book totals.
 
 Do not re-check the whole Water Island Market unless the narrowed checks still
 fail to reconcile the audit.
@@ -125,8 +138,9 @@ fail to reconcile the audit.
   delta, such as 4-bed or 2-bed suspects.
 - Add a dedicated Hotel evidence model so the repo can distinguish owned,
   placed, checked-in, boxed, and pending monsters without overloading notes.
-- Once the Hotel accounting rule is confirmed, encode it in
-  `src/msm_cognition/inventory.py` and update the audit script wording.
+- Add confirmed-count exclusions to `scripts/audit_inventory_beds.py`, so
+  re-checks like Shellbeat and Rare Shellbeat can be removed from the next
+  candidate pass.
 
 ## Validation status at pause
 

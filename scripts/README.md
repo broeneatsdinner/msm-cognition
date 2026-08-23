@@ -39,6 +39,7 @@ and the smallest count changes that could reconcile a positive mismatch.
 ```bash
 python3 scripts/audit_inventory_beds.py --island "Water Island"
 python3 scripts/audit_inventory_beds.py --island "Water Island" --assume-panel-includes-hotels
+python3 scripts/audit_inventory_beds.py --island "Water Island" --exclude "common Shellbeat" --exclude "rare Shellbeat"
 ```
 
 ```text

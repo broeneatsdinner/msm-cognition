@@ -13,6 +13,8 @@ batch, see `inventory/REINDEXING.md`.
 - `owned` is the current island count shown by the Market or supported by the
   island overview. Eggs still breeding or incubating are not included.
 - A monster may have `discovered: true` and `owned: 0` after being sold or boxed.
+- `unresolved_discoveries` records Book-discovered slots whose exact monster
+  identity is not confidently known.
 - `confidence` records visually inferred counts.
 - `checked_in` records how many owned copies of that row are checked into a
   Hotel and therefore do not occupy Castle beds.
@@ -35,6 +37,10 @@ castle:
   observed_beds_occupied: 117
   observed_beds_available: 120
 book: {}
+unresolved_discoveries:
+  rare:
+    count: 1
+    evidence: Book shows one more Rare discovery than confidently identified rows.
 monsters:
   - name: Monster
     variant: common
@@ -59,6 +65,14 @@ Book-discovered monster, because the card may be unavailable during that
 screenshot window. A castle bed audit can prove that some count is still wrong
 or hidden, but it should not be used to choose a specific monster count without
 screenshot evidence, user confirmation, or an explicit low-confidence note.
+
+Do not force ambiguous Book silhouettes into named monster rows. If the Book
+count proves a discovery exists but the monster identity is not confidently
+identified, record it under `unresolved_discoveries` for that variant. A
+low-confidence named row is acceptable for a current owned count only when there
+is additional Market, overview, bed-audit, or user evidence supporting that
+specific monster. Zero-owned low-confidence Book guesses are not canonical
+inventory.
 
 ## Breeding-plan join
 

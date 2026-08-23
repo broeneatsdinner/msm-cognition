@@ -46,6 +46,14 @@ book:
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 14}
 
+unresolved_discoveries:
+  rare:
+    count: 1
+    evidence: "Book shows 4/19 Rares discovered, but only Rare Tweedle, Rare Toe Jammer, and Rare Shellbeat are confidently identified."
+  epic:
+    count: 1
+    evidence: "Book shows 1/19 Epics discovered, but the silhouette is not confidently identified; user confirmed Epic Wubbox is undiscovered."
+
 monsters:
   # Common Naturals
   - {name: Tweedle, variant: common, class: natural, discovered: true, owned: 1}
@@ -96,7 +104,7 @@ monsters:
   - {name: Pummel, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Shellbeat, variant: rare, class: natural, discovered: true, owned: 4}
   - {name: Jeeode, variant: rare, class: ethereal, discovered: false, owned: 0}
-  - {name: Anglow, variant: rare, class: mythical, discovered: true, owned: 0, confidence: low}
+  - {name: Anglow, variant: rare, class: mythical, discovered: false, owned: 0}
   - {name: Wubbox, variant: rare, class: supernatural, discovered: false, owned: 0}
   - {name: Blabbit, variant: rare, class: seasonal, discovered: false, owned: 0}
 
@@ -118,7 +126,7 @@ monsters:
   - {name: Shellbeat, variant: epic, class: natural, discovered: false, owned: 0}
   - {name: Jeeode, variant: epic, class: ethereal, discovered: false, owned: 0}
   - {name: Anglow, variant: epic, class: mythical, discovered: false, owned: 0}
-  - {name: Wubbox, variant: epic, class: supernatural, discovered: true, owned: 0, confidence: medium}
+  - {name: Wubbox, variant: epic, class: supernatural, discovered: false, owned: 0}
   - {name: Blabbit, variant: epic, class: seasonal, discovered: false, owned: 0}
 
   # Seasonal slot counted separately by the Book.
@@ -130,6 +138,9 @@ notes:
   - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
   - Buyback entry for 'Walden' is ignored for current inventory.
   - "Humble Hotel has 1 occupant: Blaise, a level 1 Cybop; this remains owned inventory but does not occupy Castle beds."
-  - Rare Anglow is a low-confidence identification used to reconcile the Book's 4/19 Rare count; its current owned count is recorded as 0 until screenshot or user evidence supports a placed copy.
-  - Epic Wubbox is a medium-confidence identification for the Book's 1/19 Epic count; the Market card shows no owned copy.
+  - "User re-confirmed Water Island Market counts: common Shellbeat owned 5 and Rare Shellbeat owned 4; these do not resolve the +4 bed audit delta."
+  - "User confirmed Rare Anglow is undiscovered and owned 0; previous Rare Anglow Book identification was wrong."
+  - "The unidentified fourth Rare Book discovery is recorded under unresolved_discoveries instead of forcing a low-confidence monster row."
+  - "User confirmed Epic Wubbox is undiscovered and owned 0; previous Epic Wubbox Book identification was wrong."
+  - "The unidentified Epic Book discovery is recorded under unresolved_discoveries instead of forcing a medium-confidence monster row."
   - "Water Island castle info panel shows 90/90 beds occupied; after accounting for the checked-in Cybop, current indexed placed monsters explain 86 Castle beds from 88 total owned beds, leaving an unresolved +4 Castle bed audit delta."

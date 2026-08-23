@@ -17,6 +17,7 @@ from msm_cognition.inventory import (  # noqa: E402
     bed_usage,
     load_json,
     load_yaml,
+    normalize_name,
 )
 
 
@@ -64,9 +65,13 @@ def candidate_rows(
     monster_beds: dict[str, Any],
     *,
     include_zero_owned: bool,
+    excludes: set[str],
 ) -> list[tuple[dict[str, Any], int]]:
     rows = []
     for monster in island.get("monsters", []):
+        key = normalize_name(f"{monster.get('variant')} {monster.get('name')}")
+        if key in excludes:
+            continue
         owned = int(monster.get("owned", 0))
         if owned <= 0 and not (include_zero_owned and monster.get("discovered")):
             continue
@@ -100,6 +105,7 @@ def print_audit(
     *,
     include_zero_owned: bool,
     assume_panel_includes_hotels: bool,
+    excludes: set[str],
     max_changes: int,
 ) -> None:
     castle = island.get("castle", {})
@@ -137,13 +143,8 @@ def print_audit(
         print(f"Bed audit delta, treating Hotel occupants as panel-counted: {delta:+d}")
     else:
         print(f"Bed audit delta: {delta:+d}")
-    if usage["checked_in_beds"]:
-        if isinstance(castle, dict) and castle.get("observed_beds_occupied") is not None:
-            hotel_inclusive_delta = int(castle["observed_beds_occupied"]) - usage["owned_beds"]
-            print(
-                "If the Castle panel includes Hotel occupants, "
-                f"the delta would be {hotel_inclusive_delta:+d}."
-            )
+    if assume_panel_includes_hotels and usage["checked_in_beds"]:
+        print("Note: this debug mode is not the normal Hotel accounting model.")
 
     if delta == 0:
         print("Status: reconciled")
@@ -156,6 +157,7 @@ def print_audit(
         island,
         monster_beds,
         include_zero_owned=include_zero_owned,
+        excludes=excludes,
     )
     combos = correction_combinations(rows, delta, max_changes)
     if not combos:
@@ -182,7 +184,14 @@ def main() -> None:
     parser.add_argument(
         "--assume-panel-includes-hotels",
         action="store_true",
-        help="Compare the Castle panel to total owned beds instead of placed Castle beds.",
+        help="Debug mode: compare the Castle panel to total owned beds instead of placed Castle beds.",
+    )
+    parser.add_argument(
+        "--exclude",
+        action="append",
+        default=[],
+        metavar="VARIANT NAME",
+        help='Exclude a confirmed row from candidate output, such as "common Shellbeat".',
     )
     parser.add_argument(
         "--max-changes",
@@ -202,6 +211,7 @@ def main() -> None:
         monster_beds,
         include_zero_owned=args.include_zero_owned,
         assume_panel_includes_hotels=args.assume_panel_includes_hotels,
+        excludes={normalize_name(value) for value in args.exclude},
         max_changes=args.max_changes,
     )
 

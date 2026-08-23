@@ -175,16 +175,46 @@ def render_table(headers: list[str], rows: list[list[Any]]) -> list[str]:
 
 def render_summary(island: dict[str, Any]) -> list[str]:
     rows: list[list[Any]] = []
+    unresolved = island.get("unresolved_discoveries", {})
     for variant in ("common", "rare", "epic"):
         book = island.get("book", {}).get(variant, {})
         records = [m for m in island.get("monsters", []) if m.get("variant") == variant]
         owned_species = sum(1 for monster in records if (monster.get("owned") or 0) > 0)
         owned_monsters = sum(monster.get("owned") or 0 for monster in records)
         book_count = f"{book.get('discovered', '?')}/{book.get('total', '?')}"
-        rows.append([variant.title(), book_count, owned_species, owned_monsters])
+        unresolved_count = "—"
+        if isinstance(unresolved, dict):
+            unresolved_entry = unresolved.get(variant, {})
+            if isinstance(unresolved_entry, dict):
+                unresolved_count = unresolved_entry.get("count", 0) or "—"
+        rows.append(
+            [variant.title(), book_count, unresolved_count, owned_species, owned_monsters]
+        )
     return render_table(
-        ["Variant", "Book discovered", "Owned species", "Owned monsters"], rows
+        [
+            "Variant",
+            "Book discovered",
+            "Unresolved Book IDs",
+            "Owned species",
+            "Owned monsters",
+        ],
+        rows,
     )
+
+
+def render_unresolved_discoveries(island: dict[str, Any]) -> list[str]:
+    unresolved = island.get("unresolved_discoveries", {})
+    if not isinstance(unresolved, dict) or not unresolved:
+        return ["None recorded."]
+    rows = []
+    for variant in ("common", "rare", "epic"):
+        entry = unresolved.get(variant)
+        if not isinstance(entry, dict) or not entry.get("count"):
+            continue
+        rows.append([variant.title(), entry["count"], entry.get("evidence", "—")])
+    if not rows:
+        return ["None recorded."]
+    return render_table(["Variant", "Count", "Evidence"], rows)
 
 
 def bed_requirement(monster: dict[str, Any], monster_beds: dict[str, Any]) -> int:
@@ -402,6 +432,8 @@ def generate_document(repo_root: Path) -> str:
         lines.extend(render_castle(island, castle_beds, monster_beds))
         lines.extend(["", "### Summary", ""])
         lines.extend(render_summary(island))
+        lines.extend(["", "### Unresolved discoveries", ""])
+        lines.extend(render_unresolved_discoveries(island))
         lines.extend(["", "### Current monsters", ""])
         lines.extend(render_inventory(island, island_breedability))
         lines.extend(["", "### Pending", ""])

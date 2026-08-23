@@ -19,11 +19,15 @@ Observed: `2026-08-22`
 
 ### Summary
 
-| Variant | Book discovered | Owned species | Owned monsters |
-| --- | --- | --- | --- |
-| Common | 25/28 | 22 | 42 |
-| Rare | 7/19 | 6 | 7 |
-| Epic | 0/19 | 0 | 0 |
+| Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
+| --- | --- | --- | --- | --- |
+| Common | 25/28 | — | 22 | 42 |
+| Rare | 7/19 | — | 6 | 7 |
+| Epic | 0/19 | — | 0 | 0 |
+
+### Unresolved discoveries
+
+None recorded.
 
 ### Current monsters
 
@@ -167,11 +171,18 @@ Observed: `2026-08-22`
 
 ### Summary
 
-| Variant | Book discovered | Owned species | Owned monsters |
-| --- | --- | --- | --- |
-| Common | 18/28 | 18 | 28 |
-| Rare | 8/19 | 7 | 8 |
-| Epic | 1/19 | 0 | 0 |
+| Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
+| --- | --- | --- | --- | --- |
+| Common | 18/28 | — | 18 | 28 |
+| Rare | 8/19 | 1 | 7 | 8 |
+| Epic | 1/19 | 1 | 0 | 0 |
+
+### Unresolved discoveries
+
+| Variant | Count | Evidence |
+| --- | --- | --- |
+| Rare | 1 | Book shows 9 Rare plus Rare Seasonal discoveries; previous Rare Congle zero-owned low-confidence row was not independently confirmed. |
+| Epic | 1 | Book shows 1/19 Epics discovered; previous Epic Wubbox zero-owned medium-confidence row was not independently confirmed. |
 
 ### Current monsters
 
@@ -217,7 +228,7 @@ Observed: `2026-08-22`
 | Maw | Rare | Natural | Yes | No | 0 | 0 | — |
 | Scups | Rare | Natural | Yes | No | 0 | 0 | — |
 | PomPom | Rare | Natural | Yes | Yes | 2 | 0 | — |
-| Congle | Rare | Natural | Yes | Yes | 0 | 0 | Low |
+| Congle | Rare | Natural | Yes | No | 0 | 0 | — |
 | T-Rox | Rare | Natural | Yes | Yes | 1 | 0 | Low |
 | Riff | Rare | Natural | Yes | Yes | 1 | 0 | Low |
 | Reebro | Rare | Ethereal | Yes | Yes | 1 | 0 | Low |
@@ -241,7 +252,7 @@ Observed: `2026-08-22`
 | Riff | Epic | Natural | Yes | No | 0 | 0 | — |
 | Reebro | Epic | Ethereal | Yes | No | 0 | 0 | — |
 | Yawstrich | Epic | Mythical | Yes | No | 0 | 0 | — |
-| Wubbox | Epic | Supernatural | No | Yes | 0 | 0 | Medium |
+| Wubbox | Epic | Supernatural | No | No | 0 | 0 | — |
 | Hoola | Epic | Seasonal | Yes | No | 0 | 0 | — |
 | Schmoochle | Common | Seasonal | Yes | No | 0 | 0 | — |
 | Hoola | Common | Seasonal | Yes | Yes | 1 | 0 | Low |
@@ -264,6 +275,7 @@ No recipes recorded yet.
 
 - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
 - Rare T-Rox, Rare Riff, Rare Reebro, Common Hoola, and Rare Hoola are low-confidence count assignments used to reconcile Air Island's castle bed audit.
+- Unidentified Rare and Epic Book discoveries are recorded under unresolved_discoveries instead of forcing zero-owned low-confidence monster rows.
 - Alcordion appears as a Market card, but is not treated as discovered because the Book common count is already reconciled without it.
 - Air Island castle info panel shows 86/90 beds occupied; the re-indexed monster rows now explain 86 beds exactly.
 
@@ -279,11 +291,17 @@ Observed: `2026-08-22`
 
 ### Summary
 
-| Variant | Book discovered | Owned species | Owned monsters |
-| --- | --- | --- | --- |
-| Common | 18/28 | 16 | 33 |
-| Rare | 6/19 | 2 | 2 |
-| Epic | 1/19 | 0 | 0 |
+| Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
+| --- | --- | --- | --- | --- |
+| Common | 18/28 | — | 16 | 33 |
+| Rare | 6/19 | — | 2 | 2 |
+| Epic | 1/19 | 1 | 0 | 0 |
+
+### Unresolved discoveries
+
+| Variant | Count | Evidence |
+| --- | --- | --- |
+| Epic | 1 | Book shows 1/19 Epics discovered; previous Epic Wubbox zero-owned medium-confidence row was not independently confirmed. |
 
 ### Current monsters
 
@@ -353,7 +371,7 @@ Observed: `2026-08-22`
 | Deedge | Epic | Natural | Yes | No | 0 | 0 | — |
 | Grumpyre | Epic | Ethereal | Yes | No | 0 | 0 | — |
 | Strombonin | Epic | Mythical | Yes | No | 0 | 0 | — |
-| Wubbox | Epic | Supernatural | No | Yes | 0 | 0 | Medium |
+| Wubbox | Epic | Supernatural | No | No | 0 | 0 | — |
 | Yool | Epic | Seasonal | Yes | No | 0 | 0 | — |
 | Yool | Common | Seasonal | Yes | No | 0 | 0 | — |
 
@@ -373,7 +391,7 @@ No recipes recorded yet.
 
 - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
 - Rare Toe Jammer, Rare Mammott, Rare Deedge, and Rare Grumpyre are discovered but currently owned 0 on Cold Island.
-- Epic Wubbox is a medium-confidence identification for the Book's 1/19 Epic count; the Market card shows no owned copy.
+- The unidentified Epic Book discovery is recorded under unresolved_discoveries instead of forcing a medium-confidence Wubbox row.
 - Cold Island castle info panel shows 89/90 beds occupied; the re-indexed monster rows now explain 89 beds exactly.
 
 ## Earth Island
@@ -388,11 +406,15 @@ Observed: `2026-08-22`
 
 ### Summary
 
-| Variant | Book discovered | Owned species | Owned monsters |
-| --- | --- | --- | --- |
-| Common | 25/27 | 22 | 52 |
-| Rare | 11/19 | 9 | 9 |
-| Epic | 1/19 | 1 | 1 |
+| Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
+| --- | --- | --- | --- | --- |
+| Common | 25/27 | — | 22 | 52 |
+| Rare | 11/19 | — | 9 | 9 |
+| Epic | 1/19 | — | 1 | 1 |
+
+### Unresolved discoveries
+
+None recorded.
 
 ### Current monsters
 
@@ -495,11 +517,15 @@ None recorded.
 
 ### Summary
 
-| Variant | Book discovered | Owned species | Owned monsters |
-| --- | --- | --- | --- |
-| Common | 8/22 | 8 | 25 |
-| Rare | 0/15 | 0 | 0 |
-| Epic | 0/4 | 0 | 0 |
+| Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
+| --- | --- | --- | --- | --- |
+| Common | 8/22 | — | 8 | 25 |
+| Rare | 0/15 | — | 0 | 0 |
+| Epic | 0/4 | — | 0 | 0 |
+
+### Unresolved discoveries
+
+None recorded.
 
 ### Current monsters
 
@@ -606,11 +632,18 @@ Observed: `2026-08-22`
 
 ### Summary
 
-| Variant | Book discovered | Owned species | Owned monsters |
-| --- | --- | --- | --- |
-| Common | 17/28 | 17 | 26 |
-| Rare | 4/19 | 2 | 6 |
-| Epic | 1/19 | 0 | 0 |
+| Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
+| --- | --- | --- | --- | --- |
+| Common | 17/28 | — | 17 | 26 |
+| Rare | 4/19 | 1 | 2 | 6 |
+| Epic | 1/19 | 1 | 0 | 0 |
+
+### Unresolved discoveries
+
+| Variant | Count | Evidence |
+| --- | --- | --- |
+| Rare | 1 | Book shows 4/19 Rares discovered, but only Rare Tweedle, Rare Toe Jammer, and Rare Shellbeat are confidently identified. |
+| Epic | 1 | Book shows 1/19 Epics discovered, but the silhouette is not confidently identified; user confirmed Epic Wubbox is undiscovered. |
 
 ### Current monsters
 
@@ -660,7 +693,7 @@ Observed: `2026-08-22`
 | Pummel | Rare | Natural | Yes | No | 0 | 0 | — |
 | Shellbeat | Rare | Natural | Yes | Yes | 4 | 0 | — |
 | Jeeode | Rare | Ethereal | Yes | No | 0 | 0 | — |
-| Anglow | Rare | Mythical | Yes | Yes | 0 | 0 | Low |
+| Anglow | Rare | Mythical | Yes | No | 0 | 0 | — |
 | Wubbox | Rare | Supernatural | No | No | 0 | 0 | — |
 | Blabbit | Rare | Seasonal | Yes | No | 0 | 0 | — |
 | Tweedle | Epic | Natural | Yes | No | 0 | 0 | — |
@@ -680,7 +713,7 @@ Observed: `2026-08-22`
 | Shellbeat | Epic | Natural | Yes | No | 0 | 0 | — |
 | Jeeode | Epic | Ethereal | Yes | No | 0 | 0 | — |
 | Anglow | Epic | Mythical | Yes | No | 0 | 0 | — |
-| Wubbox | Epic | Supernatural | No | Yes | 0 | 0 | Medium |
+| Wubbox | Epic | Supernatural | No | No | 0 | 0 | — |
 | Blabbit | Epic | Seasonal | Yes | No | 0 | 0 | — |
 | Blabbit | Common | Seasonal | Yes | No | 0 | 0 | — |
 
@@ -701,6 +734,9 @@ No recipes recorded yet.
 - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
 - Buyback entry for 'Walden' is ignored for current inventory.
 - Humble Hotel has 1 occupant: Blaise, a level 1 Cybop; this remains owned inventory but does not occupy Castle beds.
-- Rare Anglow is a low-confidence identification used to reconcile the Book's 4/19 Rare count; its current owned count is recorded as 0 until screenshot or user evidence supports a placed copy.
-- Epic Wubbox is a medium-confidence identification for the Book's 1/19 Epic count; the Market card shows no owned copy.
+- User re-confirmed Water Island Market counts: common Shellbeat owned 5 and Rare Shellbeat owned 4; these do not resolve the +4 bed audit delta.
+- User confirmed Rare Anglow is undiscovered and owned 0; previous Rare Anglow Book identification was wrong.
+- The unidentified fourth Rare Book discovery is recorded under unresolved_discoveries instead of forcing a low-confidence monster row.
+- User confirmed Epic Wubbox is undiscovered and owned 0; previous Epic Wubbox Book identification was wrong.
+- The unidentified Epic Book discovery is recorded under unresolved_discoveries instead of forcing a medium-confidence monster row.
 - Water Island castle info panel shows 90/90 beds occupied; after accounting for the checked-in Cybop, current indexed placed monsters explain 86 Castle beds from 88 total owned beds, leaving an unresolved +4 Castle bed audit delta.

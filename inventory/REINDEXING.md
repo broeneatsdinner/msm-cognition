@@ -72,10 +72,17 @@ own roster.
 
 ## Interpretation rules
 
+- Screenshot reads produce evidence first, not canonical inventory. Do not let a
+  low-confidence visual guess directly mutate `inventory/islands/*.yaml` as
+  fact.
 - Treat Book pages as the stronger source for island roster and discovery
   state. Market pages can supply current owned counts, prices, and visible
   availability, but Market visibility does not remove or undiscover a monster
   shown in the Book.
+- Book totals can prove that some discovery exists without proving which monster
+  it is. If a Book silhouette is ambiguous, record the count under
+  `unresolved_discoveries` rather than assigning `discovered: true` to a guessed
+  monster row.
 - Prefer Market owned counts over visual island counts when the Market clearly
   shows a current count for a Book-confirmed monster.
 - Transcribe Market pages page by page before reconciling beds. For each visible
@@ -117,7 +124,8 @@ For an existing island file:
 2. Update `evidence.screenshot_directory`.
 3. Replace the `evidence` filename lists with the current screenshot groups.
 4. Update `book` discovered totals.
-5. Update monster `discovered` and `owned` values.
+5. Update monster `discovered` and `owned` values only from direct evidence.
+   Put ambiguous Book discoveries in `unresolved_discoveries`.
 6. Update `pending` for active breeding, incubation, castle upgrades, or other
    state that is not yet owned inventory.
 7. Refresh `notes` so exceptions and uncertainties are explicit.
@@ -137,9 +145,10 @@ For a new island file:
    Ethereal, Supernatural, Legendary, Magical, Fire, Celestial, Wublin, Workshop,
    or island-specific rows represented by that island's Book and references.
 4. Set unknown-but-not-discovered entries to `discovered: false` and `owned: 0`.
-5. Do not use nullable owned counts. If discovery is proven but the count is not
-   reliable, choose the best explicit integer count, mark `confidence: low`, and
-   explain the evidence gap in `notes`.
+5. Do not use nullable owned counts. If discovery is proven but the monster
+   identity is not reliable, use `unresolved_discoveries`. If the identity is
+   proven but the owned count is not reliable, choose the best explicit integer
+   count, mark `confidence: low`, and explain the evidence gap in `notes`.
 
 ## Validation
 

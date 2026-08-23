@@ -52,6 +52,33 @@ def book_total(island: dict[str, Any]) -> tuple[int, int]:
     return discovered, total
 
 
+def unresolved_count(island: dict[str, Any], variant: str) -> int:
+    unresolved = island.get("unresolved_discoveries", {})
+    if not isinstance(unresolved, dict):
+        return 0
+    entry = unresolved.get(variant, {})
+    if not isinstance(entry, dict):
+        return 0
+    return int(entry.get("count", 0))
+
+
+def row_discovered_count(island: dict[str, Any], variant: str) -> int:
+    return sum(
+        1
+        for monster in island.get("monsters", [])
+        if monster.get("variant") == variant and monster.get("discovered")
+    )
+
+
+def book_discovered_count(island: dict[str, Any], variant: str) -> int:
+    book = island.get("book", {}).get(variant, {})
+    if not isinstance(book, dict):
+        return 0
+    seasonal = book.get("seasonal", {})
+    seasonal_count = int(seasonal.get("discovered", 0)) if isinstance(seasonal, dict) else 0
+    return int(book.get("discovered", 0)) + seasonal_count
+
+
 def evidence_paths(island: dict[str, Any]) -> list[Path]:
     evidence = island.get("evidence", {})
     if not isinstance(evidence, dict):
@@ -126,6 +153,16 @@ def audit() -> str:
                     f"does not match Book+Seasonal {book_discovered}/{book_available}"
                 )
 
+        for variant in ("common", "rare", "epic"):
+            named = row_discovered_count(island, variant)
+            unresolved = unresolved_count(island, variant)
+            book_named = book_discovered_count(island, variant)
+            if named + unresolved != book_named:
+                problems.append(
+                    f"{name}: {variant} named discoveries {named} plus unresolved "
+                    f"{unresolved} does not match Book+Seasonal {book_named}"
+                )
+
         castle = island.get("castle", {})
         if isinstance(castle, dict) and castle.get("observed_beds_occupied") is not None:
             usage = bed_usage(island, monster_beds)
@@ -143,6 +180,15 @@ def audit() -> str:
                 problems.append(f"{label}: invalid checked_in value {checked_in!r}")
             if isinstance(owned, int) and isinstance(checked_in, int) and checked_in > owned:
                 problems.append(f"{label}: checked_in exceeds owned")
+            if (
+                monster.get("discovered")
+                and owned == 0
+                and monster.get("confidence") in {"low", "medium"}
+            ):
+                problems.append(
+                    f"{label}: low/medium-confidence zero-owned discovery should be "
+                    "unresolved_discoveries unless independently confirmed"
+                )
 
         missing = [p for p in evidence_paths(island) if not p.exists()]
         if missing:
@@ -179,6 +225,13 @@ def audit() -> str:
                     f"({progress['interpretation']}, {progress['confidence']} confidence)"
                 )
         lines.append(f"- Book plus Seasonal total: `{book_discovered}/{book_available}`")
+        unresolved_bits = []
+        for variant in ("common", "rare", "epic"):
+            count = unresolved_count(island, variant)
+            if count:
+                unresolved_bits.append(f"{variant} {count}")
+        if unresolved_bits:
+            lines.append(f"- Unresolved Book IDs: {', '.join(unresolved_bits)}")
 
         castle = island.get("castle", {})
         if isinstance(castle, dict) and castle.get("observed_beds_occupied") is not None:
@@ -190,10 +243,9 @@ def audit() -> str:
                 f"{castle.get('observed_beds_available', 'unknown')}`, delta `{delta:+d}`"
             )
             if usage["checked_in_beds"]:
-                hotel_delta = int(castle["observed_beds_occupied"]) - usage["owned_beds"]
                 lines.append(
-                    f"- Hotel alternate: total owned beds `{usage['owned_beds']}`, "
-                    f"panel-minus-owned delta `{hotel_delta:+d}`"
+                    f"- Checked-in Hotel beds: `{usage['checked_in_beds']}` "
+                    f"(owned inventory, not Castle occupancy)"
                 )
 
         low_confidence = [

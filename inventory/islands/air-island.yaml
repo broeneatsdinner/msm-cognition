@@ -46,6 +46,14 @@ book:
     seasonal: {discovered: 0, total: 2}
     costumes: {discovered: 0, total: 14}
 
+unresolved_discoveries:
+  rare:
+    count: 1
+    evidence: "Book shows 9 Rare plus Rare Seasonal discoveries; previous Rare Congle zero-owned low-confidence row was not independently confirmed."
+  epic:
+    count: 1
+    evidence: "Book shows 1/19 Epics discovered; previous Epic Wubbox zero-owned medium-confidence row was not independently confirmed."
+
 monsters:
   # Common Naturals
   - {name: Tweedle, variant: common, class: natural, discovered: true, owned: 1}
@@ -92,7 +100,7 @@ monsters:
   - {name: Maw, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Scups, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: PomPom, variant: rare, class: natural, discovered: true, owned: 2}
-  - {name: Congle, variant: rare, class: natural, discovered: true, owned: 0, confidence: low}
+  - {name: Congle, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: T-Rox, variant: rare, class: natural, discovered: true, owned: 1, confidence: low}
   - {name: Riff, variant: rare, class: natural, discovered: true, owned: 1, confidence: low}
   - {name: Reebro, variant: rare, class: ethereal, discovered: true, owned: 1, confidence: low}
@@ -118,7 +126,7 @@ monsters:
   - {name: Riff, variant: epic, class: natural, discovered: false, owned: 0}
   - {name: Reebro, variant: epic, class: ethereal, discovered: false, owned: 0}
   - {name: Yawstrich, variant: epic, class: mythical, discovered: false, owned: 0}
-  - {name: Wubbox, variant: epic, class: supernatural, discovered: true, owned: 0, confidence: medium}
+  - {name: Wubbox, variant: epic, class: supernatural, discovered: false, owned: 0}
   - {name: Hoola, variant: epic, class: seasonal, discovered: false, owned: 0}
 
   # Seasonal slots are counted separately by the Book.
@@ -132,5 +140,6 @@ pending: []
 notes:
   - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
   - Rare T-Rox, Rare Riff, Rare Reebro, Common Hoola, and Rare Hoola are low-confidence count assignments used to reconcile Air Island's castle bed audit.
+  - "Unidentified Rare and Epic Book discoveries are recorded under unresolved_discoveries instead of forcing zero-owned low-confidence monster rows."
   - Alcordion appears as a Market card, but is not treated as discovered because the Book common count is already reconciled without it.
   - "Air Island castle info panel shows 86/90 beds occupied; the re-indexed monster rows now explain 86 beds exactly."
