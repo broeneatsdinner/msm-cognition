@@ -9,6 +9,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from msm_cognition.inventory import (
+    bed_usage,
     generate_document,
     inventory_index,
     is_breedable,
@@ -23,6 +24,15 @@ class InventoryGeneratorTests(unittest.TestCase):
         document = generate_document(REPO_ROOT)
         self.assertIn("## Plant Island", document)
         self.assertIn("## Magical Sanctum", document)
+        self.assertIn("### Castle", document)
+        self.assertIn(
+            "| Vegidian Castle | High | 117 | 120 | 3 | 0 | 117 | 117 | 120 | 0 |",
+            document,
+        )
+        self.assertIn(
+            "| Paradise Castle | High | 86 | 90 | 4 | 2 | 88 | 90 | 90 | 4 |",
+            document,
+        )
         self.assertIn("### Rare breeding planner", document)
         self.assertIn("### Epic breeding planner", document)
         self.assertIn("| Monster | Variant | Class | Breedable? |", document)
@@ -55,6 +65,9 @@ class InventoryGeneratorTests(unittest.TestCase):
 
     def test_rare_parent_can_satisfy_epic_recipe(self) -> None:
         island = load_yaml(REPO_ROOT / "inventory/islands/plant-island.yaml")
+        for monster in island["monsters"]:
+            if monster["name"] == "Entbrat" and monster["variant"] == "common":
+                monster["owned"] = 0
         index = inventory_index(island)
         row = planner_row(
             index,
@@ -63,6 +76,50 @@ class InventoryGeneratorTests(unittest.TestCase):
         )
         self.assertEqual("Ready", row[4])
         self.assertIn("Entbrat (Rare)", row[1])
+
+    def test_plant_bed_usage_counts_known_owned_monsters(self) -> None:
+        island = load_yaml(REPO_ROOT / "inventory/islands/plant-island.yaml")
+        monster_beds = load_json(
+            REPO_ROOT / "reference/monsters/bed-requirements.json"
+        )
+        self.assertEqual(
+            {"used": 117, "owned_beds": 117, "checked_in_beds": 0},
+            bed_usage(island, monster_beds),
+        )
+
+    def test_owned_counts_are_never_nullable(self) -> None:
+        for path in (REPO_ROOT / "inventory/islands").glob("*.yaml"):
+            island = load_yaml(path)
+            for monster in island["monsters"]:
+                self.assertIsNotNone(
+                    monster.get("owned"),
+                    f"{island['island']} {monster['variant']} {monster['name']}",
+                )
+                self.assertIsInstance(
+                    monster["owned"],
+                    int,
+                    f"{island['island']} {monster['variant']} {monster['name']}",
+                )
+                self.assertGreaterEqual(
+                    monster["owned"],
+                    0,
+                    f"{island['island']} {monster['variant']} {monster['name']}",
+                )
+                self.assertIsInstance(
+                    monster.get("checked_in", 0),
+                    int,
+                    f"{island['island']} {monster['variant']} {monster['name']}",
+                )
+                self.assertGreaterEqual(
+                    monster.get("checked_in", 0),
+                    0,
+                    f"{island['island']} {monster['variant']} {monster['name']}",
+                )
+                self.assertLessEqual(
+                    monster.get("checked_in", 0),
+                    monster["owned"],
+                    f"{island['island']} {monster['variant']} {monster['name']}",
+                )
 
     def test_rare_single_pattern_reports_missing_path(self) -> None:
         island = load_yaml(REPO_ROOT / "inventory/islands/magical-sanctum.yaml")

@@ -1,45 +1,51 @@
 schema_version: 1
 island: Plant Island
-observed_at: "2026-07-13"
+observed_at: "2026-08-22"
 
 evidence:
-  screenshot_directory: training/screenshots/inventory/plant-island-2026-07-13
-  book:
-    - book-commons-25-of-28.png
-    - book-rares-5-of-18.png
-    - book-epics-0-of-18.png
-  market:
-    - market-01-epic-entbrat-rare-entbrat-drumpler.png
-    - market-02-entbrat-ghazt-shugabush.png
-    - market-03-tawkerr-parlsona-wubbox.png
-    - market-04-epic-wubbox-potbelly-noggin.png
-    - market-05-toe-jammer-mammott-shrubb.png
-    - market-06-oaktopus-furcorn-fwog.png
-    - market-07-maw-pummel-clamble.png
-    - market-08-bowgart-t-rox-gjoob.png
-    - market-09-dipsters-do-re-mi.png
-    - market-10-dipsters-fa-sol-la.png
-    - market-11-dipsters-la-ti-rare-furcorn-buyback.png
+  screenshot_directory: training/screenshots/My Singing Monsters Island Inventories 2026-08-22/02 Plant Island
   overview:
-    - island-overview-01.png
-    - island-overview-02.png
+    - IMG_0866.jpg
+  book:
+    - IMG_0867.jpg
+    - IMG_0868.jpg
+    - IMG_0869.jpg
+  market:
+    - IMG_0870.jpg
+    - IMG_0871.jpg
+    - IMG_0872.jpg
+    - IMG_0873.jpg
+    - IMG_0874.jpg
+    - IMG_0875.jpg
+    - IMG_0876.jpg
+    - IMG_0877.jpg
+    - IMG_0878.jpg
+    - IMG_0879.jpg
+    - IMG_0880.jpg
+    - IMG_0881.jpg
+
+castle:
+  name: Vegidian Castle
+  confidence: high
+  observed_beds_occupied: 117
+  observed_beds_available: 120
 
 book:
   common:
     discovered: 25
     total: 28
     seasonal: {discovered: 0, total: 1}
-    costumes: {discovered: 6, total: 194}
+    costumes: {discovered: 10, total: 199}
   rare:
-    discovered: 5
-    total: 18
+    discovered: 7
+    total: 19
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 8}
   epic:
     discovered: 0
-    total: 18
+    total: 19
     seasonal: {discovered: 0, total: 1}
-    costumes: {discovered: 0, total: 12}
+    costumes: {discovered: 0, total: 13}
 
 monsters:
   # Common Naturals
@@ -53,11 +59,11 @@ monsters:
   - {name: Fwog, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Drumpler, variant: common, class: natural, discovered: true, owned: 0}
   - {name: Maw, variant: common, class: natural, discovered: true, owned: 3}
-  - {name: Pummel, variant: common, class: natural, discovered: true, owned: 4}
-  - {name: Clamble, variant: common, class: natural, discovered: true, owned: 3}
+  - {name: Pummel, variant: common, class: natural, discovered: true, owned: 3}
+  - {name: Clamble, variant: common, class: natural, discovered: true, owned: 2}
   - {name: Bowgart, variant: common, class: natural, discovered: true, owned: 3}
   - {name: T-Rox, variant: common, class: natural, discovered: true, owned: 1}
-  - {name: Entbrat, variant: common, class: natural, discovered: true, owned: 0}
+  - {name: Entbrat, variant: common, class: natural, discovered: true, owned: 13}
 
   # Other Commons and Dipsters
   - {name: Ghazt, variant: common, class: ethereal, discovered: true, owned: 0}
@@ -74,27 +80,25 @@ monsters:
   - {name: La, variant: common, class: dipster, discovered: true, owned: 1}
   - {name: Ti, variant: common, class: dipster, discovered: true, owned: 1}
 
-  # Rares discovered in the Book
-  - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 1, confidence: medium}
-  - {name: Oaktopus, variant: rare, class: natural, discovered: true, owned: 1, confidence: medium}
-  - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 0}
-  - {name: Entbrat, variant: rare, class: natural, discovered: true, owned: 1}
-  - {name: Wubbox, variant: rare, class: supernatural, discovered: true, owned: 1, confidence: medium}
-
-  # Rares not discovered
+  # Rares
   - {name: Potbelly, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Noggin, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Toe Jammer, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Shrubb, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Oaktopus, variant: rare, class: natural, discovered: true, owned: 1}
+  - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Fwog, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Drumpler, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Maw, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Maw, variant: rare, class: natural, discovered: true, owned: 1, confidence: medium}
   - {name: Pummel, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Clamble, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Bowgart, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: T-Rox, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Entbrat, variant: rare, class: natural, discovered: true, owned: 2}
   - {name: Ghazt, variant: rare, class: ethereal, discovered: false, owned: 0}
   - {name: "G'joob", variant: rare, class: mythical, discovered: false, owned: 0}
+  - {name: Wubbox, variant: rare, class: supernatural, discovered: true, owned: 1, confidence: medium}
 
   # Epics
   - {name: Potbelly, variant: epic, class: natural, discovered: false, owned: 0}
@@ -124,6 +128,6 @@ monsters:
 pending: []
 
 notes:
-  - Market counts can be zero for a discovered monster after it has been sold or boxed.
-  - Rare Furcorn is discovered but was visible only as a zero-owned Buyback entry.
-  - Rare Mammott, Rare Oaktopus, and Rare Wubbox owned counts are inferred from the island overview.
+  - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+  - Buyback entries, if any, are ignored for current inventory.
+  - "Rare Maw is confirmed by the castle bed total: previous known bed usage was 115, and the in-game Vegidian Castle info panel showed 117/120 beds occupied."

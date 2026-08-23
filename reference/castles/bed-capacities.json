@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "sources": [
+    "https://mysingingmonsters.fandom.com/wiki/Castle",
+    "https://mysingingmonsters.fandom.com/wiki/Plant_Island"
+  ],
+  "capacities": {
+    "Basic Castle": 4,
+    "Modest Castle": 10,
+    "Comfortable Castle": 18,
+    "Spacious Castle": 28,
+    "Luxurious Castle": 40,
+    "Extravagant Castle": 60,
+    "Paradise Castle": 90,
+    "Vegidian Castle": 120,
+    "Polished Vegidian Castle": 150,
+    "Carved Vegidian Castle": 180,
+    "Frozium Castle": 120,
+    "Polished Frozium Castle": 150,
+    "Carved Frozium Castle": 180,
+    "Skylite Castle": 120,
+    "Polished Skylite Castle": 150,
+    "Carved Skylite Castle": 180,
+    "Aquanine Castle": 120,
+    "Polished Aquanine Castle": 150,
+    "Carved Aquanine Castle": 180,
+    "Stonyx Castle": 120,
+    "Polished Stonyx Castle": 150,
+    "Carved Stonyx Castle": 180
+  }
+}

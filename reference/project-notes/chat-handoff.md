@@ -12,9 +12,10 @@ It records both current reference data and the learning process used to interpre
 
 ```text
 assets/       Visual reference assets
+inventory/    Player island inventory YAML and generated inventory README
 reference/    Human + machine reference knowledge
 scripts/      Repo-maintenance tooling
-src/          Future importable cognition engine
+src/          Importable inventory and cognition code
 training/     Screenshots, observations, corrections, and terminology
 ```
 
@@ -36,6 +37,8 @@ Going forward, the repo should become the maintained source of truth. Updates sh
 ## Screenshot intake rule
 
 Do not blindly infer island name unless it is visible or user-confirmed.
+Use full island names such as `Earth Island`, not shortened names such as
+`Earth`, so natural islands are not confused with Mirror islands.
 
 A screenshot extraction should separate:
 
@@ -43,6 +46,35 @@ A screenshot extraction should separate:
 - uncertain observations
 - interpreted game mechanics
 - proposed repo updates
+
+## Inventory re-indexing rule
+
+The player inventory source of truth is `inventory/islands/*.yaml`, generated
+into `inventory/README.md`.
+
+- Book pages are the stronger source for discovery state.
+- Visible Market cards are the stronger source for current owned counts.
+- Missing Market cards do not prove `owned: 0`.
+- Buyback cards are not current inventory.
+- Eggs still breeding or incubating are not counted as owned.
+- Every monster row must have a non-negative integer `owned` count; do not use
+  nullable or unknown owned rows.
+- Castle bed panels are audits, not primary monster counters. Leave non-zero bed
+  audit deltas visible with notes unless screenshot or user evidence resolves
+  them.
+
+Before relying on inventory for planning, run:
+
+```text
+bin/inventory --check
+python3 -m unittest tests/test_inventory.py
+```
+
+Current unresolved Water Island bed audit details live in:
+
+```text
+reference/project-notes/2026-08-23-water-island-bed-audit.md
+```
 
 ## Known correction
 

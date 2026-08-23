@@ -11,6 +11,8 @@ import yaml
 
 RECIPE_PATH = Path("reference/breeding/rare-epic-breeding.json")
 BREEDABILITY_PATH = Path("reference/breeding/island-breedability.json")
+CASTLE_BEDS_PATH = Path("reference/castles/bed-capacities.json")
+MONSTER_BEDS_PATH = Path("reference/monsters/bed-requirements.json")
 INVENTORY_DIRECTORY = Path("inventory/islands")
 OUTPUT_PATH = Path("inventory/README.md")
 
@@ -185,6 +187,109 @@ def render_summary(island: dict[str, Any]) -> list[str]:
     )
 
 
+def bed_requirement(monster: dict[str, Any], monster_beds: dict[str, Any]) -> int:
+    name = normalize_name(monster["name"])
+    variant = monster["variant"]
+    monster_class = monster["class"]
+
+    variant_overrides = monster_beds.get("variant_overrides", {}).get(variant, {})
+    for override_name, beds in variant_overrides.items():
+        if normalize_name(override_name) == name:
+            return int(beds)
+
+    for requirement_name, beds in monster_beds.get("requirements", {}).items():
+        if normalize_name(requirement_name) == name:
+            return int(beds)
+
+    class_defaults = monster_beds.get("class_defaults", {})
+    if monster_class in class_defaults:
+        return int(class_defaults[monster_class])
+
+    raise ValueError(
+        f"Missing bed requirement for {variant} {monster['name']} ({monster_class})"
+    )
+
+
+def bed_usage(island: dict[str, Any], monster_beds: dict[str, Any]) -> dict[str, int]:
+    owned_beds = 0
+    checked_in_beds = 0
+    for monster in island.get("monsters", []):
+        owned = monster.get("owned")
+        if owned is None:
+            raise ValueError(
+                f"{island['island']} has nullable owned count for "
+                f"{monster['variant']} {monster['name']}"
+            )
+        checked_in = int(monster.get("checked_in", 0))
+        if checked_in < 0:
+            raise ValueError(
+                f"{island['island']} has negative checked-in count for "
+                f"{monster['variant']} {monster['name']}"
+            )
+        if checked_in > owned:
+            raise ValueError(
+                f"{island['island']} has checked-in count greater than owned count for "
+                f"{monster['variant']} {monster['name']}"
+            )
+        if owned <= 0:
+            continue
+        beds = bed_requirement(monster, monster_beds)
+        owned_beds += int(owned) * beds
+        checked_in_beds += checked_in * beds
+    return {
+        "used": owned_beds - checked_in_beds,
+        "owned_beds": owned_beds,
+        "checked_in_beds": checked_in_beds,
+    }
+
+
+def render_castle(
+    island: dict[str, Any], castle_beds: dict[str, Any], monster_beds: dict[str, Any]
+) -> list[str]:
+    castle = island.get("castle")
+    if not isinstance(castle, dict):
+        return ["None recorded."]
+    capacity = castle_beds.get("capacities", {}).get(castle.get("name"))
+    usage = bed_usage(island, monster_beds)
+    rows = [[castle.get("name", "—"), castle.get("confidence", "—").title()]]
+    headers = ["Current castle", "Confidence"]
+    if capacity is not None:
+        rows[0].extend(
+            [
+                usage["used"],
+                capacity,
+                int(capacity) - usage["used"],
+                usage["checked_in_beds"],
+                usage["owned_beds"],
+            ]
+        )
+        headers.extend(
+            [
+                "Castle beds used",
+                "Beds capacity",
+                "Castle beds free",
+                "Checked-in beds",
+                "Total owned beds",
+            ]
+        )
+    if castle.get("observed_beds_occupied") is not None:
+        observed_occupied = int(castle["observed_beds_occupied"])
+        observed_capacity = castle.get("observed_beds_available", capacity)
+        rows[0].extend(
+            [
+                observed_occupied,
+                observed_capacity,
+                observed_occupied - usage["used"],
+            ]
+        )
+        headers.extend(["Panel occupied", "Panel capacity", "Bed audit delta"])
+    if castle.get("upgrade_target"):
+        rows[0].append(castle["upgrade_target"])
+        rows[0].append(castle.get("displayed_time_remaining", "—"))
+        headers.extend(["Upgrade target", "Time remaining"])
+    return render_table(headers, rows)
+
+
 def render_inventory(
     island: dict[str, Any], island_breedability: dict[str, Any]
 ) -> list[str]:
@@ -199,7 +304,8 @@ def render_inventory(
                 if is_breedable(island_breedability, monster["name"], monster["variant"])
                 else "No",
                 "Yes" if monster.get("discovered") else "No",
-                "?" if monster.get("owned") is None else monster.get("owned", 0),
+                monster.get("owned", 0),
+                monster.get("checked_in", 0),
                 monster.get("confidence", "—").title(),
             ]
         )
@@ -211,6 +317,7 @@ def render_inventory(
             "Breedable?",
             "Discovered",
             "Owned",
+            "Checked in",
             "Confidence",
         ],
         rows,
@@ -223,11 +330,13 @@ def render_pending(island: dict[str, Any]) -> list[str]:
         return ["None recorded."]
     rows = []
     for item in pending:
+        item_type = str(item.get("type", "—")).replace("_", " ").title()
         rows.append(
             [
-                item.get("type", "—").title(),
+                item_type,
                 " + ".join(item.get("parents", [])) or "—",
-                item.get("displayed_time", "—"),
+                item.get("displayed_time")
+                or item.get("displayed_time_remaining", "—"),
                 item.get("predicted_result", "—"),
                 item.get("confidence", "—").title(),
             ]
@@ -263,6 +372,8 @@ def island_sort_key(island: dict[str, Any]) -> tuple[int, str]:
 def generate_document(repo_root: Path) -> str:
     recipes = load_json(repo_root / RECIPE_PATH)
     breedability = load_json(repo_root / BREEDABILITY_PATH)
+    castle_beds = load_json(repo_root / CASTLE_BEDS_PATH)
+    monster_beds = load_json(repo_root / MONSTER_BEDS_PATH)
     islands = sorted(
         (load_yaml(path) for path in (repo_root / INVENTORY_DIRECTORY).glob("*.yaml")),
         key=island_sort_key,
@@ -287,6 +398,9 @@ def generate_document(repo_root: Path) -> str:
         if not isinstance(island_breedability, dict):
             raise ValueError(f"Missing island breedability data for {name}")
         lines.extend([f"## {name}", "", f"Observed: `{island.get('observed_at', 'unknown')}`", ""])
+        lines.extend(["### Castle", ""])
+        lines.extend(render_castle(island, castle_beds, monster_beds))
+        lines.extend(["", "### Summary", ""])
         lines.extend(render_summary(island))
         lines.extend(["", "### Current monsters", ""])
         lines.extend(render_inventory(island, island_breedability))

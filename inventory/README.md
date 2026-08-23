@@ -9,104 +9,97 @@ parents because Rare variants may substitute for Common parents.
 
 ## Plant Island
 
-Observed: `2026-07-13`
+Observed: `2026-08-22`
+
+### Castle
+
+| Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Vegidian Castle | High | 117 | 120 | 3 | 0 | 117 | 117 | 120 | 0 |
+
+### Summary
 
 | Variant | Book discovered | Owned species | Owned monsters |
 | --- | --- | --- | --- |
-| Common | 25/28 | 21 | 31 |
-| Rare | 5/18 | 4 | 4 |
-| Epic | 0/18 | 0 | 0 |
+| Common | 25/28 | 22 | 42 |
+| Rare | 7/19 | 6 | 7 |
+| Epic | 0/19 | 0 | 0 |
 
 ### Current monsters
 
-| Monster | Variant | Class | Breedable? | Discovered | Owned | Confidence |
-| --- | --- | --- | --- | --- | --- | --- |
-| Potbelly | Common | Natural | No | Yes | 2 | — |
-| Noggin | Common | Natural | No | Yes | 1 | — |
-| Toe Jammer | Common | Natural | No | Yes | 1 | — |
-| Mammott | Common | Natural | No | Yes | 1 | — |
-| Shrubb | Common | Natural | Yes | Yes | 1 | — |
-| Oaktopus | Common | Natural | Yes | Yes | 1 | — |
-| Furcorn | Common | Natural | Yes | Yes | 1 | — |
-| Fwog | Common | Natural | Yes | Yes | 1 | — |
-| Drumpler | Common | Natural | Yes | Yes | 0 | — |
-| Maw | Common | Natural | Yes | Yes | 3 | — |
-| Pummel | Common | Natural | Yes | Yes | 4 | — |
-| Clamble | Common | Natural | Yes | Yes | 3 | — |
-| Bowgart | Common | Natural | Yes | Yes | 3 | — |
-| T-Rox | Common | Natural | Yes | Yes | 1 | — |
-| Entbrat | Common | Natural | Yes | Yes | 0 | — |
-| Ghazt | Common | Ethereal | Yes | Yes | 0 | — |
-| Shugabush | Common | Legendary | Yes | Yes | 0 | — |
-| G'joob | Common | Mythical | Yes | Yes | 1 | — |
-| Tawkerr | Common | Werdo | No | No | 0 | — |
-| Parlsona | Common | Werdo | No | No | 0 | — |
-| Wubbox | Common | Supernatural | No | No | 0 | — |
-| Do | Common | Dipster | No | Yes | 1 | — |
-| Re | Common | Dipster | No | Yes | 1 | — |
-| Mi | Common | Dipster | No | Yes | 1 | — |
-| Fa | Common | Dipster | No | Yes | 1 | — |
-| Sol | Common | Dipster | No | Yes | 1 | — |
-| La | Common | Dipster | No | Yes | 1 | — |
-| Ti | Common | Dipster | No | Yes | 1 | — |
-| Mammott | Rare | Natural | Yes | Yes | 1 | Medium |
-| Oaktopus | Rare | Natural | Yes | Yes | 1 | Medium |
-| Furcorn | Rare | Natural | Yes | Yes | 0 | — |
-| Entbrat | Rare | Natural | Yes | Yes | 1 | — |
-| Wubbox | Rare | Supernatural | No | Yes | 1 | Medium |
-| Potbelly | Rare | Natural | Yes | No | 0 | — |
-| Noggin | Rare | Natural | Yes | No | 0 | — |
-| Toe Jammer | Rare | Natural | Yes | No | 0 | — |
-| Shrubb | Rare | Natural | Yes | No | 0 | — |
-| Fwog | Rare | Natural | Yes | No | 0 | — |
-| Drumpler | Rare | Natural | Yes | No | 0 | — |
-| Maw | Rare | Natural | Yes | No | 0 | — |
-| Pummel | Rare | Natural | Yes | No | 0 | — |
-| Clamble | Rare | Natural | Yes | No | 0 | — |
-| Bowgart | Rare | Natural | Yes | No | 0 | — |
-| T-Rox | Rare | Natural | Yes | No | 0 | — |
-| Ghazt | Rare | Ethereal | Yes | No | 0 | — |
-| G'joob | Rare | Mythical | Yes | No | 0 | — |
-| Potbelly | Epic | Natural | Yes | No | 0 | — |
-| Noggin | Epic | Natural | Yes | No | 0 | — |
-| Toe Jammer | Epic | Natural | Yes | No | 0 | — |
-| Mammott | Epic | Natural | Yes | No | 0 | — |
-| Shrubb | Epic | Natural | Yes | No | 0 | — |
-| Oaktopus | Epic | Natural | Yes | No | 0 | — |
-| Furcorn | Epic | Natural | Yes | No | 0 | — |
-| Fwog | Epic | Natural | Yes | No | 0 | — |
-| Drumpler | Epic | Natural | Yes | No | 0 | — |
-| Maw | Epic | Natural | Yes | No | 0 | — |
-| Pummel | Epic | Natural | Yes | No | 0 | — |
-| Clamble | Epic | Natural | Yes | No | 0 | — |
-| Bowgart | Epic | Natural | Yes | No | 0 | — |
-| T-Rox | Epic | Natural | Yes | No | 0 | — |
-| Entbrat | Epic | Natural | Yes | No | 0 | — |
-| Ghazt | Epic | Ethereal | Yes | No | 0 | — |
-| G'joob | Epic | Mythical | Yes | No | 0 | — |
-| Wubbox | Epic | Supernatural | No | No | 0 | — |
-| Punkleton | Common | Seasonal | Yes | No | 0 | — |
-| Punkleton | Rare | Seasonal | Yes | No | 0 | — |
-| Punkleton | Epic | Seasonal | Yes | No | 0 | — |
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Checked in | Confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Potbelly | Common | Natural | No | Yes | 2 | 0 | — |
+| Noggin | Common | Natural | No | Yes | 1 | 0 | — |
+| Toe Jammer | Common | Natural | No | Yes | 1 | 0 | — |
+| Mammott | Common | Natural | No | Yes | 1 | 0 | — |
+| Shrubb | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Oaktopus | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Furcorn | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Fwog | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Drumpler | Common | Natural | Yes | Yes | 0 | 0 | — |
+| Maw | Common | Natural | Yes | Yes | 3 | 0 | — |
+| Pummel | Common | Natural | Yes | Yes | 3 | 0 | — |
+| Clamble | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Bowgart | Common | Natural | Yes | Yes | 3 | 0 | — |
+| T-Rox | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Entbrat | Common | Natural | Yes | Yes | 13 | 0 | — |
+| Ghazt | Common | Ethereal | Yes | Yes | 0 | 0 | — |
+| Shugabush | Common | Legendary | Yes | Yes | 0 | 0 | — |
+| G'joob | Common | Mythical | Yes | Yes | 1 | 0 | — |
+| Tawkerr | Common | Werdo | No | No | 0 | 0 | — |
+| Parlsona | Common | Werdo | No | No | 0 | 0 | — |
+| Wubbox | Common | Supernatural | No | No | 0 | 0 | — |
+| Do | Common | Dipster | No | Yes | 1 | 0 | — |
+| Re | Common | Dipster | No | Yes | 1 | 0 | — |
+| Mi | Common | Dipster | No | Yes | 1 | 0 | — |
+| Fa | Common | Dipster | No | Yes | 1 | 0 | — |
+| Sol | Common | Dipster | No | Yes | 1 | 0 | — |
+| La | Common | Dipster | No | Yes | 1 | 0 | — |
+| Ti | Common | Dipster | No | Yes | 1 | 0 | — |
+| Potbelly | Rare | Natural | Yes | No | 0 | 0 | — |
+| Noggin | Rare | Natural | Yes | No | 0 | 0 | — |
+| Toe Jammer | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Mammott | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Shrubb | Rare | Natural | Yes | No | 0 | 0 | — |
+| Oaktopus | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Furcorn | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Fwog | Rare | Natural | Yes | No | 0 | 0 | — |
+| Drumpler | Rare | Natural | Yes | No | 0 | 0 | — |
+| Maw | Rare | Natural | Yes | Yes | 1 | 0 | Medium |
+| Pummel | Rare | Natural | Yes | No | 0 | 0 | — |
+| Clamble | Rare | Natural | Yes | No | 0 | 0 | — |
+| Bowgart | Rare | Natural | Yes | No | 0 | 0 | — |
+| T-Rox | Rare | Natural | Yes | No | 0 | 0 | — |
+| Entbrat | Rare | Natural | Yes | Yes | 2 | 0 | — |
+| Ghazt | Rare | Ethereal | Yes | No | 0 | 0 | — |
+| G'joob | Rare | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Rare | Supernatural | No | Yes | 1 | 0 | Medium |
+| Potbelly | Epic | Natural | Yes | No | 0 | 0 | — |
+| Noggin | Epic | Natural | Yes | No | 0 | 0 | — |
+| Toe Jammer | Epic | Natural | Yes | No | 0 | 0 | — |
+| Mammott | Epic | Natural | Yes | No | 0 | 0 | — |
+| Shrubb | Epic | Natural | Yes | No | 0 | 0 | — |
+| Oaktopus | Epic | Natural | Yes | No | 0 | 0 | — |
+| Furcorn | Epic | Natural | Yes | No | 0 | 0 | — |
+| Fwog | Epic | Natural | Yes | No | 0 | 0 | — |
+| Drumpler | Epic | Natural | Yes | No | 0 | 0 | — |
+| Maw | Epic | Natural | Yes | No | 0 | 0 | — |
+| Pummel | Epic | Natural | Yes | No | 0 | 0 | — |
+| Clamble | Epic | Natural | Yes | No | 0 | 0 | — |
+| Bowgart | Epic | Natural | Yes | No | 0 | 0 | — |
+| T-Rox | Epic | Natural | Yes | No | 0 | 0 | — |
+| Entbrat | Epic | Natural | Yes | No | 0 | 0 | — |
+| Ghazt | Epic | Ethereal | Yes | No | 0 | 0 | — |
+| G'joob | Epic | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Epic | Supernatural | No | No | 0 | 0 | — |
+| Punkleton | Common | Seasonal | Yes | No | 0 | 0 | — |
+| Punkleton | Rare | Seasonal | Yes | No | 0 | 0 | — |
+| Punkleton | Epic | Seasonal | Yes | No | 0 | 0 | — |
 
 ### Pending
 
-| Type | Parents | Time | Prediction | Confidence |
-| --- | --- | --- | --- | --- |
-| Breeding | ItsABassThnCellO (Bowgart, level 15) + Iggy (Shrubb, level 15) | — | Attempting Epic Oaktopus | High |
-
-### Current objective
-
-Breed **Epic Oaktopus** during its current availability window.
-
-| Target | Combo | Success time | Enhanced success time | Current status | Priority |
-| --- | --- | --- | --- | --- | --- |
-| Epic Oaktopus | Bowgart + Shrubb | 1d 7h | 23h 15m | Ready to start with level 15 parents | Active while offered |
-
-Notes:
-- Use **ItsABassThnCellO** (Bowgart, level 15) with **Iggy** (Shrubb, level 15).
-- Current offer window is approximately **3d 7h** from the 2026-08-14 planning update.
-- Watch for 1d 7h normally, or 23h 15m with Enhanced Breeding, as the success timer.
+None recorded.
 
 ### Rare breeding planner
 
@@ -118,16 +111,16 @@ Notes:
 | Rare Mammott | T-Rox + Clamble | 6h | 4h 30m | Owned (1) | When offered |
 | Rare Shrubb | Potbelly + Noggin | 10h 30m | 7h 52m 30s | Ready | When offered |
 | Rare Oaktopus | Potbelly + Toe Jammer | 10h 30m | 7h 52m 30s | Owned (1) | When offered |
-| Rare Furcorn | Potbelly + Mammott | 10h 30m | 7h 52m 30s | Ready | When offered |
+| Rare Furcorn | Potbelly + Mammott | 10h 30m | 7h 52m 30s | Owned (1) | When offered |
 | Rare Fwog | Noggin + Toe Jammer | 1h 15m | 56m 15s | Ready | When offered |
 | Rare Drumpler | Noggin + Mammott | 1h 7m 30s | 50m 37s | Ready | When offered |
-| Rare Maw | Toe Jammer + Mammott | 1h 7m 30s | 50m 37s | Ready | When offered |
+| Rare Maw | Toe Jammer + Mammott | 1h 7m 30s | 50m 37s | Owned (1) | When offered |
 | Rare Pummel | Noggin + Oaktopus | 15h 30m | 11h 37m 30s | Ready | When offered |
 | Rare Clamble | Noggin + Furcorn | 15h 30m | 11h 37m 30s | Ready | When offered |
 | Rare Bowgart | Toe Jammer + Furcorn | 15h 30m | 11h 37m 30s | Ready | When offered |
 | Rare T-Rox | Noggin + Maw | 10h 30m | 7h 52m 30s | Ready | When offered |
-| Rare Entbrat | Noggin + Bowgart | 1d 6h 30m | 22h 52m 30s | Owned (1) | When offered |
-| Rare Ghazt | Entbrat (Rare) + T-Rox | 1d 21h 30m | 1d 10h 7m 30s | Ready | When offered |
+| Rare Entbrat | Noggin + Bowgart | 1d 6h 30m | 22h 52m 30s | Owned (2) | When offered |
+| Rare Ghazt | Entbrat + T-Rox | 1d 21h 30m | 1d 10h 7m 30s | Ready | When offered |
 | Rare G'joob | Pummel + T-Rox | 22h 30m | 16h 52m 30s | Ready | When offered |
 | Rare Wubbox | Purchase a dormant Rare Wubbox, then box one of each required Rare monster. | — | — | Owned (1) | Special acquisition |
 | Rare Punkleton | Bowgart + T-Rox | 1d 7h 45m | 23h 48m 45s | Ready | Seasonal offer |
@@ -136,10 +129,10 @@ Notes:
 
 | Target | Best first-copy combination / acquisition | Standard | Enhanced | Plan | Availability |
 | --- | --- | --- | --- | --- | --- |
-| Epic Potbelly | Entbrat (Rare) + Shrubb | 9h | 6h 45m | Ready | When offered |
-| Epic Noggin | Entbrat (Rare) + Fwog | 1h | 45m | Ready | When offered |
-| Epic Toe Jammer | Entbrat (Rare) + Oaktopus | 3h | 2h 15m | Ready | When offered |
-| Epic Mammott | Entbrat (Rare) + Furcorn | 5h | 3h 45m | Ready | When offered |
+| Epic Potbelly | Entbrat + Shrubb | 9h | 6h 45m | Ready | When offered |
+| Epic Noggin | Entbrat + Fwog | 1h | 45m | Ready | When offered |
+| Epic Toe Jammer | Entbrat + Oaktopus | 3h | 2h 15m | Ready | When offered |
+| Epic Mammott | Entbrat + Furcorn | 5h | 3h 45m | Ready | When offered |
 | Epic Shrubb | T-Rox + Oaktopus | 19h | 14h 15m | Ready | When offered |
 | Epic Oaktopus | Bowgart + Shrubb | 1d 7h | 23h 15m | Ready | When offered |
 | Epic Furcorn | Clamble + Fwog | 17h | 12h 45m | Ready | When offered |
@@ -152,116 +145,112 @@ Notes:
 | Epic T-Rox | Pummel + Drumpler | 19h | 14h 15m | Blocked: missing Drumpler | When offered |
 | Epic Entbrat | T-Rox + Shrubb | 1d 21h | 1d 9h 45m | Ready | When offered |
 | Epic Ghazt | T-Rox + Furcorn | 1d 6h | 22h 30m | Ready | When offered |
-| Epic G'joob | Entbrat (Rare) + Maw | 1d 9h 10m | 1d 52m 30s | Ready | When offered |
+| Epic G'joob | Entbrat + Maw | 1d 9h 10m | 1d 52m 30s | Ready | When offered |
 | Epic Wubbox | Evolve a powered Common Wubbox during an Epic Wubbox availability window. | — | — | Not breedable | Special acquisition |
-| Epic Punkleton | Entbrat (Rare) + Drumpler | 1d 7h 10m | 23h 22m 30s | Blocked: missing Drumpler | Seasonal offer |
+| Epic Punkleton | Entbrat + Drumpler | 1d 7h 10m | 23h 22m 30s | Blocked: missing Drumpler | Seasonal offer |
 
 ### Notes
 
-- Market counts can be zero for a discovered monster after it has been sold or boxed.
-- Rare Furcorn is discovered but was visible only as a zero-owned Buyback entry.
-- Rare Mammott, Rare Oaktopus, and Rare Wubbox owned counts are inferred from the island overview.
+- Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+- Buyback entries, if any, are ignored for current inventory.
+- Rare Maw is confirmed by the castle bed total: previous known bed usage was 115, and the in-game Vegidian Castle info panel showed 117/120 beds occupied.
 
-## Earth Island
+## Air Island
 
-Observed: `2026-07-30`
+Observed: `2026-08-22`
+
+### Castle
+
+| Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Paradise Castle | High | 86 | 90 | 4 | 0 | 86 | 86 | 90 | 0 |
+
+### Summary
 
 | Variant | Book discovered | Owned species | Owned monsters |
 | --- | --- | --- | --- |
-| Common | 24/27 | 22 | 43 |
-| Rare | 5/18 | 5 | 5 |
-| Epic | 1/18 | 1 | 1 |
+| Common | 18/28 | 18 | 28 |
+| Rare | 8/19 | 7 | 8 |
+| Epic | 1/19 | 0 | 0 |
 
 ### Current monsters
 
-| Monster | Variant | Class | Breedable? | Discovered | Owned | Confidence |
-| --- | --- | --- | --- | --- | --- | --- |
-| Tweedle | Common | Natural | No | Yes | 1 | — |
-| Potbelly | Common | Natural | No | Yes | 1 | — |
-| Noggin | Common | Natural | No | Yes | 1 | — |
-| Mammott | Common | Natural | No | Yes | 1 | — |
-| Dandidoo | Common | Natural | Yes | Yes | 2 | — |
-| Cybop | Common | Natural | Yes | Yes | 1 | — |
-| Pango | Common | Natural | Yes | Yes | 2 | — |
-| Shrubb | Common | Natural | Yes | Yes | 2 | — |
-| Furcorn | Common | Natural | Yes | Yes | 0 | — |
-| Drumpler | Common | Natural | Yes | Yes | 1 | — |
-| Reedling | Common | Natural | Yes | Yes | 2 | — |
-| Thumpies | Common | Natural | Yes | Yes | 0 | — |
-| PomPom | Common | Natural | Yes | Yes | 2 | — |
-| Clamble | Common | Natural | Yes | Yes | 1 | — |
-| Quarrister | Common | Natural | Yes | Yes | 17 | — |
-| Humbug | Common | Ethereal | Yes | Yes | 0 | — |
-| Hyehehe | Common | Mythical | Yes | No | 0 | — |
-| Tawkerr | Common | Werdo | No | No | 0 | — |
-| Stoowarb | Common | Werdo | No | Yes | 1 | — |
-| Wubbox | Common | Supernatural | No | No | 0 | — |
-| Do | Common | Dipster | No | Yes | 1 | — |
-| Re | Common | Dipster | No | Yes | 1 | — |
-| Mi | Common | Dipster | No | Yes | 1 | — |
-| Fa | Common | Dipster | No | Yes | 1 | — |
-| Sol | Common | Dipster | No | Yes | 1 | — |
-| La | Common | Dipster | No | Yes | 1 | — |
-| Ti | Common | Dipster | No | Yes | 1 | — |
-| Hoola | Common | Seasonal | Yes | Yes | 1 | — |
-| Tweedle | Rare | Natural | Yes | No | 0 | — |
-| Potbelly | Rare | Natural | Yes | Yes | 1 | — |
-| Noggin | Rare | Natural | Yes | No | 0 | — |
-| Mammott | Rare | Natural | Yes | No | 0 | — |
-| Dandidoo | Rare | Natural | Yes | No | 0 | — |
-| Cybop | Rare | Natural | Yes | No | 0 | — |
-| Pango | Rare | Natural | Yes | No | 0 | — |
-| Shrubb | Rare | Natural | Yes | Yes | 1 | — |
-| Furcorn | Rare | Natural | Yes | Yes | 1 | — |
-| Drumpler | Rare | Natural | Yes | No | 0 | — |
-| Reedling | Rare | Natural | Yes | No | 0 | — |
-| Thumpies | Rare | Natural | Yes | No | 0 | — |
-| PomPom | Rare | Natural | Yes | No | 0 | — |
-| Clamble | Rare | Natural | Yes | No | 0 | — |
-| Quarrister | Rare | Natural | Yes | Yes | 1 | — |
-| Humbug | Rare | Ethereal | Yes | Yes | 1 | — |
-| Hyehehe | Rare | Mythical | Yes | No | 0 | — |
-| Wubbox | Rare | Supernatural | No | No | 0 | — |
-| Hoola | Rare | Seasonal | Yes | No | 0 | — |
-| Tweedle | Epic | Natural | Yes | No | 0 | — |
-| Potbelly | Epic | Natural | Yes | No | 0 | — |
-| Noggin | Epic | Natural | Yes | No | 0 | — |
-| Mammott | Epic | Natural | Yes | No | 0 | — |
-| Dandidoo | Epic | Natural | Yes | No | 0 | — |
-| Cybop | Epic | Natural | Yes | No | 0 | — |
-| Pango | Epic | Natural | Yes | No | 0 | — |
-| Shrubb | Epic | Natural | Yes | No | 0 | — |
-| Furcorn | Epic | Natural | Yes | No | 0 | — |
-| Drumpler | Epic | Natural | Yes | No | 0 | — |
-| Reedling | Epic | Natural | Yes | No | 0 | — |
-| Thumpies | Epic | Natural | Yes | No | 0 | — |
-| PomPom | Epic | Natural | Yes | No | 0 | — |
-| Clamble | Epic | Natural | Yes | No | 0 | — |
-| Quarrister | Epic | Natural | Yes | Yes | 1 | — |
-| Humbug | Epic | Ethereal | Yes | No | 0 | — |
-| Hyehehe | Epic | Mythical | Yes | No | 0 | — |
-| Wubbox | Epic | Supernatural | No | No | 0 | — |
-| Hoola | Epic | Seasonal | Yes | No | 0 | — |
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Checked in | Confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Tweedle | Common | Natural | No | Yes | 1 | 0 | — |
+| Noggin | Common | Natural | No | Yes | 1 | 0 | — |
+| Toe Jammer | Common | Natural | No | Yes | 2 | 0 | — |
+| Mammott | Common | Natural | No | Yes | 1 | 0 | — |
+| Cybop | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Quibble | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Pango | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Fwog | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Drumpler | Common | Natural | Yes | Yes | 3 | 0 | — |
+| Maw | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Scups | Common | Natural | Yes | Yes | 2 | 0 | — |
+| PomPom | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Congle | Common | Natural | Yes | Yes | 1 | 0 | — |
+| T-Rox | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Riff | Common | Natural | Yes | Yes | 4 | 0 | — |
+| Reebro | Common | Ethereal | Yes | Yes | 1 | 0 | — |
+| Yawstrich | Common | Mythical | Yes | Yes | 0 | 0 | — |
+| Alcordion | Common | Legendary | No | No | 0 | 0 | — |
+| Parlsona | Common | Werdo | No | No | 0 | 0 | — |
+| Stoowarb | Common | Werdo | No | No | 0 | 0 | — |
+| Wubbox | Common | Supernatural | No | No | 0 | 0 | — |
+| Do | Common | Dipster | No | No | 0 | 0 | — |
+| Re | Common | Dipster | No | No | 0 | 0 | — |
+| Mi | Common | Dipster | No | No | 0 | 0 | — |
+| Fa | Common | Dipster | No | No | 0 | 0 | — |
+| Sol | Common | Dipster | No | No | 0 | 0 | — |
+| La | Common | Dipster | No | Yes | 1 | 0 | — |
+| Ti | Common | Dipster | No | No | 0 | 0 | — |
+| Tweedle | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Noggin | Rare | Natural | Yes | No | 0 | 0 | — |
+| Toe Jammer | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Mammott | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Cybop | Rare | Natural | Yes | No | 0 | 0 | — |
+| Quibble | Rare | Natural | Yes | No | 0 | 0 | — |
+| Pango | Rare | Natural | Yes | No | 0 | 0 | — |
+| Fwog | Rare | Natural | Yes | No | 0 | 0 | — |
+| Drumpler | Rare | Natural | Yes | No | 0 | 0 | — |
+| Maw | Rare | Natural | Yes | No | 0 | 0 | — |
+| Scups | Rare | Natural | Yes | No | 0 | 0 | — |
+| PomPom | Rare | Natural | Yes | Yes | 2 | 0 | — |
+| Congle | Rare | Natural | Yes | Yes | 0 | 0 | Low |
+| T-Rox | Rare | Natural | Yes | Yes | 1 | 0 | Low |
+| Riff | Rare | Natural | Yes | Yes | 1 | 0 | Low |
+| Reebro | Rare | Ethereal | Yes | Yes | 1 | 0 | Low |
+| Yawstrich | Rare | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Rare | Supernatural | No | No | 0 | 0 | — |
+| Hoola | Rare | Seasonal | Yes | Yes | 1 | 0 | Low |
+| Tweedle | Epic | Natural | Yes | No | 0 | 0 | — |
+| Noggin | Epic | Natural | Yes | No | 0 | 0 | — |
+| Toe Jammer | Epic | Natural | Yes | No | 0 | 0 | — |
+| Mammott | Epic | Natural | Yes | No | 0 | 0 | — |
+| Cybop | Epic | Natural | Yes | No | 0 | 0 | — |
+| Quibble | Epic | Natural | Yes | No | 0 | 0 | — |
+| Pango | Epic | Natural | Yes | No | 0 | 0 | — |
+| Fwog | Epic | Natural | Yes | No | 0 | 0 | — |
+| Drumpler | Epic | Natural | Yes | No | 0 | 0 | — |
+| Maw | Epic | Natural | Yes | No | 0 | 0 | — |
+| Scups | Epic | Natural | Yes | No | 0 | 0 | — |
+| PomPom | Epic | Natural | Yes | No | 0 | 0 | — |
+| Congle | Epic | Natural | Yes | No | 0 | 0 | — |
+| T-Rox | Epic | Natural | Yes | No | 0 | 0 | — |
+| Riff | Epic | Natural | Yes | No | 0 | 0 | — |
+| Reebro | Epic | Ethereal | Yes | No | 0 | 0 | — |
+| Yawstrich | Epic | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Epic | Supernatural | No | Yes | 0 | 0 | Medium |
+| Hoola | Epic | Seasonal | Yes | No | 0 | 0 | — |
+| Schmoochle | Common | Seasonal | Yes | No | 0 | 0 | — |
+| Hoola | Common | Seasonal | Yes | Yes | 1 | 0 | Low |
+| Schmoochle | Rare | Seasonal | Yes | No | 0 | 0 | — |
+| Schmoochle | Epic | Seasonal | Yes | No | 0 | 0 | — |
 
 ### Pending
 
-| Type | Parents | Time | Prediction | Confidence |
-| --- | --- | --- | --- | --- |
-| Castle_Upgrade | — | — | — | High |
-| Breeding | Pebblonius (Quarrister, level 20) + Lil Fuzz (Rare Furcorn, level 10) | — | Attempting Epic Potbelly | High |
-
-### Current objective
-
-Breed **Epic Potbelly** during its current availability window.
-
-| Target | Combo | Success time | Enhanced success time | Current status | Priority |
-| --- | --- | --- | --- | --- | --- |
-| Epic Potbelly | Quarrister + Furcorn | 9h | 6h 45m | Ready to start with named parents | Active while offered |
-
-Notes:
-- Use **Pebblonius** (Quarrister, level 20) with **Lil Fuzz** (Rare Furcorn, level 10).
-- Lil Fuzz can substitute for Common Furcorn as the Furcorn parent.
-- Watch for 9h normally, or 6h 45m with Enhanced Breeding, as the success timer.
+None recorded.
 
 ### Rare breeding planner
 
@@ -273,13 +262,238 @@ No recipes recorded yet.
 
 ### Notes
 
-- The current Polished Stonyx Castle is upgrading to the final Carved Stonyx Castle tier.
-- Market counts are current owned counts; a discovered monster can have zero owned after sale or boxing.
-- Common Furcorn, Humbug, and Thumpies are discovered but the Market showed zero owned.
+- Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+- Rare T-Rox, Rare Riff, Rare Reebro, Common Hoola, and Rare Hoola are low-confidence count assignments used to reconcile Air Island's castle bed audit.
+- Alcordion appears as a Market card, but is not treated as discovered because the Book common count is already reconciled without it.
+- Air Island castle info panel shows 86/90 beds occupied; the re-indexed monster rows now explain 86 beds exactly.
+
+## Cold Island
+
+Observed: `2026-08-22`
+
+### Castle
+
+| Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta | Upgrade target | Time remaining |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Paradise Castle | High | 89 | 90 | 1 | 0 | 89 | 89 | 90 | 0 | Frozium Castle | 20h 45m 29s |
+
+### Summary
+
+| Variant | Book discovered | Owned species | Owned monsters |
+| --- | --- | --- | --- |
+| Common | 18/28 | 16 | 33 |
+| Rare | 6/19 | 2 | 2 |
+| Epic | 1/19 | 0 | 0 |
+
+### Current monsters
+
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Checked in | Confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Tweedle | Common | Natural | No | Yes | 1 | 0 | — |
+| Potbelly | Common | Natural | No | Yes | 2 | 0 | — |
+| Toe Jammer | Common | Natural | No | Yes | 1 | 0 | — |
+| Mammott | Common | Natural | No | Yes | 1 | 0 | — |
+| Dandidoo | Common | Natural | Yes | Yes | 3 | 0 | — |
+| Quibble | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Pango | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Oaktopus | Common | Natural | Yes | Yes | 0 | 0 | — |
+| Furcorn | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Maw | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Spunge | Common | Natural | Yes | Yes | 6 | 0 | — |
+| Thumpies | Common | Natural | Yes | Yes | 4 | 0 | — |
+| Congle | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Bowgart | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Deedge | Common | Natural | Yes | Yes | 3 | 0 | — |
+| Grumpyre | Common | Ethereal | Yes | Yes | 2 | 0 | — |
+| Strombonin | Common | Mythical | Yes | Yes | 0 | 0 | — |
+| bbli$zard | Common | Legendary | Yes | Yes | 1 | 0 | — |
+| Tawkerr | Common | Werdo | No | No | 0 | 0 | — |
+| Maggpi | Common | Werdo | No | No | 0 | 0 | — |
+| Wubbox | Common | Supernatural | No | No | 0 | 0 | — |
+| Do | Common | Dipster | No | No | 0 | 0 | — |
+| Re | Common | Dipster | No | No | 0 | 0 | — |
+| Mi | Common | Dipster | No | No | 0 | 0 | — |
+| Fa | Common | Dipster | No | No | 0 | 0 | — |
+| Sol | Common | Dipster | No | No | 0 | 0 | — |
+| La | Common | Dipster | No | No | 0 | 0 | — |
+| Ti | Common | Dipster | No | No | 0 | 0 | — |
+| Tweedle | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Potbelly | Rare | Natural | Yes | No | 0 | 0 | — |
+| Toe Jammer | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Mammott | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Dandidoo | Rare | Natural | Yes | No | 0 | 0 | — |
+| Quibble | Rare | Natural | Yes | No | 0 | 0 | — |
+| Pango | Rare | Natural | Yes | No | 0 | 0 | — |
+| Oaktopus | Rare | Natural | Yes | No | 0 | 0 | — |
+| Furcorn | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Maw | Rare | Natural | Yes | No | 0 | 0 | — |
+| Spunge | Rare | Natural | Yes | No | 0 | 0 | — |
+| Thumpies | Rare | Natural | Yes | No | 0 | 0 | — |
+| Congle | Rare | Natural | Yes | No | 0 | 0 | — |
+| Bowgart | Rare | Natural | Yes | No | 0 | 0 | — |
+| Deedge | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Grumpyre | Rare | Ethereal | Yes | Yes | 0 | 0 | — |
+| Strombonin | Rare | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Rare | Supernatural | No | No | 0 | 0 | — |
+| Yool | Rare | Seasonal | Yes | No | 0 | 0 | — |
+| Tweedle | Epic | Natural | Yes | No | 0 | 0 | — |
+| Potbelly | Epic | Natural | Yes | No | 0 | 0 | — |
+| Toe Jammer | Epic | Natural | Yes | No | 0 | 0 | — |
+| Mammott | Epic | Natural | Yes | No | 0 | 0 | — |
+| Dandidoo | Epic | Natural | Yes | No | 0 | 0 | — |
+| Quibble | Epic | Natural | Yes | No | 0 | 0 | — |
+| Pango | Epic | Natural | Yes | No | 0 | 0 | — |
+| Oaktopus | Epic | Natural | Yes | No | 0 | 0 | — |
+| Furcorn | Epic | Natural | Yes | No | 0 | 0 | — |
+| Maw | Epic | Natural | Yes | No | 0 | 0 | — |
+| Spunge | Epic | Natural | Yes | No | 0 | 0 | — |
+| Thumpies | Epic | Natural | Yes | No | 0 | 0 | — |
+| Congle | Epic | Natural | Yes | No | 0 | 0 | — |
+| Bowgart | Epic | Natural | Yes | No | 0 | 0 | — |
+| Deedge | Epic | Natural | Yes | No | 0 | 0 | — |
+| Grumpyre | Epic | Ethereal | Yes | No | 0 | 0 | — |
+| Strombonin | Epic | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Epic | Supernatural | No | Yes | 0 | 0 | Medium |
+| Yool | Epic | Seasonal | Yes | No | 0 | 0 | — |
+| Yool | Common | Seasonal | Yes | No | 0 | 0 | — |
+
+### Pending
+
+None recorded.
+
+### Rare breeding planner
+
+No recipes recorded yet.
+
+### Epic breeding planner
+
+No recipes recorded yet.
+
+### Notes
+
+- Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+- Rare Toe Jammer, Rare Mammott, Rare Deedge, and Rare Grumpyre are discovered but currently owned 0 on Cold Island.
+- Epic Wubbox is a medium-confidence identification for the Book's 1/19 Epic count; the Market card shows no owned copy.
+- Cold Island castle info panel shows 89/90 beds occupied; the re-indexed monster rows now explain 89 beds exactly.
+
+## Earth Island
+
+Observed: `2026-08-22`
+
+### Castle
+
+| Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Carved Stonyx Castle | High | 167 | 180 | 13 | 0 | 167 | 173 | 180 | 6 |
+
+### Summary
+
+| Variant | Book discovered | Owned species | Owned monsters |
+| --- | --- | --- | --- |
+| Common | 25/27 | 22 | 52 |
+| Rare | 11/19 | 9 | 9 |
+| Epic | 1/19 | 1 | 1 |
+
+### Current monsters
+
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Checked in | Confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Tweedle | Common | Natural | No | Yes | 1 | 0 | — |
+| Potbelly | Common | Natural | No | Yes | 0 | 0 | — |
+| Noggin | Common | Natural | No | Yes | 1 | 0 | — |
+| Mammott | Common | Natural | No | Yes | 1 | 0 | — |
+| Dandidoo | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Cybop | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Pango | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Shrubb | Common | Natural | Yes | Yes | 3 | 0 | — |
+| Furcorn | Common | Natural | Yes | Yes | 0 | 0 | — |
+| Drumpler | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Reedling | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Thumpies | Common | Natural | Yes | Yes | 0 | 0 | — |
+| PomPom | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Clamble | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Quarrister | Common | Natural | Yes | Yes | 25 | 0 | — |
+| Humbug | Common | Ethereal | Yes | Yes | 0 | 0 | — |
+| Hyehehe | Common | Mythical | Yes | Yes | 0 | 0 | — |
+| Tawkerr | Common | Werdo | No | Yes | 1 | 0 | — |
+| Stoowarb | Common | Werdo | No | Yes | 1 | 0 | — |
+| Wubbox | Common | Supernatural | No | No | 0 | 0 | — |
+| Do | Common | Dipster | No | Yes | 1 | 0 | — |
+| Re | Common | Dipster | No | Yes | 1 | 0 | — |
+| Mi | Common | Dipster | No | Yes | 1 | 0 | — |
+| Fa | Common | Dipster | No | Yes | 1 | 0 | — |
+| Sol | Common | Dipster | No | Yes | 1 | 0 | — |
+| La | Common | Dipster | No | Yes | 1 | 0 | — |
+| Ti | Common | Dipster | No | Yes | 1 | 0 | — |
+| Hoola | Common | Seasonal | Yes | Yes | 1 | 0 | — |
+| Tweedle | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Potbelly | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Noggin | Rare | Natural | Yes | No | 0 | 0 | — |
+| Mammott | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Dandidoo | Rare | Natural | Yes | Yes | 1 | 0 | Low |
+| Cybop | Rare | Natural | Yes | No | 0 | 0 | — |
+| Pango | Rare | Natural | Yes | Yes | 1 | 0 | Low |
+| Shrubb | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Furcorn | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Drumpler | Rare | Natural | Yes | No | 0 | 0 | — |
+| Reedling | Rare | Natural | Yes | Yes | 1 | 0 | Low |
+| Thumpies | Rare | Natural | Yes | No | 0 | 0 | — |
+| PomPom | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Clamble | Rare | Natural | Yes | No | 0 | 0 | — |
+| Quarrister | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Humbug | Rare | Ethereal | Yes | Yes | 1 | 0 | — |
+| Hyehehe | Rare | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Rare | Supernatural | No | No | 0 | 0 | — |
+| Hoola | Rare | Seasonal | Yes | No | 0 | 0 | — |
+| Tweedle | Epic | Natural | Yes | No | 0 | 0 | — |
+| Potbelly | Epic | Natural | Yes | No | 0 | 0 | — |
+| Noggin | Epic | Natural | Yes | No | 0 | 0 | — |
+| Mammott | Epic | Natural | Yes | No | 0 | 0 | — |
+| Dandidoo | Epic | Natural | Yes | No | 0 | 0 | — |
+| Cybop | Epic | Natural | Yes | No | 0 | 0 | — |
+| Pango | Epic | Natural | Yes | No | 0 | 0 | — |
+| Shrubb | Epic | Natural | Yes | No | 0 | 0 | — |
+| Furcorn | Epic | Natural | Yes | No | 0 | 0 | — |
+| Drumpler | Epic | Natural | Yes | No | 0 | 0 | — |
+| Reedling | Epic | Natural | Yes | No | 0 | 0 | — |
+| Thumpies | Epic | Natural | Yes | No | 0 | 0 | — |
+| PomPom | Epic | Natural | Yes | No | 0 | 0 | — |
+| Clamble | Epic | Natural | Yes | No | 0 | 0 | — |
+| Quarrister | Epic | Natural | Yes | Yes | 1 | 0 | — |
+| Humbug | Epic | Ethereal | Yes | No | 0 | 0 | — |
+| Hyehehe | Epic | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Epic | Supernatural | No | No | 0 | 0 | — |
+| Hoola | Epic | Seasonal | Yes | No | 0 | 0 | — |
+
+### Pending
+
+None recorded.
+
+### Rare breeding planner
+
+No recipes recorded yet.
+
+### Epic breeding planner
+
+No recipes recorded yet.
+
+### Notes
+
+- Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+- Buyback entry for 'Slyth' is ignored for current inventory.
+- Rare Dandidoo, Rare Pango, and Rare Reedling are low-confidence count assignments used to reconcile the Book's 11/19 Rare count without nullable owned rows.
+- Market pages confirm common Clamble owned 2, common Humbug owned 0, Tawkerr owned 1, and Rare Mammott owned 0.
+- Castle info panel shows 173/180 beds occupied; after supported Market corrections and low-confidence Rare count assignments, current indexed monster rows explain 167 beds, leaving an unresolved +6 bed audit delta.
 
 ## Magical Sanctum
 
 Observed: `2026-07-13`
+
+### Castle
+
+None recorded.
+
+### Summary
 
 | Variant | Book discovered | Owned species | Owned monsters |
 | --- | --- | --- | --- |
@@ -289,52 +503,52 @@ Observed: `2026-07-13`
 
 ### Current monsters
 
-| Monster | Variant | Class | Breedable? | Discovered | Owned | Confidence |
-| --- | --- | --- | --- | --- | --- | --- |
-| Theremind | Common | Magical | No | Yes | 3 | — |
-| Clackula | Common | Magical | No | Yes | 1 | — |
-| Fluoress | Common | Magical | No | Yes | 7 | — |
-| Floot Fly | Common | Magical | No | No | 0 | — |
-| Xyster | Common | Magical | Yes | Yes | 1 | — |
-| Cahoot | Common | Magical | Yes | Yes | 7 | — |
-| Déjà-Jin | Common | Magical | Yes | No | 0 | — |
-| Roarick | Common | Magical | Yes | No | 0 | — |
-| Osstax | Common | Magical | Yes | No | 0 | — |
-| Knucklehead | Common | Magical | Yes | Yes | 1 | — |
-| G'day | Common | Magical | Yes | No | 0 | — |
-| Larvaluss | Common | Magical | Yes | No | 0 | — |
-| Frondley | Common | Magical | Yes | Yes | 4 | — |
-| Mushaboom | Common | Magical | Yes | No | 0 | — |
-| Enchantling | Common | Magical | Yes | No | 0 | — |
-| Do | Common | Dipster | No | Yes | 1 | — |
-| Re | Common | Dipster | No | No | 0 | — |
-| Mi | Common | Dipster | No | No | 0 | — |
-| Fa | Common | Dipster | No | No | 0 | — |
-| Sol | Common | Dipster | No | No | 0 | — |
-| La | Common | Dipster | No | No | 0 | — |
-| Ti | Common | Dipster | No | No | 0 | — |
-| Theremind | Rare | Magical | Yes | No | 0 | — |
-| Clackula | Rare | Magical | Yes | No | 0 | — |
-| Fluoress | Rare | Magical | Yes | No | 0 | — |
-| Floot Fly | Rare | Magical | Yes | No | 0 | — |
-| Xyster | Rare | Magical | Yes | No | 0 | — |
-| Cahoot | Rare | Magical | Yes | No | 0 | — |
-| Rare Déjà-Jin | Rare | Magical | Yes | No | 0 | — |
-| Roarick | Rare | Magical | Yes | No | 0 | — |
-| Osstax | Rare | Magical | Yes | No | 0 | — |
-| Knucklehead | Rare | Magical | Yes | No | 0 | — |
-| G'day | Rare | Magical | Yes | No | 0 | — |
-| Larvaluss | Rare | Magical | Yes | No | 0 | — |
-| Frondley | Rare | Magical | Yes | No | 0 | — |
-| Mushaboom | Rare | Magical | Yes | No | 0 | — |
-| Enchantling | Rare | Magical | Yes | No | 0 | — |
-| Clackula | Epic | Magical | Yes | No | 0 | — |
-| Fluoress | Epic | Magical | Yes | No | 0 | — |
-| Floot Fly | Epic | Magical | Yes | No | 0 | — |
-| Knucklehead | Epic | Magical | Yes | No | 0 | — |
-| Carillong | Common | Seasonal | Yes | No | 0 | — |
-| Carillong | Rare | Seasonal | Yes | No | 0 | — |
-| Carillong | Epic | Seasonal | Yes | No | 0 | — |
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Checked in | Confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Theremind | Common | Magical | No | Yes | 3 | 0 | — |
+| Clackula | Common | Magical | No | Yes | 1 | 0 | — |
+| Fluoress | Common | Magical | No | Yes | 7 | 0 | — |
+| Floot Fly | Common | Magical | No | No | 0 | 0 | — |
+| Xyster | Common | Magical | Yes | Yes | 1 | 0 | — |
+| Cahoot | Common | Magical | Yes | Yes | 7 | 0 | — |
+| Déjà-Jin | Common | Magical | Yes | No | 0 | 0 | — |
+| Roarick | Common | Magical | Yes | No | 0 | 0 | — |
+| Osstax | Common | Magical | Yes | No | 0 | 0 | — |
+| Knucklehead | Common | Magical | Yes | Yes | 1 | 0 | — |
+| G'day | Common | Magical | Yes | No | 0 | 0 | — |
+| Larvaluss | Common | Magical | Yes | No | 0 | 0 | — |
+| Frondley | Common | Magical | Yes | Yes | 4 | 0 | — |
+| Mushaboom | Common | Magical | Yes | No | 0 | 0 | — |
+| Enchantling | Common | Magical | Yes | No | 0 | 0 | — |
+| Do | Common | Dipster | No | Yes | 1 | 0 | — |
+| Re | Common | Dipster | No | No | 0 | 0 | — |
+| Mi | Common | Dipster | No | No | 0 | 0 | — |
+| Fa | Common | Dipster | No | No | 0 | 0 | — |
+| Sol | Common | Dipster | No | No | 0 | 0 | — |
+| La | Common | Dipster | No | No | 0 | 0 | — |
+| Ti | Common | Dipster | No | No | 0 | 0 | — |
+| Theremind | Rare | Magical | Yes | No | 0 | 0 | — |
+| Clackula | Rare | Magical | Yes | No | 0 | 0 | — |
+| Fluoress | Rare | Magical | Yes | No | 0 | 0 | — |
+| Floot Fly | Rare | Magical | Yes | No | 0 | 0 | — |
+| Xyster | Rare | Magical | Yes | No | 0 | 0 | — |
+| Cahoot | Rare | Magical | Yes | No | 0 | 0 | — |
+| Rare Déjà-Jin | Rare | Magical | Yes | No | 0 | 0 | — |
+| Roarick | Rare | Magical | Yes | No | 0 | 0 | — |
+| Osstax | Rare | Magical | Yes | No | 0 | 0 | — |
+| Knucklehead | Rare | Magical | Yes | No | 0 | 0 | — |
+| G'day | Rare | Magical | Yes | No | 0 | 0 | — |
+| Larvaluss | Rare | Magical | Yes | No | 0 | 0 | — |
+| Frondley | Rare | Magical | Yes | No | 0 | 0 | — |
+| Mushaboom | Rare | Magical | Yes | No | 0 | 0 | — |
+| Enchantling | Rare | Magical | Yes | No | 0 | 0 | — |
+| Clackula | Epic | Magical | Yes | No | 0 | 0 | — |
+| Fluoress | Epic | Magical | Yes | No | 0 | 0 | — |
+| Floot Fly | Epic | Magical | Yes | No | 0 | 0 | — |
+| Knucklehead | Epic | Magical | Yes | No | 0 | 0 | — |
+| Carillong | Common | Seasonal | Yes | No | 0 | 0 | — |
+| Carillong | Rare | Seasonal | Yes | No | 0 | 0 | — |
+| Carillong | Epic | Seasonal | Yes | No | 0 | 0 | — |
 
 ### Pending
 
@@ -379,3 +593,114 @@ Observed: `2026-07-13`
 - Xyster is housed in the Humble Hotel; the Market still reports one owned.
 - A Theremind egg in the Nursery is not included in the owned count.
 - The pending Frondley will raise the owned count from four to five only after placement.
+
+## Water Island
+
+Observed: `2026-08-22`
+
+### Castle
+
+| Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Paradise Castle | High | 86 | 90 | 4 | 2 | 88 | 90 | 90 | 4 |
+
+### Summary
+
+| Variant | Book discovered | Owned species | Owned monsters |
+| --- | --- | --- | --- |
+| Common | 17/28 | 17 | 26 |
+| Rare | 4/19 | 2 | 6 |
+| Epic | 1/19 | 0 | 0 |
+
+### Current monsters
+
+| Monster | Variant | Class | Breedable? | Discovered | Owned | Checked in | Confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Tweedle | Common | Natural | No | Yes | 1 | 0 | — |
+| Potbelly | Common | Natural | No | Yes | 1 | 0 | — |
+| Noggin | Common | Natural | No | Yes | 1 | 0 | — |
+| Toe Jammer | Common | Natural | No | Yes | 1 | 0 | — |
+| Dandidoo | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Cybop | Common | Natural | Yes | Yes | 1 | 1 | — |
+| Quibble | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Shrubb | Common | Natural | Yes | Yes | 2 | 0 | — |
+| Oaktopus | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Fwog | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Spunge | Common | Natural | Yes | Yes | 5 | 0 | — |
+| Reedling | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Scups | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Pummel | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Shellbeat | Common | Natural | Yes | Yes | 5 | 0 | — |
+| Jeeode | Common | Ethereal | Yes | Yes | 1 | 0 | — |
+| Anglow | Common | Mythical | Yes | Yes | 1 | 0 | — |
+| T-Pirainha | Common | Legendary | No | No | 0 | 0 | — |
+| Maggpi | Common | Werdo | No | No | 0 | 0 | — |
+| Parlsona | Common | Werdo | No | No | 0 | 0 | — |
+| Wubbox | Common | Supernatural | No | No | 0 | 0 | — |
+| Do | Common | Dipster | No | No | 0 | 0 | — |
+| Re | Common | Dipster | No | No | 0 | 0 | — |
+| Mi | Common | Dipster | No | No | 0 | 0 | — |
+| Fa | Common | Dipster | No | No | 0 | 0 | — |
+| Sol | Common | Dipster | No | No | 0 | 0 | — |
+| La | Common | Dipster | No | No | 0 | 0 | — |
+| Ti | Common | Dipster | No | No | 0 | 0 | — |
+| Tweedle | Rare | Natural | Yes | Yes | 2 | 0 | — |
+| Potbelly | Rare | Natural | Yes | No | 0 | 0 | — |
+| Noggin | Rare | Natural | Yes | No | 0 | 0 | — |
+| Toe Jammer | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Dandidoo | Rare | Natural | Yes | No | 0 | 0 | — |
+| Cybop | Rare | Natural | Yes | No | 0 | 0 | — |
+| Quibble | Rare | Natural | Yes | No | 0 | 0 | — |
+| Shrubb | Rare | Natural | Yes | No | 0 | 0 | — |
+| Oaktopus | Rare | Natural | Yes | No | 0 | 0 | — |
+| Fwog | Rare | Natural | Yes | No | 0 | 0 | — |
+| Spunge | Rare | Natural | Yes | No | 0 | 0 | — |
+| Reedling | Rare | Natural | Yes | No | 0 | 0 | — |
+| Scups | Rare | Natural | Yes | No | 0 | 0 | — |
+| Pummel | Rare | Natural | Yes | No | 0 | 0 | — |
+| Shellbeat | Rare | Natural | Yes | Yes | 4 | 0 | — |
+| Jeeode | Rare | Ethereal | Yes | No | 0 | 0 | — |
+| Anglow | Rare | Mythical | Yes | Yes | 0 | 0 | Low |
+| Wubbox | Rare | Supernatural | No | No | 0 | 0 | — |
+| Blabbit | Rare | Seasonal | Yes | No | 0 | 0 | — |
+| Tweedle | Epic | Natural | Yes | No | 0 | 0 | — |
+| Potbelly | Epic | Natural | Yes | No | 0 | 0 | — |
+| Noggin | Epic | Natural | Yes | No | 0 | 0 | — |
+| Toe Jammer | Epic | Natural | Yes | No | 0 | 0 | — |
+| Dandidoo | Epic | Natural | Yes | No | 0 | 0 | — |
+| Cybop | Epic | Natural | Yes | No | 0 | 0 | — |
+| Quibble | Epic | Natural | Yes | No | 0 | 0 | — |
+| Shrubb | Epic | Natural | Yes | No | 0 | 0 | — |
+| Oaktopus | Epic | Natural | Yes | No | 0 | 0 | — |
+| Fwog | Epic | Natural | Yes | No | 0 | 0 | — |
+| Spunge | Epic | Natural | Yes | No | 0 | 0 | — |
+| Reedling | Epic | Natural | Yes | No | 0 | 0 | — |
+| Scups | Epic | Natural | Yes | No | 0 | 0 | — |
+| Pummel | Epic | Natural | Yes | No | 0 | 0 | — |
+| Shellbeat | Epic | Natural | Yes | No | 0 | 0 | — |
+| Jeeode | Epic | Ethereal | Yes | No | 0 | 0 | — |
+| Anglow | Epic | Mythical | Yes | No | 0 | 0 | — |
+| Wubbox | Epic | Supernatural | No | Yes | 0 | 0 | Medium |
+| Blabbit | Epic | Seasonal | Yes | No | 0 | 0 | — |
+| Blabbit | Common | Seasonal | Yes | No | 0 | 0 | — |
+
+### Pending
+
+None recorded.
+
+### Rare breeding planner
+
+No recipes recorded yet.
+
+### Epic breeding planner
+
+No recipes recorded yet.
+
+### Notes
+
+- Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+- Buyback entry for 'Walden' is ignored for current inventory.
+- Humble Hotel has 1 occupant: Blaise, a level 1 Cybop; this remains owned inventory but does not occupy Castle beds.
+- Rare Anglow is a low-confidence identification used to reconcile the Book's 4/19 Rare count; its current owned count is recorded as 0 until screenshot or user evidence supports a placed copy.
+- Epic Wubbox is a medium-confidence identification for the Book's 1/19 Epic count; the Market card shows no owned copy.
+- Water Island castle info panel shows 90/90 beds occupied; after accounting for the checked-in Cybop, current indexed placed monsters explain 86 Castle beds from 88 total owned beds, leaving an unresolved +4 Castle bed audit delta.

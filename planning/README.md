@@ -39,6 +39,16 @@ owned counts, castle state, and pending work. Buyback cards are not current
 inventory. Discovered monsters with zero current count remain normal inventory
 rows with `discovered: true` and `owned: 0`.
 
+Every inventory row must use a non-negative integer `owned` count. There should
+be no unknown or nullable owned rows in a working inventory. If the evidence is
+not fully reconciled, keep the explicit count, mark low-confidence assignments
+with `confidence: low`, and leave the remaining uncertainty as a castle bed
+audit delta plus notes.
+
+Castle bed panels are audit evidence. They can prove that the indexed inventory
+still has drift, but they should not silently choose a monster count without
+screenshot evidence, user confirmation, or an explicit low-confidence note.
+
 ### Breeding recipe index
 
 The breeding index answers: how can a target be produced, and what are the
@@ -87,6 +97,21 @@ For a first island batch:
 1. Update or create player inventory YAML from screenshots.
 2. Add only the roster and breedability scaffolding needed to keep generation
    valid.
-3. Defer current availability lookup until planning is requested.
-4. Record uncertainty instead of filling gaps from memory.
-5. Generate inventory docs and run tests before using the data for planning.
+3. Keep Book discovery, Market owned counts, castle panel audits, pending work,
+   and Buyback handling separate.
+4. Defer current availability lookup until planning is requested.
+5. Record uncertainty in low-confidence notes and bed audit deltas instead of
+   nullable owned counts or memory-filled guesses.
+6. Generate inventory docs and run tests before using the data for planning.
+
+## Current sanity baseline
+
+As of the current 2026-08-22 inventory batch:
+
+- Plant Island, Cold Island, and Air Island reconcile exactly against their
+  checked castle bed panels.
+- Water Island has an unresolved `+4` bed audit delta after accounting for one
+  checked-in Cybop in the Humble Hotel.
+- Earth Island has an unresolved `+6` bed audit delta.
+- Magical Sanctum needs Magical monster bed requirements before castle-style bed
+  auditing can be applied.

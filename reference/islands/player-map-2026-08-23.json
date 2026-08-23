@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-23",
+  "source": "User-transcribed in-game map list",
+  "source_notes": [
+    "Big Blue Bubble support identifies sidebar fractions as how many Monsters have been collected on that Island.",
+    "Visible fractions match inventory Book totals plus Seasonal totals for Plant Island, Cold Island, Air Island, Water Island, and Earth Island."
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "label": "Regular Islands",
+      "islands": [
+        {
+          "order": 1,
+          "name": "Tribal Island",
+          "status": "unlocked",
+          "map_caption": "join for food"
+        },
+        {
+          "order": 2,
+          "name": "Plant Island",
+          "status": "unlocked",
+          "map_progress": {
+            "current": 32,
+            "total": 69,
+            "interpretation": "map_sidebar_collected_monsters",
+            "confidence": "high"
+          }
+        },
+        {
+          "order": 3,
+          "name": "Cold Island",
+          "status": "unlocked",
+          "map_progress": {
+            "current": 25,
+            "total": 69,
+            "interpretation": "map_sidebar_collected_monsters",
+            "confidence": "high"
+          }
+        },
+        {
+          "order": 4,
+          "name": "Air Island",
+          "status": "unlocked",
+          "map_progress": {
+            "current": 29,
+            "total": 72,
+            "interpretation": "map_sidebar_collected_monsters",
+            "confidence": "high"
+          }
+        },
+        {
+          "order": 5,
+          "name": "Water Island",
+          "status": "unlocked",
+          "map_progress": {
+            "current": 22,
+            "total": 69,
+            "interpretation": "map_sidebar_collected_monsters",
+            "confidence": "high"
+          }
+        },
+        {
+          "order": 6,
+          "name": "Earth Island",
+          "status": "unlocked",
+          "map_progress": {
+            "current": 38,
+            "total": 68,
+            "interpretation": "map_sidebar_collected_monsters",
+            "confidence": "high"
+          }
+        },
+        {"order": 7, "name": "Shugabush Island", "status": "unlocked"},
+        {"order": 8, "name": "Ethereal Island", "status": "unlocked"},
+        {"order": 9, "name": "Ethereal Workshop", "status": "unlocked"},
+        {"order": 10, "name": "Magical Sanctum", "status": "unlocked"},
+        {"order": 11, "name": "Fire Haven", "status": "unlocked"},
+        {"order": 12, "name": "Fire Oasis", "status": "unlocked"},
+        {"order": 13, "name": "Mythical Island", "status": "unlocked"},
+        {"order": 14, "name": "Light Island", "status": "unlocked"},
+        {"order": 15, "name": "Psychic Island", "status": "unlocked"},
+        {"order": 16, "name": "Faerie Island", "status": "unlocked"},
+        {"order": 17, "name": "Bone Island", "status": "unlocked"},
+        {"order": 18, "name": "Paironormal Carnival", "status": "unlocked"},
+        {"order": 19, "name": "Wublin Island", "status": "unlocked"},
+        {"order": 20, "name": "The Colossingum", "status": "unlocked"},
+        {"order": 21, "name": "Magical Nexus", "status": "unlocked"},
+        {"order": 22, "name": "Celestial Island", "status": "unlocked"},
+        {"order": 23, "name": "Amber Island", "status": "unlocked"},
+        {"order": 24, "name": "Gold Island", "status": "unlocked"},
+        {"order": 25, "name": "Seasonal Shanty", "status": "unlocked"},
+        {"order": 26, "name": "Composer Island", "status": "unlocked"},
+        {"order": 27, "name": "Clubbox Rewind", "status": "unlocked"}
+      ]
+    },
+    {
+      "page": 2,
+      "label": "Mirrors/Alternates",
+      "islands": [
+        {"order": 28, "name": "Mirror Plant Island", "status": "unlocked"},
+        {"order": 29, "name": "Mirror Cold Island", "status": "unlocked"},
+        {"order": 30, "name": "Mirror Earth Island", "status": "unlocked"},
+        {"order": 31, "name": "Plasma Islet", "status": "unlocked"},
+        {"order": 32, "name": "Crystal Islet", "status": "unlocked"},
+        {"order": 33, "name": "Shadow Islet", "status": "unlocked"},
+        {"order": 34, "name": "Mirror Air Island", "status": "locked"},
+        {"order": 35, "name": "Mirror Water Island", "status": "locked"},
+        {"order": 36, "name": "Mech Islet", "status": "locked"},
+        {"order": 37, "name": "Mirror Light Island", "status": "locked"},
+        {"order": 38, "name": "Mirror Psychic Island", "status": "locked"},
+        {"order": 39, "name": "Mirror Faerie Island", "status": "locked"},
+        {"order": 40, "name": "Mirror Bone Island", "status": "locked"}
+      ]
+    }
+  ]
+}

@@ -30,6 +30,31 @@ Island identity should be confirmed by one or more of:
 - known account state from nearby context
 
 If the island name is not visible and not user-confirmed, mark it uncertain.
+Use full island names in notes and repo updates, such as `Water Island` or
+`Mirror Water Island`, to avoid natural/Mirror island confusion.
+
+## Inventory screenshots
+
+Inventory screenshots have their own source hierarchy:
+
+1. Book pages determine discovered state and Book totals.
+2. Visible Market cards determine current owned counts for that monster and
+   variant.
+3. Overview screenshots support castle tier, visible placed monsters, and
+   state that Market pages cannot show.
+4. Breeding Structure, Nursery, and result screens support pending state, not
+   owned counts until placement.
+5. Buyback cards prove historical ownership only and are ignored for current
+   inventory.
+
+Do not treat a missing Market card as `owned: 0`. A monster may be absent from
+the Market because it is not currently offered. Every inventory monster row must
+still use an explicit non-negative integer `owned` count; unresolved evidence is
+recorded through `confidence: low`, notes, and bed audit deltas.
+
+Castle bed panels audit the inventory rows. They can reveal drift, but they
+should not silently assign a specific monster count without screenshot evidence,
+user confirmation, or an explicit low-confidence note.
 
 ## Global top UI
 
@@ -76,4 +101,6 @@ Castle
 
 ## Write discipline
 
-Screenshot-derived updates should be proposed first, reviewed second, and committed only after uncertain fields are excluded or confirmed.
+Screenshot-derived updates should be proposed first, reviewed second, and
+committed only after uncertain fields are excluded, confirmed, or explicitly
+recorded as low-confidence integer counts with notes.

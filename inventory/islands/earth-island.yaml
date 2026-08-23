@@ -1,84 +1,74 @@
 schema_version: 1
 island: Earth Island
-observed_at: "2026-07-30"
+observed_at: "2026-08-22"
 
 evidence:
-  screenshot_directory: training/screenshots/MSM Earth Island 2026-07-30
+  screenshot_directory: training/screenshots/My Singing Monsters Island Inventories 2026-08-22/06 Earth Island
   overview:
-    - IMG_0809.jpeg
-    - IMG_0810.jpeg
+    - IMG_0928.jpg
   book:
-    - IMG_0811.jpeg
-    - IMG_0812.jpeg
-    - IMG_0813.jpeg
-    - IMG_0814.jpeg
-    - IMG_0815.jpeg
-    - IMG_0816.jpeg
-    - IMG_0817.jpeg
-    - IMG_0818.jpeg
+    - IMG_0929.jpg
+    - IMG_0930.jpg
+    - IMG_0931.jpg
   market:
-    - IMG_0819.jpeg
-    - IMG_0820.jpeg
-    - IMG_0821.jpeg
-    - IMG_0822.jpeg
-    - IMG_0823.jpeg
-    - IMG_0824.jpeg
-    - IMG_0825.jpeg
-    - IMG_0826.jpeg
-    - IMG_0827.jpeg
-    - IMG_0828.jpeg
-    - IMG_0829.jpeg
-    - IMG_0830.jpeg
-    - IMG_0831.jpeg
-    - IMG_0832.jpeg
-    - IMG_0833.jpeg
-    - IMG_0834.jpeg
-    - IMG_0835.jpeg
-    - IMG_0836.jpeg
-    - IMG_0837.jpeg
-    - IMG_0838.jpeg
-    - IMG_0839.jpeg
-    - IMG_0840.jpeg
+    - IMG_0932.jpg
+    - IMG_0933.jpg
+    - IMG_0934.jpg
+    - IMG_0935.jpg
+    - IMG_0936.jpg
+    - IMG_0937.jpg
+    - IMG_0938.jpg
+    - IMG_0939.jpg
+    - IMG_0940.jpg
+    - IMG_0941.jpg
+    - IMG_0942.jpg
+    - IMG_0943.jpg
+
+castle:
+  name: Carved Stonyx Castle
+  confidence: high
+  observed_beds_occupied: 173
+  observed_beds_available: 180
 
 book:
   common:
-    discovered: 24
+    discovered: 25
     total: 27
     seasonal: {discovered: 1, total: 1}
-    costumes: {discovered: 16, total: 205}
+    costumes: {discovered: 21, total: 205}
   rare:
-    discovered: 5
-    total: 18
+    discovered: 11
+    total: 19
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 10}
   epic:
     discovered: 1
-    total: 18
+    total: 19
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 15}
 
 monsters:
   # Common Naturals
   - {name: Tweedle, variant: common, class: natural, discovered: true, owned: 1}
-  - {name: Potbelly, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Potbelly, variant: common, class: natural, discovered: true, owned: 0}
   - {name: Noggin, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Mammott, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Dandidoo, variant: common, class: natural, discovered: true, owned: 2}
   - {name: Cybop, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Pango, variant: common, class: natural, discovered: true, owned: 2}
-  - {name: Shrubb, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Shrubb, variant: common, class: natural, discovered: true, owned: 3}
   - {name: Furcorn, variant: common, class: natural, discovered: true, owned: 0}
   - {name: Drumpler, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Reedling, variant: common, class: natural, discovered: true, owned: 2}
   - {name: Thumpies, variant: common, class: natural, discovered: true, owned: 0}
-  - {name: PomPom, variant: common, class: natural, discovered: true, owned: 2}
-  - {name: Clamble, variant: common, class: natural, discovered: true, owned: 1}
-  - {name: Quarrister, variant: common, class: natural, discovered: true, owned: 17}
+  - {name: PomPom, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Clamble, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Quarrister, variant: common, class: natural, discovered: true, owned: 25}
 
   # Other Commons and Dipsters
   - {name: Humbug, variant: common, class: ethereal, discovered: true, owned: 0}
-  - {name: Hyehehe, variant: common, class: mythical, discovered: false, owned: 0}
-  - {name: Tawkerr, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Hyehehe, variant: common, class: mythical, discovered: true, owned: 0}
+  - {name: Tawkerr, variant: common, class: werdo, discovered: true, owned: 1}
   - {name: Stoowarb, variant: common, class: werdo, discovered: true, owned: 1}
   - {name: Wubbox, variant: common, class: supernatural, discovered: false, owned: 0}
   - {name: Do, variant: common, class: dipster, discovered: true, owned: 1}
@@ -91,19 +81,19 @@ monsters:
   - {name: Hoola, variant: common, class: seasonal, discovered: true, owned: 1}
 
   # Rares
-  - {name: Tweedle, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Tweedle, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Potbelly, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Noggin, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Mammott, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Dandidoo, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Dandidoo, variant: rare, class: natural, discovered: true, owned: 1, confidence: low}
   - {name: Cybop, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Pango, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Pango, variant: rare, class: natural, discovered: true, owned: 1, confidence: low}
   - {name: Shrubb, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Drumpler, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Reedling, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Reedling, variant: rare, class: natural, discovered: true, owned: 1, confidence: low}
   - {name: Thumpies, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: PomPom, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: PomPom, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Clamble, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Quarrister, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Humbug, variant: rare, class: ethereal, discovered: true, owned: 1}
@@ -132,14 +122,11 @@ monsters:
   - {name: Wubbox, variant: epic, class: supernatural, discovered: false, owned: 0}
   - {name: Hoola, variant: epic, class: seasonal, discovered: false, owned: 0}
 
-pending:
-  - type: castle_upgrade
-    building: Polished Stonyx Castle
-    target: Carved Stonyx Castle
-    displayed_time_remaining: 1d 15h 59m
-    confidence: high
+pending: []
 
 notes:
-  - The current Polished Stonyx Castle is upgrading to the final Carved Stonyx Castle tier.
-  - Market counts are current owned counts; a discovered monster can have zero owned after sale or boxing.
-  - Common Furcorn, Humbug, and Thumpies are discovered but the Market showed zero owned.
+  - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+  - Buyback entry for 'Slyth' is ignored for current inventory.
+  - Rare Dandidoo, Rare Pango, and Rare Reedling are low-confidence count assignments used to reconcile the Book's 11/19 Rare count without nullable owned rows.
+  - "Market pages confirm common Clamble owned 2, common Humbug owned 0, Tawkerr owned 1, and Rare Mammott owned 0."
+  - "Castle info panel shows 173/180 beds occupied; after supported Market corrections and low-confidence Rare count assignments, current indexed monster rows explain 167 beds, leaving an unresolved +6 bed audit delta."

@@ -29,6 +29,19 @@ breeding_lookup.py
 Looks up island-scoped breeding combinations from `reference/breeding/common-natural-breeding.json`.
 
 ```text
+audit_inventory_beds.py
+```
+
+Audits one full island name against its recorded Castle bed panel, Hotel
+checked-in beds, and monster bed requirements. It prints the current bed delta
+and the smallest count changes that could reconcile a positive mismatch.
+
+```bash
+python3 scripts/audit_inventory_beds.py --island "Water Island"
+python3 scripts/audit_inventory_beds.py --island "Water Island" --assume-panel-includes-hotels
+```
+
+```text
 guess_breeder_result.py
 ```
 

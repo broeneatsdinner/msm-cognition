@@ -1,0 +1,135 @@
+schema_version: 1
+island: Water Island
+observed_at: "2026-08-22"
+
+evidence:
+  screenshot_directory: training/screenshots/My Singing Monsters Island Inventories 2026-08-22/05 Water Island
+  overview:
+    - IMG_0913.jpg
+  book:
+    - IMG_0914.jpg
+    - IMG_0915.jpg
+    - IMG_0916.jpg
+  market:
+    - IMG_0917.jpg
+    - IMG_0918.jpg
+    - IMG_0919.jpg
+    - IMG_0920.jpg
+    - IMG_0921.jpg
+    - IMG_0922.jpg
+    - IMG_0923.jpg
+    - IMG_0924.jpg
+    - IMG_0925.jpg
+    - IMG_0926.jpg
+    - IMG_0927.jpg
+
+castle:
+  name: Paradise Castle
+  confidence: high
+  observed_beds_occupied: 90
+  observed_beds_available: 90
+
+book:
+  common:
+    discovered: 17
+    total: 28
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 4, total: 176}
+  rare:
+    discovered: 4
+    total: 19
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 2, total: 7}
+  epic:
+    discovered: 1
+    total: 19
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 0, total: 14}
+
+monsters:
+  # Common Naturals
+  - {name: Tweedle, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Potbelly, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Noggin, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Toe Jammer, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Dandidoo, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Cybop, variant: common, class: natural, discovered: true, owned: 1, checked_in: 1}
+  - {name: Quibble, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Shrubb, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Oaktopus, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Fwog, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Spunge, variant: common, class: natural, discovered: true, owned: 5}
+  - {name: Reedling, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Scups, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Pummel, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Shellbeat, variant: common, class: natural, discovered: true, owned: 5}
+
+  # Other Commons and Dipsters
+  - {name: Jeeode, variant: common, class: ethereal, discovered: true, owned: 1}
+  - {name: Anglow, variant: common, class: mythical, discovered: true, owned: 1}
+  - {name: T-Pirainha, variant: common, class: legendary, discovered: false, owned: 0}
+  - {name: Maggpi, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Parlsona, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Wubbox, variant: common, class: supernatural, discovered: false, owned: 0}
+  - {name: Do, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Re, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Mi, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Fa, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Sol, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: La, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Ti, variant: common, class: dipster, discovered: false, owned: 0}
+
+  # Rares
+  - {name: Tweedle, variant: rare, class: natural, discovered: true, owned: 2}
+  - {name: Potbelly, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Noggin, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Dandidoo, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Cybop, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Quibble, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Shrubb, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Oaktopus, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Fwog, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Spunge, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Reedling, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Scups, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Pummel, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Shellbeat, variant: rare, class: natural, discovered: true, owned: 4}
+  - {name: Jeeode, variant: rare, class: ethereal, discovered: false, owned: 0}
+  - {name: Anglow, variant: rare, class: mythical, discovered: true, owned: 0, confidence: low}
+  - {name: Wubbox, variant: rare, class: supernatural, discovered: false, owned: 0}
+  - {name: Blabbit, variant: rare, class: seasonal, discovered: false, owned: 0}
+
+  # Epics
+  - {name: Tweedle, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Potbelly, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Noggin, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Dandidoo, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Cybop, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Quibble, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Shrubb, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Oaktopus, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Fwog, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Spunge, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Reedling, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Scups, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Pummel, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Shellbeat, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Jeeode, variant: epic, class: ethereal, discovered: false, owned: 0}
+  - {name: Anglow, variant: epic, class: mythical, discovered: false, owned: 0}
+  - {name: Wubbox, variant: epic, class: supernatural, discovered: true, owned: 0, confidence: medium}
+  - {name: Blabbit, variant: epic, class: seasonal, discovered: false, owned: 0}
+
+  # Seasonal slot counted separately by the Book.
+  - {name: Blabbit, variant: common, class: seasonal, discovered: false, owned: 0}
+
+pending: []
+
+notes:
+  - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+  - Buyback entry for 'Walden' is ignored for current inventory.
+  - "Humble Hotel has 1 occupant: Blaise, a level 1 Cybop; this remains owned inventory but does not occupy Castle beds."
+  - Rare Anglow is a low-confidence identification used to reconcile the Book's 4/19 Rare count; its current owned count is recorded as 0 until screenshot or user evidence supports a placed copy.
+  - Epic Wubbox is a medium-confidence identification for the Book's 1/19 Epic count; the Market card shows no owned copy.
+  - "Water Island castle info panel shows 90/90 beds occupied; after accounting for the checked-in Cybop, current indexed placed monsters explain 86 Castle beds from 88 total owned beds, leaving an unresolved +4 Castle bed audit delta."

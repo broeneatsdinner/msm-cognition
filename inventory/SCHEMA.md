@@ -14,7 +14,13 @@ batch, see `inventory/REINDEXING.md`.
   island overview. Eggs still breeding or incubating are not included.
 - A monster may have `discovered: true` and `owned: 0` after being sold or boxed.
 - `confidence` records visually inferred counts.
+- `checked_in` records how many owned copies of that row are checked into a
+  Hotel and therefore do not occupy Castle beds.
 - `pending` records breeding or incubation state separately from owned monsters.
+- `castle` records the current visible castle tier and optional upgrade state.
+- Castle bed capacity is derived from `reference/castles/bed-capacities.json`.
+- Monster bed usage is derived from `reference/monsters/bed-requirements.json`.
+  Every monster row must use a non-negative integer `owned` count.
 
 ## Island file shape
 
@@ -23,6 +29,11 @@ schema_version: 1
 island: Island Name
 observed_at: YYYY-MM-DD
 evidence: {}
+castle:
+  name: Castle Name
+  confidence: high
+  observed_beds_occupied: 117
+  observed_beds_available: 120
 book: {}
 monsters:
   - name: Monster
@@ -30,13 +41,24 @@ monsters:
     class: natural
     discovered: true
     owned: 1
+    checked_in: 0
 pending: []
 notes: []
 ```
 
-`variant` is `common`, `rare`, or `epic`. `owned` is a non-negative integer
-when known and `null` only when evidence proves discovery without supporting a
-reliable current count.
+`variant` is `common`, `rare`, or `epic`. `owned` is always a non-negative
+integer. Do not use `owned: null`; unresolved evidence belongs in `notes`, a
+non-zero bed audit delta, or a separate review task.
+
+`checked_in` is optional and defaults to `0`. It must be a non-negative integer
+no greater than `owned`.
+
+Keep count provenance strict. A visible Market card can set `owned` for that
+monster and variant. A missing Market card does not set `owned: 0` for a
+Book-discovered monster, because the card may be unavailable during that
+screenshot window. A castle bed audit can prove that some count is still wrong
+or hidden, but it should not be used to choose a specific monster count without
+screenshot evidence, user confirmation, or an explicit low-confidence note.
 
 ## Breeding-plan join
 
@@ -57,6 +79,24 @@ with Relics, or a Wubbox acquired through purchase, boxing, or evolution.
 
 Availability is deliberately reported as `When offered`. The static inventory
 does not claim that a limited-time target is currently available in the game.
+
+## Bed usage join
+
+The generated Castle table reports known beds used, castle capacity, known beds
+free, checked-in Hotel beds, total owned beds, and any difference from the
+in-game castle panel. Dipsters use 0 beds. Rare Wubbox and Epic Wubbox use
+variant-specific bed requirements rather than the Common Wubbox requirement.
+
+When the in-game castle info panel is checked, record
+`observed_beds_occupied` and `observed_beds_available` under `castle`. These
+panel values audit the inventory rows. A non-zero bed audit delta means the
+monster owned counts need further review; it should not be solved by inventing
+monster counts without screenshot or user confirmation.
+
+If an audit delta remains after all visible Market pages are transcribed, keep
+the generated delta visible and explain it in `notes`. Use a low-confidence
+integer only when the note explains that the value is an intentional bed-audit
+inference. Do not introduce nullable or unknown owned rows.
 
 ## Regenerating the README
 

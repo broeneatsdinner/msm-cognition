@@ -1,0 +1,136 @@
+schema_version: 1
+island: Air Island
+observed_at: "2026-08-22"
+
+evidence:
+  screenshot_directory: training/screenshots/My Singing Monsters Island Inventories 2026-08-22/04 Air Island
+  overview:
+    - IMG_0898.jpg
+  book:
+    - IMG_0899.jpg
+    - IMG_0900.jpg
+    - IMG_0901.jpg
+  market:
+    - IMG_0902.jpg
+    - IMG_0903.jpg
+    - IMG_0904.jpg
+    - IMG_0905.jpg
+    - IMG_0906.jpg
+    - IMG_0907.jpg
+    - IMG_0908.jpg
+    - IMG_0909.jpg
+    - IMG_0910.jpg
+    - IMG_0911.jpg
+    - IMG_0912.jpg
+
+castle:
+  name: Paradise Castle
+  confidence: high
+  observed_beds_occupied: 86
+  observed_beds_available: 90
+
+book:
+  common:
+    discovered: 18
+    total: 28
+    seasonal: {discovered: 1, total: 2}
+    costumes: {discovered: 10, total: 206}
+  rare:
+    discovered: 8
+    total: 19
+    seasonal: {discovered: 1, total: 2}
+    costumes: {discovered: 0, total: 8}
+  epic:
+    discovered: 1
+    total: 19
+    seasonal: {discovered: 0, total: 2}
+    costumes: {discovered: 0, total: 14}
+
+monsters:
+  # Common Naturals
+  - {name: Tweedle, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Noggin, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Toe Jammer, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Mammott, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Cybop, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Quibble, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Pango, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Fwog, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Drumpler, variant: common, class: natural, discovered: true, owned: 3}
+  - {name: Maw, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Scups, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: PomPom, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Congle, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: T-Rox, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Riff, variant: common, class: natural, discovered: true, owned: 4}
+
+  # Other Commons and Dipsters
+  - {name: Reebro, variant: common, class: ethereal, discovered: true, owned: 1}
+  - {name: Yawstrich, variant: common, class: mythical, discovered: true, owned: 0}
+  - {name: Alcordion, variant: common, class: legendary, discovered: false, owned: 0}
+  - {name: Parlsona, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Stoowarb, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Wubbox, variant: common, class: supernatural, discovered: false, owned: 0}
+  - {name: Do, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Re, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Mi, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Fa, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Sol, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: La, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Ti, variant: common, class: dipster, discovered: false, owned: 0}
+
+  # Rares
+  - {name: Tweedle, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Noggin, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 1}
+  - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 1}
+  - {name: Cybop, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Quibble, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Pango, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Fwog, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Drumpler, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Maw, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Scups, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: PomPom, variant: rare, class: natural, discovered: true, owned: 2}
+  - {name: Congle, variant: rare, class: natural, discovered: true, owned: 0, confidence: low}
+  - {name: T-Rox, variant: rare, class: natural, discovered: true, owned: 1, confidence: low}
+  - {name: Riff, variant: rare, class: natural, discovered: true, owned: 1, confidence: low}
+  - {name: Reebro, variant: rare, class: ethereal, discovered: true, owned: 1, confidence: low}
+  - {name: Yawstrich, variant: rare, class: mythical, discovered: false, owned: 0}
+  - {name: Wubbox, variant: rare, class: supernatural, discovered: false, owned: 0}
+  - {name: Hoola, variant: rare, class: seasonal, discovered: true, owned: 1, confidence: low}
+
+  # Epics
+  - {name: Tweedle, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Noggin, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Mammott, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Cybop, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Quibble, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Pango, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Fwog, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Drumpler, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Maw, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Scups, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: PomPom, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Congle, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: T-Rox, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Riff, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Reebro, variant: epic, class: ethereal, discovered: false, owned: 0}
+  - {name: Yawstrich, variant: epic, class: mythical, discovered: false, owned: 0}
+  - {name: Wubbox, variant: epic, class: supernatural, discovered: true, owned: 0, confidence: medium}
+  - {name: Hoola, variant: epic, class: seasonal, discovered: false, owned: 0}
+
+  # Seasonal slots are counted separately by the Book.
+  - {name: Schmoochle, variant: common, class: seasonal, discovered: false, owned: 0}
+  - {name: Hoola, variant: common, class: seasonal, discovered: true, owned: 1, confidence: low}
+  - {name: Schmoochle, variant: rare, class: seasonal, discovered: false, owned: 0}
+  - {name: Schmoochle, variant: epic, class: seasonal, discovered: false, owned: 0}
+
+pending: []
+
+notes:
+  - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+  - Rare T-Rox, Rare Riff, Rare Reebro, Common Hoola, and Rare Hoola are low-confidence count assignments used to reconcile Air Island's castle bed audit.
+  - Alcordion appears as a Market card, but is not treated as discovered because the Book common count is already reconciled without it.
+  - "Air Island castle info panel shows 86/90 beds occupied; the re-indexed monster rows now explain 86 beds exactly."

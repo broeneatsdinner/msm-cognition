@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "sources": [
+    "https://bigbluebubblesupport.helpshift.com/hc/en/4-my-singing-monsters/faq/425-what-are-beds/",
+    "https://mysingingmonsters.fandom.com/wiki/Plant_Island",
+    "https://mysingingmonsters.fandom.com/wiki/Mythical_Monsters",
+    "https://mysingingmonsters.fandom.com/wiki/Legendary_Monsters",
+    "https://mysingingmonsters.fandom.com/wiki/Supernatural_Monsters",
+    "https://mysingingmonsters.fandom.com/wiki/Dipsters"
+  ],
+  "class_defaults": {
+    "dipster": 0,
+    "werdo": 1
+  },
+  "variant_overrides": {
+    "rare": {
+      "Wubbox": 1
+    },
+    "epic": {
+      "Wubbox": 10
+    }
+  },
+  "requirements": {
+    "Potbelly": 1,
+    "Noggin": 1,
+    "Toe Jammer": 1,
+    "Mammott": 1,
+    "Tweedle": 1,
+    "Shrubb": 2,
+    "Oaktopus": 2,
+    "Furcorn": 2,
+    "Fwog": 2,
+    "Drumpler": 2,
+    "Maw": 2,
+    "Dandidoo": 2,
+    "Cybop": 2,
+    "Quibble": 2,
+    "Pango": 2,
+    "Pummel": 3,
+    "Clamble": 3,
+    "Bowgart": 3,
+    "T-Rox": 3,
+    "Spunge": 3,
+    "Thumpies": 3,
+    "Congle": 3,
+    "PomPom": 3,
+    "Scups": 3,
+    "Reedling": 3,
+    "Entbrat": 4,
+    "Deedge": 4,
+    "Riff": 4,
+    "Shellbeat": 4,
+    "Quarrister": 4,
+    "Ghazt": 5,
+    "Grumpyre": 5,
+    "Reebro": 5,
+    "Jeeode": 5,
+    "Humbug": 5,
+    "Shugabush": 2,
+    "Alcordion": 4,
+    "bbli$zard": 2,
+    "T-Pirainha": 4,
+    "Wubbox": 6,
+    "Punkleton": 1,
+    "Yool": 1,
+    "Schmoochle": 2,
+    "Blabbit": 1,
+    "Hoola": 1,
+    "Carillong": 1,
+    "G'joob": 3,
+    "Strombonin": 3,
+    "Yawstrich": 3,
+    "Anglow": 3,
+    "Hyehehe": 3
+  }
+}

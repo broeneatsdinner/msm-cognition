@@ -1,0 +1,136 @@
+schema_version: 1
+island: Cold Island
+observed_at: "2026-08-22"
+
+evidence:
+  screenshot_directory: training/screenshots/My Singing Monsters Island Inventories 2026-08-22/03 Cold Island
+  overview:
+    - IMG_0882.jpg
+  book:
+    - IMG_0883.jpg
+    - IMG_0884.jpg
+    - IMG_0885.jpg
+  market:
+    - IMG_0886.jpg
+    - IMG_0887.jpg
+    - IMG_0888.jpg
+    - IMG_0889.jpg
+    - IMG_0890.jpg
+    - IMG_0891.jpg
+    - IMG_0892.jpg
+    - IMG_0893.jpg
+    - IMG_0894.jpg
+    - IMG_0895.jpg
+    - IMG_0896.jpg
+    - IMG_0897.jpg
+
+castle:
+  name: Paradise Castle
+  confidence: high
+  observed_beds_occupied: 89
+  observed_beds_available: 90
+  upgrade_target: Frozium Castle
+  displayed_time_remaining: 20h 45m 29s
+
+book:
+  common:
+    discovered: 18
+    total: 28
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 11, total: 198}
+  rare:
+    discovered: 6
+    total: 19
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 0, total: 13}
+  epic:
+    discovered: 1
+    total: 19
+    seasonal: {discovered: 0, total: 1}
+    costumes: {discovered: 0, total: 13}
+
+monsters:
+  # Common Naturals
+  - {name: Tweedle, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Potbelly, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Toe Jammer, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Mammott, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Dandidoo, variant: common, class: natural, discovered: true, owned: 3}
+  - {name: Quibble, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Pango, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Oaktopus, variant: common, class: natural, discovered: true, owned: 0}
+  - {name: Furcorn, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Maw, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Spunge, variant: common, class: natural, discovered: true, owned: 6}
+  - {name: Thumpies, variant: common, class: natural, discovered: true, owned: 4}
+  - {name: Congle, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Bowgart, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Deedge, variant: common, class: natural, discovered: true, owned: 3}
+
+  # Other Commons and Dipsters
+  - {name: Grumpyre, variant: common, class: ethereal, discovered: true, owned: 2}
+  - {name: Strombonin, variant: common, class: mythical, discovered: true, owned: 0}
+  - {name: bbli$zard, variant: common, class: legendary, discovered: true, owned: 1}
+  - {name: Tawkerr, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Maggpi, variant: common, class: werdo, discovered: false, owned: 0}
+  - {name: Wubbox, variant: common, class: supernatural, discovered: false, owned: 0}
+  - {name: Do, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Re, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Mi, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Fa, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Sol, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: La, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Ti, variant: common, class: dipster, discovered: false, owned: 0}
+
+  # Rares
+  - {name: Tweedle, variant: rare, class: natural, discovered: true, owned: 1}
+  - {name: Potbelly, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Dandidoo, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Quibble, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Pango, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Oaktopus, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 1}
+  - {name: Maw, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Spunge, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Thumpies, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Congle, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Bowgart, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Deedge, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Grumpyre, variant: rare, class: ethereal, discovered: true, owned: 0}
+  - {name: Strombonin, variant: rare, class: mythical, discovered: false, owned: 0}
+  - {name: Wubbox, variant: rare, class: supernatural, discovered: false, owned: 0}
+  - {name: Yool, variant: rare, class: seasonal, discovered: false, owned: 0}
+
+  # Epics
+  - {name: Tweedle, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Potbelly, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Toe Jammer, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Mammott, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Dandidoo, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Quibble, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Pango, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Oaktopus, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Furcorn, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Maw, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Spunge, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Thumpies, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Congle, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Bowgart, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Deedge, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Grumpyre, variant: epic, class: ethereal, discovered: false, owned: 0}
+  - {name: Strombonin, variant: epic, class: mythical, discovered: false, owned: 0}
+  - {name: Wubbox, variant: epic, class: supernatural, discovered: true, owned: 0, confidence: medium}
+  - {name: Yool, variant: epic, class: seasonal, discovered: false, owned: 0}
+
+  # Seasonal slot counted separately by the Book.
+  - {name: Yool, variant: common, class: seasonal, discovered: false, owned: 0}
+
+pending: []
+
+notes:
+  - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
+  - Rare Toe Jammer, Rare Mammott, Rare Deedge, and Rare Grumpyre are discovered but currently owned 0 on Cold Island.
+  - Epic Wubbox is a medium-confidence identification for the Book's 1/19 Epic count; the Market card shows no owned copy.
+  - "Cold Island castle info panel shows 89/90 beds occupied; the re-indexed monster rows now explain 89 beds exactly."

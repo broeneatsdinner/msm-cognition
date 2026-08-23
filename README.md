@@ -1,12 +1,17 @@
 # MSM Cognition
 
-Visual reference, screenshot recognition, and breeding inference for *My Singing Monsters*.
+Visual reference, screenshot recognition, inventory tracking, and breeding
+inference for *My Singing Monsters*.
 
 This project starts with a simple question:
 
 > What am I looking at in the breeder, and what is it likely to produce?
 
-The first layer is a human-readable reference system: local egg/icon assets, curated Markdown pages, and spreadsheet-derived reference data. The next layer is intended to use screenshots, local reference assets, and breeding rules to produce confidence-ranked interpretations of an in-progress breeding structure.
+The first layer is a human-readable reference system: local egg/icon assets,
+curated Markdown pages, spreadsheet-derived reference data, and dated island
+inventory files. The next layer uses screenshots, local reference assets,
+breeding rules, castle bed audits, availability snapshots, and parent readiness
+to produce confidence-ranked recommendations.
 
 ## Why this project exists
 
@@ -38,8 +43,10 @@ The project is not game automation and does not modify the game. It is a local r
 2. preserve spreadsheet-derived source data
 3. generate human-readable reference pages
 4. prepare script-readable data for future inference
-5. eventually compare breeder screenshots against known visual references
-6. combine visual recognition, island context, and timer data to rank likely outcomes
+5. index dated gameplay screenshots into island-scoped inventory YAML
+6. audit monster counts against castle bed panels when available
+7. compare breeder screenshots against known visual references
+8. combine visual recognition, inventory state, availability windows, island context, parent readiness, and timer data to rank likely outcomes
 
 ## Current capabilities
 
@@ -48,10 +55,14 @@ The repository currently contains:
 - local egg/icon reference assets for the 30 Natural monsters
 - a Markdown/HTML egg reference table for quick visual lookup
 - spreadsheet-derived reference files for islands, monsters, and Wublin blueprints
+- island-scoped player inventory YAML generated into `inventory/README.md`
+- castle and monster bed reference data for inventory audits
+- screenshot re-indexing rules for Book, Market, castle, pending, and Buyback evidence
+- breeding recipe and breedability reference scaffolding used by the inventory planner
 - curated island documentation generated from spreadsheet data
 - raw export previews preserved for audit/debug
 - maintenance scripts for inspecting and rebuilding reference material
-- placeholder package structure for future vision, rules, and inference code
+- importable inventory generation code plus tests
 
 ## Repository layout
 
@@ -68,7 +79,16 @@ reference/
   eggs/                  Human-readable egg reference
   islands/               Island CSV/JSON/raw export plus curated island docs
   monsters/              Monster CSV/JSON/raw export plus placeholder docs
+  breeding/              Island-scoped breeding and breedability data
+  castles/               Castle bed capacity reference
+  availability/          Dated limited-time availability snapshots
   wublins/               Wublin blueprint CSV/JSON/raw export plus placeholder docs
+
+inventory/
+  islands/               Canonical player inventory YAML, one file per island
+  README.md              Generated inventory, castle audit, and planner view
+  REINDEXING.md          Screenshot-to-inventory workflow checklist
+  SCHEMA.md              Inventory data and generator contract
 
 scripts/
   build_curated_docs.py  Generate curated Markdown from reference data
@@ -79,7 +99,8 @@ scripts/
                          Inspect spreadsheet-shaped JSON exports
 
 src/
-  msm_cognition/         Future importable package code
+  msm_cognition/         Importable package code
+    inventory.py         Inventory generator, bed audit, and planner join
     vision/              Screenshot/icon matching
     rules/               Breeding and game-rule modeling
     inference/           Result-ranking logic
@@ -107,6 +128,9 @@ This structure keeps the data close to its documentation instead of splitting re
 
 Useful starting points:
 
+- [`inventory/README.md`](inventory/README.md)
+- [`inventory/REINDEXING.md`](inventory/REINDEXING.md)
+- [`inventory/SCHEMA.md`](inventory/SCHEMA.md)
 - [`reference/eggs/msm-egg-reference.md`](reference/eggs/msm-egg-reference.md)
 - [`reference/islands/islands.md`](reference/islands/islands.md)
 - [`reference/monsters/monsters.md`](reference/monsters/monsters.md)
@@ -132,6 +156,12 @@ The current JSON files preserve the spreadsheet export shape:
 
 Future normalization can add cleaner script-facing records once the data model stabilizes.
 
+The canonical player inventory lives under `inventory/islands/*.yaml`. Every
+monster row uses a non-negative integer `owned` count. Book screenshots are the
+stronger source for discovered state, visible Market cards are the stronger
+source for current owned counts, Buyback cards are not current inventory, and
+castle bed panels are audits rather than primary monster counters.
+
 ## Scripts
 
 Inspect the spreadsheet-shaped JSON exports:
@@ -144,6 +174,19 @@ Regenerate curated island documentation:
 
 ```bash
 python3 scripts/build_curated_docs.py
+```
+
+Regenerate the player inventory:
+
+```bash
+bin/inventory
+```
+
+Check generated inventory and tests:
+
+```bash
+bin/inventory --check
+python3 -m unittest tests/test_inventory.py
 ```
 
 Some helper scripts use Pillow for image loading, cropping, upscaling, and comparison. Install the current Python dependencies with:
@@ -163,11 +206,11 @@ git --no-pager diff --stat
 
 Near-term:
 
-- polish curated island documentation
-- generate curated monster and Wublin documentation
-- normalize selected reference data into simpler script-facing records
-- add breeding-rule lookup data
-- add an inference layer for island + parents + timer
+- continue indexing unlocked islands from dated screenshot batches
+- resolve non-zero castle bed audit deltas with screenshot or user-confirmed evidence
+- add missing bed reference data for non-Natural classes such as Magical monsters
+- build island roster and availability snapshot data separately from player inventory
+- expand breeding recipes to preserve multiple parent combinations and failure timers
 
 Later:
 
@@ -175,8 +218,8 @@ Later:
 - crop parent-icon regions
 - compare visible icons against local reference assets
 - return confidence-ranked parent matches
-- combine detected parents with breeding rules and timer data
-- report likely breeding outcomes
+- combine detected parents with inventory, availability, breeding rules, and timer data
+- report likely breeding outcomes and next recommended actions
 
 ## Disclaimer
 

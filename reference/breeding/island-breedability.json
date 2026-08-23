@@ -17,6 +17,48 @@
         "not_breedable": ["Wubbox"]
       }
     },
+    "Cold Island": {
+      "common": {
+        "breedable": ["Dandidoo", "Quibble", "Pango", "Oaktopus", "Furcorn", "Maw", "Spunge", "Thumpies", "Congle", "Bowgart", "Deedge", "Grumpyre", "Strombonin", "bbli$zard", "Yool"],
+        "not_breedable": ["Tweedle", "Potbelly", "Toe Jammer", "Mammott", "Tawkerr", "Maggpi", "Wubbox", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"]
+      },
+      "rare": {
+        "breedable": ["Tweedle", "Potbelly", "Toe Jammer", "Mammott", "Dandidoo", "Quibble", "Pango", "Oaktopus", "Furcorn", "Maw", "Spunge", "Thumpies", "Congle", "Bowgart", "Deedge", "Grumpyre", "Strombonin", "Yool"],
+        "not_breedable": ["Wubbox"]
+      },
+      "epic": {
+        "breedable": ["Tweedle", "Potbelly", "Toe Jammer", "Mammott", "Dandidoo", "Quibble", "Pango", "Oaktopus", "Furcorn", "Maw", "Spunge", "Thumpies", "Congle", "Bowgart", "Deedge", "Grumpyre", "Strombonin", "Yool"],
+        "not_breedable": ["Wubbox"]
+      }
+    },
+    "Air Island": {
+      "common": {
+        "breedable": ["Cybop", "Quibble", "Pango", "Fwog", "Drumpler", "Maw", "Scups", "PomPom", "Congle", "T-Rox", "Riff", "Reebro", "Yawstrich", "Schmoochle", "Hoola"],
+        "not_breedable": ["Tweedle", "Noggin", "Toe Jammer", "Mammott", "Alcordion", "Parlsona", "Stoowarb", "Wubbox", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"]
+      },
+      "rare": {
+        "breedable": ["Tweedle", "Noggin", "Toe Jammer", "Mammott", "Cybop", "Quibble", "Pango", "Fwog", "Drumpler", "Maw", "Scups", "PomPom", "Congle", "T-Rox", "Riff", "Reebro", "Yawstrich", "Schmoochle", "Hoola"],
+        "not_breedable": ["Wubbox"]
+      },
+      "epic": {
+        "breedable": ["Tweedle", "Noggin", "Toe Jammer", "Mammott", "Cybop", "Quibble", "Pango", "Fwog", "Drumpler", "Maw", "Scups", "PomPom", "Congle", "T-Rox", "Riff", "Reebro", "Yawstrich", "Schmoochle", "Hoola"],
+        "not_breedable": ["Wubbox"]
+      }
+    },
+    "Water Island": {
+      "common": {
+        "breedable": ["Dandidoo", "Cybop", "Quibble", "Shrubb", "Oaktopus", "Fwog", "Spunge", "Reedling", "Scups", "Pummel", "Shellbeat", "Jeeode", "Anglow", "Blabbit"],
+        "not_breedable": ["Tweedle", "Potbelly", "Noggin", "Toe Jammer", "T-Pirainha", "Maggpi", "Parlsona", "Wubbox", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"]
+      },
+      "rare": {
+        "breedable": ["Tweedle", "Potbelly", "Noggin", "Toe Jammer", "Dandidoo", "Cybop", "Quibble", "Shrubb", "Oaktopus", "Fwog", "Spunge", "Reedling", "Scups", "Pummel", "Shellbeat", "Jeeode", "Anglow", "Blabbit"],
+        "not_breedable": ["Wubbox"]
+      },
+      "epic": {
+        "breedable": ["Tweedle", "Potbelly", "Noggin", "Toe Jammer", "Dandidoo", "Cybop", "Quibble", "Shrubb", "Oaktopus", "Fwog", "Spunge", "Reedling", "Scups", "Pummel", "Shellbeat", "Jeeode", "Anglow", "Blabbit"],
+        "not_breedable": ["Wubbox"]
+      }
+    },
     "Earth Island": {
       "common": {
         "breedable": ["Dandidoo", "Cybop", "Pango", "Shrubb", "Furcorn", "Drumpler", "Reedling", "Thumpies", "PomPom", "Clamble", "Quarrister", "Humbug", "Hyehehe", "Hoola"],
