@@ -4,6 +4,9 @@ Use this checklist when updating `inventory/islands/*.yaml` from a dated
 screenshot batch. The goal is to preserve screenshot evidence, separate visible
 facts from inference, and leave the generated inventory reproducible.
 
+For the broader planner architecture, including roster, availability, inventory,
+and breeding recipe indexes, see `planning/README.md`.
+
 ## Inputs
 
 - Confirm the island folder name and screenshot batch date.
@@ -28,18 +31,57 @@ For each island folder, identify the screenshot groups before editing YAML:
 Record only the filenames, not absolute paths, under the island's `evidence`
 section. Keep `evidence.screenshot_directory` relative to the repo root.
 
+## Island roster sources
+
+Do not build an island inventory from a global monster list. Each island has its
+own roster.
+
+- The island's Book screenshots are authoritative for this account's discovered
+  and locked entries at the observation date.
+- Reference rosters for monsters that can ever appear on an island should be
+  derived from canonical or stable sources, such as the official
+  *My Singing Monsters* pages, the *My Singing Monsters* wiki, or checked-in
+  reference exports.
+- When reference rosters disagree with the user's Book screenshots, keep the
+  screenshot-derived account state and record the roster uncertainty for review.
+- Limited-time availability is not the same as island eligibility. Do not infer
+  current promotions from static roster data or screenshots unless the offer is
+  visible in the screenshot.
+- Current availability should be recorded separately as a dated availability
+  snapshot from an external lookup when the user asks for planning or next-step
+  inference. That snapshot should include the source, lookup time, availability
+  start if known, availability end or remaining duration, and the islands or
+  variants affected. Do not collapse this to a simple available/unavailable
+  flag.
+- Planning should consider availability windows alongside breeding timers,
+  enhanced timers, likely failure-result timers, Nursery availability, and retry
+  count. A monster that is available for a short window may outrank a more
+  desirable target with a longer window, while a long failure timer may make a
+  late attempt poor even when the target is technically available.
+- Breeding targets may have multiple valid parent combinations. Store those as
+  candidate recipes rather than a single preferred combo. A planner can then rank
+  recipes by owned parent readiness, target success timer, enhanced timer,
+  possible failure results and their timers, expected retry cadence, parent
+  levels, and any user preference. The best combo is contextual, not intrinsic.
+
 ## Interpretation rules
 
 - Prefer Market owned counts over visual island counts when the Market clearly
   shows a current count.
+- Ignore Buyback entries when recording current inventory. A Buyback card proves
+  historical ownership only; it does not add to `owned` and does not need a note
+  unless the user asks to audit sold or teleported monsters separately.
 - Use overview screenshots for structures, castle tier, visible monsters, and
   counts that the Market cannot confirm.
 - Use Book screenshots for `discovered` status and discovered totals.
 - Do not count eggs still breeding or incubating as `owned`.
+- Keep discovered monsters with a current count of zero in the regular
+  `monsters` list as `discovered: true` and `owned: 0`. This means the monster
+  was discovered but is not currently available on that island as inventory.
 - Record breeding, incubation, and castle upgrades under `pending`.
 - Use `confidence` when a count is visually inferred or partially obstructed.
-- Add a `notes` entry when a zero-owned discovered monster, boxed monster,
-  hotel state, or other exception explains an otherwise surprising value.
+- Add a `notes` entry when a boxed monster, hotel state, uncertain count, or
+  other exception explains an otherwise surprising value.
 - Do not silently infer island identity. Require the folder name, visible UI,
   distinctive terrain, or user confirmation.
 
