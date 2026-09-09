@@ -226,3 +226,33 @@ Later:
 Monster names and images belong to Big Blue Bubble / *My Singing Monsters*.
 
 This is an unofficial personal reference and tooling project. It is not affiliated with or endorsed by Big Blue Bubble.
+
+## Glowbe pattern tester
+
+Run `bin/glowbe` to open the local placement and lighting workbench. It uses
+Python's standard library to serve a browser interface; no new dependencies
+are needed. Use `bin/glowbe --port 0` to pick a free port, or `--no-browser`
+to print the address without opening it.
+
+- Click an empty tile on the 8 × 8 isometric grid to place a Glowbe.
+- Click a Glowbe to select it; use **Remove selected** to delete it.
+- Toggle bulbs for the selected Glowbe: two rows of eight, steps 1–8 then 9–16.
+- Use **Play**, **Pause**, **Rewind**, or a step number to preview the loop.
+- Adjust BPM and steps per beat. Each loop has 16 steps.
+  Older 8- or 32-step files are rejected without changing the current pattern.
+- Apply a diagonal wave, chase (placement order), together pulse, checkerboard,
+  or all-off pattern to all placed Glowbes. This replaces their current sequences.
+- **Save pattern** downloads a JSON file; **Load pattern** restores it.
+  Work is held in memory, so save before refreshing or closing the page.
+
+Markers are monochrome and timing is a sketchpad model, not a verified
+reproduction of in-game Glowbe behavior. Each step lasts
+`60 / (BPM × steps per beat)` seconds. Playback uses elapsed time so delayed
+frames skip ahead rather than accumulating timer drift. The server binds only
+to loopback and serves only the interface's static directory. Stop it with Ctrl+C.
+
+Timing, presets, and pattern-file validation checks (Node required only for tests):
+
+```bash
+node --test tests/test_glowbe.cjs
+```
