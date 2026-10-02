@@ -17,6 +17,8 @@ raw-export.md
 ```text
 book/       Book of Monsters reference image manifests and local cache workflow
 eggs/       Visual egg/icon reference
+ethereal-islets/
+            Ethereal Islets, Dish-Harmonizer, Dish Wishes, Rarethereals
 islands/    Island status and structure reference
 monsters/   Monster reference data
 wublins/    Wublin blueprint reference data
