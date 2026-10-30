@@ -7,6 +7,9 @@ facts from inference, and leave the generated inventory reproducible.
 For the broader planner architecture, including roster, availability, inventory,
 and breeding recipe indexes, see `planning/README.md`.
 
+To collect evidence directly from the game in BlueStacks rather than from a
+screenshot batch, see `inventory/BLUESTACKS-WORKFLOW.md`.
+
 ## Inputs
 
 - Confirm the island folder name and screenshot batch date.

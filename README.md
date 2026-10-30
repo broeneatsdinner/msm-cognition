@@ -87,6 +87,7 @@ reference/
 inventory/
   islands/               Canonical player inventory YAML, one file per island
   islands/*.md           Generated island pages with owned-now checklists
+  BLUESTACKS-WORKFLOW.md Reading the Book, Market, and castle in BlueStacks
   README.md              Generated inventory, castle audit, and planner view
   REINDEXING.md          Screenshot-to-inventory workflow checklist
   SCHEMA.md              Inventory data and generator contract
@@ -157,6 +158,7 @@ Useful starting points:
 
 - [`inventory/README.md`](inventory/README.md)
 - [`inventory/REINDEXING.md`](inventory/REINDEXING.md)
+- [`inventory/BLUESTACKS-WORKFLOW.md`](inventory/BLUESTACKS-WORKFLOW.md)
 - [`inventory/SCHEMA.md`](inventory/SCHEMA.md)
 - [`reference/eggs/msm-egg-reference.md`](reference/eggs/msm-egg-reference.md)
 - [`reference/islands/islands.md`](reference/islands/islands.md)

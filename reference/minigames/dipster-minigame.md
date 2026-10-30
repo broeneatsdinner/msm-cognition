@@ -124,3 +124,5 @@ Screenshots in `training/screenshots/`:
   sticker screen, SKIP and SKIP ALL replace those buttons.
 - Getting there: on 2026-10-29 the game reloaded and opened straight onto this
   minigame. The usual route in from an island is not yet recorded.
+- General BlueStacks navigation (Book, Market, castle panel) is in
+  `inventory/BLUESTACKS-WORKFLOW.md`.
