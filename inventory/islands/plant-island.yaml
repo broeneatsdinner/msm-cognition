@@ -81,24 +81,24 @@ monsters:
   - {name: Ti, variant: common, class: dipster, discovered: true, owned: 1}
 
   # Rares
-  - {name: Potbelly, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Potbelly, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Noggin, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 3}
   - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 1}
-  - {name: Shrubb, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Shrubb, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Oaktopus, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 1}
-  - {name: Fwog, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Fwog, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Drumpler, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Maw, variant: rare, class: natural, discovered: true, owned: 1, confidence: medium}
+  - {name: Maw, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Pummel, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Clamble, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Bowgart, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: T-Rox, variant: rare, class: natural, discovered: true, owned: 0}
-  - {name: Entbrat, variant: rare, class: natural, discovered: true, owned: 2}
+  - {name: T-Rox, variant: rare, class: natural, discovered: true, owned: 1}
+  - {name: Entbrat, variant: rare, class: natural, discovered: true, owned: 3}
   - {name: Ghazt, variant: rare, class: ethereal, discovered: false, owned: 0}
   - {name: "G'joob", variant: rare, class: mythical, discovered: false, owned: 0}
-  - {name: Wubbox, variant: rare, class: supernatural, discovered: true, owned: 1, confidence: medium}
+  - {name: Wubbox, variant: rare, class: supernatural, discovered: true, owned: 0}
   - {name: Ti, display_name: Vitreous Ti, variant: rare, class: dipster, discovered: false, owned: 0}
   - {name: Sol, display_name: Terrene Sol, variant: rare, class: dipster, discovered: false, owned: 0}
   - {name: La, display_name: Waxen La, variant: rare, class: dipster, discovered: false, owned: 0}
@@ -134,4 +134,4 @@ notes:
   - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
   - Buyback entries, if any, are ignored for current inventory.
   - "Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La were confirmed for Plant Island by the player on 2026-10-29 (not discovered, none owned). Whether the Book's Rare total of 19 counts them is not yet confirmed, so book.rare.total is unchanged."
-  - "Rare Maw is confirmed by the castle bed total: previous known bed usage was 115, and the in-game Vegidian Castle info panel showed 117/120 beds occupied."
+  - "Rare owned counts were confirmed by the player on 2026-10-29. Rare Maw and Rare Wubbox, earlier inferred from the castle bed total, are 0. Common counts are still from 2026-08-22, and with the new Rare counts the indexed beds (129) exceed the castle capacity (120), so the Common counts need a recount."

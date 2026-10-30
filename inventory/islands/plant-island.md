@@ -44,24 +44,24 @@ A ticked box means at least one is on the island now. `x2` gives the count;
 
 ### Rare
 
-- [ ] Potbelly (in Book)
+- [x] Potbelly
 - [ ] Noggin
-- [ ] Toe Jammer (in Book)
+- [x] Toe Jammer x3
 - [x] Mammott
-- [ ] Shrubb (in Book)
+- [x] Shrubb
 - [x] Oaktopus
 - [x] Furcorn
-- [ ] Fwog (in Book)
+- [x] Fwog
 - [ ] Drumpler
-- [x] Maw (medium confidence)
+- [ ] Maw (in Book)
 - [ ] Pummel
 - [ ] Clamble (in Book)
 - [ ] Bowgart
-- [ ] T-Rox (in Book)
-- [x] Entbrat x2
+- [x] T-Rox
+- [x] Entbrat x3
 - [ ] Ghazt
 - [ ] G'joob
-- [x] Wubbox (medium confidence)
+- [ ] Wubbox (in Book)
 - [ ] Vitreous Ti
 - [ ] Terrene Sol
 - [ ] Waxen La
@@ -93,14 +93,14 @@ A ticked box means at least one is on the island now. `x2` gives the count;
 
 | Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Vegidian Castle | High | 117 | 120 | 3 | 0 | 117 | 117 | 120 | 0 |
+| Vegidian Castle | High | 129 | 120 | -9 | 0 | 129 | 117 | 120 | -12 |
 
 ## Summary
 
 | Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
 | --- | --- | --- | --- | --- |
 | Common | 25/28 | — | 22 | 42 |
-| Rare | 12/19 | — | 6 | 7 |
+| Rare | 12/19 | — | 9 | 13 |
 | Epic | 0/19 | — | 0 | 0 |
 
 ## Unresolved discoveries
@@ -139,24 +139,24 @@ None recorded.
 | Sol | Common | Dipster | No | Yes | 1 | 0 | — |
 | La | Common | Dipster | No | Yes | 1 | 0 | — |
 | Ti | Common | Dipster | No | Yes | 1 | 0 | — |
-| Potbelly | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Potbelly | Rare | Natural | Yes | Yes | 1 | 0 | — |
 | Noggin | Rare | Natural | Yes | No | 0 | 0 | — |
-| Toe Jammer | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Toe Jammer | Rare | Natural | Yes | Yes | 3 | 0 | — |
 | Mammott | Rare | Natural | Yes | Yes | 1 | 0 | — |
-| Shrubb | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Shrubb | Rare | Natural | Yes | Yes | 1 | 0 | — |
 | Oaktopus | Rare | Natural | Yes | Yes | 1 | 0 | — |
 | Furcorn | Rare | Natural | Yes | Yes | 1 | 0 | — |
-| Fwog | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Fwog | Rare | Natural | Yes | Yes | 1 | 0 | — |
 | Drumpler | Rare | Natural | Yes | No | 0 | 0 | — |
-| Maw | Rare | Natural | Yes | Yes | 1 | 0 | Medium |
+| Maw | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Pummel | Rare | Natural | Yes | No | 0 | 0 | — |
 | Clamble | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Bowgart | Rare | Natural | Yes | No | 0 | 0 | — |
-| T-Rox | Rare | Natural | Yes | Yes | 0 | 0 | — |
-| Entbrat | Rare | Natural | Yes | Yes | 2 | 0 | — |
+| T-Rox | Rare | Natural | Yes | Yes | 1 | 0 | — |
+| Entbrat | Rare | Natural | Yes | Yes | 3 | 0 | — |
 | Ghazt | Rare | Ethereal | Yes | No | 0 | 0 | — |
 | G'joob | Rare | Mythical | Yes | No | 0 | 0 | — |
-| Wubbox | Rare | Supernatural | No | Yes | 1 | 0 | Medium |
+| Wubbox | Rare | Supernatural | No | Yes | 0 | 0 | — |
 | Vitreous Ti | Rare | Dipster | No | No | 0 | 0 | — |
 | Terrene Sol | Rare | Dipster | No | No | 0 | 0 | — |
 | Waxen La | Rare | Dipster | No | No | 0 | 0 | — |
@@ -190,24 +190,24 @@ None recorded.
 
 | Target | Best first-copy combination / acquisition | Standard | Enhanced | Plan | Availability |
 | --- | --- | --- | --- | --- | --- |
-| Rare Potbelly | Pummel + Clamble | 6h | 4h 30m | Ready | When offered |
+| Rare Potbelly | Pummel + Clamble | 6h | 4h 30m | Owned (1) | When offered |
 | Rare Noggin | T-Rox + Pummel | 6h | 4h 30m | Ready | When offered |
-| Rare Toe Jammer | T-Rox + Pummel | 6h | 4h 30m | Ready | When offered |
+| Rare Toe Jammer | T-Rox + Pummel | 6h | 4h 30m | Owned (3) | When offered |
 | Rare Mammott | T-Rox + Clamble | 6h | 4h 30m | Owned (1) | When offered |
-| Rare Shrubb | Potbelly + Noggin | 10h 30m | 7h 52m 30s | Ready | When offered |
+| Rare Shrubb | Potbelly + Noggin | 10h 30m | 7h 52m 30s | Owned (1) | When offered |
 | Rare Oaktopus | Potbelly + Toe Jammer | 10h 30m | 7h 52m 30s | Owned (1) | When offered |
 | Rare Furcorn | Potbelly + Mammott | 10h 30m | 7h 52m 30s | Owned (1) | When offered |
-| Rare Fwog | Noggin + Toe Jammer | 1h 15m | 56m 15s | Ready | When offered |
+| Rare Fwog | Noggin + Toe Jammer | 1h 15m | 56m 15s | Owned (1) | When offered |
 | Rare Drumpler | Noggin + Mammott | 1h 7m 30s | 50m 37s | Ready | When offered |
-| Rare Maw | Toe Jammer + Mammott | 1h 7m 30s | 50m 37s | Owned (1) | When offered |
+| Rare Maw | Toe Jammer + Mammott | 1h 7m 30s | 50m 37s | Ready | When offered |
 | Rare Pummel | Noggin + Oaktopus | 15h 30m | 11h 37m 30s | Ready | When offered |
 | Rare Clamble | Noggin + Furcorn | 15h 30m | 11h 37m 30s | Ready | When offered |
 | Rare Bowgart | Toe Jammer + Furcorn | 15h 30m | 11h 37m 30s | Ready | When offered |
-| Rare T-Rox | Noggin + Maw | 10h 30m | 7h 52m 30s | Ready | When offered |
-| Rare Entbrat | Noggin + Bowgart | 1d 6h 30m | 22h 52m 30s | Owned (2) | When offered |
+| Rare T-Rox | Noggin + Maw | 10h 30m | 7h 52m 30s | Owned (1) | When offered |
+| Rare Entbrat | Noggin + Bowgart | 1d 6h 30m | 22h 52m 30s | Owned (3) | When offered |
 | Rare Ghazt | Entbrat + T-Rox | 1d 21h 30m | 1d 10h 7m 30s | Ready | When offered |
 | Rare G'joob | Pummel + T-Rox | 22h 30m | 16h 52m 30s | Ready | When offered |
-| Rare Wubbox | Purchase a dormant Rare Wubbox, then box one of each required Rare monster. | — | — | Owned (1) | Special acquisition |
+| Rare Wubbox | Purchase a dormant Rare Wubbox, then box one of each required Rare monster. | — | — | Not breedable | Special acquisition |
 | Rare Punkleton | Bowgart + T-Rox | 1d 7h 45m | 23h 48m 45s | Ready | Seasonal offer |
 
 ## Epic breeding planner
@@ -239,4 +239,4 @@ None recorded.
 - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
 - Buyback entries, if any, are ignored for current inventory.
 - Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La were confirmed for Plant Island by the player on 2026-10-29 (not discovered, none owned). Whether the Book's Rare total of 19 counts them is not yet confirmed, so book.rare.total is unchanged.
-- Rare Maw is confirmed by the castle bed total: previous known bed usage was 115, and the in-game Vegidian Castle info panel showed 117/120 beds occupied.
+- Rare owned counts were confirmed by the player on 2026-10-29. Rare Maw and Rare Wubbox, earlier inferred from the castle bed total, are 0. Common counts are still from 2026-08-22, and with the new Rare counts the indexed beds (129) exceed the castle capacity (120), so the Common counts need a recount.
