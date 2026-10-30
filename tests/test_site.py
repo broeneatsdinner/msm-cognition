@@ -67,13 +67,14 @@ class SiteEditTests(unittest.TestCase):
         self.assertIn(f"- [x] {name}", (self.tmp / PAGE).read_text())
 
     def test_counts_go_up_and_down_but_uncheck_stops_above_one(self) -> None:
+        before = self.row("Entbrat")["owned"]
         self.apply("Entbrat", "increment")
-        self.assertEqual(3, self.row("Entbrat")["owned"])
+        self.apply("Entbrat", "increment")
+        self.assertEqual(before + 2, self.row("Entbrat")["owned"])
         with self.assertRaises(EditError):
             self.apply("Entbrat", "uncheck")
         self.apply("Entbrat", "decrement")
-        self.apply("Entbrat", "decrement")
-        self.assertEqual(1, self.row("Entbrat")["owned"])
+        self.assertEqual(before + 1, self.row("Entbrat")["owned"])
 
     def test_a_click_settles_a_less_certain_count(self) -> None:
         self.apply("Wubbox", "uncheck")
@@ -84,7 +85,7 @@ class SiteEditTests(unittest.TestCase):
         line_no, line = self.line_of("Potbelly")
         before = (self.tmp / "inventory/islands/plant-island.yaml").read_text()
         with self.assertRaises(EditError):
-            plan_edit(self.tmp, PAGE, line_no, line.replace("[ ]", "[x]"), "uncheck")
+            plan_edit(self.tmp, PAGE, line_no, line + " x9", "uncheck")
         self.assertEqual(before, (self.tmp / "inventory/islands/plant-island.yaml").read_text())
 
     def test_plain_markdown_flips_the_box(self) -> None:
