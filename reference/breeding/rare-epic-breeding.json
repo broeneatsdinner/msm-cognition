@@ -46,7 +46,7 @@
         {"name": "Maw", "parents": ["Toe Jammer", "Mammott"], "time": "1h 7m 30s", "enhanced_time": "50m 37s"},
         {"name": "Pummel", "parents": ["Noggin", "Oaktopus"], "time": "15h 30m", "enhanced_time": "11h 37m 30s"},
         {"name": "Clamble", "parents": ["Noggin", "Furcorn"], "time": "15h 30m", "enhanced_time": "11h 37m 30s"},
-        {"name": "Bowgart", "parents": ["Toe Jammer", "Furcorn"], "time": "15h 30m", "enhanced_time": "11h 37m 30s"},
+        {"name": "Bowgart", "parents": ["Potbelly", "Maw"], "time": "15h 30m", "enhanced_time": "11h 37m 30s", "note": "Potbelly + Maw offers shorter average failure times than the Oaktopus or Furcorn combinations.", "sources": ["https://mysingingmonsters.fandom.com/wiki/Rare_Bowgart"]},
         {"name": "T-Rox", "parents": ["Noggin", "Maw"], "time": "10h 30m", "enhanced_time": "7h 52m 30s"},
         {"name": "Entbrat", "parents": ["Noggin", "Bowgart"], "time": "1d 6h 30m", "enhanced_time": "22h 52m 30s"},
         {"name": "Ghazt", "parents": ["Entbrat", "T-Rox"], "time": "1d 21h 30m", "enhanced_time": "1d 10h 7m 30s", "note": "Entbrat + T-Rox minimizes failed-attempt waiting time."},

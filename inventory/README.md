@@ -135,7 +135,7 @@ None recorded.
 | Rare Maw | Toe Jammer + Mammott | 1h 7m 30s | 50m 37s | Ready | When offered |
 | Rare Pummel | Noggin + Oaktopus | 15h 30m | 11h 37m 30s | Ready | When offered |
 | Rare Clamble | Noggin + Furcorn | 15h 30m | 11h 37m 30s | Ready | When offered |
-| Rare Bowgart | Toe Jammer + Furcorn | 15h 30m | 11h 37m 30s | Ready | When offered |
+| Rare Bowgart | Potbelly + Maw | 15h 30m | 11h 37m 30s | Ready | When offered |
 | Rare T-Rox | Noggin + Maw | 10h 30m | 7h 52m 30s | Owned (1) | When offered |
 | Rare Entbrat | Noggin + Bowgart | 1d 6h 30m | 22h 52m 30s | Owned (3) | When offered |
 | Rare Ghazt | Entbrat + T-Rox | 1d 21h 30m | 1d 10h 7m 30s | Ready | When offered |

@@ -1,5 +1,9 @@
 # Breeding
 
+[Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Wubbox](#rare-wubbox)
+
+<a id="rare-noggin"></a>
+
 Rare Noggin - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Clamble (6h)
 
@@ -39,35 +43,186 @@ Rare Noggin - **Mirror Faerie Island**
 Rare Noggin - **Mirror Bone Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Withur + Uuduk (6h)
 
+<a id="rare-drumpler"></a>
+
 Rare Drumpler - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
+
+Rare Drumpler - **Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
+
+Rare Drumpler - **Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
+
+Rare Drumpler - **Faerie Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
+
+Rare Drumpler - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
+
+Rare Drumpler - **Mirror Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
+
+Rare Drumpler - **Mirror Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
+
+Rare Drumpler - **Mirror Faerie Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
+
+<a id="rare-maw"></a>
 
 Rare Maw - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Mammott (1h 7m 30s)
 
+Rare Maw - **Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Mammott (1h 7m 30s)
+
+Rare Maw - **Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Mammott (1h 7m 30s)
+
+Rare Maw - **Fire Oasis**  
+&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Mammott (1h 7m 30s)
+
+Rare Maw - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Mammott (1h 7m 30s)
+
+Rare Maw - **Mirror Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Mammott (1h 7m 30s)
+
+Rare Maw - **Mirror Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Mammott (1h 7m 30s)
+
+<a id="rare-pummel"></a>
+
 Rare Pummel - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Noggin + Oaktopus (15h 30m)
+
+Rare Pummel - **Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Oaktopus (15h 30m)
+
+Rare Pummel - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Oaktopus (15h 30m)
+
+Rare Pummel - **Mirror Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Oaktopus (15h 30m)
+
+<a id="rare-clamble"></a>
 
 Rare Clamble - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Noggin + Furcorn (15h 30m)
 
+Rare Clamble - **Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Furcorn (15h 30m)
+
+Rare Clamble - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Furcorn (15h 30m)
+
+Rare Clamble - **Mirror Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Furcorn (15h 30m)
+
+<a id="rare-bowgart"></a>
+
 Rare Bowgart - **Plant Island**  
-&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Furcorn (15h 30m)
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Maw (15h 30m)
+
+Rare Bowgart - **Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Maw (15h 30m)
+
+Rare Bowgart - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Maw (15h 30m)
+
+Rare Bowgart - **Mirror Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Maw (15h 30m)
+
+<a id="rare-ghazt"></a>
 
 Rare Ghazt - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Entbrat + T-Rox (1d 21h 30m)
 
+Rare Ghazt - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Entbrat + T-Rox (1d 21h 30m)
+
+Rare Ghazt - **Ethereal Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Ghazt + Grumpyre / Reebro / Jeeode / Humbug (about 12h 38m)
+
+Rare Ghazt - **Plasma Islet**  
+&nbsp;&nbsp;&nbsp;&nbsp;Rarefied Dish-Harmonizer during a Rare promotion; no breeding combination.
+
+<a id="rare-gjoob"></a>
+
 Rare G'joob - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Pummel + T-Rox (22h 30m)
+
+Rare G'joob - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Pummel + T-Rox (22h 30m)
+
+Rare G'joob - **Mythical Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Cataliszt + G'joob (22h 30m)
+
+<a id="rare-punkleton"></a>
 
 Rare Punkleton - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Bowgart + T-Rox (1d 7h 45m)
 
+Rare Punkleton - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Bowgart + T-Rox (1d 7h 45m)
+
+Rare Punkleton - **Seasonal Shanty**  
+&nbsp;&nbsp;&nbsp;&nbsp;Punkleton + Monculus (1d 7h 45m)
+
+<a id="rare-wubbox"></a>
+
 Rare Wubbox - **Plant Island**  
-&nbsp;&nbsp;&nbsp;&nbsp;Purchase from the StarShop, then box the required Rare Naturals; cannot be bred.
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Mirror Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Mirror Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Mirror Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Mirror Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rare Naturals; cannot be bred.
+
+Rare Wubbox - **Fire Haven**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 7 Rare Naturals and 8 Rare Fire Monsters; cannot be bred.
+
+Rare Wubbox - **Fire Oasis**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 7 Rare Naturals and 8 Rare Fire Monsters; cannot be bred.
+
+Rare Wubbox - **Ethereal Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 15 Rarethereals; cannot be bred.
+
+Rare Wubbox - **Wublin Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;StarShop purchase; box 10 different Rare Wublins; cannot be bred.
+
+Rare Wubbox - **Gold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Place a level-15 Rare Wubbox from a Natural Island; box 30 Rare Naturals; cannot be bred.
+
+<a id="rare-ti"></a>
 
 Vitreous Ti (Rare Ti) - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Cannot be bred; no breeding time.
+
+<a id="rare-la"></a>
 
 Waxen La (Rare La) - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Cannot be bred; no breeding time.
@@ -75,26 +230,28 @@ Waxen La (Rare La) - **Plant Island**
 Times in parentheses are successful breeding times in a normal Breeding
 Structure, without an island skin boost; incubation is separate. Each
 breedable Rare must be available in a breeding promotion. A StarShop offer
-alone does not establish breeding availability. All parents listed here are
-owned in the recorded inventory; their levels and current availability for
-breeding have not been checked.
+alone does not establish breeding availability. Check each island's inventory
+for parent readiness. Gold Island has no breeding; Natural Rares and Rare
+Punkleton can be placed there at level 15 from eligible Natural Islands.
 
-These first-copy combinations follow the breeding reference and favor short
-retries where applicable; no verified success percentages are recorded. The
-single + double combinations for Rare Pummel, Rare Clamble, and Rare Bowgart
-allow quick Single-element failures. Entbrat + the corresponding Common
-triple is another option for those three, but can also produce a Ghazt with
-a longer wait. Rare Dipster acquisition offers still need to be checked in
-game.
+These are preferred first-copy pairings for each breeding island. For Rare
+Ghazt on Ethereal Island, the slash separates four alternative second parents;
+sources differ by a few seconds, so its time is approximate. Rare Dipster
+entries show only player-confirmed Plant Island eligibility.
 
 Sources: [Plant Island inventory](../../inventory/islands/plant-island.yaml),
 [first-copy recipes and times](rare-epic-breeding.json),
 [Rare breeding combinations](https://mysingingmonsters.fandom.com/wiki/Breeding_Combinations),
+[Rare Drumpler islands](https://mysingingmonsters.fandom.com/wiki/Rare_Drumpler),
+[Rare Maw islands](https://mysingingmonsters.fandom.com/wiki/Rare_Maw),
+[Rare Pummel islands](https://mysingingmonsters.fandom.com/wiki/Rare_Pummel),
+[Rare Bowgart islands and shorter retries](https://mysingingmonsters.fandom.com/wiki/Rare_Bowgart),
 [Rare Clamble rules](https://mysingingmonsters.fandom.com/wiki/Rare_Clamble),
 [Rare Ghazt](https://mysingingmonsters.fandom.com/wiki/Rare_Ghazt),
 [Rare G'joob](https://mysingingmonsters.fandom.com/wiki/Rare_G%27joob),
 [Rare Punkleton](https://mysingingmonsters.fandom.com/wiki/Rare_Punkleton),
 [Rare Wubbox](https://mysingingmonsters.fandom.com/wiki/Rare_Wubbox),
+[Rare Dish-Harmonization](https://bigbluebubblesupport.helpshift.com/hc/en/4-my-singing-monsters/faq/738-how-do-i-dish-harmonize-a-rare-monster-on-the-ethereal-islets/),
 and [island breedability classifications](island-breedability.json).
 
 ### Breeding Reference
