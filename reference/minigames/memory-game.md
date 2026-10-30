@@ -61,6 +61,14 @@ diamonds). Rare and Epic variants of a monster are different faces: a Rare
 Drumpler does not match a Common Drumpler, and a white Bowgart does not match
 a blue one.
 
+## Is a replay worth it?
+
+Usually not, if diamonds matter. The paid replay on 2026-10-29 cost 2 diamonds
+and a full nine-level clear returned only 1 diamond, along with about 485,000
+XP, 61,600 food, and 9 shards. Prizes are drawn per play, so a replay may return
+no diamonds at all. Play the free daily game; do not suggest paying for a
+replay unless the player wants the XP, food, or shards more than the diamonds.
+
 ## Strategy
 
 Remember every face seen, and never spend a flip on a face whose partner is
