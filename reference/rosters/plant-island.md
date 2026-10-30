@@ -33,10 +33,17 @@ The list matches the 19 Rare rows in `inventory/islands/plant-island.yaml`.
 | Wubbox | Supernatural |
 | Punkleton | Seasonal |
 
-### Still to confirm
+### Rare Dipsters
 
-- Rare Dipsters (Do, Re, Mi, Fa, Sol, La, Ti). The player reports they exist
-  on Plant Island; they are not yet in the inventory YAML or the Book counts.
+Confirmed by the player on 2026-10-29. Only three Dipsters have a Rare on
+Plant Island, and each Rare has its own name. They are not yet in the
+inventory YAML or its Book counts.
+
+| Rare name | Rare of | Class |
+| --- | --- | --- |
+| Vitreous Ti | Ti | Dipster |
+| Terrene Sol | Sol | Dipster |
+| Waxen La | La | Dipster |
 
 ## Common and Epic
 

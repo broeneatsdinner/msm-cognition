@@ -11,5 +11,5 @@ reference exports, and validation against the user's Book screenshots.
 ## Files
 
 ```text
-plant-island.md   Plant Island roster; Rares confirmed in game 2026-10-29
+plant-island.md   Plant Island roster; Rares and Rare Dipsters confirmed 2026-10-29
 ```
