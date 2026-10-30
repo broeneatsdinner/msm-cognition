@@ -128,7 +128,13 @@ monsters:
   - {name: Punkleton, variant: rare, class: seasonal, discovered: false, owned: 0}
   - {name: Punkleton, variant: epic, class: seasonal, discovered: false, owned: 0}
 
-pending: []
+pending:
+  - type: incubation
+    predicted_result: Shrubb
+    confidence: high
+    counted_in_owned: false
+    destination: Wubbox
+    observed: "2026-10-29, Nursery progress bar about one third full; player confirmed the egg is a Shrubb, the last monster the Wubbox Thrawn needs."
 
 notes:
   - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.

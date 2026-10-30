@@ -184,7 +184,9 @@ None recorded.
 
 ## Pending
 
-None recorded.
+| Type | Parents | Time | Prediction | Confidence |
+| --- | --- | --- | --- | --- |
+| Incubation | — | — | Shrubb | High |
 
 ## Rare breeding planner
 
