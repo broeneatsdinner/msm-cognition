@@ -1,59 +1,101 @@
 # Breeding
 
-Rare Noggin - Plant Island  
-    T-Rox + Clamble (6h)
+Rare Noggin - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Clamble (6h)
 
-Rare Noggin - Air Island  
-    T-Rox + PomPom (6h)
+Rare Noggin - **Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + PomPom (6h)
 
-Rare Noggin - Water Island  
-    Reedling + Scups (6h)
+Rare Noggin - **Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Scups (6h)
 
-Rare Noggin - Earth Island  
-    Reedling + Clamble (6h)
+Rare Noggin - **Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Clamble (6h)
 
-Rare Noggin - Fire Haven  
-    Reedling + Repatillo (6h)
+Rare Noggin - **Fire Haven**  
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Repatillo (6h)
 
-Rare Noggin - Faerie Island  
-    Cantorell + Bridg-it (6h)
+Rare Noggin - **Faerie Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Cantorell + Bridg-it (6h)
 
-Rare Noggin - Bone Island  
-    Withur + Uuduk (6h)
+Rare Noggin - **Bone Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Withur + Uuduk (6h)
 
-Rare Noggin - Mirror Plant Island  
-    T-Rox + Clamble (6h)
+Rare Noggin - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Clamble (6h)
 
-Rare Noggin - Mirror Air Island  
-    T-Rox + PomPom (6h)
+Rare Noggin - **Mirror Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + PomPom (6h)
 
-Rare Noggin - Mirror Water Island  
-    Reedling + Scups (6h)
+Rare Noggin - **Mirror Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Scups (6h)
 
-Rare Noggin - Mirror Earth Island  
-    Reedling + Clamble (6h)
+Rare Noggin - **Mirror Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Clamble (6h)
 
-Rare Noggin - Mirror Faerie Island  
-    Cantorell + Bridg-it (6h)
+Rare Noggin - **Mirror Faerie Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Cantorell + Bridg-it (6h)
 
-Rare Noggin - Mirror Bone Island  
-    Withur + Uuduk (6h)
+Rare Noggin - **Mirror Bone Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Withur + Uuduk (6h)
 
-`(6h)` is the successful breeding time in a normal Breeding Structure,
-without an island skin boost; incubation is separate. Breed only while Rare
-Noggin is available on that island. Gold Island has no breeding combination.
+Rare Drumpler - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Mammott (1h 7m 30s)
 
-These are preferred pairs for shorter Common failures and avoiding extra
-Mythical outcomes, not a claim of higher verified success percentages. Water
-Island also has Reedling + Pummel; Earth Island's three eligible pairings tie
-on Common failure times; Fire Haven also has Reedling + Floogull. The same
-options apply on the corresponding Mirror islands. Choose among tied pairs
-using parent levels and other Rares you want.
+Rare Maw - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Mammott (1h 7m 30s)
 
-Sources: [Rare Noggin combinations and times](https://mysingingmonsters.fandom.com/wiki/Rare_Noggin),
-[Natural triple times](https://mysingingmonsters.fandom.com/wiki/Breeding_Combinations),
-[Repatillo outcomes and times](https://mysingingmonsters.fandom.com/wiki/Repatillo),
-and [Floogull times](https://mysingingmonsters.fandom.com/wiki/Floogull).
+Rare Pummel - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Oaktopus (15h 30m)
+
+Rare Clamble - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Furcorn (15h 30m)
+
+Rare Bowgart - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Toe Jammer + Furcorn (15h 30m)
+
+Rare Ghazt - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Entbrat + T-Rox (1d 21h 30m)
+
+Rare G'joob - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Pummel + T-Rox (22h 30m)
+
+Rare Punkleton - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Bowgart + T-Rox (1d 7h 45m)
+
+Rare Wubbox - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Purchase from the StarShop, then box the required Rare Naturals; cannot be bred.
+
+Vitreous Ti (Rare Ti) - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Cannot be bred; no breeding time.
+
+Waxen La (Rare La) - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Cannot be bred; no breeding time.
+
+Times in parentheses are successful breeding times in a normal Breeding
+Structure, without an island skin boost; incubation is separate. Each
+breedable Rare must be available in a breeding promotion. A StarShop offer
+alone does not establish breeding availability. All parents listed here are
+owned in the recorded inventory; their levels and current availability for
+breeding have not been checked.
+
+These first-copy combinations follow the breeding reference and favor short
+retries where applicable; no verified success percentages are recorded. The
+single + double combinations for Rare Pummel, Rare Clamble, and Rare Bowgart
+allow quick Single-element failures. Entbrat + the corresponding Common
+triple is another option for those three, but can also produce a Ghazt with
+a longer wait. Rare Dipster acquisition offers still need to be checked in
+game.
+
+Sources: [Plant Island inventory](../../inventory/islands/plant-island.yaml),
+[first-copy recipes and times](rare-epic-breeding.json),
+[Rare breeding combinations](https://mysingingmonsters.fandom.com/wiki/Breeding_Combinations),
+[Rare Clamble rules](https://mysingingmonsters.fandom.com/wiki/Rare_Clamble),
+[Rare Ghazt](https://mysingingmonsters.fandom.com/wiki/Rare_Ghazt),
+[Rare G'joob](https://mysingingmonsters.fandom.com/wiki/Rare_G%27joob),
+[Rare Punkleton](https://mysingingmonsters.fandom.com/wiki/Rare_Punkleton),
+[Rare Wubbox](https://mysingingmonsters.fandom.com/wiki/Rare_Wubbox),
+and [island breedability classifications](island-breedability.json).
 
 ### Breeding Reference
 
