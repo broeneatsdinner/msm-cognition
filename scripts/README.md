@@ -23,6 +23,18 @@ reference/islands/islands.md
 ```
 
 ```text
+dipster_solver.py
+```
+
+Prints each hidden tile's chance of holding a Dipster in the Dipster minigame,
+given the revealed numbers and found Dipsters. See
+`reference/minigames/dipster-minigame.md`.
+
+```bash
+python3 scripts/dipster_solver.py --size 5 --dipsters 7 "2,2=2" "0,3=D"
+```
+
+```text
 fetch_book_references.py
 ```
 
