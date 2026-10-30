@@ -1,6 +1,6 @@
 # Breeding
 
-[Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Wubbox](#rare-wubbox)
+[Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Fwog](#rare-fwog) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Oaktopus](#rare-oaktopus) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Toe Jammer](#rare-toe-jammer) · [Rare Wubbox](#rare-wubbox)
 
 <a id="rare-noggin"></a>
 
@@ -227,6 +227,102 @@ Vitreous Ti (Rare Ti) - **Plant Island**
 Waxen La (Rare La) - **Plant Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Cannot be bred; no breeding time.
 
+<a id="rare-oaktopus"></a>
+
+Rare Oaktopus - **Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Toe Jammer (10h 30m)
+
+Rare Oaktopus - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Toe Jammer (10h 30m)
+
+Rare Oaktopus - **Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Toe Jammer (10h 30m)
+
+Rare Oaktopus - **Psychic Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Toe Jammer (10h 30m)
+
+Rare Oaktopus - **Shugabush Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Shugabush + Oaktopus (10h 30m)
+
+Rare Oaktopus - **Mirror Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Toe Jammer (10h 30m)
+
+Rare Oaktopus - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Toe Jammer (10h 30m)
+
+Rare Oaktopus - **Mirror Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Toe Jammer (10h 30m)
+
+Rare Oaktopus - **Mirror Psychic Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Potbelly + Toe Jammer (10h 30m)
+
+<a id="rare-toe-jammer"></a>
+
+Rare Toe Jammer - **Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spunge + Pummel (6h)
+
+Rare Toe Jammer - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Pummel + Bowgart (6h)
+
+Rare Toe Jammer - **Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Bowgart + Congle (6h)
+
+Rare Toe Jammer - **Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Congle (6h)
+
+Rare Toe Jammer - **Fire Oasis**  
+&nbsp;&nbsp;&nbsp;&nbsp;Congle + Whaddle (6h)
+
+Rare Toe Jammer - **Psychic Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Tapricorn + Periscorp (6h)
+
+Rare Toe Jammer - **Bone Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Withur + Banjaw (6h)
+
+Rare Toe Jammer - **Mirror Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spunge + Pummel (6h)
+
+Rare Toe Jammer - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Pummel + Bowgart (6h)
+
+Rare Toe Jammer - **Mirror Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Bowgart + Congle (6h)
+
+Rare Toe Jammer - **Mirror Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Congle (6h)
+
+Rare Toe Jammer - **Mirror Psychic Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Tapricorn + Periscorp (6h)
+
+Rare Toe Jammer - **Mirror Bone Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Withur + Banjaw (6h)
+
+<a id="rare-fwog"></a>
+
+Rare Fwog - **Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
+
+Rare Fwog - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
+
+Rare Fwog - **Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
+
+Rare Fwog - **Bone Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
+
+Rare Fwog - **Mirror Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
+
+Rare Fwog - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
+
+Rare Fwog - **Mirror Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
+
+Rare Fwog - **Mirror Bone Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
+
 Times in parentheses are successful breeding times in a normal Breeding
 Structure, without an island skin boost; incubation is separate. Each
 breedable Rare must be available in a breeding promotion. A StarShop offer
@@ -239,7 +335,14 @@ Ghazt on Ethereal Island, the slash separates four alternative second parents;
 sources differ by a few seconds, so its time is approximate. Rare Dipster
 entries show only player-confirmed Plant Island eligibility.
 
+For Rare Toe Jammer on Plant/Mirror Plant Island, T-Rox + Bowgart (6h) has
+shorter Common failures when Punkleton is unavailable; otherwise use the
+listed Pummel + Bowgart pair to avoid a Punkleton outcome.
+
 Sources: [Plant Island inventory](../../inventory/islands/plant-island.yaml),
+[Rare Oaktopus](https://mysingingmonsters.fandom.com/wiki/Rare_Oaktopus),
+[Rare Toe Jammer](https://mysingingmonsters.fandom.com/wiki/Rare_Toe_Jammer),
+[Rare Fwog](https://mysingingmonsters.fandom.com/wiki/Rare_Fwog),
 [first-copy recipes and times](rare-epic-breeding.json),
 [Rare breeding combinations](https://mysingingmonsters.fandom.com/wiki/Breeding_Combinations),
 [Rare Drumpler islands](https://mysingingmonsters.fandom.com/wiki/Rare_Drumpler),
