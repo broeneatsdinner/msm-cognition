@@ -193,7 +193,7 @@ None recorded.
 | Target | Best first-copy combination / acquisition | Standard | Enhanced | Plan | Availability |
 | --- | --- | --- | --- | --- | --- |
 | Rare Potbelly | Pummel + Clamble | 6h | 4h 30m | Owned (1) | When offered |
-| Rare Noggin | T-Rox + Pummel | 6h | 4h 30m | Ready | When offered |
+| Rare Noggin | T-Rox + Clamble | 6h | 4h 30m | Ready | When offered |
 | Rare Toe Jammer | T-Rox + Pummel | 6h | 4h 30m | Owned (3) | When offered |
 | Rare Mammott | T-Rox + Clamble | 6h | 4h 30m | Owned (1) | When offered |
 | Rare Shrubb | Potbelly + Noggin | 10h 30m | 7h 52m 30s | Owned (1) | When offered |

@@ -18,7 +18,24 @@
     "Plant Island": {
       "rare": [
         {"name": "Potbelly", "pattern": {"kind": "two_distinct_triples", "element": "Plant", "candidates": ["Pummel", "Clamble", "Bowgart"]}, "time": "6h", "enhanced_time": "4h 30m"},
-        {"name": "Noggin", "pattern": {"kind": "two_distinct_triples", "element": "Earth", "candidates": ["T-Rox", "Pummel", "Clamble"]}, "time": "6h", "enhanced_time": "4h 30m"},
+        {
+          "name": "Noggin",
+          "parents": ["T-Rox", "Clamble"],
+          "pattern": {"kind": "two_distinct_triples", "element": "Earth", "candidates": ["T-Rox", "Pummel", "Clamble"]},
+          "time": "6h",
+          "enhanced_time": "4h 30m",
+          "common_failure_outcomes": [
+            {"name": "T-Rox", "variant": "common", "time": "8h", "enhanced_time": "6h"},
+            {"name": "Clamble", "variant": "common", "time": "12h", "enhanced_time": "9h"}
+          ],
+          "note": "Preferred pair for shorter failed attempts: T-Rox provides an 8h Common failure, and this pair avoids the G'joob outcome of T-Rox + Pummel. No verified per-pair success percentages are recorded. Other available Rares may occur; Rare Mammott shares the 6h Standard / 4h 30m Enhanced success timer. Times are breeding only, before incubation, without island skin boosts. Rare Noggin must be available to breed.",
+          "sources": [
+            "https://www.msmpokegamer.com/monsters/rare-noggin",
+            "https://mysingingmonsters.fandom.com/wiki/Rare_Noggin",
+            "https://mysingingmonsters.fandom.com/wiki/T-Rox",
+            "https://mysingingmonsters.fandom.com/wiki/Clamble"
+          ]
+        },
         {"name": "Toe Jammer", "pattern": {"kind": "two_distinct_triples", "element": "Water", "candidates": ["T-Rox", "Pummel", "Bowgart"]}, "time": "6h", "enhanced_time": "4h 30m"},
         {"name": "Mammott", "pattern": {"kind": "two_distinct_triples", "element": "Cold", "candidates": ["T-Rox", "Clamble", "Bowgart"]}, "time": "6h", "enhanced_time": "4h 30m"},
         {"name": "Shrubb", "parents": ["Potbelly", "Noggin"], "time": "10h 30m", "enhanced_time": "7h 52m 30s"},
