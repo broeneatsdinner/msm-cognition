@@ -25,10 +25,10 @@ evidence:
     - IMG_0881.jpg
 
 castle:
-  name: Vegidian Castle
+  name: Polished Vegidian Castle
   confidence: high
-  observed_beds_occupied: 117
-  observed_beds_available: 120
+  observed_beds_occupied: 139
+  observed_beds_available: 150
 
 book:
   common:

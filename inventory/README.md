@@ -24,7 +24,7 @@ Observed: `2026-08-22`
 
 | Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Vegidian Castle | High | 129 | 120 | -9 | 0 | 129 | 117 | 120 | -12 |
+| Polished Vegidian Castle | High | 129 | 150 | 21 | 0 | 129 | 139 | 150 | 10 |
 
 ### Summary
 

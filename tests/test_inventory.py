@@ -28,7 +28,7 @@ class InventoryGeneratorTests(unittest.TestCase):
         self.assertIn("### Unresolved discoveries", document)
         self.assertIn("| Rare | 4/19 | 1 |", document)
         self.assertIn("| Epic | 1/19 | 1 |", document)
-        self.assertIn("| Vegidian Castle | High |", document)
+        self.assertIn("Vegidian Castle | High |", document)
         self.assertIn(
             "| Paradise Castle | High | 86 | 90 | 4 | 2 | 88 | 90 | 90 | 4 |",
             document,
