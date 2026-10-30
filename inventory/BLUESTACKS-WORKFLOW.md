@@ -47,6 +47,40 @@ The bottom toolbar (after any panel is closed) has COLLECTION (the Book), MAP,
 MAILBOX, FRIENDS, MARKET (about 1124, 740), INFO, and OPTIONS. EXIT at the
 bottom right of most full-screen menus (about 1367, 745) returns to the island.
 
+- The island opens zoomed in close. The mouse wheel does not zoom, and the
+  round minus button at the bottom left opens a Google Play menu, not zoom.
+  Pan by dragging on bare ground or sky, away from monsters; there is no
+  known way yet to zoom out from the agent side. When searching for
+  something specific, asking the player to center it is much faster.
+- COLLECT ALL (bottom right, about 1366, 595) asks for confirmation, then
+  gathers coins from every monster and clears the coin bags that hide them.
+  It spends nothing. Only use it when the player asks.
+- Tapping a monster centers the view on it and opens an action bar after a
+  short animation. Take a screenshot after the bar settles before tapping
+  again: taps during the animation land on whatever slid under them (a tap
+  meant for INFO once opened OPTIONS).
+- A monster's action bar holds BOX IT, TELEPORT, FEED (costs coins), MUTE,
+  COLLECT, COSTUMES, BIGGIFY, MOVE, and INFO (far right). Only INFO is safe.
+  The selected monster's name shows above the bar.
+- INFO opens Bio, Likes, and Stats. Stats gives Species, Class, and Beds
+  Required, which settles what a monster is when costumes disguise it.
+  SELL sits directly left of CLOSE in this panel: tap CLOSE (the red X)
+  deliberately.
+- Costumes can make one monster look like another. On Plant Island a Noggin
+  in a costume with a red button looks like a Wubbox; check INFO before
+  trusting artwork.
+- A placed Wubbox is a tan box with chimneys, a red button, and a dark
+  doorway. Its action bar is INVENTORY, MOVE, INFO, HELP, and an unfilled one
+  shows `???` for Rate and Max in its Stats.
+- A Wubbox's INVENTORY lists the monsters it needs: boxed ones in color,
+  missing ones as black silhouettes. It has two pages; swiping inside the
+  panel does nothing, so drag the scroll handle below the grid (about 583,
+  668) to the right end (about 870, 668). FILL, left of CLOSE, fills the
+  Wubbox with a paid item; never tap it. Boxed monsters are inside the
+  Wubbox, not on the island, and do not appear in Market owned counts.
+- The Nursery shows a progress bar above it while an egg incubates; record
+  that egg under `pending`.
+
 ## Castle panel
 
 1. Tap the castle body (not a bubble above it). A bar shows its name with INFO
