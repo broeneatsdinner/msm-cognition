@@ -1,6 +1,6 @@
 # Breeding
 
-[Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Fwog](#rare-fwog) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Oaktopus](#rare-oaktopus) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Toe Jammer](#rare-toe-jammer) · [Rare Wubbox](#rare-wubbox)
+[Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Fwog](#rare-fwog) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Mammott](#rare-mammott) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Oaktopus](#rare-oaktopus) · [Rare Potbelly](#rare-potbelly) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Toe Jammer](#rare-toe-jammer) · [Rare Wubbox](#rare-wubbox)
 
 <a id="rare-noggin"></a>
 
@@ -323,6 +323,94 @@ Rare Fwog - **Mirror Air Island**
 Rare Fwog - **Mirror Bone Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Noggin + Toe Jammer (1h 15m)
 
+<a id="rare-mammott"></a>
+
+Rare Mammott - **Light Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spytrap + Fiddlement (6h)
+
+Rare Mammott - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Clamble (6h)
+
+Rare Mammott - **Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Bowgart + Congle (6h)
+
+Rare Mammott - **Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Congle (6h)
+
+Rare Mammott - **Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Clamble + Thumpies (6h)
+
+Rare Mammott - **Fire Oasis**  
+&nbsp;&nbsp;&nbsp;&nbsp;Congle + Wynq (6h)
+
+Rare Mammott - **Faerie Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Cantorell + Clavi Gnat (6h)
+
+Rare Mammott - **Shugabush Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Shugabush + Mammott (6h)
+
+Rare Mammott - **Mirror Light Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spytrap + Fiddlement (6h)
+
+Rare Mammott - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Clamble (6h)
+
+Rare Mammott - **Mirror Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Bowgart + Congle (6h)
+
+Rare Mammott - **Mirror Air Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Congle (6h)
+
+Rare Mammott - **Mirror Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Clamble + Thumpies (6h)
+
+Rare Mammott - **Mirror Faerie Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Cantorell + Clavi Gnat (6h)
+
+<a id="rare-potbelly"></a>
+
+Rare Potbelly - **Light Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spytrap + TooToo (6h)
+
+Rare Potbelly - **Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Pummel + Clamble (6h)
+
+Rare Potbelly - **Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spunge + Thumpies (6h)
+
+Rare Potbelly - **Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spunge + Pummel (6h)
+
+Rare Potbelly - **Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Clamble (6h)
+
+Rare Potbelly - **Fire Haven**  
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Repatillo (6h)
+
+Rare Potbelly - **Psychic Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Tapricorn + Rooba (6h)
+
+Rare Potbelly - **Shugabush Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Shugabush + Potbelly (6h)
+
+Rare Potbelly - **Mirror Light Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spytrap + TooToo (6h)
+
+Rare Potbelly - **Mirror Plant Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Pummel + Clamble (6h)
+
+Rare Potbelly - **Mirror Cold Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spunge + Thumpies (6h)
+
+Rare Potbelly - **Mirror Water Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Spunge + Pummel (6h)
+
+Rare Potbelly - **Mirror Earth Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Clamble (6h)
+
+Rare Potbelly - **Mirror Psychic Island**  
+&nbsp;&nbsp;&nbsp;&nbsp;Tapricorn + Rooba (6h)
+
 Times in parentheses are successful breeding times in a normal Breeding
 Structure, without an island skin boost; incubation is separate. Each
 breedable Rare must be available in a breeding promotion. A StarShop offer
@@ -340,6 +428,8 @@ shorter Common failures when Punkleton is unavailable; otherwise use the
 listed Pummel + Bowgart pair to avoid a Punkleton outcome.
 
 Sources: [Plant Island inventory](../../inventory/islands/plant-island.yaml),
+[Rare Mammott](https://mysingingmonsters.fandom.com/wiki/Rare_Mammott),
+[Rare Potbelly](https://mysingingmonsters.fandom.com/wiki/Rare_Potbelly),
 [Rare Oaktopus](https://mysingingmonsters.fandom.com/wiki/Rare_Oaktopus),
 [Rare Toe Jammer](https://mysingingmonsters.fandom.com/wiki/Rare_Toe_Jammer),
 [Rare Fwog](https://mysingingmonsters.fandom.com/wiki/Rare_Fwog),
