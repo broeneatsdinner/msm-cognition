@@ -37,10 +37,10 @@ book:
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 10, total: 199}
   rare:
-    discovered: 12
-    total: 19
+    discovered: 11
+    total: 21
     seasonal: {discovered: 0, total: 1}
-    costumes: {discovered: 0, total: 8}
+    costumes: {discovered: 0, total: 9}
   epic:
     discovered: 0
     total: 19
@@ -90,7 +90,7 @@ monsters:
   - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Fwog, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Drumpler, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Maw, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Maw, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Pummel, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Clamble, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Bowgart, variant: rare, class: natural, discovered: false, owned: 0}
@@ -98,9 +98,9 @@ monsters:
   - {name: Entbrat, variant: rare, class: natural, discovered: true, owned: 3}
   - {name: Ghazt, variant: rare, class: ethereal, discovered: false, owned: 0}
   - {name: "G'joob", variant: rare, class: mythical, discovered: false, owned: 0}
-  - {name: Wubbox, variant: rare, class: supernatural, discovered: true, owned: 0}
+  - {name: Wubbox, variant: rare, class: supernatural, discovered: false, owned: 0}
   - {name: Ti, display_name: Vitreous Ti, variant: rare, class: dipster, discovered: false, owned: 0}
-  - {name: Sol, display_name: Terrene Sol, variant: rare, class: dipster, discovered: false, owned: 0}
+  - {name: Sol, display_name: Terrene Sol, variant: rare, class: dipster, discovered: true, owned: 1}
   - {name: La, display_name: Waxen La, variant: rare, class: dipster, discovered: false, owned: 0}
 
   # Epics
@@ -133,5 +133,6 @@ pending: []
 notes:
   - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
   - Buyback entries, if any, are ignored for current inventory.
-  - "Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La were confirmed for Plant Island by the player on 2026-10-29 (not discovered, none owned). Whether the Book's Rare total of 19 counts them is not yet confirmed, so book.rare.total is unchanged."
+  - "Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La were confirmed for Plant Island by the player on 2026-10-29. The Book's Rare total rose to 21, which counts all three."
+  - "The Plant Island Rare Book page on 2026-10-29 (training/screenshots/2026-10-29-plant-island-book-rares.jpeg) shows 11/21 discovered and 0/9 costumes. Terrene Sol, won in the Dipster minigame and placed on the island, is lit. Rare Maw and Rare Wubbox are not lit, so they are discovered: false; the 11 lit rows match the count."
   - "Rare owned counts were confirmed by the player on 2026-10-29. Rare Maw and Rare Wubbox, earlier inferred from the castle bed total, are 0. Common counts are still from 2026-08-22, and with the new Rare counts the indexed beds (129) exceed the castle capacity (120), so the Common counts need a recount."

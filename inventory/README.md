@@ -31,7 +31,7 @@ Observed: `2026-08-22`
 | Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
 | --- | --- | --- | --- | --- |
 | Common | 25/28 | — | 22 | 42 |
-| Rare | 12/19 | — | 9 | 13 |
+| Rare | 11/21 | — | 10 | 14 |
 | Epic | 0/19 | — | 0 | 0 |
 
 ### Unresolved discoveries
@@ -79,7 +79,7 @@ None recorded.
 | Furcorn | Rare | Natural | Yes | Yes | 1 | 0 | — |
 | Fwog | Rare | Natural | Yes | Yes | 1 | 0 | — |
 | Drumpler | Rare | Natural | Yes | No | 0 | 0 | — |
-| Maw | Rare | Natural | Yes | Yes | 0 | 0 | — |
+| Maw | Rare | Natural | Yes | No | 0 | 0 | — |
 | Pummel | Rare | Natural | Yes | No | 0 | 0 | — |
 | Clamble | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Bowgart | Rare | Natural | Yes | No | 0 | 0 | — |
@@ -87,9 +87,9 @@ None recorded.
 | Entbrat | Rare | Natural | Yes | Yes | 3 | 0 | — |
 | Ghazt | Rare | Ethereal | Yes | No | 0 | 0 | — |
 | G'joob | Rare | Mythical | Yes | No | 0 | 0 | — |
-| Wubbox | Rare | Supernatural | No | Yes | 0 | 0 | — |
+| Wubbox | Rare | Supernatural | No | No | 0 | 0 | — |
 | Vitreous Ti | Rare | Dipster | No | No | 0 | 0 | — |
-| Terrene Sol | Rare | Dipster | No | No | 0 | 0 | — |
+| Terrene Sol | Rare | Dipster | No | Yes | 1 | 0 | — |
 | Waxen La | Rare | Dipster | No | No | 0 | 0 | — |
 | Potbelly | Epic | Natural | Yes | No | 0 | 0 | — |
 | Noggin | Epic | Natural | Yes | No | 0 | 0 | — |
@@ -169,7 +169,8 @@ None recorded.
 
 - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
 - Buyback entries, if any, are ignored for current inventory.
-- Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La were confirmed for Plant Island by the player on 2026-10-29 (not discovered, none owned). Whether the Book's Rare total of 19 counts them is not yet confirmed, so book.rare.total is unchanged.
+- Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La were confirmed for Plant Island by the player on 2026-10-29. The Book's Rare total rose to 21, which counts all three.
+- The Plant Island Rare Book page on 2026-10-29 (training/screenshots/2026-10-29-plant-island-book-rares.jpeg) shows 11/21 discovered and 0/9 costumes. Terrene Sol, won in the Dipster minigame and placed on the island, is lit. Rare Maw and Rare Wubbox are not lit, so they are discovered: false; the 11 lit rows match the count.
 - Rare owned counts were confirmed by the player on 2026-10-29. Rare Maw and Rare Wubbox, earlier inferred from the castle bed total, are 0. Common counts are still from 2026-08-22, and with the new Rare counts the indexed beds (129) exceed the castle capacity (120), so the Common counts need a recount.
 
 ## Air Island
