@@ -36,8 +36,9 @@ First worked through on 2026-10-29 for Plant Island.
 - `app_batch` has no wait action. Put a `screenshot` or `zoom` between steps
   instead, and zoom on small text (counts, names) before reading it.
 - Tapping a spot on the island can hit a bubble rather than the building under
-  it. Over the castle, bubbles open a video-ad Spin Wheel offer or the Memory
-  Game; decline both with the red X and tap the castle body instead.
+  it. Over the castle, one bubble opens a video-ad Spin Wheel offer (decline
+  it with the red X) and the brain bubble opens the free Memory Game. Tap the
+  castle body when you want the castle itself.
 - The game can reload to its title screen ("Downloading Game Data") and come
   back on a different island or event screen. Re-screenshot and re-orient.
 
@@ -156,4 +157,5 @@ bed audit. On Plant Island the Market counts brought the audit delta to 0.
 ## Minigames
 
 The Dipster minigame has its own guide in
-`reference/minigames/dipster-minigame.md`.
+`reference/minigames/dipster-minigame.md`, and the Memory Game in
+`reference/minigames/memory-game.md`.

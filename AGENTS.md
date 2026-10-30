@@ -12,6 +12,8 @@ Start with `README.md` for what this project is.
   panel directly in BlueStacks with computer use.
 - `reference/minigames/dipster-minigame.md`: rules, strategy, and current
   progress for the Dipster minigame, with `scripts/dipster_solver.py`.
+- `reference/minigames/memory-game.md`: rules, level table, and matching
+  strategy for the castle's Memory Game.
 - `training/screenshots/`: dated evidence screenshots cited by the YAML notes.
 
 ## Working rules
