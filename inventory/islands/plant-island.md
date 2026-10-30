@@ -62,6 +62,9 @@ A ticked box means at least one is on the island now. `x2` gives the count;
 - [ ] Ghazt
 - [ ] G'joob
 - [x] Wubbox (medium confidence)
+- [ ] Vitreous Ti
+- [ ] Terrene Sol
+- [ ] Waxen La
 - [ ] Punkleton
 
 ### Epic
@@ -154,6 +157,9 @@ None recorded.
 | Ghazt | Rare | Ethereal | Yes | No | 0 | 0 | — |
 | G'joob | Rare | Mythical | Yes | No | 0 | 0 | — |
 | Wubbox | Rare | Supernatural | No | Yes | 1 | 0 | Medium |
+| Vitreous Ti | Rare | Dipster | No | No | 0 | 0 | — |
+| Terrene Sol | Rare | Dipster | No | No | 0 | 0 | — |
+| Waxen La | Rare | Dipster | No | No | 0 | 0 | — |
 | Potbelly | Epic | Natural | Yes | No | 0 | 0 | — |
 | Noggin | Epic | Natural | Yes | No | 0 | 0 | — |
 | Toe Jammer | Epic | Natural | Yes | No | 0 | 0 | — |
@@ -232,4 +238,5 @@ None recorded.
 
 - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
 - Buyback entries, if any, are ignored for current inventory.
+- Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La were confirmed for Plant Island by the player on 2026-10-29 (not discovered, none owned). Whether the Book's Rare total of 19 counts them is not yet confirmed, so book.rare.total is unchanged.
 - Rare Maw is confirmed by the castle bed total: previous known bed usage was 115, and the in-game Vegidian Castle info panel showed 117/120 beds occupied.

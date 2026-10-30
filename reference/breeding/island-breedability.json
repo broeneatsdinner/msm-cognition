@@ -10,7 +10,7 @@
       },
       "rare": {
         "breedable": ["Potbelly", "Noggin", "Toe Jammer", "Mammott", "Shrubb", "Oaktopus", "Furcorn", "Fwog", "Drumpler", "Maw", "Pummel", "Clamble", "Bowgart", "T-Rox", "Entbrat", "Ghazt", "G'joob", "Punkleton"],
-        "not_breedable": ["Wubbox"]
+        "not_breedable": ["Wubbox", "Ti", "Sol", "La"]
       },
       "epic": {
         "breedable": ["Potbelly", "Noggin", "Toe Jammer", "Mammott", "Shrubb", "Oaktopus", "Furcorn", "Fwog", "Drumpler", "Maw", "Pummel", "Clamble", "Bowgart", "T-Rox", "Entbrat", "Ghazt", "G'joob", "Punkleton"],
