@@ -69,10 +69,19 @@ XP, 61,600 food, and 9 shards. Prizes are drawn per play, so a replay may return
 no diamonds at all. Play the free daily game; do not suggest paying for a
 replay unless the player wants the XP, food, or shards more than the diamonds.
 
-## Strategy
+## Strategies
 
-Remember every face seen, and never spend a flip on a face whose partner is
-already known.
+Three strategies are named so runs can be compared. Strategy 1 has been played;
+Strategies 2 and 3 are the player's proposals, not yet tried by an agent.
+
+| | Strategy 1: match as you go | Strategy 2: sweep, then match | Strategy 3: sweep into one map |
+| --- | --- | --- | --- |
+| Flips | One unseen tile, then its known partner or another unseen tile | Tiles in reading order, two at a time | Same as Strategy 2 |
+| Looks | After every flip | After every pair of flips | After every pair, then one combined map |
+| Mismatches | Only first sightings; 44 of 118 on the full run | About half the tiles minus lucky pairs; fits every level seen | Same as Strategy 2 |
+| Agent round trips | About one per one or two flips | About three per level | About three per level, plus building the map |
+
+### Strategy 1: match as you go
 
 1. Flip one unseen tile.
 2. If its partner is already known, flip the partner: a guaranteed match.
@@ -85,6 +94,42 @@ already known.
 
 Used this way, mismatches only come from first sightings, and no level so far
 needed more than half its allowance. A full nine-level run used 44 of 118.
+
+The cost is on the agent side: each flip depends on the face just seen, so
+nearly every flip is its own tool call with its own image. The nine-level run
+took roughly 150 calls.
+
+### Strategy 2: sweep, then match (the player's method)
+
+1. Flip tiles in reading order two at a time (1 and 2, 3 and 4, ...) and take a
+   screenshot after each pair, before the mismatched pair flips back. Adjacent
+   tiles that happen to match stay face up for free.
+2. When every tile has been seen, read the screenshots, list the pairs, and
+   flip each pair.
+
+Mismatches: at most half the tiles. Every level seen fits with room to spare
+(level 9: 30 tiles, at most 15 mismatches, 23 allowed). The matching phase
+costs none.
+
+For an agent, the sweep does not depend on what it sees, so a whole level can
+be one batch (flip, flip, zoom, repeated), then one reasoning step, then one
+batch of all the pairs: about three calls per level instead of twenty or more.
+
+### Strategy 3: sweep into one map
+
+Strategy 2's sweep, but the faces are written into a single board map (a text
+grid of names, or one image made by cropping each revealed tile out of the
+sweep screenshots) before matching. It costs a little more work than Strategy
+2 but makes the comparison less error-prone, which matters most for
+look-alikes such as Common, Rare, and Epic variants.
+
+### Open questions
+
+- Whether unused mismatches affect anything (the prize tier or prizes). If
+  they do not, Strategy 1's lower mismatch count has no in-game value and
+  Strategies 2 and 3 win on cost.
+- Whether flips sent back-to-back in one batch land reliably while a
+  mismatched pair is still flipping back.
 
 ## Driving it in BlueStacks
 
