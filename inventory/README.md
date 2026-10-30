@@ -31,7 +31,7 @@ Observed: `2026-08-22`
 | Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
 | --- | --- | --- | --- | --- |
 | Common | 25/28 | — | 22 | 42 |
-| Rare | 7/19 | — | 6 | 7 |
+| Rare | 12/19 | — | 6 | 7 |
 | Epic | 0/19 | — | 0 | 0 |
 
 ### Unresolved discoveries
@@ -70,20 +70,20 @@ None recorded.
 | Sol | Common | Dipster | No | Yes | 1 | 0 | — |
 | La | Common | Dipster | No | Yes | 1 | 0 | — |
 | Ti | Common | Dipster | No | Yes | 1 | 0 | — |
-| Potbelly | Rare | Natural | Yes | No | 0 | 0 | — |
+| Potbelly | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Noggin | Rare | Natural | Yes | No | 0 | 0 | — |
 | Toe Jammer | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Mammott | Rare | Natural | Yes | Yes | 1 | 0 | — |
-| Shrubb | Rare | Natural | Yes | No | 0 | 0 | — |
+| Shrubb | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Oaktopus | Rare | Natural | Yes | Yes | 1 | 0 | — |
 | Furcorn | Rare | Natural | Yes | Yes | 1 | 0 | — |
-| Fwog | Rare | Natural | Yes | No | 0 | 0 | — |
+| Fwog | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Drumpler | Rare | Natural | Yes | No | 0 | 0 | — |
 | Maw | Rare | Natural | Yes | Yes | 1 | 0 | Medium |
 | Pummel | Rare | Natural | Yes | No | 0 | 0 | — |
-| Clamble | Rare | Natural | Yes | No | 0 | 0 | — |
+| Clamble | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Bowgart | Rare | Natural | Yes | No | 0 | 0 | — |
-| T-Rox | Rare | Natural | Yes | No | 0 | 0 | — |
+| T-Rox | Rare | Natural | Yes | Yes | 0 | 0 | — |
 | Entbrat | Rare | Natural | Yes | Yes | 2 | 0 | — |
 | Ghazt | Rare | Ethereal | Yes | No | 0 | 0 | — |
 | G'joob | Rare | Mythical | Yes | No | 0 | 0 | — |

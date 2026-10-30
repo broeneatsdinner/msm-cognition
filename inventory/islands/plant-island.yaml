@@ -37,7 +37,7 @@ book:
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 10, total: 199}
   rare:
-    discovered: 7
+    discovered: 12
     total: 19
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 8}
@@ -81,20 +81,20 @@ monsters:
   - {name: Ti, variant: common, class: dipster, discovered: true, owned: 1}
 
   # Rares
-  - {name: Potbelly, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Potbelly, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Noggin, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 1}
-  - {name: Shrubb, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Shrubb, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Oaktopus, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 1}
-  - {name: Fwog, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Fwog, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Drumpler, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Maw, variant: rare, class: natural, discovered: true, owned: 1, confidence: medium}
   - {name: Pummel, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Clamble, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Clamble, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Bowgart, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: T-Rox, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: T-Rox, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Entbrat, variant: rare, class: natural, discovered: true, owned: 2}
   - {name: Ghazt, variant: rare, class: ethereal, discovered: false, owned: 0}
   - {name: "G'joob", variant: rare, class: mythical, discovered: false, owned: 0}

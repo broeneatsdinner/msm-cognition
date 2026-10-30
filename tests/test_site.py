@@ -49,13 +49,22 @@ class SiteEditTests(unittest.TestCase):
         island = yaml.safe_load((self.tmp / "inventory/islands/plant-island.yaml").read_text())
         return next(m for m in island["monsters"] if m["name"] == name and m["variant"] == variant)
 
-    def test_checking_a_new_rare_marks_it_discovered_and_counts_the_book(self) -> None:
-        message = self.apply("Potbelly", "check")
-        self.assertEqual("Mark Rare Potbelly owned on Plant Island", message)
-        self.assertEqual({"owned": 1, "discovered": True}, {k: self.row("Potbelly")[k] for k in ("owned", "discovered")})
+    def book_count(self) -> int:
         island = yaml.safe_load((self.tmp / "inventory/islands/plant-island.yaml").read_text())
-        self.assertEqual(8, island["book"]["rare"]["discovered"])
-        self.assertIn("- [x] Potbelly", (self.tmp / PAGE).read_text())
+        return island["book"]["rare"]["discovered"]
+
+    def test_checking_a_new_rare_marks_it_discovered_and_counts_the_book(self) -> None:
+        island = yaml.safe_load((self.tmp / "inventory/islands/plant-island.yaml").read_text())
+        name = next(
+            m["name"] for m in island["monsters"]
+            if m["variant"] == "rare" and m["class"] == "natural" and not m["discovered"]
+        )
+        before = self.book_count()
+        message = self.apply(name, "check")
+        self.assertEqual(f"Mark Rare {name} owned on Plant Island", message)
+        self.assertEqual({"owned": 1, "discovered": True}, {k: self.row(name)[k] for k in ("owned", "discovered")})
+        self.assertEqual(before + 1, self.book_count())
+        self.assertIn(f"- [x] {name}", (self.tmp / PAGE).read_text())
 
     def test_counts_go_up_and_down_but_uncheck_stops_above_one(self) -> None:
         self.apply("Entbrat", "increment")
