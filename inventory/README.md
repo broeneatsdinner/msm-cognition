@@ -7,6 +7,15 @@ Rare, Epic, and Seasonal recipes are planning references only: the target must
 also be available in the game. Parent readiness accepts owned Common or Rare
 parents because Rare variants may substitute for Common parents.
 
+Each island also has its own page with an owned-now checklist:
+
+- [Plant Island](islands/plant-island.md)
+- [Air Island](islands/air-island.md)
+- [Cold Island](islands/cold-island.md)
+- [Earth Island](islands/earth-island.md)
+- [Magical Sanctum](islands/magical-sanctum.md)
+- [Water Island](islands/water-island.md)
+
 ## Plant Island
 
 Observed: `2026-08-22`

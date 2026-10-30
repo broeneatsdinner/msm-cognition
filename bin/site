@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# ----------------
+# --    site    --
+# ----------------
+# description: Serve the repository as a local site for two hours
+#
+# This file is meant to be run directly:
+#
+# bin/site
+# bin/site --hours 4 --no-push
+#
+# It regenerates the inventory pages, serves the repo on 127.0.0.1 (port 8770
+# or the next free one), opens a browser tab, and stops after two hours. If the
+# site is already running, it only opens a tab. Ticking a checklist box edits
+# the file behind it, commits that one change, and pushes in the background.
+# Run bin/site --help for every option.
+set -euo pipefail
+
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+python="${PYTHON:-python3}"
+
+if [[ -x "$root/.venv/bin/python" ]]; then
+  python="$root/.venv/bin/python"
+fi
+
+export PYTHONPATH="$root/src${PYTHONPATH:+:$PYTHONPATH}"
+exec "$python" -m msm_cognition.site "$@"

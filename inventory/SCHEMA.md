@@ -3,6 +3,10 @@
 The canonical player inventory is stored as one YAML file per island under
 `inventory/islands/`. Screenshot evidence and Git history therefore remain
 island-scoped, while `inventory/README.md` provides one generated human view.
+`bin/inventory` also writes `inventory/islands/<island>.md` next to each YAML
+file: a readable page that starts with an owned-now checklist. Do not edit the
+generated pages by hand; tick boxes through `bin/site`, which changes the YAML
+and regenerates them, or edit the YAML and run `bin/inventory`.
 
 For the repeatable workflow used to re-evaluate islands from a dated screenshot
 batch, see `inventory/REINDEXING.md`.

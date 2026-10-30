@@ -15,6 +15,8 @@ CASTLE_BEDS_PATH = Path("reference/castles/bed-capacities.json")
 MONSTER_BEDS_PATH = Path("reference/monsters/bed-requirements.json")
 INVENTORY_DIRECTORY = Path("inventory/islands")
 OUTPUT_PATH = Path("inventory/README.md")
+CHECKLIST_HEADING = "Owned now"
+VARIANTS = ("common", "rare", "epic")
 
 
 def normalize_name(value: str) -> str:
@@ -399,15 +401,84 @@ def island_sort_key(island: dict[str, Any]) -> tuple[int, str]:
     return (0 if name == "Plant Island" else 1, name)
 
 
-def generate_document(repo_root: Path) -> str:
-    recipes = load_json(repo_root / RECIPE_PATH)
-    breedability = load_json(repo_root / BREEDABILITY_PATH)
-    castle_beds = load_json(repo_root / CASTLE_BEDS_PATH)
-    monster_beds = load_json(repo_root / MONSTER_BEDS_PATH)
-    islands = sorted(
-        (load_yaml(path) for path in (repo_root / INVENTORY_DIRECTORY).glob("*.yaml")),
-        key=island_sort_key,
+def checklist_label(monster: dict[str, Any]) -> str:
+    """One checklist entry: the name, then the count when above one, then a
+    note for a Book discovery with none owned or a less certain count."""
+    owned = monster.get("owned") or 0
+    label = monster.get("display_name", monster["name"])
+    if owned > 1:
+        label += f" x{owned}"
+    if owned == 0 and monster.get("discovered"):
+        label += " (in Book)"
+    elif owned and monster.get("confidence") in {"low", "medium"}:
+        label += f" ({monster['confidence']} confidence)"
+    return label
+
+
+def render_owned_checklist(island: dict[str, Any], prefix: str) -> list[str]:
+    lines = []
+    for variant in VARIANTS:
+        records = [m for m in island.get("monsters", []) if m.get("variant") == variant]
+        if not records:
+            continue
+        lines.extend([f"{prefix} {variant.title()}", ""])
+        for monster in records:
+            box = "x" if (monster.get("owned") or 0) > 0 else " "
+            lines.append(f"- [{box}] {checklist_label(monster)}")
+        lines.append("")
+    return lines[:-1]
+
+
+def load_islands(repo_root: Path) -> list[tuple[Path, dict[str, Any]]]:
+    paths = (repo_root / INVENTORY_DIRECTORY).glob("*.yaml")
+    return sorted(((path, load_yaml(path)) for path in paths), key=lambda item: island_sort_key(item[1]))
+
+
+def render_island_sections(
+    island: dict[str, Any],
+    recipes: dict[str, Any],
+    breedability: dict[str, Any],
+    castle_beds: dict[str, Any],
+    monster_beds: dict[str, Any],
+    prefix: str,
+) -> list[str]:
+    name = island["island"]
+    island_recipes = recipes.get("islands", {}).get(name, {})
+    island_breedability = breedability.get("islands", {}).get(name)
+    if not isinstance(island_breedability, dict):
+        raise ValueError(f"Missing island breedability data for {name}")
+    lines = [f"{prefix} Castle", ""]
+    lines.extend(render_castle(island, castle_beds, monster_beds))
+    lines.extend(["", f"{prefix} Summary", ""])
+    lines.extend(render_summary(island))
+    lines.extend(["", f"{prefix} Unresolved discoveries", ""])
+    lines.extend(render_unresolved_discoveries(island))
+    lines.extend(["", f"{prefix} Current monsters", ""])
+    lines.extend(render_inventory(island, island_breedability))
+    lines.extend(["", f"{prefix} Pending", ""])
+    lines.extend(render_pending(island))
+    lines.extend(["", f"{prefix} Rare breeding planner", ""])
+    lines.extend(render_planner(island, island_recipes, "rare"))
+    lines.extend(["", f"{prefix} Epic breeding planner", ""])
+    lines.extend(render_planner(island, island_recipes, "epic"))
+    if island.get("notes"):
+        lines.extend(["", f"{prefix} Notes", ""])
+        lines.extend(f"- {markdown(note)}" for note in island["notes"])
+    return lines
+
+
+def load_references(repo_root: Path) -> tuple[dict[str, Any], ...]:
+    return (
+        load_json(repo_root / RECIPE_PATH),
+        load_json(repo_root / BREEDABILITY_PATH),
+        load_json(repo_root / CASTLE_BEDS_PATH),
+        load_json(repo_root / MONSTER_BEDS_PATH),
     )
+
+
+def generate_document(repo_root: Path) -> str:
+    references = load_references(repo_root)
+    islands = load_islands(repo_root)
 
     lines = [
         "# Island inventory",
@@ -419,61 +490,98 @@ def generate_document(repo_root: Path) -> str:
         "also be available in the game. Parent readiness accepts owned Common or Rare",
         "parents because Rare variants may substitute for Common parents.",
         "",
+        "Each island also has its own page with an owned-now checklist:",
+        "",
     ]
+    lines.extend(
+        f"- [{island['island']}](islands/{path.with_suffix('.md').name})"
+        for path, island in islands
+    )
+    lines.append("")
 
-    for island in islands:
+    for _, island in islands:
         name = island["island"]
-        island_recipes = recipes.get("islands", {}).get(name, {})
-        island_breedability = breedability.get("islands", {}).get(name)
-        if not isinstance(island_breedability, dict):
-            raise ValueError(f"Missing island breedability data for {name}")
         lines.extend([f"## {name}", "", f"Observed: `{island.get('observed_at', 'unknown')}`", ""])
-        lines.extend(["### Castle", ""])
-        lines.extend(render_castle(island, castle_beds, monster_beds))
-        lines.extend(["", "### Summary", ""])
-        lines.extend(render_summary(island))
-        lines.extend(["", "### Unresolved discoveries", ""])
-        lines.extend(render_unresolved_discoveries(island))
-        lines.extend(["", "### Current monsters", ""])
-        lines.extend(render_inventory(island, island_breedability))
-        lines.extend(["", "### Pending", ""])
-        lines.extend(render_pending(island))
-        lines.extend(["", "### Rare breeding planner", ""])
-        lines.extend(render_planner(island, island_recipes, "rare"))
-        lines.extend(["", "### Epic breeding planner", ""])
-        lines.extend(render_planner(island, island_recipes, "epic"))
-        if island.get("notes"):
-            lines.extend(["", "### Notes", ""])
-            lines.extend(f"- {markdown(note)}" for note in island["notes"])
+        lines.extend(render_island_sections(island, *references, prefix="###"))
         lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 
 
+def generate_island_page(
+    path: Path, island: dict[str, Any], references: tuple[dict[str, Any], ...]
+) -> str:
+    name = island["island"]
+    lines = [
+        f"# {name}",
+        "",
+        f"> Generated by `bin/inventory` from `{path.name}`. Tick a box on the local",
+        "> site (`bin/site`) to change an owned count, or edit the YAML and regenerate.",
+        "",
+        f"Observed: `{island.get('observed_at', 'unknown')}`",
+        "",
+        f"## {CHECKLIST_HEADING}",
+        "",
+        "A ticked box means at least one is on the island now. `x2` gives the count;",
+        "`(in Book)` marks a monster discovered in the Book with none owned now.",
+        "",
+    ]
+    lines.extend(render_owned_checklist(island, "###"))
+    lines.append("")
+    lines.extend(render_island_sections(island, *references, prefix="##"))
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def generate_outputs(repo_root: Path) -> dict[Path, str]:
+    """Every generated Markdown file, keyed by its path relative to the repo."""
+    references = load_references(repo_root)
+    outputs = {OUTPUT_PATH: generate_document(repo_root)}
+    for path, island in load_islands(repo_root):
+        page = path.with_suffix(".md").relative_to(repo_root)
+        outputs[page] = generate_island_page(path, island, references)
+    return outputs
+
+
+def write_outputs(repo_root: Path) -> list[Path]:
+    """Write the generated files that differ from disk; return those paths."""
+    written = []
+    for relative, document in generate_outputs(repo_root).items():
+        output = repo_root / relative
+        current = output.read_text(encoding="utf-8") if output.exists() else ""
+        if current != document:
+            output.write_text(document, encoding="utf-8")
+            written.append(relative)
+    return written
+
+
 def main(argv: list[str] | None = None, repo_root: Path | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Generate the player island inventory README.")
+    parser = argparse.ArgumentParser(description="Generate the player island inventory README and island pages.")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--stdout", action="store_true", help="Print instead of writing")
     mode.add_argument("--check", action="store_true", help="Fail if README is stale")
     args = parser.parse_args(argv)
 
     root = repo_root or Path(__file__).resolve().parents[2]
-    document = generate_document(root)
-    output = root / OUTPUT_PATH
 
     if args.stdout:
-        print(document, end="")
+        print(generate_document(root), end="")
         return 0
     if args.check:
-        current = output.read_text(encoding="utf-8") if output.exists() else ""
-        if current != document:
-            print(f"Stale generated inventory: {output}")
+        stale = []
+        for relative, document in generate_outputs(root).items():
+            output = root / relative
+            current = output.read_text(encoding="utf-8") if output.exists() else ""
+            if current != document:
+                stale.append(relative)
+        for relative in stale:
+            print(f"Stale generated inventory: {root / relative}")
+        if stale:
             return 1
-        print(f"Inventory is current: {output}")
+        print(f"Inventory is current: {root / OUTPUT_PATH} and island pages")
         return 0
 
-    output.write_text(document, encoding="utf-8")
-    print(f"Generated {output}")
+    for relative in write_outputs(root):
+        print(f"Generated {root / relative}")
     return 0
 
 

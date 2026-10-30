@@ -86,9 +86,13 @@ reference/
 
 inventory/
   islands/               Canonical player inventory YAML, one file per island
+  islands/*.md           Generated island pages with owned-now checklists
   README.md              Generated inventory, castle audit, and planner view
   REINDEXING.md          Screenshot-to-inventory workflow checklist
   SCHEMA.md              Inventory data and generator contract
+
+bin/
+  site                   Browse the repo locally; checklist clicks commit
 
 scripts/
   build_curated_docs.py  Generate curated Markdown from reference data
@@ -123,6 +127,29 @@ reference/islands/
 The same pattern is used for monsters and Wublins.
 
 This structure keeps the data close to its documentation instead of splitting related files across separate `data/` and `docs/` trees.
+
+## Browsing the repository
+
+Double-click `msm-cognition-site.command` in Finder, or run `bin/site`, to
+browse the repository in a browser tab. The local site stops by itself after
+two hours (`bin/site --hours 4` for longer, `--hours 0` until Ctrl-C), and
+running it again while it is up just opens another tab.
+
+- Folders list their contents and show their README; Markdown is rendered,
+  other text files are shown as source, and images open directly.
+- Each indexed island has a generated page, such as
+  [`inventory/islands/plant-island.md`](inventory/islands/plant-island.md),
+  that starts with an owned-now checklist. Ticking a box sets that monster's
+  count to 1 or 0 in the island YAML; the minus and plus buttons change counts
+  above one. The pages are regenerated before every Markdown page is shown.
+- Ticking a box in any other Markdown file flips that box in the file.
+- Every click is committed on its own, with only the files it changed, and
+  pushed in the background. This repository is public, so pushed ticks are
+  public too. A file that already had uncommitted changes is saved but not
+  committed. `--no-commit` and `--no-push` turn those steps off.
+
+The server binds 127.0.0.1 only, never serves dotfiles, `.venv`, or
+`__pycache__`, and accepts edits only from its own pages.
 
 ## Human-readable reference pages
 
@@ -186,8 +213,11 @@ Check generated inventory and tests:
 
 ```bash
 bin/inventory --check
-python3 -m unittest tests/test_inventory.py
+.venv/bin/python -m unittest tests/test_inventory.py tests/test_site.py
 ```
+
+The tests need PyYAML, which is installed in `.venv` (`python3 -m venv .venv`
+then `.venv/bin/python -m pip install -r requirements.txt`).
 
 Some helper scripts use Pillow for image loading, cropping, upscaling, and comparison. Install the current Python dependencies with:
 
