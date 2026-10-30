@@ -1,4 +1,61 @@
-# Breeding Reference
+# Breeding
+
+Rare Noggin - Plant Island  
+    T-Rox + Clamble (6h)
+
+Rare Noggin - Air Island  
+    T-Rox + PomPom (6h)
+
+Rare Noggin - Water Island  
+    Reedling + Scups (6h)
+
+Rare Noggin - Earth Island  
+    Reedling + Clamble (6h)
+
+Rare Noggin - Fire Haven  
+    Reedling + Repatillo (6h)
+
+Rare Noggin - Faerie Island  
+    Cantorell + Bridg-it (6h)
+
+Rare Noggin - Bone Island  
+    Withur + Uuduk (6h)
+
+Rare Noggin - Mirror Plant Island  
+    T-Rox + Clamble (6h)
+
+Rare Noggin - Mirror Air Island  
+    T-Rox + PomPom (6h)
+
+Rare Noggin - Mirror Water Island  
+    Reedling + Scups (6h)
+
+Rare Noggin - Mirror Earth Island  
+    Reedling + Clamble (6h)
+
+Rare Noggin - Mirror Faerie Island  
+    Cantorell + Bridg-it (6h)
+
+Rare Noggin - Mirror Bone Island  
+    Withur + Uuduk (6h)
+
+`(6h)` is the successful breeding time in a normal Breeding Structure,
+without an island skin boost; incubation is separate. Breed only while Rare
+Noggin is available on that island. Gold Island has no breeding combination.
+
+These are preferred pairs for shorter Common failures and avoiding extra
+Mythical outcomes, not a claim of higher verified success percentages. Water
+Island also has Reedling + Pummel; Earth Island's three eligible pairings tie
+on Common failure times; Fire Haven also has Reedling + Floogull. The same
+options apply on the corresponding Mirror islands. Choose among tied pairs
+using parent levels and other Rares you want.
+
+Sources: [Rare Noggin combinations and times](https://mysingingmonsters.fandom.com/wiki/Rare_Noggin),
+[Natural triple times](https://mysingingmonsters.fandom.com/wiki/Breeding_Combinations),
+[Repatillo outcomes and times](https://mysingingmonsters.fandom.com/wiki/Repatillo),
+and [Floogull times](https://mysingingmonsters.fandom.com/wiki/Floogull).
+
+### Breeding Reference
 
 This directory contains structured breeding-reference data for My Singing Monsters.
 
@@ -90,3 +147,4 @@ Sanctum, and the individual special-monster pages linked from them.
 
 Do not answer “can I breed X on island Y?” from elements alone. Answer from
 island-scoped data.
+~~~~
