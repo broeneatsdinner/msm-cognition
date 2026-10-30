@@ -35,26 +35,34 @@ close.
 
 ## Levels seen
 
-Board sizes and mismatch allowances were the same on both runs; layouts were
+Board sizes and mismatch allowances were the same on every run; layouts were
 mostly the same, but level 2 changed shape and tile faces and prizes change
 every play.
 
-| Level | Tiles | Mismatches allowed | Run 1 used | Run 2 used | Run 2 prize |
-| --- | --- | --- | --- | --- | --- |
-| 1 | 4 | 3 | 0 | 1 | 2,300 XP |
-| 2 | 6 (run 1), 12 (run 2) | 5 (run 1), 9 (run 2) | 1 | 2 | 1 diamond |
-| 3 | 12 | 9 | 3 | 4 | 9 shards |
-| 4 | 14 | 12 | 3 | 3 | 23,000 XP |
-| 5 | 18 | 14 | 5 | 6 | 8,800 food |
-| 6 | 20 | 15 | 6 | 5 | 8,800 food |
-| 7 | 22 | 17 | 7 | 5 | 230,000 XP |
-| 8 | 26 | 20 | Finished by the player | 8 | 44,000 food |
-| 9 | 30 | 23 | Not reached | 10 | 230,000 XP |
+| Level | Tiles | Mismatches allowed | Run 1 used | Run 2 used | Run 2 prize | Run 3 used | Run 3 prize |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 4 | 3 | 0 | 1 | 2,300 XP | 2 | 9 shards |
+| 2 | 6 (runs 1, 3), 12 (run 2) | 5 (runs 1, 3), 9 (run 2) | 1 | 2 | 1 diamond | 3 | 2,300 XP |
+| 3 | 12 | 9 | 3 | 4 | 9 shards | 4 | 900 food |
+| 4 | 14 | 12 | 3 | 3 | 23,000 XP | 7 | 96 shards |
+| 5 | 18 | 14 | 5 | 6 | 8,800 food | 9 | 1 key |
+| 6 | 20 | 15 | 6 | 5 | 8,800 food | 10 | 900 food |
+| 7 | 22 | 17 | 7 | 5 | 230,000 XP | 10 | 3 keys |
+| 8 | 26 | 20 | Finished by the player | 8 | 44,000 food | Finished by the player | 362,000 coins |
+| 9 | 30 | 23 | Not reached | 10 | 230,000 XP | Finished by the player | 44,000 food |
 
 Run 1 was 2026-10-29 (first, free play); run 2 the same day (2-diamond play),
-cleared all nine levels with 44 mismatches used out of 118 allowed. Prize
-amounts are from the Rewards Recap
-(`training/screenshots/2026-10-29-memory-game-rewards-recap.jpeg`).
+cleared all nine levels with 44 mismatches used out of 118 allowed. Run 3 was a
+second 2-diamond replay that day, played with Strategy 2 through level 7 (45
+mismatches out of 75 allowed on those levels); the player finished levels 8
+and 9. Prize amounts are from the Rewards Recaps
+(`training/screenshots/2026-10-29-memory-game-rewards-recap.jpeg` for run 2,
+`training/screenshots/2026-10-29-memory-game-run-3-rewards-recap.jpeg` for
+run 3), which list the nine level prizes in reading order.
+
+Before a paid replay, a "Top Rewards Remaining" panel lists the best prizes
+still in the pool. Before run 3 it showed 1 diamond, 3 keys, 44,000 food,
+362,000 coins, and 1 key; run 3 won everything on it except the diamond.
 
 Tile faces are monsters, Dipsters, and resources (coins, food, XP, shards,
 diamonds). Rare and Epic variants of a monster are different faces: a Rare
@@ -65,21 +73,24 @@ a blue one.
 
 Usually not, if diamonds matter. The paid replay on 2026-10-29 cost 2 diamonds
 and a full nine-level clear returned only 1 diamond, along with about 485,000
-XP, 61,600 food, and 9 shards. Prizes are drawn per play, so a replay may return
-no diamonds at all. Play the free daily game; do not suggest paying for a
-replay unless the player wants the XP, food, or shards more than the diamonds.
+XP, 61,600 food, and 9 shards. The second paid replay (run 3) returned no
+diamonds: 362,000 coins, 45,800 food, 105 shards, 4 keys, and 2,300 XP. Play
+the free daily game; do not suggest paying for a replay unless the player wants
+the coins, food, shards, or keys more than the diamonds. The "Top Rewards
+Remaining" panel shows whether a diamond is still in the pool before paying.
 
 ## Strategies
 
-Three strategies are named so runs can be compared. Strategy 1 has been played;
-Strategies 2 and 3 are the player's proposals, not yet tried by an agent.
+Three strategies are named so runs can be compared. Strategy 1 (run 2) and
+Strategy 2 (run 3, levels 1 to 7) have been played; Strategy 3 is the player's
+proposal, not yet tried by an agent.
 
 | | Strategy 1: match as you go | Strategy 2: sweep, then match | Strategy 3: sweep into one map |
 | --- | --- | --- | --- |
 | Flips | One unseen tile, then its known partner or another unseen tile | Tiles in reading order, two at a time | Same as Strategy 2 |
 | Looks | After every flip | After every pair of flips | After every pair, then one combined map |
-| Mismatches | Only first sightings; 44 of 118 on the full run | About half the tiles minus lucky pairs; fits every level seen | Same as Strategy 2 |
-| Agent round trips | About one per one or two flips | About three per level | About three per level, plus building the map |
+| Mismatches | Only first sightings; 44 of 118 on the full run | About half the tiles minus lucky pairs; 45 of 75 on levels 1 to 7 | Same as Strategy 2 |
+| Agent round trips | About one per one or two flips | Three to four per level | About three per level, plus building the map |
 
 ### Strategy 1: match as you go
 
@@ -115,6 +126,19 @@ For an agent, the sweep does not depend on what it sees, so a whole level can
 be one batch (flip, flip, zoom, repeated), then one reasoning step, then one
 batch of all the pairs: about three calls per level instead of twenty or more.
 
+Run 3 bore this out. Levels 1 to 7 took about 25 calls in all, and no
+matching flip ever missed. Every level stayed well inside its allowance; the
+tightest was level 6 (10 of 15). Two details made it work:
+
+- Pairs known before the sweep ends can be matched in the next batch, ahead
+  of the remaining sweep pairs, since matched flips need no pause.
+- The last unseen pair never needs a sweep: once every other face is known,
+  the two remaining tiles must match each other.
+
+Strategy 2 used about the same number of mismatches as Strategy 1 (45 on
+levels 1 to 7, against 44 for all nine levels of run 2) with roughly a sixth
+of the calls.
+
 ### Strategy 3: sweep into one map
 
 Strategy 2's sweep, but the faces are written into a single board map (a text
@@ -127,9 +151,12 @@ look-alikes such as Common, Rare, and Epic variants.
 
 - Whether unused mismatches affect anything (the prize tier or prizes). If
   they do not, Strategy 1's lower mismatch count has no in-game value and
-  Strategies 2 and 3 win on cost.
-- Whether flips sent back-to-back in one batch land reliably while a
-  mismatched pair is still flipping back.
+  Strategies 2 and 3 win on cost. Run 3 used more mismatches than run 2 and
+  won no diamond, but prizes are drawn per play, so one run does not settle
+  it.
+
+Settled by run 3: flips sent while a mismatched pair is still flipping back
+are ignored. See the pause rule under Driving it in BlueStacks.
 
 ## Driving it in BlueStacks
 
@@ -137,6 +164,11 @@ look-alikes such as Common, Rare, and Epic variants.
   letter and index) and keep a running list of known faces.
 - Take a `zoom` of the board right after each flip, in the same batch,
   before the tile turns back over. A batch of "flip, zoom, flip, zoom" works.
+- After a mismatch, the game ignores taps until the pair has turned back
+  over. In a batch, put five `screenshot` actions at 0.1 scale between a
+  mismatched pair and the next flip; that pause never missed in run 3.
+  `zoom` actions are too quick to serve as the pause. Matched pairs need no
+  pause, so a batch of known pairs can be flipped back to back.
 - Tile faces are small; zoom the whole board region at about 0.4 scale to
   tell similar monsters apart (Common vs Rare vs Epic).
 - After the last pair, take a screenshot: the prize shows briefly, then the
