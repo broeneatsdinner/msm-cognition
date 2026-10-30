@@ -18,21 +18,21 @@ Each island also has its own page with an owned-now checklist:
 
 ## Plant Island
 
-Observed: `2026-08-22`
+Observed: `2026-10-29`
 
 ### Castle
 
 | Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Polished Vegidian Castle | High | 135 | 150 | 15 | 0 | 135 | 139 | 150 | 4 |
+| Polished Vegidian Castle | High | 139 | 150 | 11 | 0 | 139 | 139 | 150 | 0 |
 
 ### Summary
 
 | Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
 | --- | --- | --- | --- | --- |
-| Common | 27/28 | — | 23 | 43 |
+| Common | 27/28 | — | 27 | 41 |
 | Rare | 11/21 | — | 10 | 14 |
-| Epic | 5/21 | — | 0 | 0 |
+| Epic | 5/21 | — | 5 | 5 |
 
 ### Unresolved discoveries
 
@@ -42,7 +42,7 @@ None recorded.
 
 | Monster | Variant | Class | Breedable? | Discovered | Owned | Checked in | Confidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Potbelly | Common | Natural | No | Yes | 2 | 0 | — |
+| Potbelly | Common | Natural | No | Yes | 1 | 0 | — |
 | Noggin | Common | Natural | No | Yes | 1 | 0 | — |
 | Toe Jammer | Common | Natural | No | Yes | 1 | 0 | — |
 | Mammott | Common | Natural | No | Yes | 1 | 0 | — |
@@ -50,18 +50,18 @@ None recorded.
 | Oaktopus | Common | Natural | Yes | Yes | 1 | 0 | — |
 | Furcorn | Common | Natural | Yes | Yes | 1 | 0 | — |
 | Fwog | Common | Natural | Yes | Yes | 1 | 0 | — |
-| Drumpler | Common | Natural | Yes | Yes | 0 | 0 | — |
-| Maw | Common | Natural | Yes | Yes | 3 | 0 | — |
-| Pummel | Common | Natural | Yes | Yes | 3 | 0 | — |
-| Clamble | Common | Natural | Yes | Yes | 2 | 0 | — |
-| Bowgart | Common | Natural | Yes | Yes | 3 | 0 | — |
+| Drumpler | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Maw | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Pummel | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Clamble | Common | Natural | Yes | Yes | 1 | 0 | — |
+| Bowgart | Common | Natural | Yes | Yes | 2 | 0 | — |
 | T-Rox | Common | Natural | Yes | Yes | 1 | 0 | — |
-| Entbrat | Common | Natural | Yes | Yes | 13 | 0 | — |
+| Entbrat | Common | Natural | Yes | Yes | 14 | 0 | — |
 | Ghazt | Common | Ethereal | Yes | Yes | 0 | 0 | — |
 | Shugabush | Common | Legendary | Yes | Yes | 0 | 0 | — |
 | G'joob | Common | Mythical | Yes | Yes | 1 | 0 | — |
-| Tawkerr | Common | Werdo | No | Yes | 0 | 0 | — |
-| Parlsona | Common | Werdo | No | Yes | 0 | 0 | — |
+| Tawkerr | Common | Werdo | No | Yes | 1 | 0 | — |
+| Parlsona | Common | Werdo | No | Yes | 1 | 0 | — |
 | Wubbox | Common | Supernatural | No | No | 1 | 0 | — |
 | Do | Common | Dipster | No | Yes | 1 | 0 | — |
 | Re | Common | Dipster | No | Yes | 1 | 0 | — |
@@ -91,8 +91,8 @@ None recorded.
 | Vitreous Ti | Rare | Dipster | No | No | 0 | 0 | — |
 | Terrene Sol | Rare | Dipster | No | Yes | 1 | 0 | — |
 | Waxen La | Rare | Dipster | No | No | 0 | 0 | — |
-| Potbelly | Epic | Natural | Yes | Yes | 0 | 0 | — |
-| Noggin | Epic | Natural | Yes | Yes | 0 | 0 | — |
+| Potbelly | Epic | Natural | Yes | Yes | 1 | 0 | — |
+| Noggin | Epic | Natural | Yes | Yes | 1 | 0 | — |
 | Toe Jammer | Epic | Natural | Yes | No | 0 | 0 | — |
 | Mammott | Epic | Natural | Yes | No | 0 | 0 | — |
 | Shrubb | Epic | Natural | Yes | No | 0 | 0 | — |
@@ -103,13 +103,13 @@ None recorded.
 | Maw | Epic | Natural | Yes | No | 0 | 0 | — |
 | Pummel | Epic | Natural | Yes | No | 0 | 0 | — |
 | Clamble | Epic | Natural | Yes | No | 0 | 0 | — |
-| Bowgart | Epic | Natural | Yes | Yes | 0 | 0 | — |
-| T-Rox | Epic | Natural | Yes | Yes | 0 | 0 | — |
-| Entbrat | Epic | Natural | Yes | Yes | 0 | 0 | — |
+| Bowgart | Epic | Natural | Yes | Yes | 1 | 0 | — |
+| T-Rox | Epic | Natural | Yes | Yes | 1 | 0 | — |
+| Entbrat | Epic | Natural | Yes | Yes | 1 | 0 | — |
 | Ghazt | Epic | Ethereal | Yes | No | 0 | 0 | — |
 | G'joob | Epic | Mythical | Yes | No | 0 | 0 | — |
 | Wubbox | Epic | Supernatural | No | No | 0 | 0 | — |
-| Punkleton | Common | Seasonal | Yes | Yes | 0 | 0 | — |
+| Punkleton | Common | Seasonal | Yes | Yes | 1 | 0 | — |
 | Punkleton | Rare | Seasonal | Yes | No | 0 | 0 | — |
 | Punkleton | Epic | Seasonal | Yes | No | 0 | 0 | — |
 
@@ -145,8 +145,8 @@ None recorded.
 
 | Target | Best first-copy combination / acquisition | Standard | Enhanced | Plan | Availability |
 | --- | --- | --- | --- | --- | --- |
-| Epic Potbelly | Entbrat + Shrubb | 9h | 6h 45m | Ready | When offered |
-| Epic Noggin | Entbrat + Fwog | 1h | 45m | Ready | When offered |
+| Epic Potbelly | Entbrat + Shrubb | 9h | 6h 45m | Owned (1) | When offered |
+| Epic Noggin | Entbrat + Fwog | 1h | 45m | Owned (1) | When offered |
 | Epic Toe Jammer | Entbrat + Oaktopus | 3h | 2h 15m | Ready | When offered |
 | Epic Mammott | Entbrat + Furcorn | 5h | 3h 45m | Ready | When offered |
 | Epic Shrubb | T-Rox + Oaktopus | 19h | 14h 15m | Ready | When offered |
@@ -154,16 +154,16 @@ None recorded.
 | Epic Furcorn | Clamble + Fwog | 17h | 12h 45m | Ready | When offered |
 | Epic Fwog | Pummel + Furcorn | 7h | 5h 15m | Ready | When offered |
 | Epic Drumpler | Clamble + Maw | 15h | 11h 15m | Ready | When offered |
-| Epic Maw | Bowgart + Drumpler | 13h | 9h 45m | Blocked: missing Drumpler | When offered |
+| Epic Maw | Bowgart + Drumpler | 13h | 9h 45m | Ready | When offered |
 | Epic Pummel | Bowgart + Fwog | 1d 7h | 23h 15m | Ready | When offered |
 | Epic Clamble | Pummel + Maw | 21h | 15h 45m | Ready | When offered |
-| Epic Bowgart | Clamble + Oaktopus | 1d 5h | 21h 45m | Ready | When offered |
-| Epic T-Rox | Pummel + Drumpler | 19h | 14h 15m | Blocked: missing Drumpler | When offered |
-| Epic Entbrat | T-Rox + Shrubb | 1d 21h | 1d 9h 45m | Ready | When offered |
+| Epic Bowgart | Clamble + Oaktopus | 1d 5h | 21h 45m | Owned (1) | When offered |
+| Epic T-Rox | Pummel + Drumpler | 19h | 14h 15m | Owned (1) | When offered |
+| Epic Entbrat | T-Rox + Shrubb | 1d 21h | 1d 9h 45m | Owned (1) | When offered |
 | Epic Ghazt | T-Rox + Furcorn | 1d 6h | 22h 30m | Ready | When offered |
 | Epic G'joob | Entbrat + Maw | 1d 9h 10m | 1d 52m 30s | Ready | When offered |
 | Epic Wubbox | Evolve a powered Common Wubbox during an Epic Wubbox availability window. | — | — | Not breedable | Special acquisition |
-| Epic Punkleton | Entbrat + Drumpler | 1d 7h 10m | 23h 22m 30s | Blocked: missing Drumpler | Seasonal offer |
+| Epic Punkleton | Entbrat + Drumpler | 1d 7h 10m | 23h 22m 30s | Ready | Seasonal offer |
 
 ### Notes
 
@@ -171,10 +171,11 @@ None recorded.
 - Buyback entries, if any, are ignored for current inventory.
 - Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La were confirmed for Plant Island by the player on 2026-10-29. The Book's Rare total rose to 21, which counts all three.
 - The Plant Island Common and Epic Book pages on 2026-10-29 (training/screenshots/2026-10-29-plant-island-book-commons.jpeg and -epics.jpeg) show Commons 27/28 with seasonal 1/1 and costumes 16/201, and Epics 5/21 with costumes 0/14. Parlsona, Tawkerr, and Punkleton are newly lit; Epic Bowgart, T-Rox, Noggin, Entbrat, and Potbelly are lit. Every lit figure was named from its Book entry. Owned counts for these rows are not yet confirmed and stay 0.
+- Owned counts were read from the Plant Island Market Monsters tab on 2026-10-29 (training/screenshots/2026-10-29-plant-island-market/), card by card. The Common Wubbox card is greyed out with no count because only one can be bought and it has been; with the player's confirmation that means owned: 1. The Market lists no Rare Wubbox card. A 'Leandro' Pummel Buyback card is ignored.
 - The player has a Common Wubbox on Plant Island that is still being filled (2026-10-29). An unfilled Wubbox shows grey, not lit, in the Book, so it is owned: 1 with discovered: false; it should light up once filled.
 - The Epic Book total of 21 is three more than the 18 Epic rows here; the three extra Book slots are not yet identified.
 - The Plant Island Rare Book page on 2026-10-29 (training/screenshots/2026-10-29-plant-island-book-rares.jpeg) shows 11/21 discovered and 0/9 costumes. Terrene Sol, won in the Dipster minigame and placed on the island, is lit. Rare Maw and Rare Wubbox are not lit, so they are discovered: false; the 11 lit rows match the count.
-- Rare owned counts were confirmed by the player on 2026-10-29. Rare Maw and Rare Wubbox, earlier inferred from the castle bed total, are 0. Common counts are still from 2026-08-22, and with the new Rare counts the indexed beds (129) exceed the castle capacity (120), so the Common counts need a recount.
+- Rare owned counts were confirmed by the player on 2026-10-29. Rare Maw and Rare Wubbox, earlier inferred from the castle bed total, are 0. The 129-over-120 bed mismatch noted then came from a stale castle tier (now Polished Vegidian, 150) and August Common counts, both since replaced.
 
 ## Air Island
 
