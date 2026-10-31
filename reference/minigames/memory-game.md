@@ -87,6 +87,26 @@ Run 4 used 75 of 118 mismatches. Level 8 is two full rows of ten with three
 rows of edge pairs below; level 9 is five rows of six with gaps (a ragged
 grid, 30 tiles).
 
+Run 5 was the free daily play on 2026-10-31, played by an agent with
+Strategy 3 through all nine levels. Level 2 was the 6-tile board. Prizes are
+from `training/screenshots/2026-10-31-memory-game-run-5-rewards-recap.jpeg`.
+
+| Level | Tiles | Mismatches allowed | Run 5 used | Run 5 prize |
+| --- | --- | --- | --- | --- |
+| 1 | 4 | 3 | 0 | 900 food |
+| 2 | 6 | 5 | 0 | 9 shards |
+| 3 | 12 | 9 | 5 | 36,200 coins |
+| 4 | 14 | 12 | 6 | 72,400 coins |
+| 5 | 18 | 14 | 9 | 23,000 XP |
+| 6 | 20 | 15 | 9 | 1 key |
+| 7 | 22 | 17 | 10 | 44,000 food |
+| 8 | 26 | 20 | 12 | 230,000 XP |
+| 9 | 30 | 23 | 15 | 3 keys |
+
+Run 5 used 66 of 118 mismatches. Two of level 5's nine were an agent slip
+(two tile positions swapped in the notes), not misreads. Levels 1 and 2 were
+cleared with no mismatches because every sweep pair happened to match.
+
 Before a paid replay, a "Top Rewards Remaining" panel lists the best prizes
 still in the pool. Before run 3 it showed 1 diamond, 3 keys, 44,000 food,
 362,000 coins, and 1 key; run 3 won everything on it except the diamond.
@@ -111,17 +131,16 @@ Remaining" panel shows whether a diamond is still in the pool before paying.
 
 ## Strategies
 
-Three strategies are named so runs can be compared. Strategy 1 (run 2) and
-Strategy 2 (run 3, levels 1 to 7, and run 4, all nine levels) have been
-played. Strategy 3 is the player's proposal; run 4 set out to test it but did
-not follow it (see below), so it is still untried.
+Three strategies are named so runs can be compared. Strategy 1 (run 2),
+Strategy 2 (run 3, levels 1 to 7, and run 4, all nine levels), and Strategy 3
+(run 5, all nine levels) have all been played.
 
 | | Strategy 1: match as you go | Strategy 2: sweep, then match | Strategy 3: sweep into one map |
 | --- | --- | --- | --- |
 | Flips | One unseen tile, then its known partner or another unseen tile | Tiles in reading order, two at a time, matching known pairs as they appear | Every tile in reading order, two at a time, with no matching until the whole board is mapped |
 | Looks | After every flip | After every pair of flips | After every pair, then one complete map |
-| Mismatches | Only first sightings; 44 of 118 on the full run | About half the tiles minus lucky pairs; 45 of 75 on levels 1 to 7 (run 3), 75 of 118 on all nine (run 4) | Expected the same as Strategy 2 |
-| Agent round trips | About one per one or two flips | Three to four per level; about 30 for run 4 | Expected two or three per level |
+| Mismatches | Only first sightings; 44 of 118 on the full run | About half the tiles minus lucky pairs; 45 of 75 on levels 1 to 7 (run 3), 75 of 118 on all nine (run 4) | Same as Strategy 2, plus the forced last pair; 66 of 118 (run 5) |
+| Agent round trips | About one per one or two flips | Three to four per level; about 30 for run 4 | Two to four per level; about 30 for run 5 |
 
 ### Strategy 1: match as you go
 
@@ -186,25 +205,44 @@ which matters most for look-alikes such as Common, Rare, and Epic variants.
 
 Run 4 was meant to test this but did not: it matched known pairs between
 sweep batches, row by row, as in Strategy 2. Its numbers are Strategy 2
-numbers. The mismatch count should come out the same either way, since
-matching a known pair never costs one and every tile still has to be swept
-once. What a real Strategy 3 run would show is whether one clean sweep batch
-and one matching batch per level is faster and makes fewer misreads.
+numbers.
+
+Run 5 played it as written, on all nine levels:
+
+- Every level stayed inside its allowance; the tightest was level 5 (9 of
+  14, two of them an agent slip).
+- Once a map was complete, no matching flip missed on its face. Look-alikes
+  were told apart on the map before any matching: a green and a blue
+  cyclops (level 6), two orange monsters (level 7), and two horn monsters
+  that differ only in the rider (level 9).
+- Sweeping the last unseen pair costs one mismatch that Strategy 2 avoids by
+  elimination. On level 5 the map already showed what the last two tiles had
+  to be.
+- The one costly error was in the notes, not the reading: two tiles' tap
+  positions were swapped when the pairs were written out. Keying the map by
+  tap coordinate, not by a row-letter label, removed it for levels 6 to 9.
+- Round trips were about the same as Strategy 2: sweep batches of four pairs
+  (about 32 actions), then one batch of all matches per level.
+
+Strategy 3 is as cheap as Strategy 2 and reads look-alikes more safely. A
+sensible blend is Strategy 3 with the last pair taken by elimination.
 
 ### Open questions
 
 - Whether unused mismatches affect anything (the prize tier or prizes). If
   they do not, Strategy 1's lower mismatch count has no in-game value and
-  Strategies 2 and 3 win on cost. Runs 3 and 4 used more mismatches than run
-  2 and won no diamond, but prizes are drawn per play, so this is not settled.
+  Strategies 2 and 3 win on cost. Runs 3, 4, and 5 used more mismatches than
+  run 2 and won no diamond, but prizes are drawn per play, so this is not
+  settled.
 
 Settled by run 3: flips sent while a mismatched pair is still flipping back
 are ignored. See the pause rule under Driving it in BlueStacks.
 
 ## Driving it in BlueStacks
 
-- Name tiles by position in the current layout (row and column, or a row
-  letter and index) and keep a running list of known faces.
+- Name tiles by their tap coordinates and keep a running list of known
+  faces keyed the same way. Row-letter labels invite swapping two
+  positions when the matching batch is written (run 5, level 5).
 - Take a `zoom` of the board right after each flip, in the same batch,
   before the tile turns back over. A batch of "flip, zoom, flip, zoom" works.
 - After a mismatch, the game ignores taps until the pair has turned back
