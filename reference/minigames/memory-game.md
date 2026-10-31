@@ -227,6 +227,34 @@ Run 5 played it as written, on all nine levels:
 Strategy 3 is as cheap as Strategy 2 and reads look-alikes more safely. A
 sensible blend is Strategy 3 with the last pair taken by elimination.
 
+### Agent usage by strategy
+
+Token totals for each agent-played run, measured from the session
+transcripts. "Weighted" is a rough single cost figure: context re-read
+(cache read) at 0.1, context written (cache write) at 1.25, and output at 5,
+in input-token units.
+
+| Run | Strategy | Levels played by agent | Model calls | Context re-read | Context written | Output | Weighted |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2 | 1 | 9 | 164 | 100.3M | 1.30M | 49.5k | ~11.9M |
+| 3 | 2 | 7 | 33 | 5.5M | 0.21M | 26.5k | ~0.9M |
+| 4 | 2 | 9 | 59 | 21.9M | 4.89M | 42.5k | ~8.5M |
+| 5 | 3 | 9 | 47 | 11.9M | 0.39M | 41.2k | ~1.9M |
+
+- Strategy 1 costs the most by far: every flip waits on the last
+  screenshot, so each of 164 calls re-reads the whole conversation.
+- Strategies 2 and 3 cost about the same per level. Run 3 was cheapest per
+  level (about 0.13M against about 0.21M for run 5).
+- Run 4 cost about 4.5 times run 5 for the same nine levels. Most of it was
+  context written: a 70-action batch overflowed and had to be recovered from
+  disk, and a usage-limit pause fell mid-game.
+- Conversation length is the biggest confounder. Run 5 started right after a
+  context summary; runs 2 and 4 ran late in long sessions. The gap between
+  Strategies 2 and 3 is within that noise; the gap to Strategy 1 is not.
+
+For the lowest usage: Strategy 2 or 3, started in a fresh or recently
+summarized session, with batches of about 35 actions.
+
 ### Open questions
 
 - Whether unused mismatches affect anything (the prize tier or prizes). If
