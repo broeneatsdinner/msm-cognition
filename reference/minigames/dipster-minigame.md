@@ -60,6 +60,11 @@ Legendary Sticker Packs, Epic Sticker Packs, Clubbox Tickets.
 
 The goal is to hit Dipsters with as few tokens as possible.
 
+Hard rule, at any effort level: never dig a tile without running the solver
+first, and before each run re-check the solver input against a fresh
+screenshot (every number, Dipster, and rock). A guess by eye or a misread
+number costs a token. The only exception is the first tile of a new level.
+
 1. Open the center tile first. Its number covers the most neighbors.
 2. After every reveal, run the solver with every revealed tile:
 
