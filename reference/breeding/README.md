@@ -1,5 +1,9 @@
 # Breeding
 
+[Kazilleon](#kazilleon)
+
+[Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Shrubb](#epic-shrubb)
+
 [Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Fwog](#rare-fwog) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Mammott](#rare-mammott) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Oaktopus](#rare-oaktopus) · [Rare Potbelly](#rare-potbelly) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Toe Jammer](#rare-toe-jammer) · [Rare Wubbox](#rare-wubbox)
 
 <a id="rare-noggin"></a>
@@ -411,9 +415,72 @@ Rare Potbelly - **Mirror Earth Island**
 Rare Potbelly - **Mirror Psychic Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Tapricorn + Rooba (6h)
 
+<a id="epic-gjoob"></a>
+
+Epic G'joob - **Plant Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Entbrat + Maw (1d 9h 10m)
+
+Epic G'joob - **Mirror Plant Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Entbrat + Maw (1d 9h 10m)
+
+Epic G'joob - **Mythical Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Cataliszt + Yawstrich (1d 9h 10m)
+
+Enhanced Breeding Structure on all listed islands: **1d 52m 30s**, without an island skin boost.
+Epic G'joob must be available in a breeding promotion.
+Source: [Epic G'joob recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_G%27joob).
+
+<a id="epic-gnarl"></a>
+
+Epic Gnarl - **Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plinkajou + Peckidna (1d 23h)
+
+Epic Gnarl - **Mirror Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plinkajou + Peckidna (1d 23h)
+
+Enhanced Breeding Structure on all listed islands: **1d 11h 15m**, without an island skin boost.
+Epic Gnarl must be available in a breeding promotion.
+Source: [Epic Gnarl recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_Gnarl).
+
+<a id="epic-shrubb"></a>
+
+Epic Shrubb - **Plant Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Oaktopus (19h)
+
+Epic Shrubb - **Water Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Quibble (19h)
+
+Epic Shrubb - **Earth Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;PomPom + Dandidoo (19h)
+
+Epic Shrubb - **Fire Haven**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Barrb + Cybop (19h)
+
+Epic Shrubb - **Mirror Plant Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;T-Rox + Oaktopus (19h)
+
+Epic Shrubb - **Mirror Water Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Quibble (19h)
+
+Epic Shrubb - **Mirror Earth Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;PomPom + Dandidoo (19h)
+
+Enhanced Breeding Structure on all listed islands: **14h 15m**, without an island skin boost.
+Epic Shrubb must be available in a breeding promotion.
+Source: [Epic Shrubb recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_Shrubb).
+
+<a id="kazilleon"></a>
+
+Kazilleon - **Ethereal Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Grumpyre + Humbug (1d 18h)
+
+Enhanced Breeding Structure: **1d 7h 30m**, without an island skin boost.
+Common Kazilleon can be bred year-round; no breeding promotion is required.
+Source: [Kazilleon recipe and times](https://mysingingmonsters.fandom.com/wiki/Kazilleon).
+
 Times in parentheses are successful breeding times in a normal Breeding
 Structure, without an island skin boost; incubation is separate. Each
-breedable Rare must be available in a breeding promotion. A StarShop offer
+breedable Rare or Epic must be available in a breeding promotion. A StarShop offer
 alone does not establish breeding availability. Check each island's inventory
 for parent readiness. Gold Island has no breeding; Natural Rares and Rare
 Punkleton can be placed there at level 15 from eligible Natural Islands.
