@@ -107,6 +107,35 @@ Run 5 used 66 of 118 mismatches. Two of level 5's nine were an agent slip
 (two tile positions swapped in the notes), not misreads. Levels 1 and 2 were
 cleared with no mismatches because every sweep pair happened to match.
 
+Run 6 was the free daily play on 2026-11-01, played by an agent with
+Strategy 3 through all nine levels (diamonds 125 before, 126 after). Level 2
+was the 6-tile board. Level 9 was a new shape: 32 tiles in a V (rows of 7,
+9, 7, 5, 3, 1) with 24 mismatches allowed, so the run allowed 119. Prizes
+are from `training/screenshots/2026-11-01-memory-game-run-6-rewards-recap.jpeg`.
+
+| Level | Tiles | Mismatches allowed | Run 6 used | Run 6 prize |
+| --- | --- | --- | --- | --- |
+| 1 | 4 | 3 | 2 | 900 food |
+| 2 | 6 | 5 | 2 | 38,000 coins |
+| 3 | 12 | 9 | 6 | 2,500 XP |
+| 4 | 14 | 12 | 6 | 100 shards |
+| 5 | 18 | 14 | 8 | 1 key |
+| 6 | 20 | 15 | 9 | 25,000 XP |
+| 7 | 22 | 17 | 10 | 250,000 XP |
+| 8 | 26 | 20 | 12 | 380,000 coins |
+| 9 | 32 | 24 | 18 | 1 diamond |
+
+Run 6 used 73 of 119 mismatches. Two of level 9's were lost when a batch
+stopped mid-sweep (see Driving it in BlueStacks) and four tiles had to be
+flipped again. The free play won a diamond, the first since run 2. Most
+prize amounts were about 5% higher than the same prize types in earlier
+runs (38,000 coins against 36,200; 2,500 XP against 2,300; 100 shards
+against 96; 25,000 and 250,000 XP against 23,000 and 230,000; 380,000 coins
+against 362,000). Why is not known.
+
+After run 6 the replay prompt (2 diamonds, declined) showed Top Rewards
+Remaining: 1 diamond, 3 keys, 2,500 shards, and two of 46,000 food.
+
 Before a paid replay, a "Top Rewards Remaining" panel lists the best prizes
 still in the pool. Before run 3 it showed 1 diamond, 3 keys, 44,000 food,
 362,000 coins, and 1 key; run 3 won everything on it except the diamond.
@@ -133,13 +162,13 @@ Remaining" panel shows whether a diamond is still in the pool before paying.
 
 Three strategies are named so runs can be compared. Strategy 1 (run 2),
 Strategy 2 (run 3, levels 1 to 7, and run 4, all nine levels), and Strategy 3
-(run 5, all nine levels) have all been played.
+(runs 5 and 6, all nine levels) have all been played.
 
 | | Strategy 1: match as you go | Strategy 2: sweep, then match | Strategy 3: sweep into one map |
 | --- | --- | --- | --- |
 | Flips | One unseen tile, then its known partner or another unseen tile | Tiles in reading order, two at a time, matching known pairs as they appear | Every tile in reading order, two at a time, with no matching until the whole board is mapped |
 | Looks | After every flip | After every pair of flips | After every pair, then one complete map |
-| Mismatches | Only first sightings; 44 of 118 on the full run | About half the tiles minus lucky pairs; 45 of 75 on levels 1 to 7 (run 3), 75 of 118 on all nine (run 4) | Same as Strategy 2, plus the forced last pair; 66 of 118 (run 5) |
+| Mismatches | Only first sightings; 44 of 118 on the full run | About half the tiles minus lucky pairs; 45 of 75 on levels 1 to 7 (run 3), 75 of 118 on all nine (run 4) | Same as Strategy 2, plus the forced last pair; 66 of 118 (run 5), 73 of 119 (run 6) |
 | Agent round trips | About one per one or two flips | Three to four per level; about 30 for run 4 | Two to four per level; about 30 for run 5 |
 
 ### Strategy 1: match as you go
@@ -227,6 +256,14 @@ Run 5 played it as written, on all nine levels:
 Strategy 3 is as cheap as Strategy 2 and reads look-alikes more safely. A
 sensible blend is Strategy 3 with the last pair taken by elimination.
 
+Run 6 played it again on all nine levels (73 of 119, tightest level 9 at
+18 of 24 including two lost to a dropped batch). No matching flip missed.
+Look-alikes came up on levels 4, 8, and 9: two white horned monsters (one
+long-haired, one a furry ram), a white grinning monster, and two green
+monsters. They were settled by cropping the saved zoom images of each
+candidate tile side by side with a short Python script before matching,
+and once (level 8) by elimination when no other partner was left.
+
 ### Agent usage by strategy
 
 Token totals for each agent-played run, measured from the session
@@ -289,7 +326,14 @@ are ignored. See the pause rule under Driving it in BlueStacks.
 - When an unseen tile turns out to pair with a known tile but was flipped as
   the second tile of a mismatch, it flips back; spend the next two flips on
   that known pair right away, while its position is fresh.
-- Clicks wait for a pause while the player types elsewhere; that only slows
-  the run, it does not break it.
+- Clicks wait for a pause while the player types elsewhere; usually that
+  only slows the run. If the wait runs out, the batch stops at that click
+  and returns no images at all, and they are not saved under
+  `tool-results` either. A sweep batch that stops this way loses the faces
+  it flipped (run 6, level 9: two mismatches spent for nothing). Take a
+  fresh zoom, then sweep those tiles again.
+- Zoom images are saved under the session's `tool-results` folder. To
+  compare look-alikes, crop each candidate tile from its saved zoom and
+  paste the crops side by side in one image.
 - If the Mac locks, clicks are refused but the board waits. Take a fresh
   screenshot after unlock to confirm it is unchanged before continuing.
