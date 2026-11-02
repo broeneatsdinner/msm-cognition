@@ -73,22 +73,36 @@ screenshot (every number, Dipster, and rock). A guess by eye or a misread
 number costs a token. The only exception is the first tile of a new level.
 
 1. Open the center tile first. Its number covers the most neighbors.
-2. After every reveal, run the solver with every revealed tile:
+2. After every reveal, run the solver with every revealed tile and every rock
+   still standing:
 
     ```bash
-    python3 scripts/dipster_solver.py --size 5 --dipsters 7 "2,2=2" "0,3=D"
+    python3 scripts/dipster_solver.py --size 5 --dipsters 7 --rock 0,1 --rock 0,0=2 "2,2=2" "0,3=D"
     ```
 
-    It counts the layouts that fit every number and prints each hidden tile's
-    chance of holding a Dipster. For a board that is not square, pass
-    `--rows 6 --columns 5` instead of `--size`.
-3. Reveal the tile with the highest chance. Among ties, pick the one whose
-   number would tell the most about other hidden tiles (it touches more of
-   them).
-4. When the solver shows `1.00`, reveal those tiles directly.
-5. Rock tiles cost two tokens (dig, then reveal). Compare a rock tile's
-   chance divided by two with the best plain tile's chance, and take the
-   better value per token. The solver treats rocks as ordinary hidden tiles.
+    - For a board that is not square, pass `--rows 6 --columns 5` instead of
+      `--size`.
+    - `--rock ROW,COLUMN=DIGS` gives the digs a rock still needs before a
+      further dig reveals the tile: 1 for a small pile (the default), 2 for a
+      boulder. After a dig that only shrinks a rock, lower its count; once the
+      rock is gone, drop the flag.
+3. Dig the tile on the solver's `Next dig:` line. The solver prints each
+   hidden tile's chance of holding a Dipster, then picks the dig:
+    - When at most 200 layouts fit (`--lookahead-limit` changes this), it
+      plans ahead over every layout and picks the dig with the lowest
+      expected tokens to finish the level, counting rock digs. It may pick a
+      safe tile whose number splits the layouts over a likely Dipster: a
+      Dipster it is sure of can wait until the end, since digging it teaches
+      nothing.
+    - Above that, it picks the best chance per token, and among ties the
+      tile touching the most undecided tiles.
+4. `Certain Dipsters:` lists tiles at `1.00`. Dig them whenever convenient;
+   the order does not change the cost.
+
+The plan lowers the average, not every game. At level 6's `6/7` (one
+Dipster among 10 tiles, 3 of them rocks) it expects 3.5 tokens to finish, but
+on the real board, with the Dipster under the boulder, its route costs 7; the
+route played by hand cost 6.
 
 Level 2 shows the payoff: 12 tokens for 7 Dipsters, with only 5 tokens spent
 on empty tiles.

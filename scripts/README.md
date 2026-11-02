@@ -27,11 +27,11 @@ dipster_solver.py
 ```
 
 Prints each hidden tile's chance of holding a Dipster in the Dipster minigame,
-given the revealed numbers and found Dipsters. See
-`reference/minigames/dipster-minigame.md`.
+given the revealed numbers, found Dipsters, and rocks, and suggests the next
+dig. See `reference/minigames/dipster-minigame.md`.
 
 ```bash
-python3 scripts/dipster_solver.py --size 5 --dipsters 7 "2,2=2" "0,3=D"
+python3 scripts/dipster_solver.py --size 5 --dipsters 7 --rock 0,1 "2,2=2" "0,3=D"
 ```
 
 ```text
