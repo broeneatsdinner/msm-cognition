@@ -57,7 +57,7 @@ A token reward can extend a run, so keep the token count in view.
 | 4 | 5x5 | 7 | Rocks on r1 c0 to r3 c0 | 14 | Waxen La |
 | 5 | 5x5 | 7 | Rocks on r0 c1 and r0 c4 | 15 | Re and a sticker pack |
 | 6 | 6 rows x 5 columns | 7 | Boulder on r0 c0, rocks on r1 c0 and r5 c0 | 17 | Re and 3 sticker packs |
-| 7 | 6 rows x 5 columns | 7 | Boulder near the top corner, rocks on the left | 0 so far | Not started |
+| 7 | 6 rows x 5 columns | 7 | Boulder on r1 c0, rocks on r1 c1 and r5 c1 | 7 so far (2/7) | In progress |
 
 Possible prizes listed on the TOP PRIZES `i` panel: Superno-Fa, Dipsters
 (Royal), Dipsters (Elemental), Zworaffe (Decoration), Dipsters (Tonal),
@@ -109,9 +109,17 @@ on empty tiles.
 
 ## Current progress
 
-As of 2026-11-01: level 7, `0/7` found, tokens 2. Nothing dug yet. Rows and
-columns count from the top corner of the diamond (row runs down-left, column
-runs down-right).
+As of 2026-11-01: level 7, `2/7` found, tokens 0. Rows and columns count
+from the top corner of the diamond (row runs down-left, column runs
+down-right). Resume with:
+
+```bash
+python3 scripts/dipster_solver.py --rows 6 --columns 5 --dipsters 7 --rock 1,0=2 --rock 1,1 --rock 5,1 "3,2=1" "1,2=2" "1,3=2" "0,2=2" "0,3=D" "0,1=1" "2,4=D"
+```
+
+- The rock on r1 c1 is a certain Dipster (2 tokens: clear, then reveal).
+- r0 c0, r1 c0 (the boulder), r0 c4, r1 c4 and r2 c1 to r2 c3 are clear.
+- r2 c4 was a 1-in-3 guess with the last token, at the player's request.
 
 ## Evidence
 
