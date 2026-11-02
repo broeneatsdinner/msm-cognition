@@ -19,9 +19,10 @@ From the level 3 tutorial (Alcordion):
 
 - Rocks are obstacles that take multiple digs to clear; the bigger the rock,
   the more digs. Once a rock is cleared, digging continues as normal.
-- Observed: every rock so far cleared with one dig (one token), so a rock
-  tile costs two tokens in total: one to clear, one to reveal. Rocks can hide
-  Dipsters (levels 3 and 4 each had one under a rock).
+- Observed: small rock piles clear with one dig, so they cost two tokens in
+  total (one to clear, one to reveal). The big boulder on level 6 r0 c0 took
+  two digs to clear, so three tokens in total. Rocks can hide Dipsters
+  (levels 3 to 6 each had one under a rock).
 
 Observed behavior:
 
@@ -36,9 +37,12 @@ Observed behavior:
   tap to continue), then a NEXT LEVEL button.
 - Board progress was unchanged when play resumed later the same day.
 - The game sometimes reveals a number on its own when a Dipster is found
-  (level 3 showed r3 c0 and r2 c1 without a token being spent).
+  (level 3 showed r3 c0 and r2 c1 without a token being spent). On level 6 it
+  also revealed a Dipster on its own (r4 c4), so after any surprise jump in
+  the found count, re-read the whole board before the next solver run.
 
-Rewards seen for revealing a Dipster: `+7,800` food, `+750,000` coins,
+Rewards seen for revealing a Dipster: `+7,800` or `+9,000` food,
+`+750,000` or `+850,000` coins,
 `+750,000` XP, about `+150,000` XP, sticker packs, `+5` minigame tokens
 (token icon), and `+5` with a blue star icon (not tokens; not yet identified).
 A token reward can extend a run, so keep the token count in view.
@@ -50,7 +54,10 @@ A token reward can extend a run, so keep the token count in view.
 | 1 | 4x4 | 3 | None | 8 | Mi (Tonal Dipster) and a sticker pack |
 | 2 | 5x5 | 7 | None | 12 | Terrene Sol and a sticker pack |
 | 3 | 5x5 | 7 | Rocks on r4 c3 and r4 c4 | 16 | Re (Tonal Dipster) |
-| 4 | 5x5 | 7 | Rocks on r1 c0 to r3 c0 | 13 so far, 6/7 | Not finished |
+| 4 | 5x5 | 7 | Rocks on r1 c0 to r3 c0 | 14 | Waxen La |
+| 5 | 5x5 | 7 | Rocks on r0 c1 and r0 c4 | 15 | Re and a sticker pack |
+| 6 | 6 rows x 5 columns | 7 | Boulder on r0 c0, rocks on r1 c0 and r5 c0 | 17 | Re and 3 sticker packs |
+| 7 | 6 rows x 5 columns | 7 | Boulder near the top corner, rocks on the left | 0 so far | Not started |
 
 Possible prizes listed on the TOP PRIZES `i` panel: Superno-Fa, Dipsters
 (Royal), Dipsters (Elemental), Zworaffe (Decoration), Dipsters (Tonal),
@@ -73,7 +80,8 @@ number costs a token. The only exception is the first tile of a new level.
     ```
 
     It counts the layouts that fit every number and prints each hidden tile's
-    chance of holding a Dipster.
+    chance of holding a Dipster. For a board that is not square, pass
+    `--rows 6 --columns 5` instead of `--size`.
 3. Reveal the tile with the highest chance. Among ties, pick the one whose
    number would tell the most about other hidden tiles (it touches more of
    them).
@@ -87,29 +95,9 @@ on empty tiles.
 
 ## Current progress
 
-As of 2026-10-29: level 4, `6/7` found, tokens 0. The last Dipster is
-certainly on r1 c0.
-
-Board, rows and columns counted from the top corner of the diamond (row runs
-down-left, column runs down-right).
-
-| | c0 | c1 | c2 | c3 | c4 |
-| --- | --- | --- | --- | --- | --- |
-| r0 | 1 | 0.00 | 1 | 0.00 | 0.00 |
-| r1 | 1.00, maybe rock | 0.00 | 0.00 | Dipster | 0.00 |
-| r2 | 0.00 rock | 0.00 | 2 | 0.00 | 1 |
-| r3 | Dipster | 4 | Dipster | 0.00 | 0.00 |
-| r4 | Dipster | Dipster | 3 | Dipster | 0.00 |
-
-Solver input to confirm:
-
-```bash
-python3 scripts/dipster_solver.py --size 5 --dipsters 7 "2,2=2" "2,4=1" "0,2=1" "4,2=3" "4,1=D" "4,3=D" "3,1=4" "3,2=D" "4,0=D" "1,3=D" "3,0=D" "0,0=1"
-```
-
-Next move: tap r1 c0. If a rock still covers it, the first tap clears the
-rock and a second tap reveals the Dipster. Screenshot first to confirm the
-board still matches.
+As of 2026-11-01: level 7, `0/7` found, tokens 2. Nothing dug yet. Rows and
+columns count from the top corner of the diamond (row runs down-left, column
+runs down-right).
 
 ## Evidence
 
@@ -135,10 +123,14 @@ Screenshots in `training/screenshots/`:
 - Tile centers in the 1456x831 frame:
     - 4x4 board: `x = 915 + 100 * (c - r)`, `y = 331 + 49 * (r + c)`.
     - 5x5 board: `x = 795 + 80 * (c - r)`, `y = 268 + 39.8 * (r + c + 1)`.
+    - 6-row x 5-column board: `x = 860 + 71.3 * (c - r)`,
+      `y = 251 + 35.35 * (r + c + 1)`.
     - Re-derive from the board's four corners if the layout changes.
 - The full-size `app_screenshot` frame can differ from the scaled one (one
   session returned a 1728x986 frame, then 1456x831). Read the frame size
   reported with each screenshot and re-derive tile centers if it changed.
+- Tap through sticker packs one tap per call: taps sent while a pack is
+  still animating are dropped.
 - Tutorial dialogs advance with the green arrow at about (1240, 765).
 - INFO (bottom right) shows the rules; EXIT leaves the minigame. On the
   sticker screen, SKIP and SKIP ALL replace those buttons.
