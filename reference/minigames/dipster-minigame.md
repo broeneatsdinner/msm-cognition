@@ -24,6 +24,23 @@ From the level 3 tutorial (Alcordion):
   two digs to clear, so three tokens in total. Rocks can hide Dipsters
   (levels 3 to 6 each had one under a rock).
 
+From the level 11 tutorial (Alcordion), on first digging part of one:
+
+- Some Dipsters are BIG and take up more than one grid square. Dig every
+  square to reveal it and collect its discovery reward.
+- Observed on level 11: the big Dipster was 3x3 (r0 to r2, c2 to c4, with
+  a boulder on r2 c2 and a rock on r1 c4 inside it). Each dug square shows a
+  dirt mound with a yellow flag, and the found count only rises when the last
+  square is dug. Each square costs a token, so this one cost 12 tokens
+  (9 squares plus 3 rock digs) for one Dipster.
+- Numbers count a big Dipster once, however many of its squares touch the
+  tile. Level 11 settled this: if each square counted, the 3x2 already dug
+  would have been the whole Dipster, and r4 c3 read 2 where "not counted at
+  all" required a Dipster there. r0 c1 = 2 fit as well.
+- `scripts/dipster_solver.py` does not model big Dipsters. Level 11 was
+  played with a throwaway brute force that tried every rectangle covering
+  the flagged squares; the dug squares grew 1, 2, 2x2, 3x2, then 3x3.
+
 Observed behavior:
 
 - A revealed empty tile shows a number: how many Dipsters are in its 8
@@ -47,6 +64,9 @@ Observed behavior:
 - On level 10 the dig on r1 c2 revealed r2 c2 and also removed the rocks on
   r0 c2 and r1 c3 with no token spent. Why is not known, so re-read the rocks
   as well after any surprise reveal.
+- Free numbers kept coming on 2026-11-08: level 10's dig on r3 c3 (a
+  Dipster) also showed r2 c3 and r3 c4, and level 12's dig on r3 c0 (a
+  number) also showed r5 c2. So a free reveal can follow an empty dig too.
 
 Rewards seen for revealing a Dipster: `+7,800` or `+9,000` food,
 `+1,100` purple crystals (the last Dipster of level 7),
@@ -68,7 +88,10 @@ A token reward can extend a run, so keep the token count in view.
 | 7 | 6 rows x 5 columns | 7 | Boulder on r1 c0, rocks on r1 c1 and r5 c1 | 17 | Mi |
 | 8 | 6 rows x 5 columns | 7 | Boulder on r0 c0, rocks on r2 c2 and r3 c0 | 10 | Fa and 2 sticker packs |
 | 9 | 6 rows x 5 columns | 8 | Boulder on r0 c3, rocks on r1 c2, r3 c0, r4 c4 and r5 c3 | 13 | Terrene Sol and 2 sticker packs |
-| 10 | 6 rows x 5 columns | 8 | Boulder on r2 c0, rocks on r0 c2, r1 c3, r1 c4 and r5 c4 | 2 so far (2/8) | In progress |
+| 10 | 6 rows x 5 columns | 8 | Boulder on r2 c0, rocks on r0 c2, r1 c3, r1 c4 and r5 c4 | 17 | Re and 3 sticker packs |
+| 11 | 6 rows x 5 columns | 7, one of them a 3x3 big Dipster | Boulder on r2 c2, rocks on r1 c0, r1 c4, r4 c3 and r5 c4 | 27 | Superno-Fa and 4 sticker packs |
+| 12 | 6 rows x 5 columns | 8 | Boulders on r0 c4 and r1 c3, rocks on r1 c4, r3 c1, r3 c3 and r5 c3 | 21 | Sol and a sticker pack |
+| 13 | 6 rows x 5 columns | 8 | Boulders on r4 c1 and r5 c3, rocks on r1 c3, r2 c0, r3 c0 and r4 c4 | 2 so far (0/8) | In progress |
 
 Possible prizes listed on the TOP PRIZES `i` panel: Superno-Fa, Dipsters
 (Royal), Dipsters (Elemental), Zworaffe (Decoration), Dipsters (Tonal),
@@ -120,18 +143,21 @@ on empty tiles.
 
 ## Current progress
 
-As of 2026-11-04: level 10, `2/8` found, tokens 0. Rows and columns count
-from the top corner of the diamond (row runs down-left, column runs
-down-right). Resume with:
+As of 2026-11-08: level 13, `0/8` found, tokens 0, event timer `18h 22m`.
+Rows and columns count from the top corner of the diamond (row runs
+down-left, column runs down-right). Resume with:
 
 ```bash
-python3 scripts/dipster_solver.py --rows 6 --columns 5 --dipsters 8 --rock 2,0=2 --rock 1,4 --rock 5,4 "1,1=3" "1,2=D" "2,2=D"
+python3 scripts/dipster_solver.py --rows 6 --columns 5 --dipsters 8 --rock 2,0 --rock 3,0 --rock 1,3 --rock 4,4 --rock 4,1=2 --rock 5,3=2 "2,2=2" "4,2=5"
 ```
 
-- The boulder on r2 c0 and the rocks on r1 c4 and r5 c4 still stand. The
-  rocks on r0 c2 and r1 c3 are gone, but those tiles are still hidden.
-- The 35 tokens of 2026-11-04 found 22 Dipsters: the last 5 of level 7, all
-  of levels 8 and 9, and 2 on level 10. Rock digs took 2 of the 35.
+- Its next pick is r4 c3 (chance 0.68). If a flagged dirt mound appears,
+  the level has a big Dipster and the solver no longer applies.
+- The 65 tokens of 2026-11-08 found 21 Dipsters (one of them big): the last
+  6 of level 10, all of levels 11 and 12, and none yet on level 13. Rock
+  digs took 11 of the 65.
+- History: the 35 tokens of 2026-11-04 found 22 Dipsters: the last 5 of
+  level 7, all of levels 8 and 9, and 2 on level 10.
 
 ## Evidence
 
@@ -158,18 +184,26 @@ Screenshots in `training/screenshots/`:
     - 4x4 board: `x = 915 + 100 * (c - r)`, `y = 331 + 49 * (r + c)`.
     - 5x5 board: `x = 795 + 80 * (c - r)`, `y = 268 + 39.8 * (r + c + 1)`.
     - 6-row x 5-column board: `x = 860 + 71.3 * (c - r)`,
-      `y = 251 + 35.35 * (r + c + 1)`. Levels 6 to 10 all use it.
+      `y = 251 + 35.35 * (r + c + 1)`. Levels 6 to 13 all use it.
     - Re-derive from the board's four corners if the layout changes.
-- The full-size `app_screenshot` frame can differ from the scaled one (one
-  session returned a 1728x986 frame, then 1456x831). Read the frame size
-  reported with each screenshot and re-derive tile centers if it changed.
+    - Check both terms before tapping: on 2026-11-08 a slip in the `y` term
+      put a tap on the corner shared by four tiles, and the game dug r0 c1
+      instead of r1 c1 (one token, still read as a normal reveal).
+- The full-size `app_screenshot` frame can differ from the scaled one (two
+  sessions returned a 1728x986 frame first, then 1456x831 after the first
+  scaled screenshot). Read the frame size reported with each screenshot and
+  re-derive tile centers if it changed. In the 1728x986 frame the 6x5 board
+  is `x = 1020.7 + 84.6 * (c - r)`, `y = 297.9 + 41.95 * (r + c + 1)`.
 - Tap through sticker packs one tap per call: taps sent while a pack is
   still animating are dropped. SKIP ALL at about (60, 780) clears the rest in
   one tap, but its stickers are not shown, so whether they were granted was
   not checked.
 - A tap sent straight after a Dipster's reveal can be dropped too (a rock on
   level 7, no token lost). Check the token count before assuming a dig landed.
-- Tutorial dialogs advance with the green arrow at about (1240, 765).
+- Tutorial dialogs advance with the green arrow at about (1240, 765). A tap
+  while the text is still typing out only finishes the line. After the last
+  line the arrow is gone and the same spot is INFO, which opens "How it
+  works"; close it with the red X at about (1362, 88).
 - INFO (bottom right) shows the rules; EXIT leaves the minigame. On the
   sticker screen, SKIP and SKIP ALL replace those buttons.
 - Getting there: on 2026-10-29 the game reloaded and opened straight onto this
