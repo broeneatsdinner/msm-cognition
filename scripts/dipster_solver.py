@@ -10,12 +10,36 @@ from fractions import Fraction
 
 
 Tile = tuple[int, int]
+Shape = tuple[int, int]
+
+# Tile values besides a number: a found single Dipster, a flagged dirt mound
+# (a dug square of a big Dipster not yet complete), and a square of a big
+# Dipster already found.
+DIPSTER, MOUND, BIG = "D", "M", "B"
+
+# Big Dipster shapes tried when none is given: every rectangle up to 3x3.
+ANY_SHAPES: tuple[Shape, ...] = ((1, 2), (2, 1), (1, 3), (3, 1), (2, 2), (2, 3), (3, 2), (3, 3))
 
 
 def parse_tile(text: str) -> tuple[Tile, str]:
     position, value = text.split("=")
     row, column = (int(part) for part in position.split(","))
     return (row, column), value.strip().upper()
+
+
+def parse_shapes(text: str) -> list[Shape]:
+    """Parse "any" or a comma list of ROWSxCOLUMNS shapes, such as "2x2,3x3"."""
+    if text.strip().lower() == "any":
+        return list(ANY_SHAPES)
+    shapes = []
+    for part in text.split(","):
+        rows, _, columns = part.strip().lower().partition("x")
+        if not (rows.isdigit() and columns.isdigit()):
+            raise ValueError(
+                f"--big {text}: shapes look like 3x3; a bare --big must not come right before a tile"
+            )
+        shapes.append((int(rows), int(columns)))
+    return shapes
 
 
 def parse_rock(text: str) -> tuple[Tile, int]:
@@ -43,17 +67,20 @@ def tile_name(tile: Tile) -> str:
 class Board:
     rows: int
     columns: int
+    # Every Dipster on the board, big ones included, as the found bar counts them.
     dipsters: int
     known: dict[Tile, str] = field(default_factory=dict)
     # Digs a rock tile still needs before a further dig reveals it.
     rocks: dict[Tile, int] = field(default_factory=dict)
+    # One entry per big Dipster: the shapes it may have.
+    bigs: list[list[Shape]] = field(default_factory=list)
 
     def __post_init__(self) -> None:
         for tile, value in self.known.items():
             if not self.on_board(tile):
                 raise ValueError(f"{tile_name(tile)} is off the board")
-            if value != "D" and not (value.isdigit() and int(value) <= 8):
-                raise ValueError(f"{tile_name(tile)}={value} is not a number or D")
+            if value not in (DIPSTER, MOUND, BIG) and not (value.isdigit() and int(value) <= 8):
+                raise ValueError(f"{tile_name(tile)}={value} is not a number, D, M or B")
         for tile, digs in self.rocks.items():
             if not self.on_board(tile):
                 raise ValueError(f"rock {tile_name(tile)} is off the board")
@@ -61,6 +88,14 @@ class Board:
                 raise ValueError(f"rock {tile_name(tile)} is also listed as revealed")
             if digs < 0:
                 raise ValueError(f"rock {tile_name(tile)} needs a dig count of 0 or more")
+        if len(self.bigs) > self.dipsters:
+            raise ValueError("more big Dipsters than Dipsters")
+        for shapes in self.bigs:
+            if not shapes:
+                raise ValueError("a big Dipster needs at least one shape")
+            for height, width in shapes:
+                if height < 1 or width < 1 or height * width < 2:
+                    raise ValueError(f"{height}x{width} is not a big Dipster shape")
 
     def on_board(self, tile: Tile) -> bool:
         return 0 <= tile[0] < self.rows and 0 <= tile[1] < self.columns
@@ -70,11 +105,12 @@ class Board:
 
     @property
     def found(self) -> set[Tile]:
-        return {tile for tile, value in self.known.items() if value == "D"}
+        """Found single Dipsters."""
+        return {tile for tile, value in self.known.items() if value == DIPSTER}
 
     @property
     def numbers(self) -> dict[Tile, int]:
-        return {tile: int(value) for tile, value in self.known.items() if value != "D"}
+        return {tile: int(value) for tile, value in self.known.items() if value.isdigit()}
 
     @property
     def hidden(self) -> list[Tile]:
@@ -197,8 +233,112 @@ def _convolve(left: dict[int, int], right: dict[int, int]) -> dict[int, int]:
     return result
 
 
+def _placements(board: Board, shapes: list[Shape]) -> list[frozenset[Tile]]:
+    """Every spot a big Dipster of one of these shapes could fill on the board.
+
+    It cannot cover a number or a single Dipster. A spot with any B square is
+    a found big Dipster, so all its squares must be B. Otherwise it must still
+    have an undug square: were all its squares mounds, it would be found.
+    """
+    result = []
+    for height, width in dict.fromkeys(shapes):
+        for top in range(board.rows - height + 1):
+            for left in range(board.columns - width + 1):
+                squares = frozenset(
+                    (top + row, left + column) for row in range(height) for column in range(width)
+                )
+                marks = [board.known.get(tile) for tile in squares]
+                if any(mark not in (None, MOUND, BIG) for mark in marks):
+                    continue
+                if BIG in marks:
+                    if all(mark == BIG for mark in marks):
+                        result.append(squares)
+                elif None in marks:
+                    result.append(squares)
+    return result
+
+
+def _big_combos(board: Board) -> list[tuple[frozenset[Tile], ...]]:
+    """Every way to place all the big Dipsters, apart from each other, covering every M and B."""
+    options = [_placements(board, shapes) for shapes in board.bigs]
+    marked = {tile for tile, value in board.known.items() if value in (MOUND, BIG)}
+    seen: set[frozenset[frozenset[Tile]]] = set()
+    result = []
+
+    def extend(index: int, picked: list[frozenset[Tile]], used: frozenset[Tile]) -> None:
+        if index == len(options):
+            key = frozenset(picked)
+            if marked <= used and key not in seen:
+                seen.add(key)
+                result.append(tuple(picked))
+            return
+        for squares in options[index]:
+            if not squares & used:
+                extend(index + 1, picked + [squares], used | squares)
+
+    extend(0, [], frozenset())
+    return result
+
+
+def _singles_board(board: Board, combo: tuple[frozenset[Tile], ...]) -> Board | None:
+    """The board left for the single Dipsters once the big ones sit at these spots.
+
+    A number counts a big Dipster once however many of its squares it
+    touches, so each number drops by the big Dipsters next to it. Their
+    squares are blocked as B.
+    """
+    singles = board.dipsters - len(combo)
+    if singles < 0:
+        return None
+    squares = frozenset().union(*combo)
+    known: dict[Tile, str] = {}
+    for tile, value in board.known.items():
+        if value == DIPSTER:
+            known[tile] = value
+        elif value.isdigit():
+            around = board.neighbors(tile)
+            left = int(value) - sum(1 for big in combo if any(other in big for other in around))
+            if left < 0:
+                return None
+            known[tile] = str(left)
+    for tile in squares:
+        known[tile] = BIG
+    rocks = {tile: digs for tile, digs in board.rocks.items() if tile not in squares}
+    return Board(board.rows, board.columns, singles, known, rocks)
+
+
 def solve(board: Board) -> Solution:
     """Count every Dipster layout that fits the board, and how many put one on each tile.
+
+    A tile's hits count a single Dipster or an undug square of a big one. With
+    big Dipsters, each way to place them is solved for the singles in turn,
+    and every fitting layout counts once.
+    """
+    if not board.bigs:
+        return _solve_singles(board)
+    layout_count = 0
+    hits = {tile: 0 for tile in board.hidden}
+    for combo in _big_combos(board):
+        singles_board = _singles_board(board, combo)
+        if singles_board is None:
+            continue
+        solution = _solve_singles(singles_board)
+        if not solution.layouts:
+            continue
+        layout_count += solution.layouts
+        for tile, tile_hits in solution.hits.items():
+            hits[tile] += tile_hits
+        for squares in combo:
+            for tile in squares:
+                if tile in hits:
+                    hits[tile] += solution.layouts
+    if not layout_count:
+        return Solution(0, {})
+    return Solution(layout_count, hits)
+
+
+def _solve_singles(board: Board) -> Solution:
+    """Count the layouts of single Dipsters only.
 
     Only tiles next to a revealed number are enumerated, group by group; tiles
     no number touches are counted with binomials, so large boards stay fast.
@@ -252,8 +392,61 @@ def solve(board: Board) -> Solution:
     return Solution(layout_count, result)
 
 
-def layouts(board: Board) -> list[frozenset[Tile]]:
-    """List every layout that fits the board, as the set of its hidden Dipster tiles."""
+@dataclass(frozen=True)
+class Layout:
+    """One way the hidden Dipsters could lie.
+
+    `tiles` holds every hidden tile with a Dipster on it: single Dipsters and
+    the undug squares of big ones. `bigs` holds every square of each big
+    Dipster, dug or not.
+    """
+
+    tiles: frozenset[Tile]
+    bigs: tuple[frozenset[Tile], ...] = ()
+
+    def __contains__(self, tile: object) -> bool:
+        return tile in self.tiles
+
+    def __iter__(self):
+        return iter(self.tiles)
+
+    def __len__(self) -> int:
+        return len(self.tiles)
+
+    def __sub__(self, other: frozenset[Tile]) -> frozenset[Tile]:
+        return self.tiles - other
+
+    def shows(self, board: Board, tile: Tile) -> int:
+        """What digging the tile would show: -1 a single Dipster, -2 a big Dipster's square, else the number."""
+        if tile in self.tiles:
+            return -2 if any(tile in big for big in self.bigs) else -1
+        around = board.neighbors(tile)
+        singles = sum(
+            1
+            for other in around
+            if other in board.found
+            or (other in self.tiles and not any(other in big for big in self.bigs))
+        )
+        return singles + sum(1 for big in self.bigs if any(other in big for other in around))
+
+
+def layouts(board: Board) -> list[Layout]:
+    """List every layout that fits the board."""
+    if not board.bigs:
+        return [Layout(tiles) for tiles in _singles_layouts(board)]
+    result = []
+    hidden = set(board.hidden)
+    for combo in _big_combos(board):
+        singles_board = _singles_board(board, combo)
+        if singles_board is None:
+            continue
+        undug = frozenset(tile for squares in combo for tile in squares if tile in hidden)
+        for tiles in _singles_layouts(singles_board):
+            result.append(Layout(tiles | undug, combo))
+    return result
+
+
+def _singles_layouts(board: Board) -> list[frozenset[Tile]]:
     split = _split(board)
     if split is None:
         return []
@@ -287,24 +480,21 @@ def _combinations(tiles: list[Tile], count: int):
             yield [tiles[position], *rest]
 
 
-def plan(board: Board, layout_list: list[frozenset[Tile]]) -> tuple[Fraction, Tile | None]:
+def plan(board: Board, layout_list: list[Layout]) -> tuple[Fraction, Tile | None]:
     """Find the dig that keeps the expected token cost to finish the level lowest.
 
-    Each fitting layout is taken as equally likely. A dig either finds a
-    Dipster or shows a number, and each result narrows the layouts; once one
-    layout is left, its remaining Dipsters are dug at their known cost. Returns
-    the expected cost and the tile to dig, or no tile when one layout is left.
+    Each fitting layout is taken as equally likely. A dig finds a single
+    Dipster, finds a big Dipster's square (a flagged mound), or shows a number,
+    and each result narrows the layouts; once one layout is left, its remaining
+    Dipster squares are dug at their known cost. Returns the expected cost and
+    the tile to dig, or no tile when one layout is left.
     """
-    found = board.found
-    # For each tile, which layouts give each result: -1 for a Dipster, else the number shown.
+    # For each tile, which layouts give each result (see Layout.shows).
     splits: dict[Tile, dict[int, int]] = {}
     for tile in board.hidden:
-        around = board.neighbors(tile)
         masks: dict[int, int] = {}
         for index, layout in enumerate(layout_list):
-            result = -1 if tile in layout else sum(
-                1 for other in around if other in layout or other in found
-            )
+            result = layout.shows(board, tile)
             masks[result] = masks.get(result, 0) | (1 << index)
         if len(masks) > 1:
             splits[tile] = masks
@@ -312,7 +502,8 @@ def plan(board: Board, layout_list: list[frozenset[Tile]]) -> tuple[Fraction, Ti
     # Try likely Dipsters first so a good choice is found early and prunes the rest.
     order = sorted(
         splits,
-        key=lambda tile: -splits[tile].get(-1, 0).bit_count() / board.cost(tile),
+        key=lambda tile: -(splits[tile].get(-1, 0) | splits[tile].get(-2, 0)).bit_count()
+        / board.cost(tile),
     )
     memo: dict[int, tuple[int, Tile | None]] = {}
     floors: dict[int, int] = {}
@@ -354,12 +545,12 @@ def plan(board: Board, layout_list: list[frozenset[Tile]]) -> tuple[Fraction, Ti
             cost = board.cost(tile)
             # Tiles that split the layouts the same way, with the same part being a
             # Dipster, at the same cost are interchangeable.
-            signature = (cost, tuple(sorted((group, result == -1) for result, group in groups)))
+            signature = (cost, tuple(sorted((group, result < 0) for result, group in groups)))
             if signature in seen:
                 continue
             seen.add(signature)
             # Only a dig that shows a number is an extra cost.
-            total = cost * sum(group.bit_count() for result, group in groups if result != -1)
+            total = cost * sum(group.bit_count() for result, group in groups if result >= 0)
             if total + sum(floor(group) for _, group in groups) >= choice[0]:
                 continue
             for _, group in groups:
@@ -385,7 +576,8 @@ class Advice:
 
 
 def advise(board: Board, solution: Solution, lookahead_limit: int = 200) -> Advice:
-    if board.dipsters == len(board.found):
+    if not any(solution.hits.values()):
+        # No hidden tile holds a Dipster or an undug big Dipster square.
         return Advice([], None, Fraction(0), Fraction(0))
     hidden = board.hidden
     certain = [tile for tile in hidden if solution.hits[tile] == solution.layouts]
@@ -433,6 +625,19 @@ def main(argv: list[str] | None = None) -> int:
         ),
     )
     parser.add_argument(
+        "--big",
+        action="append",
+        default=[],
+        nargs="?",
+        const="any",
+        metavar="SHAPES",
+        help=(
+            "One big Dipster, counted in --dipsters, with its possible shapes as "
+            "ROWSxCOLUMNS, comma separated (default any: every rectangle up to 3x3). "
+            "Repeat for each big Dipster."
+        ),
+    )
+    parser.add_argument(
         "--lookahead-limit",
         type=int,
         default=200,
@@ -444,7 +649,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "tiles",
         nargs="*",
-        help="Revealed tiles as row,column=value, with value a number or D for a found Dipster",
+        help=(
+            "Revealed tiles as row,column=value: a number, D for a found Dipster, "
+            "M for a flagged mound (a dug square of an unfinished big Dipster), "
+            "or B for a square of a found big Dipster"
+        ),
     )
     args = parser.parse_args(argv)
     rows = args.rows or args.size
@@ -459,9 +668,12 @@ def main(argv: list[str] | None = None) -> int:
             args.dipsters,
             dict(parse_tile(text) for text in args.tiles),
             dict(parse_rock(text) for text in args.rock),
+            [parse_shapes(text) for text in args.big],
         )
     except ValueError as error:
         parser.error(str(error))
+    if not board.bigs and any(value in (MOUND, BIG) for value in board.known.values()):
+        parser.error("M and B tiles need --big")
 
     solution = solve(board)
     if not solution.layouts:

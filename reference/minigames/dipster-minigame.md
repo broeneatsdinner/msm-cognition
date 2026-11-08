@@ -37,9 +37,12 @@ From the level 11 tutorial (Alcordion), on first digging part of one:
   tile. Level 11 settled this: if each square counted, the 3x2 already dug
   would have been the whole Dipster, and r4 c3 read 2 where "not counted at
   all" required a Dipster there. r0 c1 = 2 fit as well.
-- `scripts/dipster_solver.py` does not model big Dipsters. Level 11 was
-  played with a throwaway brute force that tried every rectangle covering
-  the flagged squares; the dug squares grew 1, 2, 2x2, 3x2, then 3x3.
+- Level 11 was played with a throwaway brute force that tried every
+  rectangle covering the flagged squares; the dug squares grew 1, 2, 2x2,
+  3x2, then 3x3. The solver now models big Dipsters (`--big`, see
+  Strategy). Replayed on level 11, it knew the 3x3 as soon as the 3x2 was
+  dug, and once the big Dipster was found it marked r3 c3 as certainly
+  empty, so the 3 tokens spent on r3 c3 and the r4 c3 rock were not needed.
 
 Observed behavior:
 
@@ -120,6 +123,16 @@ number costs a token. The only exception is the first tile of a new level.
       further dig reveals the tile: 1 for a small pile (the default), 2 for a
       boulder. After a dig that only shrinks a rock, lower its count; once the
       rock is gone, drop the flag.
+    - Big Dipsters: add `--big` once per big Dipster, still counting each
+      one in `--dipsters`. With no value it tries every rectangle up to
+      3x3; `--big 3x3` or `--big 2x2,3x3` narrows the shapes. A bare
+      `--big` must be followed by another option, not a tile. Pass a
+      flagged mound as `ROW,COLUMN=M` and each square of a found big Dipster
+      as `=B`. If the solver answers "No layout fits", a bigger shape may be
+      in play: list it explicitly, for example `--big 2x4,4x2`.
+    - The chances then cover single Dipsters and undug big-Dipster squares
+      alike, and each way to place the big and single Dipsters counts as
+      equally likely.
 3. Dig the tile on the solver's `Next dig:` line. The solver prints each
    hidden tile's chance of holding a Dipster, then picks the dig:
     - When at most 200 layouts fit (`--lookahead-limit` changes this), it
@@ -152,7 +165,7 @@ python3 scripts/dipster_solver.py --rows 6 --columns 5 --dipsters 8 --rock 2,0 -
 ```
 
 - Its next pick is r4 c3 (chance 0.68). If a flagged dirt mound appears,
-  the level has a big Dipster and the solver no longer applies.
+  the level has a big Dipster: add `--big` and pass the mound as `=M`.
 - The 65 tokens of 2026-11-08 found 21 Dipsters (one of them big): the last
   6 of level 10, all of levels 11 and 12, and none yet on level 13. Rock
   digs took 11 of the 65.
