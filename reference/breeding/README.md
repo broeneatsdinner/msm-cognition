@@ -2,7 +2,7 @@
 
 [Kazilleon](#kazilleon)
 
-[Epic Fwog](#epic-fwog) · [Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Shrubb](#epic-shrubb)
+[Epic Fwog](#epic-fwog) · [Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Shrubb](#epic-shrubb) · [Epic Toe Jammer](#epic-toe-jammer)
 
 [Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Fwog](#rare-fwog) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Mammott](#rare-mammott) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Oaktopus](#rare-oaktopus) · [Rare Potbelly](#rare-potbelly) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Toe Jammer](#rare-toe-jammer) · [Rare Wubbox](#rare-wubbox)
 
@@ -498,6 +498,51 @@ Epic Shrubb - **Mirror Earth Island**<br>
 Enhanced Breeding Structure on all listed islands: **14h 15m**, without an island skin boost.
 Epic Shrubb must be available in a breeding promotion.
 Source: [Epic Shrubb recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_Shrubb).
+
+<a id="epic-toe-jammer"></a>
+
+Epic Toe Jammer - **Plant Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Entbrat + Oaktopus (3h)
+
+Epic Toe Jammer - **Cold Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Deedge + Quibble (3h)
+
+Epic Toe Jammer - **Air Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Riff + Maw (3h)
+
+Epic Toe Jammer - **Water Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Shellbeat + Fwog (3h)
+
+Epic Toe Jammer - **Fire Oasis**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sneyser + Pango (3h)
+
+Epic Toe Jammer - **Psychic Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Gloptic + Flowah (3h)
+
+Epic Toe Jammer - **Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plinkajou + Stogg (3h)
+
+Epic Toe Jammer - **Mirror Plant Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Entbrat + Oaktopus (3h)
+
+Epic Toe Jammer - **Mirror Cold Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Deedge + Quibble (3h)
+
+Epic Toe Jammer - **Mirror Air Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Riff + Maw (3h)
+
+Epic Toe Jammer - **Mirror Water Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Shellbeat + Fwog (3h)
+
+Epic Toe Jammer - **Mirror Psychic Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Gloptic + Flowah (3h)
+
+Epic Toe Jammer - **Mirror Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plinkajou + Stogg (3h)
+
+Enhanced Breeding Structure on all listed islands: **2h 15m**, without an island skin boost.
+Epic Toe Jammer must be available in a breeding promotion.
+Source: [Epic Toe Jammer recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_Toe_Jammer).
 
 <a id="kazilleon"></a>
 
