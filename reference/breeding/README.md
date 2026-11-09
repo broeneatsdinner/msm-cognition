@@ -2,7 +2,7 @@
 
 [Kazilleon](#kazilleon)
 
-[Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Shrubb](#epic-shrubb)
+[Epic Fwog](#epic-fwog) · [Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Shrubb](#epic-shrubb)
 
 [Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Fwog](#rare-fwog) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Mammott](#rare-mammott) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Oaktopus](#rare-oaktopus) · [Rare Potbelly](#rare-potbelly) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Toe Jammer](#rare-toe-jammer) · [Rare Wubbox](#rare-wubbox)
 
@@ -414,6 +414,36 @@ Rare Potbelly - **Mirror Earth Island**
 
 Rare Potbelly - **Mirror Psychic Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Tapricorn + Rooba (6h)
+
+<a id="epic-fwog"></a>
+
+Epic Fwog - **Plant Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Pummel + Furcorn (7h)
+
+Epic Fwog - **Air Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Scups + Pango (7h)
+
+Epic Fwog - **Water Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Oaktopus (7h)
+
+Epic Fwog - **Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Thrumble + Denchuhs (7h)
+
+Epic Fwog - **Mirror Plant Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Pummel + Furcorn (7h)
+
+Epic Fwog - **Mirror Air Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Scups + Pango (7h)
+
+Epic Fwog - **Mirror Water Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Reedling + Oaktopus (7h)
+
+Epic Fwog - **Mirror Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Thrumble + Denchuhs (7h)
+
+Enhanced Breeding Structure on all listed islands: **5h 15m**, without an island skin boost.
+Epic Fwog must be available in a breeding promotion.
+Source: [Epic Fwog recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_Fwog).
 
 <a id="epic-gjoob"></a>
 
