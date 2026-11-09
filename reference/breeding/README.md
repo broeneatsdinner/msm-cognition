@@ -2,7 +2,7 @@
 
 [Kazilleon](#kazilleon)
 
-[Epic Clackula](#epic-clackula) · [Epic Fwog](#epic-fwog) · [Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Shrubb](#epic-shrubb) · [Epic Toe Jammer](#epic-toe-jammer)
+[Epic Clackula](#epic-clackula) · [Epic Fwog](#epic-fwog) · [Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Kayna](#epic-kayna) · [Epic Shrubb](#epic-shrubb) · [Epic Toe Jammer](#epic-toe-jammer)
 
 [Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Fwog](#rare-fwog) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Mammott](#rare-mammott) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Oaktopus](#rare-oaktopus) · [Rare Potbelly](#rare-potbelly) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Toe Jammer](#rare-toe-jammer) · [Rare Wubbox](#rare-wubbox)
 
@@ -417,10 +417,16 @@ Rare Potbelly - **Mirror Psychic Island**
 
 <a id="epic-clackula"></a>
 
+Epic Clackula - **Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plinkajou + Denchuhs (20h 6m)
+
 Epic Clackula - **Magical Sanctum**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Enchantling + Osstax (20h 6m)
 
-Enhanced Breeding Structure: **15h 4m 30s**, without an island skin boost.
+Epic Clackula - **Mirror Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plinkajou + Denchuhs (20h 6m)
+
+Enhanced Breeding Structure on all listed islands: **15h 4m 30s**, without an island skin boost.
 Epic Clackula must be available in a breeding promotion.
 Observed 2026-11-09: two Enchantling + Osstax attempts on Magical Sanctum each
 showed a 20h breeding timer.
@@ -482,6 +488,45 @@ Epic Gnarl - **Mirror Bone Island**<br>
 Enhanced Breeding Structure on all listed islands: **1d 11h 15m**, without an island skin boost.
 Epic Gnarl must be available in a breeding promotion.
 Source: [Epic Gnarl recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_Gnarl).
+
+<a id="epic-kayna"></a>
+
+Epic Kayna - **Fire Haven**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tring + Stogg (15h)
+
+Epic Kayna - **Fire Oasis**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Sneyser + Phangler (15h)
+
+Epic Kayna - **Psychic Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Gloptic + Oaktopus (15h)
+
+Epic Kayna - **Faerie Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Pladdie + Drumpler (15h)
+
+Epic Kayna - **Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plinkajou + Fwog (15h)
+
+Epic Kayna - **Light Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Blow't + Furcorn (15h)
+
+Epic Kayna - **Mirror Psychic Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Gloptic + Oaktopus (15h)
+
+Epic Kayna - **Mirror Faerie Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Pladdie + Drumpler (15h)
+
+Epic Kayna - **Mirror Bone Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Plinkajou + Fwog (15h)
+
+Epic Kayna - **Mirror Light Island**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Blow't + Furcorn (15h)
+
+Enhanced Breeding Structure on all listed islands: **11h 15m**, without an island skin boost.
+Epic Kayna must be available in a breeding promotion. Failed attempts are
+weighted toward the Quad parent's egg, even when Epic Kayna is not offered.
+On Amber Island it comes only from evolving a Kayna or Rare Kayna in the
+enhanced Crucible.
+Source: [Epic Kayna recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_Kayna).
 
 <a id="epic-shrubb"></a>
 
