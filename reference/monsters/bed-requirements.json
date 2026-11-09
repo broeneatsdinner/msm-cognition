@@ -6,7 +6,8 @@
     "https://mysingingmonsters.fandom.com/wiki/Mythical_Monsters",
     "https://mysingingmonsters.fandom.com/wiki/Legendary_Monsters",
     "https://mysingingmonsters.fandom.com/wiki/Supernatural_Monsters",
-    "https://mysingingmonsters.fandom.com/wiki/Dipsters"
+    "https://mysingingmonsters.fandom.com/wiki/Dipsters",
+    "In-game Book of Monsters Stats tab, Magical Sanctum, 2026-11-09 (training/screenshots/2026-11-09-magical-sanctum-book-stats-*.jpg)"
   ],
   "class_defaults": {
     "dipster": 0,
@@ -71,6 +72,21 @@
     "Strombonin": 3,
     "Yawstrich": 3,
     "Anglow": 3,
-    "Hyehehe": 3
+    "Hyehehe": 3,
+    "Theremind": 1,
+    "Clackula": 1,
+    "Fluoress": 1,
+    "Floot Fly": 1,
+    "Xyster": 2,
+    "Cahoot": 2,
+    "Deja-Jin": 2,
+    "Roarick": 2,
+    "Osstax": 2,
+    "Knucklehead": 2,
+    "G'day": 3,
+    "Larvaluss": 3,
+    "Frondley": 3,
+    "Mushaboom": 3,
+    "Enchantling": 4
   }
 }

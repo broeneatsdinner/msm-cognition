@@ -1,66 +1,80 @@
 schema_version: 1
 island: Magical Sanctum
-observed_at: "2026-07-13"
+observed_at: "2026-11-09"
 
 evidence:
-  screenshot_directory: training/screenshots/inventory/magical-sanctum-2026-07-13
+  screenshot_directory: training/screenshots
+  castle:
+    - 2026-11-09-magical-sanctum-castle-bio.jpg
+    - 2026-11-09-magical-sanctum-castle-stats.jpg
   book:
-    - book-commons-8-of-22.png
-    - book-rares-0-of-15.png
-    - book-epics-0-of-4.png
+    - 2026-11-09-magical-sanctum-book-commons.jpg
+    - 2026-11-09-magical-sanctum-book-rares.jpg
+    - 2026-11-09-magical-sanctum-book-rare-mushaboom.jpg
+    - 2026-11-09-magical-sanctum-book-rare-knucklehead.jpg
+    - 2026-11-09-magical-sanctum-book-epics.jpg
   market:
-    - market-01-floot-fly-deja-jin-roarick.png
-    - market-02-osstax-gday-larvaluss.png
-    - market-03-mushaboom-enchantling-dipster-re.png
-    - market-04-dipsters-mi-fa-sol.png
-    - market-05-dipsters-la-ti-theremind.png
-    - market-06-clackula-fluoress-xyster.png
-    - market-07-cahoot-knucklehead-frondley.png
-    - market-08-knucklehead-frondley-dipster-do.png
-  overview:
-    - island-overview-01.png
+    - 2026-11-09-magical-sanctum-market-01-re-vitreous-ti-waxen-la.jpg
+    - 2026-11-09-magical-sanctum-market-02-waxen-la-terrene-sol-king-do.jpg
+    - 2026-11-09-magical-sanctum-market-03-king-do-queen-re-bishop-mi.jpg
+    - 2026-11-09-magical-sanctum-market-04-rare-epic-clackula.jpg
+    - 2026-11-09-magical-sanctum-market-05-theremind-clackula-fluoress.jpg
+    - 2026-11-09-magical-sanctum-market-06-floot-fly-xyster-cahoot.jpg
+    - 2026-11-09-magical-sanctum-market-07-deja-jin-roarick-osstax.jpg
+    - 2026-11-09-magical-sanctum-market-08-osstax-knucklehead-gday.jpg
+    - 2026-11-09-magical-sanctum-market-09-larvaluss-frondley-mushaboom.jpg
+    - 2026-11-09-magical-sanctum-market-10-enchantling-do-mi.jpg
+    - 2026-11-09-magical-sanctum-market-11-mi-fa-sol.jpg
+    - 2026-11-09-magical-sanctum-market-12-sol-la-ti.jpg
+    - 2026-11-09-magical-sanctum-market-13-la-ti-buyback.jpg
+
+castle:
+  name: Paradise Castle
+  confidence: high
+  observed_beds_occupied: 89
+  observed_beds_available: 90
 
 book:
   common:
-    discovered: 8
+    discovered: 22
     total: 22
-    seasonal: {discovered: 0, total: 1}
+    seasonal: {discovered: 1, total: 1}
     costumes: {discovered: 0, total: 46}
   rare:
-    discovered: 0
-    total: 15
+    discovered: 2
+    total: 18
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 0}
   epic:
     discovered: 0
-    total: 4
+    total: 9
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 0}
 
 monsters:
   # Commons
   - {name: Theremind, variant: common, class: magical, discovered: true, owned: 3}
-  - {name: Clackula, variant: common, class: magical, discovered: true, owned: 1}
-  - {name: Fluoress, variant: common, class: magical, discovered: true, owned: 7}
-  - {name: Floot Fly, variant: common, class: magical, discovered: false, owned: 0}
-  - {name: Xyster, variant: common, class: magical, discovered: true, owned: 1}
-  - {name: Cahoot, variant: common, class: magical, discovered: true, owned: 7}
-  - {name: Deja-Jin, display_name: Déjà-Jin, variant: common, class: magical, discovered: false, owned: 0}
-  - {name: Roarick, variant: common, class: magical, discovered: false, owned: 0}
-  - {name: Osstax, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: Clackula, variant: common, class: magical, discovered: true, owned: 2}
+  - {name: Fluoress, variant: common, class: magical, discovered: true, owned: 5}
+  - {name: Floot Fly, variant: common, class: magical, discovered: true, owned: 1}
+  - {name: Xyster, variant: common, class: magical, discovered: true, owned: 4}
+  - {name: Cahoot, variant: common, class: magical, discovered: true, owned: 5}
+  - {name: Deja-Jin, display_name: Déjà-Jin, variant: common, class: magical, discovered: true, owned: 1}
+  - {name: Roarick, variant: common, class: magical, discovered: true, owned: 1}
+  - {name: Osstax, variant: common, class: magical, discovered: true, owned: 2}
   - {name: Knucklehead, variant: common, class: magical, discovered: true, owned: 1}
-  - {name: "G'day", variant: common, class: magical, discovered: false, owned: 0}
-  - {name: Larvaluss, variant: common, class: magical, discovered: false, owned: 0}
-  - {name: Frondley, variant: common, class: magical, discovered: true, owned: 4}
-  - {name: Mushaboom, variant: common, class: magical, discovered: false, owned: 0}
-  - {name: Enchantling, variant: common, class: magical, discovered: false, owned: 0}
+  - {name: "G'day", variant: common, class: magical, discovered: true, owned: 1}
+  - {name: Larvaluss, variant: common, class: magical, discovered: true, owned: 1}
+  - {name: Frondley, variant: common, class: magical, discovered: true, owned: 8}
+  - {name: Mushaboom, variant: common, class: magical, discovered: true, owned: 2}
+  - {name: Enchantling, variant: common, class: magical, discovered: true, owned: 2}
   - {name: Do, variant: common, class: dipster, discovered: true, owned: 1}
-  - {name: Re, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: Mi, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: Fa, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: Sol, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: La, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: Ti, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Re, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Mi, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Fa, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Sol, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: La, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Ti, variant: common, class: dipster, discovered: true, owned: 1}
 
   # Rares
   - {name: Theremind, variant: rare, class: magical, discovered: false, owned: 0}
@@ -72,34 +86,38 @@ monsters:
   - {name: Deja-Jin, display_name: Rare Déjà-Jin, variant: rare, class: magical, discovered: false, owned: 0}
   - {name: Roarick, variant: rare, class: magical, discovered: false, owned: 0}
   - {name: Osstax, variant: rare, class: magical, discovered: false, owned: 0}
-  - {name: Knucklehead, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Knucklehead, variant: rare, class: magical, discovered: true, owned: 0}
   - {name: "G'day", variant: rare, class: magical, discovered: false, owned: 0}
   - {name: Larvaluss, variant: rare, class: magical, discovered: false, owned: 0}
   - {name: Frondley, variant: rare, class: magical, discovered: false, owned: 0}
-  - {name: Mushaboom, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Mushaboom, variant: rare, class: magical, discovered: true, owned: 0}
   - {name: Enchantling, variant: rare, class: magical, discovered: false, owned: 0}
+  - {name: Ti, display_name: Vitreous Ti, variant: rare, class: dipster, discovered: false, owned: 0}
+  - {name: Sol, display_name: Terrene Sol, variant: rare, class: dipster, discovered: false, owned: 0}
+  - {name: La, display_name: Waxen La, variant: rare, class: dipster, discovered: false, owned: 0}
 
   # Epics currently represented in the Book.
   - {name: Clackula, variant: epic, class: magical, discovered: false, owned: 0}
   - {name: Fluoress, variant: epic, class: magical, discovered: false, owned: 0}
   - {name: Floot Fly, variant: epic, class: magical, discovered: false, owned: 0}
   - {name: Knucklehead, variant: epic, class: magical, discovered: false, owned: 0}
+  - {name: Do, display_name: King Do, variant: epic, class: dipster, discovered: false, owned: 0}
+  - {name: Re, display_name: Queen Re, variant: epic, class: dipster, discovered: false, owned: 0}
+  - {name: Mi, display_name: Bishop Mi, variant: epic, class: dipster, discovered: false, owned: 0}
 
   # Seasonal slots are counted separately by the Book.
-  - {name: Carillong, variant: common, class: seasonal, discovered: false, owned: 0}
+  - {name: Carillong, variant: common, class: seasonal, discovered: true, owned: 0}
   - {name: Carillong, variant: rare, class: seasonal, discovered: false, owned: 0}
   - {name: Carillong, variant: epic, class: seasonal, discovered: false, owned: 0}
 
-pending:
-  - type: breeding
-    parents: [Frondley, Clackula]
-    displayed_time: 1d 6h
-    predicted_result: Frondley
-    confidence: high
-    counted_in_owned: false
+pending: []
 
 notes:
-  - The Book's 8/22 Common count is seven Magical species plus the Do Dipster.
-  - Xyster is housed in the Humble Hotel; the Market still reports one owned.
-  - A Theremind egg in the Nursery is not included in the owned count.
-  - The pending Frondley will raise the owned count from four to five only after placement.
+  - "Checked in BlueStacks on 2026-11-09: castle panel, every Market Monsters card, and all three Book pages. Owned counts come from the Market cards (screenshots listed under evidence)."
+  - The Book's 22/22 Commons are the fifteen Magical species plus the seven Dipsters. Seasonal 1/1 is Carillong; no Carillong Market card was offered, so its owned count stays 0.
+  - Rare Mushaboom and Rare Knucklehead are lit in the Book (named from their Book entries), but neither has a Market card, so their owned counts stay 0.
+  - "The Market offers Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La and Epic Dipsters King Do, Queen Re, and Bishop Mi here, each locked behind Prize wins with 0 owned. They account for the Rare total rising from 15 to 18 and three of the five new Epic slots (4 to 9); the other two Epic silhouettes are not yet named."
+  - Rare Clackula and Epic Clackula cards were on a timed offer (7h 12m left) with 0 owned.
+  - The July pending Frondley breeding and Nursery Theremind egg are long finished and were dropped; breeding and Nursery state were not rechecked.
+  - "Bed audit on 2026-11-09: Market counts account for 83 beds against the panel's 89, a delta of 6. Rare Mushaboom (3 beds) plus Rare Knucklehead (2) plus Carillong (1) would close it exactly, which suggests one of each is on the island without a Market card, but that is unconfirmed and their counts stay 0. Eggs or Hotel check-ins were not checked and could also move the figure."
+  - Magical bed sizes were read from each monster's Book Stats tab on 2026-11-09 and added to reference/monsters/bed-requirements.json.

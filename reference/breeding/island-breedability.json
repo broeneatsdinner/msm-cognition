@@ -80,11 +80,11 @@
       },
       "rare": {
         "breedable": ["Theremind", "Clackula", "Fluoress", "Floot Fly", "Xyster", "Cahoot", "Deja-Jin", "Roarick", "Osstax", "Knucklehead", "G'day", "Larvaluss", "Frondley", "Mushaboom", "Enchantling", "Carillong"],
-        "not_breedable": []
+        "not_breedable": ["Ti", "Sol", "La"]
       },
       "epic": {
         "breedable": ["Clackula", "Fluoress", "Floot Fly", "Knucklehead", "Carillong"],
-        "not_breedable": []
+        "not_breedable": ["Do", "Re", "Mi"]
       }
     }
   }

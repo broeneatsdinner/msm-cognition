@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import sys
 import unittest
 from pathlib import Path
@@ -137,7 +138,13 @@ class InventoryGeneratorTests(unittest.TestCase):
                     )
 
     def test_rare_single_pattern_reports_missing_path(self) -> None:
-        island = load_yaml(REPO_ROOT / "inventory/islands/magical-sanctum.yaml")
+        island = copy.deepcopy(
+            load_yaml(REPO_ROOT / "inventory/islands/magical-sanctum.yaml")
+        )
+        candidates = ["G'day", "Larvaluss", "Frondley"]
+        for monster in island["monsters"]:
+            if monster["variant"] == "common" and monster["name"] in candidates:
+                monster["owned"] = 1 if monster["name"] == "Frondley" else 0
         index = inventory_index(island)
         row = planner_row(
             index,
@@ -146,7 +153,7 @@ class InventoryGeneratorTests(unittest.TestCase):
                 "pattern": {
                     "kind": "two_distinct_triples",
                     "element": "Psychic",
-                    "candidates": ["G'day", "Larvaluss", "Frondley"],
+                    "candidates": candidates,
                 },
                 "time": "8h",
             },

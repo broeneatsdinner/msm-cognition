@@ -529,19 +529,21 @@ No recipes recorded yet.
 
 ## Magical Sanctum
 
-Observed: `2026-07-13`
+Observed: `2026-11-09`
 
 ### Castle
 
-None recorded.
+| Current castle | Confidence | Castle beds used | Beds capacity | Castle beds free | Checked-in beds | Total owned beds | Panel occupied | Panel capacity | Bed audit delta |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Paradise Castle | High | 83 | 90 | 7 | 0 | 83 | 89 | 90 | 6 |
 
 ### Summary
 
 | Variant | Book discovered | Unresolved Book IDs | Owned species | Owned monsters |
 | --- | --- | --- | --- | --- |
-| Common | 8/22 | — | 8 | 25 |
-| Rare | 0/15 | — | 0 | 0 |
-| Epic | 0/4 | — | 0 | 0 |
+| Common | 22/22 | — | 22 | 46 |
+| Rare | 2/18 | — | 0 | 0 |
+| Epic | 0/9 | — | 0 | 0 |
 
 ### Unresolved discoveries
 
@@ -552,27 +554,27 @@ None recorded.
 | Monster | Variant | Class | Breedable? | Discovered | Owned | Checked in | Confidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Theremind | Common | Magical | No | Yes | 3 | 0 | — |
-| Clackula | Common | Magical | No | Yes | 1 | 0 | — |
-| Fluoress | Common | Magical | No | Yes | 7 | 0 | — |
-| Floot Fly | Common | Magical | No | No | 0 | 0 | — |
-| Xyster | Common | Magical | Yes | Yes | 1 | 0 | — |
-| Cahoot | Common | Magical | Yes | Yes | 7 | 0 | — |
-| Déjà-Jin | Common | Magical | Yes | No | 0 | 0 | — |
-| Roarick | Common | Magical | Yes | No | 0 | 0 | — |
-| Osstax | Common | Magical | Yes | No | 0 | 0 | — |
+| Clackula | Common | Magical | No | Yes | 2 | 0 | — |
+| Fluoress | Common | Magical | No | Yes | 5 | 0 | — |
+| Floot Fly | Common | Magical | No | Yes | 1 | 0 | — |
+| Xyster | Common | Magical | Yes | Yes | 4 | 0 | — |
+| Cahoot | Common | Magical | Yes | Yes | 5 | 0 | — |
+| Déjà-Jin | Common | Magical | Yes | Yes | 1 | 0 | — |
+| Roarick | Common | Magical | Yes | Yes | 1 | 0 | — |
+| Osstax | Common | Magical | Yes | Yes | 2 | 0 | — |
 | Knucklehead | Common | Magical | Yes | Yes | 1 | 0 | — |
-| G'day | Common | Magical | Yes | No | 0 | 0 | — |
-| Larvaluss | Common | Magical | Yes | No | 0 | 0 | — |
-| Frondley | Common | Magical | Yes | Yes | 4 | 0 | — |
-| Mushaboom | Common | Magical | Yes | No | 0 | 0 | — |
-| Enchantling | Common | Magical | Yes | No | 0 | 0 | — |
+| G'day | Common | Magical | Yes | Yes | 1 | 0 | — |
+| Larvaluss | Common | Magical | Yes | Yes | 1 | 0 | — |
+| Frondley | Common | Magical | Yes | Yes | 8 | 0 | — |
+| Mushaboom | Common | Magical | Yes | Yes | 2 | 0 | — |
+| Enchantling | Common | Magical | Yes | Yes | 2 | 0 | — |
 | Do | Common | Dipster | No | Yes | 1 | 0 | — |
-| Re | Common | Dipster | No | No | 0 | 0 | — |
-| Mi | Common | Dipster | No | No | 0 | 0 | — |
-| Fa | Common | Dipster | No | No | 0 | 0 | — |
-| Sol | Common | Dipster | No | No | 0 | 0 | — |
-| La | Common | Dipster | No | No | 0 | 0 | — |
-| Ti | Common | Dipster | No | No | 0 | 0 | — |
+| Re | Common | Dipster | No | Yes | 1 | 0 | — |
+| Mi | Common | Dipster | No | Yes | 1 | 0 | — |
+| Fa | Common | Dipster | No | Yes | 1 | 0 | — |
+| Sol | Common | Dipster | No | Yes | 1 | 0 | — |
+| La | Common | Dipster | No | Yes | 1 | 0 | — |
+| Ti | Common | Dipster | No | Yes | 1 | 0 | — |
 | Theremind | Rare | Magical | Yes | No | 0 | 0 | — |
 | Clackula | Rare | Magical | Yes | No | 0 | 0 | — |
 | Fluoress | Rare | Magical | Yes | No | 0 | 0 | — |
@@ -582,63 +584,71 @@ None recorded.
 | Rare Déjà-Jin | Rare | Magical | Yes | No | 0 | 0 | — |
 | Roarick | Rare | Magical | Yes | No | 0 | 0 | — |
 | Osstax | Rare | Magical | Yes | No | 0 | 0 | — |
-| Knucklehead | Rare | Magical | Yes | No | 0 | 0 | — |
+| Knucklehead | Rare | Magical | Yes | Yes | 0 | 0 | — |
 | G'day | Rare | Magical | Yes | No | 0 | 0 | — |
 | Larvaluss | Rare | Magical | Yes | No | 0 | 0 | — |
 | Frondley | Rare | Magical | Yes | No | 0 | 0 | — |
-| Mushaboom | Rare | Magical | Yes | No | 0 | 0 | — |
+| Mushaboom | Rare | Magical | Yes | Yes | 0 | 0 | — |
 | Enchantling | Rare | Magical | Yes | No | 0 | 0 | — |
+| Vitreous Ti | Rare | Dipster | No | No | 0 | 0 | — |
+| Terrene Sol | Rare | Dipster | No | No | 0 | 0 | — |
+| Waxen La | Rare | Dipster | No | No | 0 | 0 | — |
 | Clackula | Epic | Magical | Yes | No | 0 | 0 | — |
 | Fluoress | Epic | Magical | Yes | No | 0 | 0 | — |
 | Floot Fly | Epic | Magical | Yes | No | 0 | 0 | — |
 | Knucklehead | Epic | Magical | Yes | No | 0 | 0 | — |
-| Carillong | Common | Seasonal | Yes | No | 0 | 0 | — |
+| King Do | Epic | Dipster | No | No | 0 | 0 | — |
+| Queen Re | Epic | Dipster | No | No | 0 | 0 | — |
+| Bishop Mi | Epic | Dipster | No | No | 0 | 0 | — |
+| Carillong | Common | Seasonal | Yes | Yes | 0 | 0 | — |
 | Carillong | Rare | Seasonal | Yes | No | 0 | 0 | — |
 | Carillong | Epic | Seasonal | Yes | No | 0 | 0 | — |
 
 ### Pending
 
-| Type | Parents | Time | Prediction | Confidence |
-| --- | --- | --- | --- | --- |
-| Breeding | Frondley + Clackula | 1d 6h | Frondley | High |
+None recorded.
 
 ### Rare breeding planner
 
 | Target | Best first-copy combination / acquisition | Standard | Enhanced | Plan | Availability |
 | --- | --- | --- | --- | --- | --- |
-| Rare Theremind | Any two distinct Psychic triples | 8h | 6h | Blocked: pair Frondley with G'day or Larvaluss | When offered |
-| Rare Clackula | Any two distinct Bone triples | 8h | 6h | Blocked: need two of G'day, Larvaluss, Mushaboom | When offered |
-| Rare Fluoress | Any two distinct Light triples | 8h | 6h | Blocked: pair Frondley with G'day or Mushaboom | When offered |
-| Rare Floot Fly | Any two distinct Faerie triples | 8h | 6h | Blocked: pair Frondley with Larvaluss or Mushaboom | When offered |
+| Rare Theremind | G'day + Larvaluss | 8h | 6h | Ready | When offered |
+| Rare Clackula | G'day + Larvaluss | 8h | 6h | Ready | When offered |
+| Rare Fluoress | G'day + Frondley | 8h | 6h | Ready | When offered |
+| Rare Floot Fly | Larvaluss + Frondley | 8h | 6h | Ready | When offered |
 | Rare Xyster | Theremind + Clackula | 1d 2h 30m | 19h 52m 30s | Ready | When offered |
 | Rare Cahoot | Theremind + Fluoress | 1d 2h 30m | 19h 52m 30s | Ready | When offered |
-| Rare Déjà-Jin | Theremind + Floot Fly | 1d 2h 30m | 19h 52m 30s | Blocked: missing Floot Fly | When offered |
+| Rare Déjà-Jin | Theremind + Floot Fly | 1d 2h 30m | 19h 52m 30s | Ready | When offered |
 | Rare Roarick | Clackula + Fluoress | 1d 2h 30m | 19h 52m 30s | Ready | When offered |
-| Rare Osstax | Clackula + Floot Fly | 1d 2h 30m | 19h 52m 30s | Blocked: missing Floot Fly | When offered |
-| Rare Knucklehead | Fluoress + Floot Fly | 1d 2h 30m | 19h 52m 30s | Blocked: missing Floot Fly | When offered |
+| Rare Osstax | Clackula + Floot Fly | 1d 2h 30m | 19h 52m 30s | Ready | When offered |
+| Rare Knucklehead | Fluoress + Floot Fly | 1d 2h 30m | 19h 52m 30s | Ready | When offered |
 | Rare G'day | Xyster + Fluoress | 1d 13h 30m | 1d 4h 7m 30s | Ready | When offered |
-| Rare Larvaluss | Osstax + Theremind | 1d 13h 30m | 1d 4h 7m 30s | Blocked: missing Osstax | When offered |
-| Rare Frondley | Deja-Jin + Fluoress | 1d 13h 30m | 1d 4h 7m 30s | Blocked: missing Deja-Jin | When offered |
-| Rare Mushaboom | Osstax + Fluoress | 1d 13h 30m | 1d 4h 7m 30s | Blocked: missing Osstax | When offered |
-| Rare Enchantling | Larvaluss + Fluoress | 2d 14h 30m | 1d 22h 52m 30s | Blocked: missing Larvaluss | When offered |
-| Rare Carillong | Mushaboom + Roarick | 1d 7h 45m | 23h 48m 45s | Blocked: missing Mushaboom, Roarick | Seasonal offer |
+| Rare Larvaluss | Osstax + Theremind | 1d 13h 30m | 1d 4h 7m 30s | Ready | When offered |
+| Rare Frondley | Déjà-Jin + Fluoress | 1d 13h 30m | 1d 4h 7m 30s | Ready | When offered |
+| Rare Mushaboom | Osstax + Fluoress | 1d 13h 30m | 1d 4h 7m 30s | Ready | When offered |
+| Rare Enchantling | Larvaluss + Fluoress | 2d 14h 30m | 1d 22h 52m 30s | Ready | When offered |
+| Rare Carillong | Mushaboom + Roarick | 1d 7h 45m | 23h 48m 45s | Ready | Seasonal offer |
 
 ### Epic breeding planner
 
 | Target | Best first-copy combination / acquisition | Standard | Enhanced | Plan | Availability |
 | --- | --- | --- | --- | --- | --- |
-| Epic Clackula | Enchantling + Osstax | 20h 6m | 15h 4m 30s | Blocked: missing Enchantling, Osstax | When offered |
-| Epic Fluoress | Enchantling + Cahoot | 19h 16m | 14h 27m | Blocked: missing Enchantling | When offered |
-| Epic Floot Fly | Enchantling + Knucklehead | 19h 56m | 14h 57m | Blocked: missing Enchantling | When offered |
-| Epic Knucklehead | Larvaluss + Cahoot | 2d 3h 49m | 1d 14h 51m 45s | Blocked: missing Larvaluss | When offered |
-| Epic Carillong | Enchantling + Roarick | 1d 12h 12m | 1d 3h 9m | Blocked: missing Enchantling, Roarick | Seasonal offer |
+| Epic Clackula | Enchantling + Osstax | 20h 6m | 15h 4m 30s | Ready | When offered |
+| Epic Fluoress | Enchantling + Cahoot | 19h 16m | 14h 27m | Ready | When offered |
+| Epic Floot Fly | Enchantling + Knucklehead | 19h 56m | 14h 57m | Ready | When offered |
+| Epic Knucklehead | Larvaluss + Cahoot | 2d 3h 49m | 1d 14h 51m 45s | Ready | When offered |
+| Epic Carillong | Enchantling + Roarick | 1d 12h 12m | 1d 3h 9m | Ready | Seasonal offer |
 
 ### Notes
 
-- The Book's 8/22 Common count is seven Magical species plus the Do Dipster.
-- Xyster is housed in the Humble Hotel; the Market still reports one owned.
-- A Theremind egg in the Nursery is not included in the owned count.
-- The pending Frondley will raise the owned count from four to five only after placement.
+- Checked in BlueStacks on 2026-11-09: castle panel, every Market Monsters card, and all three Book pages. Owned counts come from the Market cards (screenshots listed under evidence).
+- The Book's 22/22 Commons are the fifteen Magical species plus the seven Dipsters. Seasonal 1/1 is Carillong; no Carillong Market card was offered, so its owned count stays 0.
+- Rare Mushaboom and Rare Knucklehead are lit in the Book (named from their Book entries), but neither has a Market card, so their owned counts stay 0.
+- The Market offers Rare Dipsters Vitreous Ti, Terrene Sol, and Waxen La and Epic Dipsters King Do, Queen Re, and Bishop Mi here, each locked behind Prize wins with 0 owned. They account for the Rare total rising from 15 to 18 and three of the five new Epic slots (4 to 9); the other two Epic silhouettes are not yet named.
+- Rare Clackula and Epic Clackula cards were on a timed offer (7h 12m left) with 0 owned.
+- The July pending Frondley breeding and Nursery Theremind egg are long finished and were dropped; breeding and Nursery state were not rechecked.
+- Bed audit on 2026-11-09: Market counts account for 83 beds against the panel's 89, a delta of 6. Rare Mushaboom (3 beds) plus Rare Knucklehead (2) plus Carillong (1) would close it exactly, which suggests one of each is on the island without a Market card, but that is unconfirmed and their counts stay 0. Eggs or Hotel check-ins were not checked and could also move the figure.
+- Magical bed sizes were read from each monster's Book Stats tab on 2026-11-09 and added to reference/monsters/bed-requirements.json.
 
 ## Water Island
 
