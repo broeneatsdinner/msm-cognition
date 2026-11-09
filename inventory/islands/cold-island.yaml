@@ -1,63 +1,64 @@
 schema_version: 1
 island: Cold Island
-observed_at: "2026-08-22"
+observed_at: "2026-11-09"
 
 evidence:
-  screenshot_directory: training/screenshots/My Singing Monsters Island Inventories 2026-08-22/03 Cold Island
-  overview:
-    - IMG_0882.jpg
+  screenshot_directory: training/screenshots
+  castle:
+    - 2026-11-09-cold-island-map-summary.jpg
+    - 2026-11-09-cold-island-castle-bio.jpg
+    - 2026-11-09-cold-island-castle-stats.jpg
   book:
-    - IMG_0883.jpg
-    - IMG_0884.jpg
-    - IMG_0885.jpg
+    - 2026-11-09-cold-island-book-commons.jpg
+    - 2026-11-09-cold-island-book-rares.jpg
+    - 2026-11-09-cold-island-book-rare-grumpyre-unavailable.jpg
+    - 2026-11-09-cold-island-book-epics.jpg
+    - 2026-11-09-cold-island-book-epic-mammott-name.jpg
   market:
-    - IMG_0886.jpg
-    - IMG_0887.jpg
-    - IMG_0888.jpg
-    - IMG_0889.jpg
-    - IMG_0890.jpg
-    - IMG_0891.jpg
-    - IMG_0892.jpg
-    - IMG_0893.jpg
-    - IMG_0894.jpg
-    - IMG_0895.jpg
-    - IMG_0896.jpg
-    - IMG_0897.jpg
+    - 2026-11-09-cold-island-market-01-re-maw-vitreous-ti.jpg
+    - 2026-11-09-cold-island-market-02-vitreous-ti-waxen-la-king-do.jpg
+    - 2026-11-09-cold-island-market-03-queen-re-bishop-mi-epic-toe-jammer.jpg
+    - 2026-11-09-cold-island-market-04-terrene-sol-rare-toe-jammer-oaktopus.jpg
+    - 2026-11-09-cold-island-market-05-oaktopus-strombonin-tawkerr.jpg
+    - 2026-11-09-cold-island-market-06-tawkerr-maggpi-do.jpg
+    - 2026-11-09-cold-island-market-07-la-wubbox-epic-wubbox.jpg
+    - 2026-11-09-cold-island-market-08-epic-wubbox-tweedle-potbelly.jpg
+    - 2026-11-09-cold-island-market-09-potbelly-toe-jammer-mammott.jpg
+    - 2026-11-09-cold-island-market-10-dandidoo-quibble-pango.jpg
+    - 2026-11-09-cold-island-market-11-pango-furcorn-spunge.jpg
+    - 2026-11-09-cold-island-market-12-spunge-thumpies-congle.jpg
+    - 2026-11-09-cold-island-market-13-bowgart-deedge-grumpyre.jpg
+    - 2026-11-09-cold-island-market-14-grumpyre-bblizard-mi.jpg
+    - 2026-11-09-cold-island-market-15-fa-sol-ti.jpg
+    - 2026-11-09-cold-island-market-16-sol-ti-buyback.jpg
 
 castle:
-  name: Paradise Castle
+  name: Polished Frozium Castle
   confidence: high
-  observed_beds_occupied: 89
-  observed_beds_available: 90
-  upgrade_target: Frozium Castle
-  displayed_time_remaining: 20h 45m 29s
+  observed_beds_occupied: 147
+  observed_beds_available: 150
 
 book:
   common:
-    discovered: 18
+    discovered: 22
     total: 28
     seasonal: {discovered: 0, total: 1}
-    costumes: {discovered: 11, total: 198}
+    costumes: {discovered: 15, total: 199}
   rare:
-    discovered: 6
-    total: 19
+    discovered: 11
+    total: 21
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 13}
   epic:
     discovered: 1
-    total: 19
+    total: 21
     seasonal: {discovered: 0, total: 1}
     costumes: {discovered: 0, total: 13}
-
-unresolved_discoveries:
-  epic:
-    count: 1
-    evidence: "Book shows 1/19 Epics discovered; previous Epic Wubbox zero-owned medium-confidence row was not independently confirmed."
 
 monsters:
   # Common Naturals
   - {name: Tweedle, variant: common, class: natural, discovered: true, owned: 1}
-  - {name: Potbelly, variant: common, class: natural, discovered: true, owned: 2}
+  - {name: Potbelly, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Toe Jammer, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Mammott, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Dandidoo, variant: common, class: natural, discovered: true, owned: 3}
@@ -68,9 +69,9 @@ monsters:
   - {name: Maw, variant: common, class: natural, discovered: true, owned: 1}
   - {name: Spunge, variant: common, class: natural, discovered: true, owned: 6}
   - {name: Thumpies, variant: common, class: natural, discovered: true, owned: 4}
-  - {name: Congle, variant: common, class: natural, discovered: true, owned: 1}
+  - {name: Congle, variant: common, class: natural, discovered: true, owned: 2}
   - {name: Bowgart, variant: common, class: natural, discovered: true, owned: 2}
-  - {name: Deedge, variant: common, class: natural, discovered: true, owned: 3}
+  - {name: Deedge, variant: common, class: natural, discovered: true, owned: 17}
 
   # Other Commons and Dipsters
   - {name: Grumpyre, variant: common, class: ethereal, discovered: true, owned: 2}
@@ -78,41 +79,44 @@ monsters:
   - {name: bbli$zard, variant: common, class: legendary, discovered: true, owned: 1}
   - {name: Tawkerr, variant: common, class: werdo, discovered: false, owned: 0}
   - {name: Maggpi, variant: common, class: werdo, discovered: false, owned: 0}
-  - {name: Wubbox, variant: common, class: supernatural, discovered: false, owned: 0}
+  - {name: Wubbox, variant: common, class: supernatural, discovered: false, owned: 1}
   - {name: Do, variant: common, class: dipster, discovered: false, owned: 0}
   - {name: Re, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: Mi, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: Fa, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: Sol, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Mi, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Fa, variant: common, class: dipster, discovered: true, owned: 1}
+  - {name: Sol, variant: common, class: dipster, discovered: true, owned: 1}
   - {name: La, variant: common, class: dipster, discovered: false, owned: 0}
-  - {name: Ti, variant: common, class: dipster, discovered: false, owned: 0}
+  - {name: Ti, variant: common, class: dipster, discovered: true, owned: 1}
 
   # Rares
   - {name: Tweedle, variant: rare, class: natural, discovered: true, owned: 1}
-  - {name: Potbelly, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Potbelly, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Toe Jammer, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Mammott, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Dandidoo, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Quibble, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Pango, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Pango, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Oaktopus, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Furcorn, variant: rare, class: natural, discovered: true, owned: 1}
   - {name: Maw, variant: rare, class: natural, discovered: false, owned: 0}
   - {name: Spunge, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Thumpies, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Congle, variant: rare, class: natural, discovered: false, owned: 0}
-  - {name: Bowgart, variant: rare, class: natural, discovered: false, owned: 0}
+  - {name: Thumpies, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Congle, variant: rare, class: natural, discovered: true, owned: 0}
+  - {name: Bowgart, variant: rare, class: natural, discovered: true, owned: 0}
   - {name: Deedge, variant: rare, class: natural, discovered: true, owned: 0}
-  - {name: Grumpyre, variant: rare, class: ethereal, discovered: true, owned: 0}
+  - {name: Grumpyre, variant: rare, class: ethereal, discovered: false, owned: 0}
   - {name: Strombonin, variant: rare, class: mythical, discovered: false, owned: 0}
   - {name: Wubbox, variant: rare, class: supernatural, discovered: false, owned: 0}
   - {name: Yool, variant: rare, class: seasonal, discovered: false, owned: 0}
+  - {name: Ti, display_name: Vitreous Ti, variant: rare, class: dipster, discovered: false, owned: 0}
+  - {name: Sol, display_name: Terrene Sol, variant: rare, class: dipster, discovered: true, owned: 1}
+  - {name: La, display_name: Waxen La, variant: rare, class: dipster, discovered: false, owned: 0}
 
   # Epics
   - {name: Tweedle, variant: epic, class: natural, discovered: false, owned: 0}
   - {name: Potbelly, variant: epic, class: natural, discovered: false, owned: 0}
   - {name: Toe Jammer, variant: epic, class: natural, discovered: false, owned: 0}
-  - {name: Mammott, variant: epic, class: natural, discovered: false, owned: 0}
+  - {name: Mammott, variant: epic, class: natural, discovered: true, owned: 0}
   - {name: Dandidoo, variant: epic, class: natural, discovered: false, owned: 0}
   - {name: Quibble, variant: epic, class: natural, discovered: false, owned: 0}
   - {name: Pango, variant: epic, class: natural, discovered: false, owned: 0}
@@ -128,6 +132,9 @@ monsters:
   - {name: Strombonin, variant: epic, class: mythical, discovered: false, owned: 0}
   - {name: Wubbox, variant: epic, class: supernatural, discovered: false, owned: 0}
   - {name: Yool, variant: epic, class: seasonal, discovered: false, owned: 0}
+  - {name: Do, display_name: King Do, variant: epic, class: dipster, discovered: false, owned: 0}
+  - {name: Re, display_name: Queen Re, variant: epic, class: dipster, discovered: false, owned: 0}
+  - {name: Mi, display_name: Bishop Mi, variant: epic, class: dipster, discovered: false, owned: 0}
 
   # Seasonal slot counted separately by the Book.
   - {name: Yool, variant: common, class: seasonal, discovered: false, owned: 0}
@@ -135,7 +142,13 @@ monsters:
 pending: []
 
 notes:
-  - Book pages supersede Market visibility for discovery state; Market pages supply visible current counts.
-  - Rare Toe Jammer, Rare Mammott, Rare Deedge, and Rare Grumpyre are discovered but currently owned 0 on Cold Island.
-  - "The unidentified Epic Book discovery is recorded under unresolved_discoveries instead of forcing a medium-confidence Wubbox row."
-  - "Cold Island castle info panel shows 89/90 beds occupied; the re-indexed monster rows now explain 89 beds exactly."
+  - "Checked in BlueStacks on 2026-11-09: map summary, castle panel, every Market Monsters card, and all three Book pages. Owned counts come from the Market cards (screenshots listed under evidence)."
+  - "The castle is now Polished Frozium Castle with 147/150 beds occupied (castle Stats tab). The map summary for Cold Island shows the same 147/150 and Book counters 22/28 Commons, 11/21 Rares, 1/21 Epics, 0/3 seasonal, 15/225 costumes."
+  - "Commons 22/28: the eighteen August discoveries plus Mi, Fa, Sol, and Ti, each now owned 1. Unlit are Wubbox, Tawkerr, Maggpi, Do, Re, and La. Seasonal 0/1 is Yool."
+  - "The Common Wubbox card is greyed out with no count, so it is owned: 1. It shows grey in the Book, so it is still being filled (discovered: false), as on Plant Island."
+  - "Rares 11/21, each named from its Book entry: Tweedle, Potbelly, Toe Jammer, Mammott, Pango, Furcorn, Thumpies, Congle, Bowgart, Deedge, and Terrene Sol. The Rare total rose from 19 to 21; the page now includes the prize Dipsters Vitreous Ti, Terrene Sol, and Waxen La."
+  - "Rare Grumpyre, recorded as discovered on 2026-08-22, is an unlit silhouette whose Book entry says Monster Unavailable (training/screenshots/2026-11-09-cold-island-book-rare-grumpyre-unavailable.jpg), so it is now discovered: false. The August reading was probably wrong."
+  - "Epics 1/21: the lit Epic is Epic Mammott (named from its Book entry), which resolves the August unresolved Epic discovery. No Epic Mammott Market card, so owned stays 0. The Epic total rose from 19 to 21; the page now includes the prize Dipsters King Do, Queen Re, and Bishop Mi, all locked behind Prize wins."
+  - "Rare Tweedle and Rare Furcorn had no Market card on 2026-11-09, so their owned: 1 is carried over from August. Rare Toe Jammer and Epic Toe Jammer were on a timed offer (6h 29m left); Rare shows 1 owned, Epic 0."
+  - "Common Deedge rose from 3 to 17 on its Market card. Potbelly fell from 2 to 1 and Congle rose from 1 to 2. A 'Cobham' Quibble Buyback card is ignored."
+  - "Bed audit on 2026-11-09: rows account for 154 beds against the panel's 147, a delta of -7. Candidates are Hotel check-ins (likely among the 17 Deedge), the carried-over Rare Tweedle (1) and Rare Furcorn (2), or the unfilled Wubbox (6). Breeding, Nursery, and Hotel state were not checked."

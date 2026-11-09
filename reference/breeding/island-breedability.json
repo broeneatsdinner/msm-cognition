@@ -24,11 +24,11 @@
       },
       "rare": {
         "breedable": ["Tweedle", "Potbelly", "Toe Jammer", "Mammott", "Dandidoo", "Quibble", "Pango", "Oaktopus", "Furcorn", "Maw", "Spunge", "Thumpies", "Congle", "Bowgart", "Deedge", "Grumpyre", "Strombonin", "Yool"],
-        "not_breedable": ["Wubbox"]
+        "not_breedable": ["Wubbox", "Ti", "Sol", "La"]
       },
       "epic": {
         "breedable": ["Tweedle", "Potbelly", "Toe Jammer", "Mammott", "Dandidoo", "Quibble", "Pango", "Oaktopus", "Furcorn", "Maw", "Spunge", "Thumpies", "Congle", "Bowgart", "Deedge", "Grumpyre", "Strombonin", "Yool"],
-        "not_breedable": ["Wubbox"]
+        "not_breedable": ["Wubbox", "Do", "Re", "Mi"]
       }
     },
     "Air Island": {
