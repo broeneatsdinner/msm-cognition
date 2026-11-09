@@ -2,7 +2,7 @@
 
 [Kazilleon](#kazilleon)
 
-[Epic Fwog](#epic-fwog) · [Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Shrubb](#epic-shrubb) · [Epic Toe Jammer](#epic-toe-jammer)
+[Epic Clackula](#epic-clackula) · [Epic Fwog](#epic-fwog) · [Epic G'joob](#epic-gjoob) · [Epic Gnarl](#epic-gnarl) · [Epic Shrubb](#epic-shrubb) · [Epic Toe Jammer](#epic-toe-jammer)
 
 [Rare Bowgart](#rare-bowgart) · [Rare Clamble](#rare-clamble) · [Rare Drumpler](#rare-drumpler) · [Rare Fwog](#rare-fwog) · [Rare Ghazt](#rare-ghazt) · [Rare G'joob](#rare-gjoob) · [Rare La (Waxen La)](#rare-la) · [Rare Mammott](#rare-mammott) · [Rare Maw](#rare-maw) · [Rare Noggin](#rare-noggin) · [Rare Oaktopus](#rare-oaktopus) · [Rare Potbelly](#rare-potbelly) · [Rare Pummel](#rare-pummel) · [Rare Punkleton](#rare-punkleton) · [Rare Ti (Vitreous Ti)](#rare-ti) · [Rare Toe Jammer](#rare-toe-jammer) · [Rare Wubbox](#rare-wubbox)
 
@@ -414,6 +414,17 @@ Rare Potbelly - **Mirror Earth Island**
 
 Rare Potbelly - **Mirror Psychic Island**  
 &nbsp;&nbsp;&nbsp;&nbsp;Tapricorn + Rooba (6h)
+
+<a id="epic-clackula"></a>
+
+Epic Clackula - **Magical Sanctum**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Enchantling + Osstax (20h 6m)
+
+Enhanced Breeding Structure: **15h 4m 30s**, without an island skin boost.
+Epic Clackula must be available in a breeding promotion.
+Observed 2026-11-09: two Enchantling + Osstax attempts on Magical Sanctum each
+showed a 20h breeding timer.
+Source: [Epic Clackula recipe and times](https://mysingingmonsters.fandom.com/wiki/Epic_Clackula).
 
 <a id="epic-fwog"></a>
 
