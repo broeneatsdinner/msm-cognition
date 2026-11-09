@@ -136,6 +136,24 @@ against 362,000). Why is not known.
 After run 6 the replay prompt (2 diamonds, declined) showed Top Rewards
 Remaining: 1 diamond, 3 keys, 2,500 shards, and two of 46,000 food.
 
+Run 7 was a play on 2026-11-09, started by the player and played by an agent
+with Strategy 3 (last pair by elimination where possible) through all nine
+levels. Level 2 was the 6-tile board and level 9 the 30-tile ragged grid
+(23 allowed). Prizes are from
+`training/screenshots/2026-11-09-memory-game-run-7-rewards-recap.jpeg`:
+10 shards, 2,500 XP, 900 food, 76,000 coins, 9,200 food, 76,000 coins,
+2,500 shards, 46,000 food, 46,000 food. Mismatches were not counted per
+level; level 9 finished with 3 of 23 left. The window was 1456x831 and the
+board coordinates in the older notes did not apply: re-derive tile centers
+from a fresh screenshot of each level. Two lessons from this run:
+
+- A pause of seven or eight `screenshot` actions at 0.1 scale was needed
+  after a mismatch; with five, the first tap of the next pair was sometimes
+  dropped and that tile stayed face down.
+- On level 9 three pairs of look-alikes (green pear monster, red horned
+  monster, brown tongue monster) were settled by cropping the saved zooms
+  side by side before matching. No matching flip missed.
+
 Before a paid replay, a "Top Rewards Remaining" panel lists the best prizes
 still in the pool. Before run 3 it showed 1 diamond, 3 keys, 44,000 food,
 362,000 coins, and 1 key; run 3 won everything on it except the diamond.
