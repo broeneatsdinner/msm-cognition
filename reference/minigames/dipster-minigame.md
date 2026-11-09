@@ -70,6 +70,11 @@ Observed behavior:
 - Free numbers kept coming on 2026-11-08: level 10's dig on r3 c3 (a
   Dipster) also showed r2 c3 and r3 c4, and level 12's dig on r3 c0 (a
   number) also showed r5 c2. So a free reveal can follow an empty dig too.
+- Level 13 on 2026-11-09: free reveals came after most Dipster finds. The
+  r5 c1 find showed r5 c0 and r5 c2 and shrank the r4 c1 boulder to a small
+  rock; the r3 c1 find showed r2 c1 and r3 c2 and removed the rocks on r3 c0
+  and r4 c1 outright. A tap on a tile that had already been revealed for
+  free cost no token.
 
 Rewards seen for revealing a Dipster: `+7,800` or `+9,000` food,
 `+1,100` purple crystals (the last Dipster of level 7),
@@ -94,7 +99,8 @@ A token reward can extend a run, so keep the token count in view.
 | 10 | 6 rows x 5 columns | 8 | Boulder on r2 c0, rocks on r0 c2, r1 c3, r1 c4 and r5 c4 | 17 | Re and 3 sticker packs |
 | 11 | 6 rows x 5 columns | 7, one of them a 3x3 big Dipster | Boulder on r2 c2, rocks on r1 c0, r1 c4, r4 c3 and r5 c4 | 27 | Superno-Fa and 4 sticker packs |
 | 12 | 6 rows x 5 columns | 8 | Boulders on r0 c4 and r1 c3, rocks on r1 c4, r3 c1, r3 c3 and r5 c3 | 21 | Sol and a sticker pack |
-| 13 | 6 rows x 5 columns | 8 | Boulders on r4 c1 and r5 c3, rocks on r1 c3, r2 c0, r3 c0 and r4 c4 | 2 so far (0/8) | In progress |
+| 13 | 6 rows x 5 columns | 8 | Boulders on r4 c1 and r5 c3, rocks on r1 c3, r2 c0, r3 c0 and r4 c4 | 11 | Zworaffe (Decoration), no sticker pack |
+| 14 | 6 rows x 5 columns | 8, at least one of them big | Boulders on r2 c3 and r4 c1, rocks on r1 c1, r2 c1, r4 c0 and r5 c1 | 1 so far (0/8) | In progress |
 
 Possible prizes listed on the TOP PRIZES `i` panel: Superno-Fa, Dipsters
 (Royal), Dipsters (Elemental), Zworaffe (Decoration), Dipsters (Tonal),
@@ -156,16 +162,21 @@ on empty tiles.
 
 ## Current progress
 
-As of 2026-11-08: level 13, `0/8` found, tokens 0, event timer `18h 22m`.
-Rows and columns count from the top corner of the diamond (row runs
-down-left, column runs down-right). Resume with:
+As of 2026-11-09: level 14, `0/8` found, tokens 0, event timer `7h 2m`
+(the event ends around 2026-11-09 evening, so this board may never be
+resumed). Rows and columns count from the top corner of the diamond (row
+runs down-left, column runs down-right). Resume with:
 
 ```bash
-python3 scripts/dipster_solver.py --rows 6 --columns 5 --dipsters 8 --rock 2,0 --rock 3,0 --rock 1,3 --rock 4,4 --rock 4,1=2 --rock 5,3=2 "2,2=2" "4,2=5"
+python3 scripts/dipster_solver.py --rows 6 --columns 5 --dipsters 8 --big --rock 1,1 --rock 2,1 --rock 4,0 --rock 5,1 --rock 4,1=2 --rock 2,3=2 "2,2=M"
 ```
 
-- Its next pick is r4 c3 (chance 0.68). If a flagged dirt mound appears,
-  the level has a big Dipster: add `--big` and pass the mound as `=M`.
+- The opening dig on r2 c2 showed a flagged mound, so level 14 has a big
+  Dipster. Its next pick is r1 c2 (chance 0.57).
+- The 10 tokens of 2026-11-09 found all 8 Dipsters of level 13 (9 tokens,
+  one of them a rock dig) and opened level 14 with the last one. Free
+  reveals did much of the work: two rocks vanished and five numbers
+  appeared without a token.
 - The 65 tokens of 2026-11-08 found 21 Dipsters (one of them big): the last
   6 of level 10, all of levels 11 and 12, and none yet on level 13. Rock
   digs took 11 of the 65.
