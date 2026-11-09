@@ -396,9 +396,65 @@ def render_planner(
     )
 
 
+# The player's custom island order, as set in the game's map list (the same
+# on BlueStacks and iPad), top to bottom. It differs from the game's default
+# order. The inventory pages follow it.
+GAME_ISLAND_ORDER = (
+    "Tribal Island",
+    "bbli$zard Island",
+    "Plant Island",
+    "Cold Island",
+    "Air Island",
+    "Water Island",
+    "Earth Island",
+    "Shugabush Island",
+    "Ethereal Island",
+    "Ethereal Workshop",
+    "Magical Sanctum",
+    "Fire Haven",
+    "Fire Oasis",
+    "Mythical Island",
+    "Light Island",
+    "Psychic Island",
+    "Faerie Island",
+    "Bone Island",
+    "Paironormal Carnival",
+    "Wublin Island",
+    "The Colossingum",
+    "Magical Nexus",
+    "Celestial Island",
+    "Amber Island",
+    "Gold Island",
+    "Seasonal Shanty",
+    "Clubbox Rewind",
+    "Composer Island",
+    # Mirror view, in the player's custom order.
+    "Mirror Plant Island",
+    "Mirror Cold Island",
+    "Mirror Air Island",
+    "Mirror Water Island",
+    "Mirror Earth Island",
+    "Plasma Islet",
+    "Mech Islet",
+    "Shadow Islet",
+    "Crystal Islet",
+    "Mirror Light Island",
+    "Mirror Psychic Island",
+    "Mirror Faerie Island",
+    "Mirror Bone Island",
+    # The game labels this one "Paironormal Carnival" in the Mirror list too;
+    # the prefix keeps it apart from the main-view Carnival.
+    "Mirror Paironormal Carnival",
+)
+
+
 def island_sort_key(island: dict[str, Any]) -> tuple[int, str]:
+    """Sort by the player's custom order; islands not in it go last, by name."""
     name = island["island"]
-    return (0 if name == "Plant Island" else 1, name)
+    try:
+        return (GAME_ISLAND_ORDER.index(name), name)
+    except ValueError:
+        return (len(GAME_ISLAND_ORDER), name)
 
 
 def checklist_label(monster: dict[str, Any]) -> str:

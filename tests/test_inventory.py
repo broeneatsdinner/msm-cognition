@@ -10,17 +10,30 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from msm_cognition.inventory import (
+    GAME_ISLAND_ORDER,
     bed_usage,
     generate_document,
     inventory_index,
     is_breedable,
+    island_sort_key,
     load_json,
     load_yaml,
+    load_islands,
     planner_row,
 )
 
 
 class InventoryGeneratorTests(unittest.TestCase):
+    def test_islands_follow_custom_order(self) -> None:
+        names = [island["island"] for _, island in load_islands(REPO_ROOT)]
+        known = [name for name in names if name in GAME_ISLAND_ORDER]
+        self.assertEqual(sorted(known, key=GAME_ISLAND_ORDER.index), known)
+        self.assertEqual(names[: len(known)], known)
+
+    def test_unknown_island_sorts_after_game_islands(self) -> None:
+        last = island_sort_key({"island": GAME_ISLAND_ORDER[-1]})
+        self.assertLess(last, island_sort_key({"island": "Zzz Unlisted Island"}))
+
     def test_document_contains_both_islands_and_planners(self) -> None:
         document = generate_document(REPO_ROOT)
         self.assertIn("## Plant Island", document)
